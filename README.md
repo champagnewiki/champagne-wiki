@@ -1,4 +1,8 @@
- 
+---
+title: Champagne Wiki
+description: An uncompromised, curated archive of the internet's most powerful tools, media, and knowledge.
+---
+
 <a href="https://champagne.pages.dev">
   <img src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExM3ZtNXQ4ZTZ0OHYyeXJtNngxeDhwYXF6N3Jya3p1NzNwNzF6bTNwZyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/8Iv5lqKwKsZ2g/giphy.webp" alt="Gatsby Toast" width="100%" style="border-radius: 8px; margin-bottom: 20px; object-fit: cover; max-height: 400px;" />
 </a>
