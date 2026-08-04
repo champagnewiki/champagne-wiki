@@ -1,0 +1,186 @@
+---
+title: Browsers and Extensions
+description: Enhance your web experience and make it ad-free, more private and streamlined.
+icon: Rocket
+---
+
+import { 
+  BrowserAtmosphere, 
+  BrowserHero, 
+  ToolDeck, 
+  ToolCard,
+  AltPill, 
+  BrowserHeadingIcon,
+  BrowserNotice
+} from '@/components/browser-magic';
+
+import { 
+  Shield, EyeOff, Fingerprint, Cookie, MessageSquare, MonitorPlay, FastForward,
+  Bot, Maximize, ArrowUp, Compass, Zap, GlobeLock, Terminal, Layout, Unlock, FileVideo, 
+  Wand2, Settings, Download, History, Palette, ThumbsDown
+} from 'lucide-react';
+
+<BrowserAtmosphere />
+<BrowserHero />
+
+<BrowserNotice tone="info">
+When it comes to web browsers, there is no one-size-fits-all solution. Each browser offers unique features and strengths, catering to different user needs and preferences. No matter your choice, staying informed about privacy settings and keeping the software updated is crucial for secure operation.
+</BrowserNotice>
+
+## <BrowserHeadingIcon icon={<Compass />} accent="emerald" />The Vanguard: Browsers
+
+### Ease of Use & Privacy
+For users who want robust protection out-of-the-box without sacrificing website compatibility or everyday convenience.
+
+<ToolDeck>
+  <ToolCard title="Brave Browser" href="https://brave.com/" icon={<Shield />} badge="Recommended" badgeStyle="emerald">
+    Built upon the Chromium engine, meaning it feels immediately familiar and has minimal website compatibility issues. It includes a highly effective built-in content blocker and strict privacy features enabled by default.
+  </ToolCard>
+  <ToolCard title="Mozilla Firefox" href="https://www.firefox.com/en-US/" icon={<GlobeLock />} badge="Independent" badgeStyle="amber">
+    The classic open-source alternative. Firefox provides strong privacy settings such as Enhanced Tracking Protection, which proactively blocks various types of tracking scripts natively.
+  </ToolCard>
+  <ToolCard title="Microsoft Edge" href="https://www.microsoft.com/en-us/edge" icon={<Zap />} badge="Performance" badgeStyle="blue">
+    Offers exceptional raw performance, low RAM usage, and powerful built-in AI tools (Copilot). *Note: Highly integrated with Microsoft telemetry, recommended only if privacy is not your primary concern.*
+  </ToolCard>
+</ToolDeck>
+
+### Hardcore Anti-Surveillance
+For users who demand uncompromised privacy, telemetry removal, and strict anti-fingerprinting. 
+
+<ToolDeck>
+  <ToolCard title="Mullvad Browser" href="https://mullvad.net/en/browser" icon={<Fingerprint />} badge="Anti-Fingerprinting" badgeStyle="rose">
+    A version of the Tor Browser with Tor network integrations removed. It provides VPN users with Tor's advanced anti-fingerprinting technologies, serving as a key protection against mass surveillance.
+  </ToolCard>
+  <ToolCard title="Ungoogled Chromium" href="https://github.com/ungoogled-software/ungoogled-chromium" icon={<Terminal />} badge="De-Googled" badgeStyle="neutral">
+    A hardened drop-in replacement for Google Chrome. It strips out all Google web services, telemetry, and background trackers while retaining the raw speed and compatibility of the Chromium engine.
+  </ToolCard>
+</ToolDeck>
+
+---
+
+---
+
+## <BrowserHeadingIcon icon={<Settings />} accent="blue" />The Arsenal: Essential Extensions
+
+A browser is only as powerful as the tools it wields. We have categorized the most effective extensions to fortify your digital footprint and streamline your daily navigation.
+
+### Core Defenses (Ad & Tracker Blocking)
+
+<ToolDeck>
+  <ToolCard 
+    title="uBlock Origin" 
+    href="https://github.com/gorhill/uBlock" 
+    icon={<Shield />} 
+    badge="Essential" 
+    badgeStyle="emerald"
+    alternatives={
+      <AltPill title="uBOL-home (For Chrome MV3)" href="https://github.com/uBlockOrigin/uBOL-home" />
+    }
+  >
+The undisputed king of content blockers. It is fast, potent, and lean. Required for a clean web experience. 
+  </ToolCard>
+  <ToolCard 
+    title="ClearURLs" 
+    href="https://docs.clearurls.xyz/1.23.0/#download" 
+    icon={<EyeOff />} 
+    badge="Privacy" 
+    badgeStyle="neutral"
+  >
+Automatically strips bloated, invisible tracking elements from URLs. *Note: Has not been updated recently and may cause breakage on some modern e-commerce sites.*
+  </ToolCard>
+  <ToolCard title="Privacy Badger" href="https://privacybadger.org/" icon={<GlobeLock />} badge="Heuristic" badgeStyle="amber">
+Developed by the EFF. It automatically learns to block invisible trackers as you browse, dynamically filling in the gaps left by standard blocklists.
+  </ToolCard>
+</ToolDeck>
+
+### Access & Bypassing
+
+<ToolDeck>
+  <ToolCard 
+    title="Bypass Paywalls Clean" 
+    href="https://gitflic.ru/project/magnolia1234/bpc_uploads" 
+    icon={<Unlock />} 
+    badge="Paywalls" 
+    badgeStyle="emerald"
+    alternatives={
+      <AltPill title="Press Released" href="https://pressreleased.alwaysdata.net/" />
+    }
+  >
+A legendary, continuously updated script that seamlessly bypasses artificial paywalls across hundreds of major news and editorial outlets.
+  </ToolCard>
+  <ToolCard 
+    title="Bypass All Shortlinks" 
+    href="https://codeberg.org/gongchandang49/bypass-all-shortlinks-debloated" 
+    icon={<FastForward />} 
+    badge="Scripts" 
+    badgeStyle="rose"
+    alternatives={
+      <AltPill title="Bypass.vip" href="https://bypass.vip/" />
+    }
+  >
+A highly potent userscript that skips annoying link shorteners, ad-redirects, and countdown timers, taking you directly to your destination instantly.
+  </ToolCard>
+</ToolDeck>
+
+### Media Acquisition & Quality of Life
+
+<ToolDeck>
+  <ToolCard 
+    title="FetchV" 
+    href="https://fetchv.net/" 
+    icon={<Download />} 
+    badge="Video Downloader" 
+    badgeStyle="emerald"
+    alternatives={
+      <AltPill title="MPMux (Stream Capture)" href="https://mpmux.com/" />
+    }
+  >
+A professional, generic video download extension. Excels at capturing complex formats including HLS streams (m3u8), MP4, WebM, and FLV.
+  </ToolCard>
+  <ToolCard title="SponsorBlock" href="https://sponsor.ajay.app/" icon={<MonitorPlay />} badge="Crowdsourced" badgeStyle="neutral">
+Automatically skips sponsor segments, intro/outros, and subscription begging in YouTube videos. Save countless hours of your life.
+  </ToolCard>
+  <ToolCard title="Return YouTube Dislike" href="https://returnyoutubedislike.com/" icon={<ThumbsDown />} badge="UI Restorer" badgeStyle="amber">
+An open-source extension that queries archived APIs to restore the heavily requested dislike count directly to the YouTube interface.
+  </ToolCard>
+  <ToolCard title="I still don't care about cookies" href="https://github.com/OhMyGuus/I-Dont-Care-About-Cookies" icon={<Cookie />} badge="Sanity" badgeStyle="blue">
+Get rid of GDPR cookie warnings from almost all websites instantly, automatically rejecting or accepting based on the easiest path to hide the banner.
+  </ToolCard>
+</ToolDeck>
+
+### Navigation, UI & Developer Tools
+
+<ToolDeck>
+  <ToolCard title="Reddit Enhancement Suite" href="https://redditenhancementsuite.com/" icon={<MessageSquare />} badge="Reddit" badgeStyle="rose">
+A massive suite of modules that completely overhaul and enhance your Reddit browsing experience (designed primarily for Old Reddit).
+  </ToolCard>
+  <ToolCard title="Old Reddit Redirect" href="https://github.com/tom-james-watson/old-reddit-redirect" icon={<History />} badge="Classic" badgeStyle="amber">
+Dislike the modern, bloated redesign? Ensure that you always forcefully load the classic, text-dense layout instead.
+  </ToolCard>
+  <ToolCard title="Buster" href="https://github.com/dessant/buster" icon={<Bot />} badge="Captcha" badgeStyle="emerald">
+Solves difficult captchas automatically by downloading and completing reCAPTCHA audio challenges using speech recognition.
+  </ToolCard>
+  <ToolCard title="Violentmonkey" href="https://violentmonkey.github.io/" icon={<Terminal />} badge="Userscripts" badgeStyle="blue">
+An open source, highly efficient user script manager required to run web modifications like Bypass All Shortlinks.
+  </ToolCard>
+  <ToolCard title="ColorZilla" href="https://www.colorzilla.com/" icon={<Palette />} badge="Design" badgeStyle="neutral">
+Advanced Eyedropper, ColorPicker, Color Analyzer and other colorful goodies for developers and designers.
+  </ToolCard>
+</ToolDeck>
+
+---
+
+## <BrowserHeadingIcon icon={<Wand2 />} accent="rose" />macOS Safari Warning
+
+<BrowserNotice title="Not Recommended" tone="danger">
+Safari is heavily restricted by Apple regarding powerful extensions (like true uBlock Origin). We strongly recommend macOS users transition to **Brave**, **Firefox**, or **Ungoogled Chromium**.
+</BrowserNotice>
+
+If you are locked into the Apple ecosystem and cannot live without Safari, these are the essential extensions to maintain a baseline of sanity:
+
+<div className="flex flex-wrap gap-2.5 my-4 relative z-10">
+  <AltPill title="AdGuard for Safari" href="https://adguard.com/en/adguard-safari/overview.html" />
+  <AltPill title="SponsorBlock (Manual Build)" href="https://sponsor.ajay.app/" />
+  <AltPill title="Consent-O-Matic" href="https://apps.apple.com/gb/app/consent-o-matic/id1606897889" />
+  <AltPill title="Hush Nag Blocker" href="https://apps.apple.com/no/app/hush-nag-blocker/id1544743900" />
+</div>

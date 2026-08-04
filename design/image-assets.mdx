@@ -1,0 +1,532 @@
+---
+title: Image & Design Tools
+description: Editors, vectors, stock photography, palettes, asset libraries, and every essential tool for composing, restoring, and formatting visual media.
+icon: Palette
+---
+
+import { ImageToolsHero } from "@/components/graphics/image-tools-hero";
+import {
+  GraphicsAtmosphere, GfxSectionHeader, GfxDeck, GfxCard,
+  GfxPillDeck, GfxPill, PremiumVaultBanner, ColorWidget, DorkBlock, GfxNotice
+} from "@/components/graphics/graphics";
+import {
+  PenTool, Image, Eraser, Sparkles, Wand2, Brush,
+  Frame, Layout, Shapes, Grid, Archive, Type, Search,
+  Camera, Palette, FileImage, MousePointerClick, Crop, Scissors
+} from "lucide-react";
+
+<GraphicsAtmosphere />
+<ImageToolsHero />
+
+<GfxSectionHeader icon={<PenTool />} accent="indigo">
+
+## Editing Software
+
+</GfxSectionHeader>
+
+These are the heavy lifters for local desktop raster and raw editing. If you want full offline control over layering, masking, and high-resolution photo manipulation without paying a monthly subscription, these are the industry-standard FOSS alternatives.
+
+<GfxDeck columns={2}>
+  <GfxCard title="GIMP" href="https://www.gimp.org/" icon={<PenTool />} badge="Standard">
+    The premier open-source raster editor. Expandable via plugins like PhotoGIMP and Texture Synthesizer.
+  </GfxCard>
+  <GfxCard title="ImageMagick" href="https://imagemagick.org/" icon={<PenTool />} badge="CLI">
+    Powerful command-line software suite for creating, editing, and composing bitmap images in bulk.
+  </GfxCard>
+  <GfxCard title="Affinity" href="https://www.affinity.studio/" icon={<PenTool />}>
+    Professional suite for photo editing, publishing, and graphic design (one-time purchase alternative).
+  </GfxCard>
+  <GfxCard title="Paint.net" href="https://www.getpaint.net/" icon={<PenTool />} badge="Windows">
+    Fast, capable, and highly extensible image and photo editor specifically optimized for Windows.
+  </GfxCard>
+</GfxDeck>
+
+<GfxPillDeck>
+  <GfxPill title="LazPaint" href="https://lazpaint.github.io/" />
+  <GfxPill title="PhotoDemon" href="https://photodemon.org/" />
+  <GfxPill title="RapidRAW" href="https://www.getrapidraw.com/" tag="RAW Processor" />
+  <GfxPill title="Gimel Studio" href="https://gimelstudio.com/" tag="Node-based" />
+  <GfxPill title="IOPaint" href="https://github.com/Sanster/IOPaint" tag="AI Multitool" />
+</GfxPillDeck>
+
+---
+
+<GfxSectionHeader icon={<MousePointerClick />} accent="sky">
+
+## Online Editors
+
+</GfxSectionHeader>
+
+For quick tweaks, Chromebook users, or working away from your main workstation, these browser-based editors pack surprisingly deep toolsets without requiring any installation or heavy system resources. 
+
+<GfxNotice title="Photopea Tip" tone="info">
+  Photopea is practically indistinguishable from older versions of Photoshop. It natively opens PSD, Sketch, and XD files right in the browser, making it the fastest way to view and edit client files without installing Adobe CC.
+</GfxNotice>
+
+<GfxDeck columns={3}>
+  <GfxCard title="Photopea" href="https://www.photopea.com/" icon={<MousePointerClick />} badge="Top Pick">
+    A complete, browser-based Photoshop alternative handling PSDs with full layer support.
+  </GfxCard>
+  <GfxCard title="Pixlr" href="https://pixlr.com/" icon={<MousePointerClick />}>
+    Accessible, AI-powered online photo editor with dedicated modes for quick tweaks or deep design.
+  </GfxCard>
+  <GfxCard title="Lunapic" href="https://lunapic.com/" icon={<MousePointerClick />}>
+    A legacy multi-tool packed with unique filters, animation effects, and quick transparency edits.
+  </GfxCard>
+</GfxDeck>
+
+<GfxPillDeck>
+  <GfxPill title="BitMappery" href="https://www.igorski.nl/application/bitmappery/" />
+  <GfxPill title="iPiccy" href="https://ipiccy.com/" />
+  <GfxPill title="Stet" href="https://stet.io/" />
+  <GfxPill title="Polarr" href="https://photoeditor.polarr.co/" />
+  <GfxPill title="Resize Pixel" href="https://www.resizepixel.com/" />
+  <GfxPill title="Tom's Editor" href="https://tomseditor.com/editor/" />
+  <GfxPill title="MiNi Photo Editor" href="https://mini2-photo-editor.netlify.app/" />
+  <GfxPill title="UpperPix" href="https://upperpix.com/" />
+  <GfxPill title="edit.photo" href="https://edit.photo/" />
+  <GfxPill title="RedKetchup" href="https://redketchup.io/" />
+</GfxPillDeck>
+
+---
+
+<GfxSectionHeader icon={<Eraser />} accent="rose">
+
+## Content Removers
+
+</GfxSectionHeader>
+
+Tools dedicated entirely to isolating subjects, clearing backgrounds, and removing unwanted objects. While online tools are convenient, running a local model like Rembg guarantees privacy for personal photos.
+
+<GfxNotice title="Resolution Limits" tone="warning">
+  Many free online background removers (like remove.bg) heavily downscale your final image unless you pay. If you need full-resolution exports, use a self-hosted tool like Rembg or the open-source Segment Anything model.
+</GfxNotice>
+
+<GfxPillDeck>
+  <GfxPill title="ObjectRemover" href="https://objectremover.com/" tag="AI Removal" />
+  <GfxPill title="Inpaint" href="https://theinpaint.com/" />
+  <GfxPill title="HAMA" href="https://www.hama.app/" />
+  <GfxPill title="BG Bye" href="https://bgbye.io/" tag="Backgrounds" />
+  <GfxPill title="Pixelcut" href="https://www.pixelcut.ai/" />
+  <GfxPill title="remove.bg" href="https://www.remove.bg/" />
+  <GfxPill title="Rembg" href="https://github.com/danielgatis/rembg" tag="Self-Hosted" />
+  <GfxPill title="Segment Anything" href="https://aidemos.meta.com/segment-anything" tag="Meta AI" />
+</GfxPillDeck>
+
+---
+
+<GfxSectionHeader icon={<Sparkles />} accent="emerald">
+
+## Upscale & Restore
+
+</GfxSectionHeader>
+
+Restore degraded images, clear up compression artifacts, or scale up low-res art using neural networks. Local tools like Upscayl run entirely on your GPU, meaning zero upload limits or subscription fees.
+
+<GfxDeck columns={2}>
+  <GfxCard title="Waifu2x" href="https://github.com/nagadomi/nunif" icon={<Sparkles />} badge="Anime/Art">
+    The standard for upscaling anime-style art and illustrations using Deep Convolutional Neural Networks.
+  </GfxCard>
+  <GfxCard title="Upscayl" href="https://upscayl.org/" icon={<Sparkles />} badge="Local GUI">
+    Free and open-source AI image upscaler built for local desktop hardware.
+  </GfxCard>
+  <GfxCard title="chaiNNer" href="https://chainner.app/" icon={<Sparkles />} badge="Nodes">
+    Node-based image processing GUI for chaining complex AI upscaling and restoration workflows.
+  </GfxCard>
+  <GfxCard title="Real-ESRGAN" href="https://github.com/xinntao/Real-ESRGAN" icon={<Sparkles />}>
+    Advanced algorithm for restoring and upscaling general photos and real-world textures.
+  </GfxCard>
+</GfxDeck>
+
+<GfxPillDeck>
+  <GfxPill title="OpenModelDB" href="https://openmodeldb.info/" tag="Model Index" />
+  <GfxPill title="WaifuXL" href="https://waifuxl.com/" />
+  <GfxPill title="image-upscaling" href="https://image-upscaling.net/" />
+  <GfxPill title="IMGUpscaler" href="https://imgupscaler.ai/" />
+  <GfxPill title="Bigjpg" href="https://bigjpg.com/" />
+  <GfxPill title="Final2x" href="https://github.com/Tohrusky/Final2x" tag="Self-Hosted" />
+  <GfxPill title="QualityScaler" href="https://github.com/Djdefrag/QualityScaler" />
+  <GfxPill title="resdet" href="https://github.com/0x09/resdet" tag="Detect Original Res" />
+</GfxPillDeck>
+
+<PremiumVaultBanner text="Looking for Topaz Gigapixel and AI enhancers?" hash="upscalers" />
+
+---
+
+<GfxSectionHeader icon={<Wand2 />} accent="amber">
+
+## Image Effects & Utilities
+
+</GfxSectionHeader>
+
+A collection of specialized tools for adding retro textures, generating halftones, dithering, glitching, or turning standard photographs into heavily stylized graphic assets.
+
+<GfxPillDeck>
+  <GfxPill title="Mosh" href="https://moshpro.app/" tag="Glitch" />
+  <GfxPill title="glitch2" href="https://akx.github.io/glitch2/" />
+  <GfxPill title="PhotoFunia" href="https://photofunia.com/" tag="Filters" />
+  <GfxPill title="Grainrad" href="https://grainrad.com/" />
+  <GfxPill title="Image95" href="https://image95.com/" tag="Retro" />
+  <GfxPill title="Palettum" href="https://palettum.com/" />
+  <GfxPill title="InColor" href="https://www.myheritage.com/incolor" tag="Colorize B&W" />
+  <GfxPill title="Dual Shades" href="https://dual-shades.anmolagrawal.dev/" />
+  <GfxPill title="PhotoJoiner" href="https://www.photojoiner.com/" tag="Collage" />
+  <GfxPill title="shabzefilters" href="https://shabzefilters.netlify.app/" tag="ASCII/Dither" />
+  <GfxPill title="VHS-Engine" href="https://vhs-engine.netlify.app/" />
+  <GfxPill title="AIDraw" href="https://ai-draw.tokyo/en/" tag="Line Art" />
+  <GfxPill title="Croppola" href="https://croppola.com/" tag="Smart Crop" />
+  <GfxPill title="PixelFrame" href="https://pixelframe.design/" />
+</GfxPillDeck>
+
+<PremiumVaultBanner text="Get Dithering Automators and advanced Photoshop effects" hash="photoshop-effects" />
+
+---
+
+<GfxSectionHeader icon={<Brush />} accent="pink">
+
+## Painting & Drawing
+
+</GfxSectionHeader>
+
+Software tailored specifically for illustration, sketching, and digital painting rather than photo manipulation. Krita and Inkscape lead the FOSS space for raster and vector illustration respectively.
+
+<GfxDeck columns={2}>
+  <GfxCard title="Krita" href="https://krita.org/en/" icon={<Brush />} badge="Open Source">
+    Professional, free painting program built by artists. Excellent brush engine and native AI-diffusion plugins.
+  </GfxCard>
+  <GfxCard title="Inkscape" href="https://inkscape.org/" icon={<Brush />} badge="Vector">
+    The premier open-source vector graphics editor, perfect for illustrations, logos, and scalable typography.
+  </GfxCard>
+</GfxDeck>
+
+<GfxPillDeck>
+  <GfxPill title="miniPaint" href="https://viliusle.github.io/miniPaint/" tag="Browser" />
+  <GfxPill title="Pinta" href="https://www.pinta-project.com/" />
+  <GfxPill title="Magma" href="https://magma.com/" tag="Collab" />
+  <GfxPill title="DrawPile" href="https://drawpile.net/" tag="Collab" />
+  <GfxPill title="SmoothDraw" href="https://qrli.github.io/smoothdraw/" />
+  <GfxPill title="Wigglypaint" href="https://beyondloom.com/tools/wigglypaint.html" />
+  <GfxPill title="FireAlpaca" href="https://firealpaca.com/" />
+  <GfxPill title="PixiEditor" href="https://pixieditor.net/" />
+</GfxPillDeck>
+
+<PremiumVaultBanner text="Looking for Krita, Procreate, and Clip Studio Paint brushes?" hash="brushes" />
+
+---
+
+<GfxSectionHeader icon={<Grid />} accent="zinc">
+
+## Pixel Art & GIF Tools
+
+</GfxSectionHeader>
+
+While you *can* make pixel art in Photoshop or GIMP, dedicated sprite editors handle indexed color palettes, tiling, and frame-by-frame animation timelines much more intuitively.
+
+<GfxPillDeck>
+  <GfxPill title="Awesome Pixel Art" href="https://github.com/Siilwyn/awesome-pixel-art" tag="Index" />
+  <GfxPill title="Aseprite" href="https://github.com/aseprite/aseprite" tag="Industry Standard" />
+  <GfxPill title="LibreSprite" href="https://libresprite.github.io/" tag="FOSS Fork" />
+  <GfxPill title="Piskel" href="https://www.piskelapp.com/" tag="Browser" />
+  <GfxPill title="rx" href="https://rx.cloudhead.io/" />
+  <GfxPill title="Gifski" href="https://gif.ski/" tag="High Quality Encoder" />
+  <GfxPill title="EZGif" href="https://ezgif.com/" />
+  <GfxPill title="GIFnText" href="https://www.gifntext.com/" />
+  <GfxPill title="Gifsicle" href="http://www.lcdf.org/gifsicle/" tag="CLI" />
+  <GfxPill title="ScreenToGif" href="https://www.screentogif.com/" tag="Recorder" />
+  <GfxPill title="licecap" href="https://www.cockos.com/licecap/" />
+</GfxPillDeck>
+
+---
+
+<GfxSectionHeader icon={<Layout />} accent="indigo">
+
+## Design Apps & Inspiration
+
+</GfxSectionHeader>
+
+UI/UX prototyping, layout engines, and collaborative whiteboards. This section also includes archives that preserve graphic design history, typography, and single-page web layouts for inspiration.
+
+<GfxDeck columns={2}>
+  <GfxCard title="Figma" href="https://www.figma.com/" icon={<Layout />} badge="Standard">
+    The definitive collaborative interface design tool for modern web and app layouts.
+  </GfxCard>
+  <GfxCard title="Penpot" href="https://penpot.app/" icon={<Layout />} badge="Open Source">
+    The leading open-source alternative to Figma, built on open web standards and native SVG support.
+  </GfxCard>
+</GfxDeck>
+
+<GfxPillDeck>
+  <GfxPill title="archives.design" href="https://archives.design/" tag="Inspiration" />
+  <GfxPill title="Muzli" href="https://search.muz.li/" />
+  <GfxPill title="Cosmos" href="https://www.cosmos.so/" />
+  <GfxPill title="CARI" href="https://cari.institute/" tag="Aesthetic History" />
+  <GfxPill title="One Page Love" href="https://onepagelove.com/" />
+  <GfxPill title="AnotherGraphic" href="https://anothergraphic.org/" />
+  <GfxPill title="Canva" href="https://www.canva.com/" />
+  <GfxPill title="Plasmic" href="https://www.plasmic.app/" />
+  <GfxPill title="lunacy" href="https://icons8.com/lunacy" />
+  <GfxPill title="Dirty Little Zine" href="https://dirtylittlezine.com/" tag="Zine Maker" />
+</GfxPillDeck>
+
+<PremiumVaultBanner text="Get premium InDesign templates, flyers, and brochures" hash="templates" />
+
+---
+
+<GfxSectionHeader icon={<Shapes />} accent="emerald">
+
+## Icons, Avatars & Logos
+
+</GfxSectionHeader>
+
+Quick generation tools for profile pictures, mockups, and vector (SVG) brand icons. Utilizing vectors ensures your logos remain perfectly crisp regardless of how large they are scaled.
+
+<GfxPillDeck>
+  <GfxPill title="Picrew" href="https://picrew.me/en/" tag="Avatar Maker" />
+  <GfxPill title="Alphacoders Avatars" href="https://avatars.alphacoders.com/" />
+  <GfxPill title="Icon Gen" href="https://icon-gen.netlify.app/" />
+  <GfxPill title="Pico" href="https://pico-icons.vercel.app/" tag="Icon Editor" />
+  <GfxPill title="PixelMe" href="https://xsgames.co/pixelme/" tag="8-Bit" />
+  <GfxPill title="Square Face Generator" href="https://squareface.app/" />
+  <GfxPill title="MultiAvatar" href="https://multiavatar.com/" />
+  <GfxPill title="CHARAT" href="https://charat.me/en/" tag="Anime" />
+  <GfxPill title="FreeLogoMaker" href="https://myfreelogomaker.com/" />
+  <GfxPill title="Brandfetch" href="https://brandfetch.com/" tag="Brand Logos" />
+  <GfxPill title="SuperTinyIcons" href="https://edent.github.io/SuperTinyIcons/" />
+  <GfxPill title="Logo Fast" href="https://logofa.st/" />
+  <GfxPill title="RealFaviconGenerator" href="https://realfavicongenerator.net/" />
+</GfxPillDeck>
+
+---
+
+<GfxSectionHeader icon={<Grid />} accent="amber">
+
+## Textures & Patterns
+
+</GfxSectionHeader>
+
+High-resolution surface materials for 2D graphic design or 3D rendering. PBR (Physically Based Rendering) textures include normal, roughness, and displacement maps alongside the base image.
+
+<GfxPillDeck>
+  <GfxPill title="AmbientCG" href="https://ambientcg.com/" />
+  <GfxPill title="TextureTown" href="https://textures.neocities.org/" />
+  <GfxPill title="Texture Labs" href="https://texturelabs.org/" />
+  <GfxPill title="Transparent Textures" href="https://www.transparenttextures.com/" />
+  <GfxPill title="TexturesForFree" href="https://texturesforfree.com/" />
+  <GfxPill title="MatLib" href="https://matlib.gpuopen.com/main/materials/all" />
+</GfxPillDeck>
+
+---
+
+<GfxSectionHeader icon={<Archive />} accent="indigo">
+
+## Free Asset Libraries
+
+</GfxSectionHeader>
+
+Massive indexes containing thousands of mockups, vector illustrations, UI kits, and PSD templates. These are the aggregators to check before starting any layout from scratch.
+
+<GfxDeck columns={2}>
+  <GfxCard title="Free Design Assets" href="https://github.com/noahelhadedy/400-free-design-resources" icon={<Archive />} badge="Github Index">
+    A massive, curated repository covering hundreds of design resources.
+  </GfxCard>
+  <GfxCard title="Freesets" href="https://freesets.dev/" icon={<Archive />}>
+    Developer and designer asset index with a clean UI.
+  </GfxCard>
+</GfxDeck>
+
+<GfxPillDeck>
+  <GfxPill title="Gumroad" href="https://gumroad.com/" tag="Search $0" />
+  <GfxPill title="Salvaged" href="https://salvaged.nu/" />
+  <GfxPill title="PNGTree" href="https://pngtree.com/" />
+  <GfxPill title="Designer Candies" href="https://designercandies.net/category/freebies/" />
+  <GfxPill title="Unblast" href="https://unblast.com/" />
+  <GfxPill title="Freebiesbug" href="https://freebiesbug.com/" />
+  <GfxPill title="Creative Fabrica" href="https://www.creativefabrica.com/freebies/" />
+  <GfxPill title="UI STORE DESIGN" href="https://www.uistore.design/" />
+  <GfxPill title="Pixelbuddha" href="https://pixelbuddha.net/" />
+  <GfxPill title="CraftWork" href="https://craftwork.design/catalog/freebies" />
+</GfxPillDeck>
+
+<PremiumVaultBanner text="Unlock the massive PSD/Template vault and VK archives" hash="asset-vaults" />
+
+---
+
+<GfxSectionHeader icon={<Type />} accent="sky">
+
+## Fonts
+
+</GfxSectionHeader>
+
+Good typography defines a design. Always check the commercial license status before embedding a free font into a client project. When you know exactly what typeface you want, use the search syntax below to find the raw `.ttf` or `.otf` files.
+
+<DorkBlock>
+  <span className="text-zinc-500"># HOW TO DORK ANY FONT YOU WANT</span><br/>
+  <span className="text-emerald-400">1. Find the name of the exact typeface (e.g. Proxima Nova)</span><br/>
+  <span className="text-emerald-400">2. Run these exact search strings in Google:</span><br/><br/>
+  <span className="text-indigo-300">proxima nova.ttf</span><br/>
+  <span className="text-indigo-300">site:vk.com proxima nova.ttf</span><br/>
+  <span className="text-indigo-300">site:github.com proxima nova.ttf</span><br/><br/>
+  <span className="text-emerald-400">3. Alternatively, search directly inside GitHub:</span><br/>
+  <span className="text-indigo-300">extension:ttf extension:otf filename:proxima nova</span>
+</DorkBlock>
+
+<PremiumVaultBanner text="Need massive font archives? Jump to the Typography Vault" hash="fonts" />
+
+---
+
+<GfxSectionHeader icon={<Search />} accent="rose">
+
+## Download Images & Search Engines
+
+</GfxSectionHeader>
+
+Reverse image search engines and CLI downloaders. SauceNAO is highly specialized for anime and user-made art, whereas TinEye is better suited for real-world photography and tracking stock images.
+
+<GfxPillDeck>
+  <GfxPill title="gallery-dl" href="https://codeberg.org/mikf/gallery-dl" tag="CLI Downloader" />
+  <GfxPill title="Search by Image" href="https://github.com/dessant/search-by-image" tag="Extension" />
+  <GfxPill title="SauceNao" href="https://saucenao.com/" tag="Reverse Search" />
+  <GfxPill title="TinEye" href="https://tineye.com/" />
+  <GfxPill title="same.energy" href="https://same.energy/" tag="Visual Search" />
+  <GfxPill title="Dezoomify" href="https://dezoomify.ophir.dev/" tag="Download Zoomable" />
+  <GfxPill title="shot.cafe" href="https://shot.cafe/" tag="Stills" />
+  <GfxPill title="Film Grab" href="https://film-grab.com/" tag="Cinematography" />
+  <GfxPill title="Block Posters" href="https://www.blockposters.com/" />
+</GfxPillDeck>
+
+---
+
+<GfxSectionHeader icon={<Camera />} accent="emerald">
+
+## Stock Images
+
+</GfxSectionHeader>
+
+<GfxNotice title="Understanding Licenses" tone="info">
+  "Royalty-Free" means you can use the image without paying per view, but there are often restrictions on resale or mass printing. "CC0" (Creative Commons Zero) means the image is in the public domain and can be used for absolutely anything without attribution.
+</GfxNotice>
+
+<GfxPillDeck>
+  <GfxPill title="EveryPixel" href="https://www.everypixel.com/" tag="Search Engine" />
+  <GfxPill title="Unsplash" href="https://unsplash.com/" tag="Royalty Free" />
+  <GfxPill title="Pexels" href="https://www.pexels.com/" tag="Royalty Free" />
+  <GfxPill title="Pixabay" href="https://pixabay.com/" />
+  <GfxPill title="themeisle" href="https://mystock.themeisle.com/" tag="CC0" />
+  <GfxPill title="PxHere" href="https://pxhere.com/" tag="CC0" />
+  <GfxPill title="Lummi" href="https://www.lummi.ai/" tag="AI Generated" />
+  <GfxPill title="Smithsonian Open Access" href="https://www.si.edu/OpenAccess" />
+  <GfxPill title="PNGIMG" href="https://pngimg.com/" tag="Transparent" />
+  <GfxPill title="publicdomainvectors" href="https://publicdomainvectors.org/" tag="Vectors" />
+  <GfxPill title="mockups-design" href="https://mockups-design.com/" tag="Mockups" />
+</GfxPillDeck>
+
+<PremiumVaultBanner text="Bypass Shutterstock, Getty Images, and Freepik" hash="image-banks" />
+
+---
+
+<GfxSectionHeader icon={<Palette />} accent="pink">
+
+## Art & Illustration Platforms
+
+</GfxSectionHeader>
+
+The largest communities and tagging engines for user-generated art. "Boorus" rely heavily on user-curated tagging systems, making it incredibly easy to search for highly specific visual concepts.
+
+<GfxPillDeck>
+  <GfxPill title="ArtStation" href="https://www.artstation.com/" />
+  <GfxPill title="Pixiv" href="https://www.pixiv.net/" tag="Anime" />
+  <GfxPill title="Danbooru" href="https://safebooru.donmai.us/" tag="Booru" />
+  <GfxPill title="hydrus" href="https://hydrusnetwork.github.io/hydrus/" tag="Media Tagger" />
+  <GfxPill title="Kultura" href="https://kultura.art/" />
+  <GfxPill title="Cara" href="https://cara.app/" />
+  <GfxPill title="DeviantArt" href="https://www.deviantart.com/" />
+</GfxPillDeck>
+
+---
+
+<GfxSectionHeader icon={<FileImage />} accent="amber">
+
+## Image Hosting & Galleries
+
+</GfxSectionHeader>
+
+Fast drop-points for sharing images. Note that while some hosts offer higher file limits, they may not allow "hotlinking" (embedding the image directly into forums or markdown documents) to save bandwidth. Catbox is a preferred choice for hotlinking.
+
+<GfxPillDeck>
+  <GfxPill title="ImgBB" href="https://imgbb.com/" tag="32MB" />
+  <GfxPill title="Catbox" href="https://catbox.moe/" tag="200MB / Hotlinking" />
+  <GfxPill title="Postimages" href="https://postimages.org/" />
+  <GfxPill title="pixelfed" href="https://pixelfed.org/" tag="Decentralized" />
+  <GfxPill title="sxcu.net" href="https://sxcu.net/" tag="ShareX Backend" />
+  <GfxPill title="IMGPile" href="https://imgpile.com/" />
+  <GfxPill title="GIFYU" href="https://gifyu.com/" />
+</GfxPillDeck>
+
+---
+
+<GfxSectionHeader icon={<Crop />} accent="sky">
+
+## Screenshot Tools
+
+</GfxSectionHeader>
+
+Once configured, utilities like ShareX allow you to hit a single keybind to capture a specific window, annotate it, upload it to a host like Catbox, and instantly place the URL in your clipboard.
+
+<GfxDeck columns={2}>
+  <GfxCard title="ShareX" href="https://getsharex.com/" icon={<Crop />} badge="Windows">
+    The undisputed king of desktop screen capture, GIF recording, and automated uploading.
+  </GfxCard>
+  <GfxCard title="Flameshot" href="https://flameshot.org/" icon={<Crop />} badge="Cross Platform">
+    Powerful, open-source screenshot software with built-in annotation tools.
+  </GfxCard>
+</GfxDeck>
+<GfxPillDeck>
+  <GfxPill title="Zipline" href="https://zipline.diced.sh/" tag="Self-Hosted Backend" />
+  <GfxPill title="Greenshot" href="https://getgreenshot.org/" />
+</GfxPillDeck>
+
+---
+
+<GfxSectionHeader icon={<Palette />} accent="indigo">
+
+## Color Tools & Palettes
+
+</GfxSectionHeader>
+
+Mathematical color space visualizers and palette generators. Click any swatch on the live widget below to copy the hex code to your clipboard.
+
+<ColorWidget />
+
+<GfxPillDeck>
+  <GfxPill title="Color Designer" href="https://colordesigner.io/tools" />
+  <GfxPill title="Coolors" href="https://coolors.co/" tag="Generator" />
+  <GfxPill title="Color Palette Pro" href="https://colorpalette.pro/" />
+  <GfxPill title="Color Space" href="https://mycolor.space/" tag="Gradients" />
+  <GfxPill title="OKLCH" href="https://oklch.com/" tag="Picker" />
+  <GfxPill title="Picular" href="https://picular.co/" />
+  <GfxPill title="React Color" href="https://casesandberg.github.io/react-color/" tag="Index" />
+</GfxPillDeck>
+
+---
+
+<GfxSectionHeader icon={<Scissors />} accent="rose">
+
+## Image Optimization & Utilities
+
+</GfxSectionHeader>
+
+Tools to strip EXIF data, run OSINT forensics, or crunch massive image files into modern formats like WebP or AVIF for the web without losing visual fidelity. 
+
+<GfxPillDeck>
+  <GfxPill title="Caesium" href="https://saerasoft.com/caesium/" tag="Compression" />
+  <GfxPill title="Squoosh" href="https://squoosh.app/" tag="Web App" />
+  <GfxPill title="ImageMagick" href="https://imagemagick.org/" tag="Optimization CLI" />
+  <GfxPill title="RIOT" href="https://riot-optimizer.com/" />
+  <GfxPill title="Oxipng" href="https://github.com/shssoichiro/oxipng" />
+  <GfxPill title="ImageToText" href="https://www.imagetotext.info/" tag="OCR" />
+  <GfxPill title="Text Grab" href="https://github.com/TheJoeFin/Text-Grab" tag="Windows OCR" />
+  <GfxPill title="Capture2Text" href="https://capture2text.sourceforge.net/" />
+  <GfxPill title="IrfanView" href="https://www.irfanview.com/" tag="Viewer" />
+  <GfxPill title="ImageGlass" href="https://imageglass.org/" tag="Viewer" />
+  <GfxPill title="FotoForensics" href="https://www.fotoforensics.com/" tag="OSINT" />
+</GfxPillDeck>

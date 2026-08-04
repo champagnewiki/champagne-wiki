@@ -1,0 +1,190 @@
+---
+title: General Entertainment
+description: A comprehensive guide to building a modern cord-cutting ecosystem. Access high-fidelity streaming, direct download archives, and personal media centers.
+icon: Popcorn
+---
+
+import { 
+  TheaterAtmosphere, 
+  TheaterHero, 
+  TheaterRowDeck, 
+  TheaterRowItem,
+  PillGroup,
+  StreamingPill,
+  DocPill,
+  TorrentPill,
+  DDLPill,
+  TheaterGuideBox,
+  TheaterSectionHeader
+} from '@/components/entertainment-magic';
+
+import { 
+  MonitorPlay, Tv, Film, Clapperboard, Download, Send, Magnet, 
+  ShieldAlert, Sparkles, Database, Compass, Server
+} from 'lucide-react';
+
+{/* The Full-Bleed Video Engine & Cinematic Hero */}
+<TheaterAtmosphere />
+<TheaterHero />
+
+<TheaterGuideBox title="The Golden Rules of Web Streaming" icon={<ShieldAlert />}>
+**1. Install uBlock Origin:** Never visit a web streamer without an ad-blocker. We strictly recommend installing the [uBlock Origin Extension](https://github.com/gorhill/uBlock) on Firefox or a Chromium-based browser to intercept invasive video advertisements natively.
+
+**2. Torrenting Safety:** If you choose to engage in Peer-to-Peer (P2P) BitTorrent swarms, **you must use a bound VPN**. Direct Downloads (DDL) and Web Streaming generally do not require a VPN, but torrenting exposes your IP address to the entire swarm.
+
+**3. Video Quality:** Utilize the quality selector gear (⚙️) located in the bottom right corner of most web players to toggle between 1080p and 4K output.
+</TheaterGuideBox>
+
+---
+
+<TheaterSectionHeader icon={<MonitorPlay />} accent="red">
+
+## Premium 1080p & 4K Platforms
+
+</TheaterSectionHeader>
+
+These platforms offer instant, browser-based access to massive libraries of movies and television shows without requiring software installation or local storage.
+
+<PillGroup>
+  <StreamingPill title="Cineby" href="https://cineby.at/" icon={<MonitorPlay />} />
+  <StreamingPill title="PopCornMovies" href="https://popcornmovies.io/" icon={<Tv />} />
+  <StreamingPill title="Rive" href="https://www.rivestream.app/" icon={<Film />} />
+  <StreamingPill title="Flixer" href="https://flixer.gd/" icon={<Clapperboard />} />
+  <StreamingPill title="Aether" href="https://aether.bar/" icon={<MonitorPlay />} />
+  <StreamingPill title="Overlook" href="https://overlook.cx/" icon={<Tv />} />
+  <StreamingPill title="Bingebox" href="https://bingebox.to/" icon={<Film />} />
+  <StreamingPill title="Nepu" href="https://nepu.to/" icon={<MonitorPlay />} />
+  <StreamingPill title="Bingr" href="https://bingr.one/" icon={<Clapperboard />} />
+  <StreamingPill title="Yes! Movies" href="https://ww.yesmovies.ag/yes.html" icon={<Film />} />
+  <StreamingPill title="UniqueStream" href="https://uniquestream.net/" icon={<MonitorPlay />} />
+  <StreamingPill title="PressPlay" href="https://pressplayz.to/" icon={<Film />} />
+  <StreamingPill title="Best Series" href="https://bstsrs.in/" icon={<Tv />} />
+  <StreamingPill title="Look Movie" href="https://lookmovie2.to" icon={<MonitorPlay />} />
+  <StreamingPill title="PrimeWire" href="https://primewire.nexus/" icon={<Tv />} />
+  <StreamingPill title="NoirX" href="https://noirx.me/" icon={<Film />} />
+  <StreamingPill title="AuroraScreen" href="https://www.aurorascreen.org/" icon={<Clapperboard />} />
+</PillGroup>
+
+---
+
+<TheaterSectionHeader icon={<Film />} accent="amber">
+
+## Documentaries & Educational
+
+</TheaterSectionHeader>
+
+Curated platforms focused strictly on non-fiction, historical, and educational filmmaking.
+
+<PillGroup>
+  <DocPill title="IHaveNoTV" href="https://ihavenotv.com/" icon={<Film />} />
+  <DocPill title="Doc+" href="https://www.docplus.com/" icon={<Tv />} />
+  <DocPill title="DocuMania" href="https://www.documentarymania.com/" icon={<Film />} />
+  <DocPill title="WorkLizard" href="https://worklizard.com/groups/documentaries/" icon={<MonitorPlay />} />
+  <DocPill title="WatchDocumentaries" href="https://watchdocumentaries.com/" icon={<Tv />} />
+  <DocPill title="DocumentaryTube" href="https://www.documentarytube.com/" icon={<Film />} />
+</PillGroup>
+
+---
+
+<TheaterSectionHeader icon={<Sparkles />} accent="red">
+
+## The Modern Meta: Stremio & Debrid
+
+</TheaterSectionHeader>
+
+Web streaming sites frequently buffer or suffer from dead links. For the ultimate cord-cutting experience, modern power users have migrated to the **"Debrid Ecosystem."**
+
+<TheaterGuideBox title="How The Ultimate Setup Works" icon={<Server />}>
+Instead of relying on unstable web servers, users install an application called **Stremio** and pair it with an add-on called **Torrentio**, which is linked to a paid **Real-Debrid** account (roughly $3/month). 
+  
+When you select a movie in Stremio, Torrentio finds the torrent file, but instead of you downloading it, Real-Debrid downloads the torrent securely on their massive, hyper-fast gigabit servers. It then streams the cached 4K HDR file directly to your television with zero buffering. Because Real-Debrid acts as a middleman, your ISP never sees you torrenting, effectively replacing the need for a VPN.
+</TheaterGuideBox>
+
+<TheaterRowDeck>
+  <TheaterRowItem 
+    title="FireTV & Android Ultimate Stremio Guide" 
+    href="/piracy-guides/firestick" 
+    icon={<Server className="text-[#E50914]" />}
+    badge="Wiki Guide"
+  >
+    Access our comprehensive, step-by-step internal wiki guide detailing exactly how to install and link Stremio, Torrentio, and Real-Debrid together in 5 minutes.
+  </TheaterRowItem>
+</TheaterRowDeck>
+
+---
+
+<TheaterSectionHeader icon={<Magnet />} accent="fuchsia">
+
+## Torrent Swarms (P2P)
+
+</TheaterSectionHeader>
+
+<div className="mb-6 text-[14.5px] text-zinc-900 dark:text-zinc-200 font-semibold bg-white/50 dark:bg-black/50 backdrop-blur-2xl border border-black/10 dark:border-white/10 p-5 rounded-2xl shadow-lg">Torrents rely on a decentralized network of users sharing pieces of a file. They offer the highest quality (Remuxes, 4K HDR), but **require a VPN** to use safely in strict copyright jurisdictions.</div>
+
+<PillGroup>
+  <TorrentPill title="RuTracker" href="https://rutracker.org/forum/index.php" icon={<Magnet />} badge="Requires Account" isWarning={true} />
+  <TorrentPill title="1337x" href="https://1337x.to/" icon={<Magnet />} badge="Proxy(x1337x.cc)" />
+  <TorrentPill title="EZTV" href="https://eztv.re/" icon={<Magnet />} badge="Television Only" />
+  <TorrentPill title="LimeTorrents" href="https://www.limetorrents.fun/" icon={<Magnet />} badge="Dedicated" />
+  <TorrentPill title="watchSOmuch" href="https://watchsomuch.to/" icon={<Magnet />} badge="Multi" />
+  <TorrentPill title="BTDIGG" href="https://btdig.com/" icon={<Magnet />} badge="DHT Indexer" />
+  <TorrentPill title="KNABEN" href="https://knaben.eu/" icon={<Magnet />} badge="Indexer" />
+  <TorrentPill title="BT4G" href="https://bt4g.org/" icon={<Magnet />} badge="Indexer" />
+  <TorrentPill title="Torlock" href="https://www.torlock.com/" icon={<Magnet />} badge="Indexer" />
+  <TorrentPill title="EXT" href="https://ext.to/" icon={<Magnet />} badge="Indexer" />
+  <TorrentPill title="Magnet DL" href="https://magnetdl.hair/" icon={<Magnet />} badge="Indexer" />
+</PillGroup>
+
+---
+
+<TheaterSectionHeader icon={<Download />} accent="cyan">
+
+## Direct Downloads (DDL)
+
+</TheaterSectionHeader>
+
+<div className="mb-6 text-[14.5px] text-zinc-900 dark:text-zinc-200 font-semibold bg-white/50 dark:bg-black/50 backdrop-blur-2xl border border-black/10 dark:border-white/10 p-5 rounded-2xl shadow-lg">Direct Downloads pull files straight from centralized hosting lockers (like Google Drive or Mega). They are generally safe to use without a VPN, but links frequently die and qualities are highly compressed (HEVC/x265).</div>
+
+<PillGroup>
+  <DDLPill title="111477" href="https://a.111477.xyz/" icon={<Download />} badge="Massive" />  
+  <DDLPill title="Acer Movies" href="https://acermovies.fun/" icon={<Download />} />
+  <DDLPill title="SCLOUD" href="https://scloudx.lol/" icon={<Download />} />
+  <DDLPill title="MKV Base" href="https://mkvbase.site/" icon={<Download />} />
+  <DDLPill title="XDMovies" href="https://top.xdmovies.wtf/" icon={<Download />} />
+  <DDLPill title="Movies Paradise" href="https://movieparadise.org/" icon={<Download />} />
+  <DDLPill title="Ola Movies" href="https://main.ol-am.top/" icon={<Download />} />
+  <DDLPill title="DDL Base" href="https://ddlbase.com/" icon={<Download />} />
+  <DDLPill title="Vega Movies" href="https://vegamovies.hot/" icon={<Download />} />
+  <DDLPill title="Rapid Moviez" href="https://rmz.cr/" icon={<Download />} />
+  <DDLPill title="PSA Rips" href="https://psa.wf/" icon={<Download />} badge="x265 Compressed" />
+  <DDLPill title="Pahe" href="https://pahe.ink/" icon={<Download />} badge="x265 Compressed" />
+  <DDLPill title="Phono Film" href="https://phonofilm.net/" icon={<Send />} badge="TG" />
+  <DDLPill title="SearchMoviesBot" href="https://t.me/SearchMoviesBot" icon={<Send />} badge="TG Bot" />
+  <DDLPill title="TVSeriesSearchBot" href="https://t.me/TVSeriesSearchBot" icon={<Send />} badge="TG Bot" />
+  <DDLPill title="KimoiTV" href="https://www.kimoitv.co/" icon={<Download />} badge="Super Low Size" isWarning={true} />
+</PillGroup>
+
+---
+
+<TheaterSectionHeader icon={<Compass />} accent="red">
+
+## Tracking & Media Servers
+
+</TheaterSectionHeader>
+
+With media scattered across endless streaming services, tracking what you watch is essential. Once you've tracked your media, use local software to organize it.
+
+<TheaterRowDeck>
+  <TheaterRowItem title="Trakt.tv" href="https://trakt.tv/" icon={<Compass />} badge="Tracking">
+    The ultimate media tracking API. It integrates directly with apps like Stremio, Plex, and Kodi to automatically "scrobble" (track) episodes as you watch them, keeping your progress synced across every device.
+  </TheaterRowItem>
+  <TheaterRowItem title="Letterboxd" href="https://letterboxd.com/" icon={<Film />} badge="Discovery">
+    A global social network for film lovers. Use it to log films, write reviews, and discover highly niche, user-curated movie lists that algorithm-driven platforms like Netflix hide.
+  </TheaterRowItem>
+  <TheaterRowItem title="Plex" href="https://www.plex.tv/" icon={<Server />} badge="Media Center">
+    The gold standard for local media hosting. Download your own files, point Plex to the folder, and it will automatically generate a beautiful, Netflix-style interface that you can stream to any TV in your house.
+  </TheaterRowItem>
+  <TheaterRowItem title="Jellyfin" href="https://jellyfin.org/" icon={<Server />} badge="FOSS Media Center">
+    The open-source alternative to Plex. It is entirely free, respects data privacy completely, and does not require server authentication to function locally.
+  </TheaterRowItem>
+</TheaterRowDeck>

@@ -1,0 +1,360 @@
+---
+title: Education & Learning
+description: Free courses, science and math references, history archives, and every tool for learning something new.
+icon: GraduationCap
+---
+
+import { EducationHero } from "@/components/education/education-hero";
+import {
+  EduAtmosphere, EduSectionHeading, DeskGrid, CourseCard, EduPillDeck, EduPill,
+  StudyNote, FieldNote,
+} from "@/components/education/education";
+import {
+  GraduationCap, Film, BookOpen, FlaskConical, Rocket, Landmark, Users,
+  ScrollText, Wrench, Sparkle, Globe, Music, Palette, Calculator,
+} from "lucide-react";
+
+<EduAtmosphere />
+<EducationHero />
+
+<StudyNote icon={<ScrollText />} title="A quick note" tone="warm">
+  Streaming platforms below are legitimate and free. Downloading sections may sit in a gray area depending on the source and your location, so use good judgment.
+</StudyNote>
+
+<EduSectionHeading icon={<BookOpen />} accent="amber">
+
+## Courses
+
+</EduSectionHeading>
+
+Whether you want a full university curriculum or a single afternoon skill, these streaming platforms and course indexes cover it, from MIT's entire lecture catalog to community curated course search engines.
+
+<DeskGrid columns={2}>
+  <CourseCard title="edX" href="https://www.edx.org/" icon={<GraduationCap />} tag="University Courses" tagStyle="emerald">
+    Free university level courses from Harvard, MIT, and dozens of other institutions, with optional paid certificates.
+  </CourseCard>
+  <CourseCard title="MIT OpenCourseWare" href="https://ocw.mit.edu/" icon={<GraduationCap />} tag="Full Curriculum" tagStyle="sky">
+    Nearly all of MIT's undergraduate and graduate course materials published freely online, lecture notes included.
+  </CourseCard>
+  <CourseCard title="Khan Academy" href="https://www.khanacademy.org/" icon={<GraduationCap />} tag="K-12 to College" tagStyle="amber">
+    Structured, self paced lessons covering math, science, and humanities from basic arithmetic through college level topics.
+  </CourseCard>
+  <CourseCard title="Class Central" href="https://www.classcentral.com/" icon={<GraduationCap />} tag="Course Search" tagStyle="violet">
+    A search engine that indexes free courses from universities and platforms worldwide, with reviews for each one.
+  </CourseCard>
+</DeskGrid>
+
+<EduPillDeck>
+  <EduPill title="OpenLearn" href="https://www.open.edu/openlearn/" type="site" />
+  <EduPill title="Alison" href="https://alison.com/" type="site" />
+  <EduPill title="Saylor Academy" href="https://learn.saylor.org/" type="site" />
+  <EduPill title="OpenCulture" href="https://www.openculture.com/" type="site" />
+  <EduPill title="Digital Garage" href="https://grow.google/intl/uk/courses-and-tools/" type="official" info="Google" />
+  <EduPill title="OpenHPI" href="https://open.hpi.de/" type="site" />
+  <EduPill title="OLI" href="https://oli.cmu.edu/independent-learner-courses/" type="site" />
+  <EduPill title="LearnOutLoud" href="https://www.learnoutloud.com/" type="site" info="Documentaries · Courses" />
+  <EduPill title="Yale Courses" href="https://oyc.yale.edu/courses" type="official" info="Lectures" />
+  <EduPill title="Gresham College" href="https://www.gresham.ac.uk/" type="official" info="Lectures" />
+  <EduPill title="Crash Course" href="https://thecrashcourse.com/" type="site" info="Topic Crash Courses" />
+</EduPillDeck>
+
+<FieldNote title="Downloading course content" tone="neutral">
+  You can grab premium, paid courses for free through these sources, but come prepared: run an adblocker and a link shortener bypass extension before clicking through, since most of these rely on ad-heavy redirect chains to stay funded.
+  <ul>
+    <li><a href="https://www.cbusters.com/home" target="_blank" rel="noopener noreferrer"><strong>Course Busters</strong></a>, another course access aggregator</li>
+    <li><a href="https://afratafreeh.com/" target="_blank" rel="noopener noreferrer"><strong>AfraTafreeh</strong></a>, free video courses and books across several technical subjects</li>
+    <li><a href="https://www.certcommunity.org/forum/" target="_blank" rel="noopener noreferrer"><strong>CertCommunity</strong></a>, IT certification course access</li>
+    <li><a href="https://www.infinitecourses.org/" target="_blank" rel="noopener noreferrer"><strong>Infinite Courses</strong></a>, another large paid-course mirror index</li>
+    <li><a href="https://hacksnation.com/t/courses" target="_blank" rel="noopener noreferrer"><strong>HacksNation Courses</strong></a>, a forum thread aggregating course drops and requests</li>
+    <li><a href="https://online-courses.club/" target="_blank" rel="noopener noreferrer"><strong>Online Courses Club</strong></a>, a browsable catalog of freely mirrored paid courses</li>
+    <li><a href="https://pimpmymoney.net/" target="_blank" rel="noopener noreferrer"><strong>PimpMyMoney</strong></a>, course drops focused on business, finance, and marketing content</li>
+  </ul>
+</FieldNote>
+
+---
+
+<EduSectionHeading icon={<Sparkle />} accent="violet">
+
+## Learning Sites and Virtual Tours
+
+</EduSectionHeading>
+
+Beyond formal courses, this space is full of interactive simulations, encyclopedias, and virtual museum tours that make abstract subjects tangible, from walking through the Vatican Museums to running physics simulations in your browser.
+
+<EduPillDeck>
+  <EduPill title="Learn Anything" href="https://learn-anything.xyz/" type="official" info="Resource Search" />
+  <EduPill title="The Borr Project" href="https://borr.dev/" type="site" />
+  <EduPill title="OSSU" href="https://github.com/ossu/computer-science" type="tool" info="CS Curriculum" />
+  <EduPill title="PhET" href="https://phet.colorado.edu/" type="tool" info="Interactive Lessons" />
+  <EduPill title="Ted Talks" href="https://www.ted.com/talks" type="official" />
+  <EduPill title="Stack Exchange" href="https://stackexchange.com/" type="forum" info="Q&A Network" />
+  <EduPill title="Wikiversity" href="https://www.wikiversity.org/" type="site" />
+  <EduPill title="HowStuffWorks" href="https://www.howstuffworks.com/" type="site" />
+  <EduPill title="AnimaGraffs" href="https://animagraffs.com/" type="site" info="Animated Infographs" />
+  <EduPill title="Information Is Beautiful" href="https://informationisbeautiful.net/" type="site" />
+  <EduPill title="P2PU" href="https://www.p2pu.org/" type="site" info="Learning Groups" />
+  <EduPill title="Virtual Museum Resources" href="https://mcn.edu/a-guide-to-virtual-museum-resources/" type="official" info="Online Museums" />
+  <EduPill title="Matterport" href="https://matterport.com/discover" type="tool" info="Explore Real Places" />
+  <EduPill title="360Cities" href="https://www.360cities.net/" type="site" info="360 Images" />
+  <EduPill title="Smithsonian 3D" href="https://3d.si.edu/" type="official" />
+</EduPillDeck>
+
+---
+
+<EduSectionHeading icon={<FlaskConical />} accent="sky">
+
+## Science and Math
+
+</EduSectionHeading>
+
+From interactive physics simulators to full calculus textbooks, this is the backbone reference layer for anyone studying STEM, split across physics, math, engineering, chemistry, and biology.
+
+<DeskGrid columns={2}>
+  <CourseCard title="The Feynman Lectures" href="https://www.feynmanlectures.caltech.edu/" icon={<FlaskConical />} tag="Physics" tagStyle="sky">
+    The complete, freely hosted lecture series that remains one of the best physics introductions ever written.
+  </CourseCard>
+  <CourseCard title="WolframAlpha" href="https://www.wolframalpha.com/" icon={<Calculator />} tag="Knowledge Engine" tagStyle="violet">
+    A computational search engine that solves equations, plots graphs, and answers factual queries directly.
+  </CourseCard>
+  <CourseCard title="3Blue1Brown" href="https://www.3blue1brown.com/" icon={<Calculator />} tag="Math Visuals" tagStyle="emerald">
+    Beautifully animated explanations of calculus, linear algebra, and other math concepts that are hard to visualize.
+  </CourseCard>
+  <CourseCard title="LibreTexts" href="https://libretexts.org/" icon={<FlaskConical />} tag="Free Textbooks" tagStyle="amber">
+    An enormous library of free, openly licensed textbooks spanning nearly every STEM and humanities subject.
+  </CourseCard>
+</DeskGrid>
+
+<EduPillDeck>
+  <EduPill title="Awesome Math" href="https://github.com/rossant/awesome-math" type="tool" />
+  <EduPill title="Project Euler" href="https://projecteuler.net/" type="site" info="Math + Programming" />
+  <EduPill title="Manim" href="https://www.manim.community/" type="tool" info="Explanatory Videos" />
+  <EduPill title="The Engineering Toolbox" href="https://www.engineeringtoolbox.com/" type="site" />
+  <EduPill title="NPTEL" href="https://nptel.ac.in/" type="official" info="Engineering Courses" />
+  <EduPill title="KiCad" href="https://www.kicad.org/" type="tool" info="PCB Design" />
+  <EduPill title="PubChem" href="https://pubchem.ncbi.nlm.nih.gov/" type="official" info="Chemistry" />
+  <EduPill title="Ptable" href="https://ptable.com/" type="site" info="Periodic Table" />
+  <EduPill title="ChemTube3D" href="https://www.chemtube3d.com/" type="tool" info="3D Animations" />
+  <EduPill title="OneZoom" href="https://www.onezoom.org/" type="tool" info="Tree of Life" />
+  <EduPill title="iNaturalist" href="https://www.inaturalist.org/" type="official" info="Organism ID" />
+  <EduPill title="Radiopaedia" href="https://radiopaedia.org/" type="official" info="Med School" />
+</EduPillDeck>
+
+<StudyNote icon={<Wrench />} title="Simulation heavy subjects" tone="cool">
+  Physics, engineering, and chemistry all lean hard on interactive simulators. Falstad, PhET, and ChemTube3D are worth bookmarking early since they cover the widest range of topics.
+</StudyNote>
+
+---
+
+<EduSectionHeading icon={<Rocket />} accent="rose">
+
+## Space and Aerospace
+
+</EduSectionHeading>
+
+Everything from raw NASA data feeds to full flight simulators lives here, useful whether you're tracking a rocket launch or just want to see the scale of the observable universe.
+
+<EduPillDeck>
+  <EduPill title="NASA" href="https://www.nasa.gov/" type="official" />
+  <EduPill title="Space Dashboard" href="https://spacedashboard.com/" type="site" info="Live Streams" />
+  <EduPill title="Stellarium Web" href="https://stellarium-web.org/" type="tool" info="Virtual Sky" />
+  <EduPill title="APOD" href="https://apod.nasa.gov/" type="official" info="Daily Astronomy Images" />
+  <EduPill title="Solar System Scope" href="https://www.solarsystemscope.com/" type="tool" />
+  <EduPill title="NASASpaceFlight" href="https://www.nasaspaceflight.com/" type="site" info="Launch News" />
+  <EduPill title="OpenRocket" href="https://openrocket.info/" type="tool" info="Rocket Simulator" />
+  <EduPill title="FlightGear" href="https://www.flightgear.org/" type="tool" info="Flight Simulator" />
+  <EduPill title="Awesome Aerospace Engineering" href="https://github.com/mahran-sayed/awesome-aerospace-engineering/" type="tool" />
+</EduPillDeck>
+
+---
+
+<EduSectionHeading icon={<Landmark />} accent="amber">
+
+## History and Humanities
+
+</EduSectionHeading>
+
+History, philosophy, economics, and world data sit together here, letting you trace anything from ancient mythology to modern global trade statistics.
+
+<EduPillDeck>
+  <EduPill title="Histography" href="https://histography.io/" type="site" info="History Timelines" />
+  <EduPill title="Smithsonian Institution Archives" href="https://siarchives.si.edu/" type="official" />
+  <EduPill title="Stanford Encyclopedia of Philosophy" href="https://plato.stanford.edu/index.html" type="official" />
+  <EduPill title="Our World in Data" href="https://ourworldindata.org/" type="official" info="World Data" />
+  <EduPill title="Worldometer" href="https://www.worldometers.info/" type="site" info="Live Statistics" />
+  <EduPill title="Theoi" href="https://www.theoi.com/" type="site" info="Greek Mythology" />
+  <EduPill title="GodChecker" href="https://www.godchecker.com/" type="site" info="Mythology" />
+  <EduPill title="Historical Tech Tree" href="https://historicaltechtree.com/" type="site" />
+  <EduPill title="CORE Econ" href="https://www.core-econ.org/" type="site" info="Econ Textbooks" />
+  <EduPill title="RationalWiki" href="https://rationalwiki.org/" type="site" info="Pseudoscience" />
+</EduPillDeck>
+
+---
+
+<EduSectionHeading icon={<Palette />} accent="violet">
+
+## Skills, Hobbies and DIY
+
+</EduSectionHeading>
+
+Practical, hands on learning for skills that fall outside a traditional classroom, from music theory to figure drawing to Morse code.
+
+<DeskGrid columns={2}>
+  <CourseCard title="Drawabox" href="https://drawabox.com/" icon={<Palette />} tag="Drawing" tagStyle="rose">
+    A structured, exercise based drawing course built around fundamentals rather than shortcuts.
+  </CourseCard>
+  <CourseCard title="Proko" href="https://www.youtube.com/user/ProkoTV/videos" icon={<Palette />} tag="Figure Drawing" tagStyle="amber">
+    In depth figure drawing and anatomy lessons taught by a working professional illustrator.
+  </CourseCard>
+  <CourseCard title="JustinGuitar" href="https://www.justinguitar.com/" icon={<Music />} tag="Guitar" tagStyle="emerald">
+    A complete, free guitar course covering beginner through advanced technique and theory.
+  </CourseCard>
+  <CourseCard title="Musicca" href="https://www.musicca.com/" icon={<Music />} tag="Music Theory" tagStyle="sky">
+    Interactive lessons and tools for learning music theory, ear training, and instrument basics.
+  </CourseCard>
+</DeskGrid>
+
+<EduPillDeck>
+  <EduPill title="Instructables" href="https://www.instructables.com/" type="site" info="DIY Projects" />
+  <EduPill title="ARRL" href="https://www.arrl.org/" type="official" info="Ham Radio" />
+  <EduPill title="Lock Picking 101" href="https://www.lockpicking101.com/" type="forum" />
+  <EduPill title="Ultimate Guitar" href="https://www.ultimate-guitar.com/" type="site" info="Tabs" />
+  <EduPill title="Character Design References" href="hhttps://characterdesignreferences.com/visual-library" type="site" />
+  <EduPill title="TutsPlus" href="https://tutsplus.com/" type="site" info="Creative Courses" />
+</EduPillDeck>
+
+<FieldNote title="Where to start if you're overwhelmed" tone="special">
+  With this much breadth, pick one thread and follow it before branching out.
+  <ul>
+    <li>Want structure? Start with <strong>edX</strong> or <strong>MIT OpenCourseWare</strong> for a real syllabus</li>
+    <li>Want something visual? <strong>PhET</strong> and <strong>3Blue1Brown</strong> make abstract ideas click fast</li>
+    <li>Want a hobby, not a degree? <strong>Drawabox</strong> or <strong>JustinGuitar</strong> are the best paced starting points</li>
+  </ul>
+</FieldNote>
+
+---
+
+<EduSectionHeading icon={<Globe />} accent="sky">
+
+## Language Learning
+
+</EduSectionHeading>
+
+Every route into a new language lives here, from structured courses to native media immersion, exchange partners, and dictionaries for both major and lesser known languages.
+
+**Multi-Language** — the general toolkit that works no matter which language you're learning, covering comprehensible input, media-based immersion, and reference tools.
+
+<EduPillDeck>
+  <EduPill title="Language Transfer" href="https://www.languagetransfer.org/" type="official" info="Audio Lessons" />
+  <EduPill title="Language Reactor" href="https://www.languagereactor.com/" type="tool" info="Learn via Videos" />
+  <EduPill title="Refold" href="https://refold.la/" type="official" info="Learning Roadmap" />
+  <EduPill title="Omniglot" href="https://omniglot.com/" type="site" info="Writing Systems" />
+  <EduPill title="Readlang" href="https://readlang.com/" type="tool" info="Learn via Browsing" />
+  <EduPill title="Comprehensible Input Wiki" href="https://comprehensibleinputwiki.org/" type="site" />
+</EduPillDeck>
+
+**Language Exchange** — communities and apps that pair you with native speakers for live conversation practice, the fastest way to stress-test what you've learned.
+
+<EduPillDeck>
+  <EduPill title="Tandem" href="https://www.tandem.net/" type="site" />
+  <EduPill title="Conversation Exchange" href="https://www.conversationexchange.com/" type="site" />
+  <EduPill title="InterPals" href="https://www.interpals.net/" type="site" />
+  <EduPill title="HiNative" href="https://hinative.com/" type="site" info="Q&A" />
+  <EduPill title="Polyglot Club" href="https://polyglotclub.com/" type="site" />
+</EduPillDeck>
+
+**English** — from ESL fundamentals through IELTS prep, covering pronunciation, listening, and writing practice for learners at any level.
+
+<EduPillDeck>
+  <EduPill title="BBC Learning English" href="https://www.bbc.co.uk/learningenglish/" type="official" info="Video Lessons" />
+  <EduPill title="Many Things" href="https://www.manythings.org/" type="official" info="ESL Resources" />
+  <EduPill title="EngVid" href="https://www.engvid.com/" type="site" info="Video Lessons" />
+  <EduPill title="Forvo" href="https://forvo.com/" type="site" info="Pronunciation" />
+  <EduPill title="IELTS Liz" href="https://ieltsliz.com/" type="site" info="Test Prep" />
+</EduPillDeck>
+
+**Japanese** — resources built around real immersion, learning grammar and vocab directly from anime, manga, and visual novels rather than flashcard drilling alone.
+
+<EduPillDeck>
+  <EduPill title="Tatsumoto" href="https://tatsumoto-ren.github.io/" type="official" info="Immersion Guide" />
+  <EduPill title="Immersion Kit" href="https://www.immersionkit.com/" type="tool" info="Example Sentences" />
+  <EduPill title="BunPro" href="https://bunpro.jp/" type="tool" info="Grammar" />
+  <EduPill title="jidoujisho" href="https://github.com/arianneorpilla/jidoujisho" type="tool" info="Via Books" />
+  <EduPill title="RealKana" href="https://realkana.com/" type="tool" info="Learn Kana" />
+</EduPillDeck>
+
+**Korean** — structured lessons and Hangul fundamentals, from a well known community-run Discord to dedicated grammar and typing practice sites.
+
+<EduPillDeck>
+  <EduPill title="Learn Korean" href="https://discord.gg/e3H9Pde" type="official" info="Discord Community" />
+  <EduPill title="HowToStudyKorean" href="https://www.howtostudykorean.com/" type="site" info="Lessons" />
+  <EduPill title="TalkToMeInKorean" href="https://courses.talktomeinkorean.com/" type="site" info="Courses" />
+  <EduPill title="Read Korean Letters" href="https://readkoreanletters.com/" type="tool" info="Learn Hangul" />
+  <EduPill title="90 Day Korean" href="https://www.90daykorean.com/" type="site" />
+</EduPillDeck>
+
+**Chinese and Cantonese** — Mandarin and Cantonese resources together, covering stroke order, tone practice, and dictionaries for both spoken varieties.
+
+<EduPillDeck>
+  <EduPill title="DigMandarin" href="https://www.digmandarin.com/" type="site" info="Lessons" />
+  <EduPill title="MDBG" href="https://www.mdbg.net/" type="official" info="Dictionary" />
+  <EduPill title="The Chairman's Bao" href="https://www.thechairmansbao.com/" type="site" info="Reading Practice" />
+  <EduPill title="Cantonese Sheik" href="https://www.cantonese.sheik.co.uk/" type="site" info="Cantonese Resources" />
+  <EduPill title="Pleco" href="https://www.pleco.com/" type="tool" info="Flashcards + Dictionary" />
+</EduPillDeck>
+
+**European Languages** — Spanish, French, and a handful of smaller European languages, from comprehensible input libraries to grammar-checking tools.
+
+<EduPillDeck>
+  <EduPill title="StudySpanish" href="https://studyspanish.com/" type="official" />
+  <EduPill title="SpanishDict" href="https://www.spanishdict.com/" type="official" info="Dictionary" />
+  <EduPill title="TV5MONDE" href="https://apprendre.tv5monde.com/en/" type="official" info="French Videos" />
+  <EduPill title="The French Tutorial" href="http://www.frenchtutorial.com/" type="site" />
+  <EduPill title="French Comprehensible Input" href="https://docs.google.com/spreadsheets/d/e/2PACX-1vS35pIJ5A3g5tBSyOcYY6RXhkfGyHGYUc_iD08MYbRmZta8R4ydXbMyrgOpy9Ignq7iyrqyThusQ8mu/pubhtml" type="site" />
+</EduPillDeck>
+
+**German** — a compact but reliable set covering a free official course, a large learning community, and translation dictionaries.
+
+<EduPillDeck>
+  <EduPill title="DW German Course" href="https://learngerman.dw.com/en/learn-german/s-9528" type="official" />
+  <EduPill title="German Discord" href="https://discord.gg/german" type="forum" info="Community" />
+  <EduPill title="VHS Lernportal" href="https://www.vhs-lernportal.de/" type="official" info="Course" />
+  <EduPill title="Seedlang" href="https://seedlang.com/" type="tool" />
+  <EduPill title="Linguee" href="https://www.linguee.de/" type="site" info="Dictionary" />
+</EduPillDeck>
+
+**South Asian Languages** — Urdu, Sanskrit, and Tagalog resources, including grammar overviews and community-maintained resource compilations.
+
+<EduPillDeck>
+  <EduPill title="Learn Sanskrit" href="https://www.learnsanskrit.org/" type="official" />
+  <EduPill title="Urdu Resources" href="https://docs.google.com/document/d/1GRTK_E0YGybMNYZjFToM40sOHNkR1NJXc_dL8HW2Q_0/" type="official" />
+  <EduPill title="Rekhta Dictionary" href="https://www.rekhtadictionary.com/" type="official" info="Urdu" />
+  <EduPill title="Mga Nagmamarunong's Masterlist" href="https://docs.google.com/spreadsheets/d/1R9P2nt0sQbL8GqEO_hcPjwIZcM-4s0BbJifm-1AJ0Bc/" type="official" info="Tagalog" />
+</EduPillDeck>
+
+**Sign Languages** — dictionaries and learning platforms for ASL, BSL, and international sign, plus one multi-language index for less common sign languages.
+
+<EduPillDeck>
+  <EduPill title="SpreadTheSign" href="https://spreadthesign.com/" type="official" info="Multi-Language" />
+  <EduPill title="ASL Dictionary" href="https://www.signasl.org/" type="official" />
+  <EduPill title="LifePrint" href="https://lifeprint.com/" type="site" info="ASL Lessons" />
+  <EduPill title="BSL Dictionary" href="https://www.signbsl.com/" type="official" />
+  <EduPill title="SignSchool" href="https://www.signschool.com/" type="site" info="ASL Lessons" />
+</EduPillDeck>
+
+**Constructed Languages** — Esperanto, Toki Pona, and a few niche conlangs with dedicated learning communities, for anyone curious about invented rather than natural languages.
+
+<EduPillDeck>
+  <EduPill title="Toki Pona (.org)" href="https://tokipona.org/" type="official" />
+  <EduPill title="ma pona pi toki pona" href="https://discord.com/invite/mapona" type="forum" info="Discord" />
+  <EduPill title="Links from Esperanto" href="https://ligil.ujo.moe/" type="official" info="Resource Index" />
+  <EduPill title="Learn Na'vi" href="https://learnnavi.org/" type="official" info="Avatar Language" />
+</EduPillDeck>
+
+<FieldNote title="Where to start with a new language" tone="special">
+  Pick a route that matches how you actually like to learn.
+  <ul>
+    <li>Want structure? <strong>Language Transfer</strong> or your target language's dedicated course (DW German, TalkToMeInKorean) gives you a syllabus</li>
+    <li>Want immersion? <strong>Language Reactor</strong> or Japanese's <strong>Immersion Kit</strong> teach through native media instead of textbooks</li>
+    <li>Want a conversation partner? <strong>Tandem</strong> or <strong>Conversation Exchange</strong> connect you with native speakers directly</li>
+  </ul>
+</FieldNote>

@@ -1,0 +1,11 @@
+{
+  "title": "Movies, Shows & Sports",
+  "icon": "Clapperboard",
+  "pages": [
+    "general-entertainment",
+    "asian-entertainment",
+    "live-sports",
+    "cartoons",
+    "live-tv"
+  ]  
+}

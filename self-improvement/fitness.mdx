@@ -1,0 +1,156 @@
+---
+title: Fitness
+description: Your encyclopedia for training, mobility, bodyweight mechanics, and physical conditioning.
+icon: Activity
+---
+
+import { 
+  FitnessAtmosphere, 
+  FitnessHero, 
+  FitnessSectionHeader,
+  FitnessDeck,
+  FitnessCard,
+  FitnessNotice
+} from '@/components/fitness-magic';
+import { CustomBadge } from '@/components/custombadge';
+import YouTube from '@/components/youtube';
+import { 
+  Dumbbell, Activity, ShieldAlert, HeartPulse, 
+  Map, Apple, BookOpen, Flame, Orbit, Users, Info
+} from 'lucide-react';
+
+<FitnessAtmosphere />
+<FitnessHero />
+
+<FitnessNotice title="Medical Disclaimer" tone="warn" icon={<ShieldAlert className="w-5 h-5 text-rose-500" />}>
+  Please ensure that you do not have any pre-existing injuries or conditions. Consult with a physician before beginning any new training program. Always progress gradually and prioritize proper form and technique over weight.
+</FitnessNotice>
+
+---
+
+<FitnessSectionHeader icon={<HeartPulse />} accent="orange">
+
+## Everyday Mobility
+
+</FitnessSectionHeader>
+
+Regular mobility, stretching, and flexibility exercises are critical for maintaining optimal physical health and function—especially if you spend hours at a desk. These routines improve range of motion, prevent injuries, fix posture, and reduce muscular tension.
+
+<FitnessNotice title="Consistency is Key" tone="info" icon={<Info className="w-5 h-5 text-sky-500" />}>
+  For optimal results, incorporate these three routines into your daily regimen, or at minimum, every other day. They only take a few minutes.
+</FitnessNotice>
+
+<div className="grid grid-cols-1 md:grid-cols-3 gap-6 my-8 relative z-10">
+  <YouTube id="w1iXMvTMvBo" caption="15 Min Full Body Mobility" />  
+  <YouTube id="Aoyy3bKtD84" caption="Fix Your Posture" /> 
+  <YouTube id="FSSDLDhbacc" caption="Daily Stretching Routine" /> 
+</div>
+
+---
+
+<FitnessSectionHeader icon={<Map />} accent="rose">
+
+## Minimalist & Bodyweight Training
+
+</FitnessSectionHeader>
+
+For those constantly on the move and for people without access to equipment, for example you're an entrepreneur jumping between cities - maintaining consistency is harder than the workouts themselves. You don't need a heavy gym to build an aesthetic, capable physique.
+
+<FitnessDeck>
+  <FitnessCard 
+    title="r/bodyweightfitness" 
+    href="https://old.reddit.com/r/bodyweightfitness" 
+    icon={<Orbit />} 
+    accent="rose"
+    description="The absolute gold standard community for Calisthenics. Start with their 'Recommended Routine' (RR) which requires minimal equipment (just rings or a pull-up bar)."
+  />
+  <FitnessCard 
+    title="Hybrid Calisthenics" 
+    href="https://www.hybridcalisthenics.com/" 
+    icon={<Activity />} 
+    accent="rose"
+    description="Provides incredibly accessible, joint-friendly bodyweight fitness routines and progressions that you can do literally anywhere, for free."
+  />
+  <FitnessCard 
+    title="DAREBEE" 
+    href="https://darebee.com/" 
+    icon={<Flame />} 
+    accent="rose"
+    description="A massive archive of 2100+ FREE visual workouts, no-equipment fitness programs, monthly challenges, and hotel-room-friendly training guides."
+  />
+</FitnessDeck>
+
+---
+
+<FitnessSectionHeader icon={<Dumbbell />} accent="amber">
+
+## Building A Foundation
+
+</FitnessSectionHeader>
+
+If you are starting with a slimmer build, the focus should shift heavily towards **progressive overload** and a **caloric surplus** to build a lean, aesthetic foundation.
+
+<FitnessDeck>
+  <FitnessCard 
+    title="StrongLifts 5x5" 
+    href="https://stronglifts.com/" 
+    icon={<Dumbbell />} 
+    accent="amber"
+    description="Arguably the best, most stripped-down barbell workout program for absolute beginners. Focuses entirely on the major compound movements (Squat, Bench, Deadlift, OHP, Row)."
+  />
+  <FitnessCard 
+    title="Muscle Wiki" 
+    href="https://musclewiki.com/" 
+    icon={<Activity />} 
+    accent="amber"
+    description="An interactive map of the human body. Click on the exact muscle group you want to target (e.g., Lats for width) and see gifs of the best exercises."
+  />
+  <FitnessCard 
+    title="Video Exercise Database" 
+    href="https://www.muscleandstrength.com/exercises" 
+    icon={<BookOpen />} 
+    accent="amber"
+    description="The largest comprehensive database of free video exercise guides. Never guess how to perform a movement. Learn how to execute exercises using perfect technique."
+  />
+</FitnessDeck>
+
+---
+
+<FitnessSectionHeader icon={<BookOpen />} accent="emerald">
+
+## The Fitness Encyclopedias
+
+</FitnessSectionHeader>
+
+An assortment of foundational wikis to answer any highly specific questions about nutrition, supplements, and programming.
+
+<FitnessDeck>
+  <FitnessCard 
+    title="The Official Fitness Wiki" 
+    href="https://thefitness.wiki/" 
+    icon={<BookOpen />} 
+    accent="emerald"
+    description="If you read nothing else, read this. It debunks 90% of the fitness myths on the internet regarding muscle gain and fat loss."
+  />
+  <FitnessCard 
+    title="Strength Training Wiki" 
+    href="https://bodybuilding.fandom.com/wiki/Strength_training" 
+    icon={<Dumbbell />} 
+    accent="emerald"
+    description="A deep dive into the specific mechanics of central nervous system adaptation and raw strength generation."
+  />
+  <FitnessCard 
+    title="r/fitness" 
+    href="https://old.reddit.com/r/Fitness" 
+    icon={<Users />} 
+    accent="emerald"
+    description="The largest fitness community online. Excellent daily Q&A threads for quick form checks or nutritional advice."
+  />
+  <FitnessCard 
+    title="Fitness Subreddit Directory" 
+    href="https://old.reddit.com/r/Fitness/wiki/related_subreddits" 
+    icon={<Map />} 
+    accent="emerald"
+    description="A curated list of niche fitness subreddits ranging from powerlifting to yoga, running, and climbing."
+  />
+</FitnessDeck>

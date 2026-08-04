@@ -1,0 +1,481 @@
+---
+title: Otaku Sites Directory
+description: Websites for anime, manga, novels & more
+customDescription: Discover the best websites for anime, manga, novels & more.
+icon: Globe
+outline: 2
+---
+
+import {
+  WeebAtmosphere,
+  PillLegend,
+  PillDeck,
+  WeebPill,
+  DiscordPill,
+  GuideBox,
+  ZoneIntro,
+  WarnBox,
+  WeebSectionHeading,
+} from "@/components/weeb-elements";
+import { WebsitesHero } from "@/components/websites-hero";
+import {
+  Tv,
+  PlayCircle,
+  Layers,
+  Network,
+  Globe2,
+  Download,
+  HardDriveDownload,
+  Compass,
+  BadgeCheck,
+  MonitorPlay,
+  Heart,
+  Sparkles,
+  BookOpen,
+  Library,
+  BookmarkPlus,
+  Users, 
+  ScrollText,
+  PenLine,
+  Search,
+  Music2, Radio, CreditCard, Wrench, Database,
+  Smartphone, Monitor, Server,  
+} from "lucide-react";
+
+<WeebAtmosphere />
+<WebsitesHero />
+
+<WarnBox title="A Quick Heads-Up">
+- Plenty of the sites below sit close to mature or explicit corners of the internet — tread carefully, especially around ad placements.
+- Several of these platforms push their own app pretty aggressively. We're listing the website, not endorsing the app — stick to the browser version if you can.
+- Where a category doesn't have a clear "best pick," we've just listed sites alphabetically instead of pretending there's a ranking.
+- When in doubt about where to grab something, [Nyaa](https://nyaa.si/) is almost always the answer.
+</WarnBox>
+
+<PillLegend />
+
+<WeebSectionHeading icon={<Tv />} accent="sakura">
+
+## Anime
+
+</WeebSectionHeading>
+
+<ZoneIntro accent="sakura">
+From dedicated streaming players to scrapers that pull from a dozen backends at once — here's where to actually watch anime without the clutter.
+</ZoneIntro>
+
+<WeebSectionHeading icon={<PlayCircle />} accent="sakura">
+
+### Streaming Players
+
+</WeebSectionHeading>
+
+<PillDeck>
+  <WeebPill title="KickassAnime" href="https://kaa.lt/" type="site" tagLabel="CC" />
+  <WeebPill title="Miruro" href="https://www.miruro.to/" type="site" tagLabel="Multi-source" />
+  <WeebPill title="AnimeStream" href="https://anime.uniquestream.net/" type="site" tagLabel="CC" />
+  <WeebPill title="Re:ANIME" href="https://reanime.to/home" type="site" tagLabel="Auto-sync" />
+  <WeebPill title="AniZone" href="https://anizone.to/" type="site" tagLabel="No login" />
+</PillDeck>
+
+<GuideBox title="A few more worth bookmarking" icon={<BookmarkPlus />} tone="neutral">
+Not every player makes the front row, but these still earn a spot in the rotation:
+- [All Manga](https://allmanga.to/anime?tr=sub&cty=ALL) — wide catalog, syncs progress if you sign in
+- [Anibd](https://anibd.app/) — hardsub only, no watch-history sync
+- [AniHQ](https://anihq.cc/home/) — simple player, account gated
+- [Anime Nexus](https://anime.nexus/) — one of the few with full cross-device sync
+- [AnimePahe](https://animepahe.pw/) — no account needed, syncs via local storage
+- [AniDB](https://anidb.app/) — more of a database with a player bolted on
+- [Watch Cartoon Online](https://www.wco.tv/) — leans western animation, but has anime too
+</GuideBox>
+
+<WeebSectionHeading icon={<Layers />} accent="lavender">
+
+### Scrapers
+
+</WeebSectionHeading>
+
+Instead of hosting anything themselves, these sites stitch together feeds from several backend sources — so if one goes down, the show usually keeps playing from another.
+
+<PillDeck>
+  <WeebPill title="AniLight" href="https://anilight.live/" type="tool" />
+  <WeebPill title="AnimeX" href="https://animex.one/home" type="tool" />
+  <WeebPill title="Luna" href="https://luna-stream.me/" type="tool" />
+</PillDeck>
+
+<GuideBox title="What's actually powering each one" icon={<Network />} tone="neutral">
+Useful to know if a specific episode is missing or lagging on one scraper — it might just be that backend having a bad day:
+- **AniLight** draws from AnimePahe, Anibd, AniDB, AniNeko, Anikoto, and AllManga
+- **AnimeX** pulls from AniDB, Anibd, AniNeko, AnimeOnsen, AllManga, and Animeverse
+- **Luna** combines Anikoto, Aniwave, Anibd, AniDB, AnimeGG, AllManga, AniNeko, AnimeHeaven, and Animeverse
+- **Miruro** aggregates AnimeDunya, AniDB, AnimeGG, AnimePahe, AniNeko, KickAssAnime, AllManga, and Anikoto
+</GuideBox>
+
+<WeebSectionHeading icon={<Globe2 />} accent="matcha">
+
+### Donghua
+
+</WeebSectionHeading>
+
+Chinese animation has its own dedicated corner of the streaming world, mostly run by smaller fan-driven teams:
+
+<PillDeck>
+  <WeebPill title="Animekhor" href="https://animekhor.org/" type="site" />
+  <WeebPill title="AnimeXin" href="https://animexin.dev/" type="site" />
+  <WeebPill title="Chiki Animation" href="https://chikianimation.com/" type="site" tagLabel="2D & 3D" />
+  <WeebPill title="Crimson Subs" href="https://crimsonfansubs.com/" type="site" />
+  <WeebPill title="Donghua Stream" href="https://donghuastream.org/" type="site" />
+  <DiscordPill title="Donghua Stream" href="https://discord.gg/4zrUguAakG" />
+  <WeebPill title="Dongsub" href="https://www.dongsub.net/" type="site" />
+  <WeebPill title="LM Anime" href="https://lmanime.com/" type="site" />
+  <WeebPill title="Lucifer Donghua" href="https://luciferdonghua.in/" type="site" />
+  <WeebPill title="Myanime" href="https://myanime.live/" type="site" />
+  <WeebPill title="WowTopix" href="https://wowtopix.com/" type="site" />
+</PillDeck>
+
+<WeebSectionHeading icon={<Download />} accent="amber">
+
+### Downloading & Archives
+
+</WeebSectionHeading>
+
+<GuideBox title="Torrents, reuploads & disc rips" icon={<HardDriveDownload />} tone="neutral">
+If streaming isn't your thing, or a show's been pulled from every player, this is the fallback layer:
+- **Torrents** — [Nyaa](https://nyaa.si/), [AniRena](https://www.anirena.com/), [nekoBT](https://nekobt.to/), [Shana Project](https://www.shanaproject.com/), [Tokyo Toshokan](https://www.tokyotosho.info/), [TsukiHime](https://tsukihime.org/)
+- **Reuploads** — [Tokyo Insider](https://www.tokyoinsider.com/), [Chauthanh](https://chauthanh.info/)
+- **Disc rips (BDMV)** — [JPFiles](https://jpfiles.net/), [AnimeRSS](https://animerss.com/), [Asia Media Blog](https://asiamediablog.com/media/anime/), [urajp](https://urajp.se/)
+- **Dubtitle scripts** — [Closed Caption Browser](https://cc.edatribe.com/#/)
+</GuideBox>
+
+<GuideBox title="Handy companions for the download route" icon={<Compass />} tone="neutral">
+- [aniDB](https://anidb.net/) — deep catalog, needs an account to browse fully
+- [Seadex](https://releases.moe/) — curates the objectively "best" release per show
+- [Sneedex](https://static.sneedex.moe/) and [A Certain Fansubber's Index](https://index.fansubcar.tel/) — more release-quality references
+</GuideBox>
+
+<WeebSectionHeading icon={<BadgeCheck />} accent="sky">
+
+### Official & Legal
+
+</WeebSectionHeading>
+
+<WarnBox title="Region locks apply">
+Availability on these platforms varies heavily by country — a title live in one region may be completely absent in another.
+</WarnBox>
+
+<PillDeck>
+  <WeebPill title="Crunchyroll" href="https://www.crunchyroll.com/" type="official" />
+  <WeebPill title="HIDIVE" href="https://www.hidive.com/" type="official" />
+  <WeebPill title="OceanVeil" href="https://oceanveil.net/" type="official" warning="Hosts erotic/mature content." />
+  <WeebPill title="RetroCrush" href="https://www.retrocrush.tv/home" type="official" />
+</PillDeck>
+
+<GuideBox title="Free, ad-supported channels worth knowing" icon={<MonitorPlay />} tone="neutral">
+- **General uploaders** — Anime Bancho, Anime & Manga Official by Kodansha, Ani-One Asia, Cartoon Power Up, CONtv, It's Anime by REMOW, Muse Asia, TMS Official, Tropics Anime Asia
+- **Series-specific channels** — Akane-banashi Global, Arait Play English (Inazuma Eleven), BEYBLADE, CARDFIGHT Vanguard, Official Yu-Gi-Oh!, Pokémon TV
+</GuideBox>
+
+<WeebSectionHeading icon={<Sparkles />} accent="sakura">
+
+### Fan Projects & Reruns
+
+</WeebSectionHeading>
+
+<GuideBox title="Community-driven edits and nostalgia blocks" icon={<Heart />} tone="neutral">
+- **One Pace** re-edits One Piece into a pacing-friendly cut — [official site](https://onepace.net/en/watch), [unofficial mirror](https://onepace.co/), and a [Stremio addon](https://stremio-addons.net/addons/one-pace-addon) if you'd rather not manage files
+- **Rerun blocks** keep old-school programming alive — BumpWorthy, RetroBlast, Swim Rewind, Toonami Aftermath, Toonami Remastered
+- **Other passion projects** — Gabby's Anime Edits, SBY Stream, Sonic Zone TV, JP Animated Classics
+</GuideBox>
+
+<WeebSectionHeading icon={<BookOpen />} accent="matcha">
+
+## Manga
+
+</WeebSectionHeading>
+
+<ZoneIntro accent="matcha">
+Reader sites vary wildly in library size, upload speed, and how much clutter you have to fight through. Here's the shortlist worth your time.
+</ZoneIntro>
+
+<WeebSectionHeading icon={<Library />} accent="matcha">
+
+### Reading Online
+
+</WeebSectionHeading>
+
+<PillDeck>
+  <WeebPill title="Kagane" href="https://kagane.to/" type="site" tagLabel="37k titles" />
+  <WeebPill title="Weeb Central" href="https://weebcentral.com/" type="site" tagLabel="11k titles" />
+  <WeebPill title="Comix" href="https://comix.to/" type="site" tagLabel="91k titles" />
+  <WeebPill title="Atsumaru" href="https://atsu.moe/" type="site" tagLabel="18k titles" />
+  <WeebPill title="MangaDotNet" href="https://mangadot.net/" type="site" tagLabel="32k titles" />
+</PillDeck>
+
+<GuideBox title="Bigger libraries, worth a look too" icon={<BookmarkPlus />} tone="neutral">
+None of these missed the cut by much. Each has its own quirk that might suit you better depending on what you're reading:
+- [OniSaga](https://onisaga.com/home) has one of the largest catalogs around, at roughly 76k titles
+- [MangaBall](https://mangaball.net/) leads the pack in raw size with over 150k titles listed
+- [Mangahub](https://mangahub.io/) and [MangaKatana](https://mangakatana.com/) both keep things simple with clean layouts
+- [MangaFire](https://mangafire.to/) offers a solid multi-source reading experience with sync support
+- [Like Manga](https://likemanga.ink/) rounds things out with a straightforward long-strip layout
+</GuideBox>
+
+<WeebSectionHeading icon={<Download />} accent="amber">
+
+### Downloading & Archives
+
+</WeebSectionHeading>
+
+<GuideBox title="Where to actually grab the files" icon={<HardDriveDownload />} tone="neutral">
+- [Nyaa](https://nyaa.si/) covers most scanlated releases and raw scans in one place
+- [Madokami](https://manga.madokami.al) runs an account gated archive with an enormous back catalog
+- [Anna's Archive](https://annas-archive.gl/) and [Library Genesis+](https://libgen.li/) both mirror huge swaths of digital and scanned manga
+- [Desuarchive](https://desuarchive.org/) and the Internet Archive's manga library act as long term backups when everything else goes dark
+</GuideBox>
+
+<GuideBox title="Dedicated rippers worth following" icon={<Users />} tone="neutral">
+A handful of individual uploaders consistently put out clean, well organized releases on Nyaa and 4chan archives. Names like 1r0n, LuCaZ, Shizu, and Stick show up constantly if you dig through upload histories.
+</GuideBox>
+
+<WeebSectionHeading icon={<BadgeCheck />} accent="sky">
+
+### Official & Legal
+
+</WeebSectionHeading>
+
+<WarnBox title="Availability shifts by region">
+Not every publisher's storefront ships to every country, so double check before assuming a title is missing entirely.
+</WarnBox>
+
+<PillDeck>
+  <WeebPill title="Manga Plus" href="https://mangaplus.shueisha.co.jp/" type="official" tagLabel="Free" />
+  <WeebPill title="VIZ" href="https://www.viz.com/" type="official" />
+  <WeebPill title="Yen Press" href="https://yenpress.com/" type="official" />
+  <WeebPill title="Kodansha USA" href="https://kodansha.us/" type="official" />
+  <WeebPill title="Seven Seas" href="https://sevenseasentertainment.com/" type="official" />
+</PillDeck>
+
+<GuideBox title="Chapter by chapter platforms" icon={<Layers />} tone="neutral">
+These publish new chapters as they release rather than waiting for a full volume. Some are entirely free, others mix in a coin or subscription system:
+- [Comikey](https://comikey.com/), [Manga UP!](https://global.manga-up.com/), and [Mangamo](https://www.mangamo.com/) all use a freemium coin model
+- [KManga](https://kmanga.kodansha.com/) and [Coolmic](https://coolmic.me/) lean on subscriptions alongside free chapters
+- [Shonen Jump](https://www.viz.com/sj-offer) bundles Weekly Shonen Jump chapters behind a subscription with a free tier
+</GuideBox>
+
+<GuideBox title="Manhwa & manhua specific platforms" icon={<Globe2 />} tone="neutral">
+Korean and Chinese webcomics mostly live on their own dedicated apps rather than general manga readers:
+- [Webtoon](https://www.webtoons.com/en/) is the default entry point for most manhwa readers
+- [Lezhin](https://www.lezhinus.com/en) and [Tappytoon](https://www.tappytoon.com/en/comics/discover) lean into mature and romance heavy titles
+- [Tapas](https://tapas.io/), [Manta](https://manta.net/en), and [Toomics](https://toomics.com/en/) round out the rest with their own coin economies
+</GuideBox>
+
+<WeebSectionHeading icon={<ScrollText />} accent="lavender">
+
+## Novels
+
+</WeebSectionHeading>
+
+<ZoneIntro accent="lavender">
+Light novels and web novels split pretty cleanly into three camps: official platforms, fan translation hubs, and the download route for when neither has what you need.
+</ZoneIntro>
+
+<WeebSectionHeading icon={<PenLine />} accent="lavender">
+
+### Reading Online
+
+</WeebSectionHeading>
+
+<PillDeck>
+  <WeebPill title="LNori" href="https://lnori.com/" type="official" />
+  <WeebPill title="cyrisia" href="https://cyrisia.com/" type="official" />
+  <WeebPill title="Novel Updates" href="https://www.novelupdates.com/" type="site" tagLabel="Index" />
+  <WeebPill title="Baka-Tsuki" href="https://www.baka-tsuki.org/project/index.php?title=Main_Page" type="forum" />
+  <WeebPill title="Ranobes" href="https://ranobes.top/" type="site" />
+</PillDeck>
+
+<GuideBox title="A note on Novel Updates" icon={<Compass />} tone="neutral">
+It's worth treating this one less like a reading site and more like a directory. Most entries link out to whichever fan translation group is actively working on that title, so it's often your fastest way to find where a specific series lives.
+</GuideBox>
+
+<WeebSectionHeading icon={<Download />} accent="amber">
+
+### Downloading & Archives
+
+</WeebSectionHeading>
+
+<GuideBox title="Torrents and direct downloads" icon={<HardDriveDownload />} tone="neutral">
+- [Nyaa](https://nyaa.si/) hosts a healthy chunk of fan translated novel releases alongside its anime and manga catalog
+- [Elscione's Library](https://server.elscione.com/) and the [JNovel Codex](https://jnovelcodex.web.app/index.html) both organize direct download links by series
+- [Anna's Archive](https://annas-archive.gl/) and [Library Genesis+](https://libgen.li/) mirror a huge range of official digital releases too
+- [Z-Library](https://z-lib.sk/) rounds things out as a general fallback for anything the others don't have
+</GuideBox>
+
+<GuideBox title="Individual uploaders to know" icon={<Users />} tone="neutral">
+Similar to manga, a few dedicated people consistently rip and share novel volumes. AlpinDale, Ganba, and Stick all show up often enough on Nyaa that their names are worth remembering when you're hunting for a specific release.
+</GuideBox>
+
+<WeebSectionHeading icon={<BadgeCheck />} accent="sky">
+
+### Official & Legal
+
+</WeebSectionHeading>
+
+<PillDeck>
+  <WeebPill title="BookWalker" href="https://bookwalker.com/" type="official" />
+  <WeebPill title="J-Novel Club" href="https://j-novel.club/" type="official" />
+  <WeebPill title="Yen Press" href="https://yenpress.com/" type="official" />
+  <WeebPill title="Kodansha USA" href="https://kodansha.us/" type="official" />
+  <WeebPill title="Cross Infinite World" href="https://www.crossinfworld.com/index.html" type="official" />
+  <WeebPill title="Square Enix" href="https://squareenixmangaandbooks.square-enix-games.com/en-us" type="official" />
+  <WeebPill title="VIZ" href="https://www.viz.com/" type="official" />
+</PillDeck>
+
+<GuideBox title="Web novel specific platforms" icon={<Globe2 />} tone="neutral">
+A slightly different category from light novels. These focus on ongoing, chapter-by-chapter web fiction rather than bound volumes:
+- [WebNovel](https://www.webnovel.com/) leans heavily into Chinese web fiction with a coin based unlock system
+- [Wuxia World](https://www.wuxiaworld.com/) built its whole identity around cultivation and wuxia genre fiction
+</GuideBox>
+
+<WeebSectionHeading icon={<BookOpen />} accent="rose">
+
+## Comics
+
+</WeebSectionHeading>
+
+<ZoneIntro accent="rose">
+Western comics get their own corner here, split between reading online, tracking down archives, and a few reference sites for figuring out where to even start.
+</ZoneIntro>
+
+<WeebSectionHeading icon={<PlayCircle />} accent="rose">
+
+### Reading Online
+
+</WeebSectionHeading>
+
+<PillDeck>
+  <WeebPill title="BatCave.biz" href="https://batcave.biz/" type="site" />
+  <WeebPill title="Comic Book Plus" href="https://comicbookplus.com/" type="site" tagLabel="Vintage" />
+  <WeebPill title="Digital Comic Museum" href="https://digitalcomicmuseum.com/" type="site" tagLabel="Vintage" />
+  <WeebPill title="Read Comics Online" href="https://readcomicsonline.ru/" type="site" />
+  <WeebPill title="XOXO Comics" href="https://xoxocomic.com/" type="site" />
+</PillDeck>
+
+<WeebSectionHeading icon={<Download />} accent="amber">
+
+### Downloading & Archives
+
+</WeebSectionHeading>
+
+<GuideBox title="Where to actually grab the files" icon={<HardDriveDownload />} tone="neutral">
+- [Anna's Archive](https://annas-archive.gl/) and [Library Genesis+](https://libgen.li/) both mirror enormous digital comic collections
+- [GetComics](https://getcomics.org/) stays reliably up to date with new releases as they drop
+- [ComicsCodes](https://comics.codes/) and [TheLongbox](https://thelongbox.net/) fill in gaps the bigger archives sometimes miss
+- [Old Comics World](https://oldcomicsworld.blogspot.com/) leans specifically into vintage, out of print material
+- [Desuarchive](https://desuarchive.org/) works as a long term backup for older thread based uploads
+</GuideBox>
+
+<WeebSectionHeading icon={<Compass />} accent="lavender">
+
+### Info, Reading Order & Reviews
+
+</WeebSectionHeading>
+
+<GuideBox title="Reference and database sites" icon={<Library />} tone="neutral">
+- [Comic Vine](https://comicvine.gamespot.com/), [Grand Comics Database](https://www.comics.org/), and [Metron](https://metron.cloud/) all catalog issues, creators, and publication history in depth
+- [Comichron](https://www.comichron.com/index.php) tracks sales data if you're curious what's actually selling
+- [League of Comic Geeks](https://leagueofcomicgeeks.com/) doubles as a personal collection tracker
+</GuideBox>
+
+<GuideBox title="Not sure where to start reading?" icon={<BookmarkPlus />} tone="neutral">
+- [Comic Book Herald](https://www.comicbookherald.com/) and [How To Love Comics](https://www.howtolovecomics.com/) both specialize in beginner friendly reading orders
+- [Complete Marvel Reading Order](https://marvelreading.com/) and the [Official Marvel Guides](https://www.marvel.com/comics/guides) are the go to for untangling Marvel's continuity specifically
+- [Comic Book Reading Orders](https://comicbookreadingorders.com/) and [Continuity Guide](https://www.continuityguide.net/) cover a wider range of publishers beyond just Marvel
+</GuideBox>
+
+<GuideBox title="News, roundups & community takes" icon={<Heart />} tone="neutral">
+- [13th Dimension](https://13thdimension.com/), [The Beat](https://www.comicsbeat.com/), and [The Comics Journal](https://www.tcj.com/) all cover industry news and long form commentary
+- [Comic Book Roundup](https://comicbookroundup.com/) aggregates review scores across outlets
+- [Comic Watch](https://comic-watch.com/) rounds things out with regular reviews and creator interviews
+</GuideBox>
+
+<WeebSectionHeading icon={<BadgeCheck />} accent="matcha">
+
+### Official & Legal
+
+</WeebSectionHeading>
+
+<PillDeck>
+  <WeebPill title="DC Universe Infinite" href="https://www.dcuniverseinfinite.com/" type="official" tagLabel="US/UK/CA/AU/NZ" />
+  <WeebPill title="Marvel Unlimited" href="https://www.marvel.com/unlimited" type="official" />
+  <WeebPill title="GlobalComix" href="https://globalcomix.com/" type="official" />
+  <WeebPill title="Comics Kingdom" href="https://comicskingdom.com/" type="official" />
+  <WeebPill title="GoComics" href="https://www.gocomics.com/" type="official" />
+</PillDeck>
+
+<WeebSectionHeading icon={<Music2 />} accent="rose">
+
+## Music
+
+</WeebSectionHeading>
+
+<ZoneIntro accent="rose">
+OSTs, AMVs, doujin tracks, and game soundtracks all live in slightly different corners of the internet — here's where to actually find them.
+</ZoneIntro>
+
+<WeebSectionHeading icon={<Radio />} accent="rose">
+
+### Streaming
+
+</WeebSectionHeading>
+
+<PillDeck>
+  <WeebPill title="AnimeThemes" href="https://animethemes.moe/" type="site" tagLabel="OP/ED" />
+  <WeebPill title="Animusic" href="https://animusic.moe/" type="site" />
+  <WeebPill title="Karaoke Mugen" href="https://kara.moe" type="site" />
+  <WeebPill title="Lyrical Nonsense" href="https://www.lyrical-nonsense.com/global/" type="site" tagLabel="Lyrics" />
+  <WeebPill title="Squidify" href="https://www.squidify.org/" type="site" />
+</PillDeck>
+
+<GuideBox title="A few more worth bookmarking" icon={<BookmarkPlus />} tone="neutral">
+- [Anisong Database](https://anisongdb.com/) catalogs anime songs by artist, useful when you only remember a snippet
+- [popDNSLC](https://pop.dnslc.net/) and [One Piece Tracklist](http://onepiecetracklist.com/) cover niche and series-specific tracklists
+- **AMV focused** — [AKROSS](https://www.akross.ru/index.cgi?l=e), [AMV Hell](https://www.amvhell.com/), [AMV News](https://amvnews.ru/), [Anime Music Videos](https://www.animemusicvideos.org/home/home.php)
+- **Doujin & Touhou** — [Touhou Disc](https://alist.thdisc.tk/), [Touhou Lossless Music Collection](https://tlmc.pf-n.co/tlmc), [Touhou Player](https://touhou.kuukunen.net/)
+- **Game soundtracks** — [Zophar's Domain](https://www.zophar.net/music), [Vidya Intarweb Playlist](https://www.vipvgm.net/), [Keygen Music](https://keygenmusic.tk/), [VGMRips](https://vgmrips.net/packs/), [SMS Power](https://vgm.impulseinformatica.com.br/)
+</GuideBox>
+
+<WeebSectionHeading icon={<Download />} accent="amber">
+
+### Downloading & Archives
+
+</WeebSectionHeading>
+
+<GuideBox title="Where to actually grab the files" icon={<HardDriveDownload />} tone="neutral">
+- [Nyaa](https://nyaa.si/) covers anime OSTs, discography, and doujin releases in flac and mp3 alike, all in one place
+- [Sitting on Clouds](https://www.sittingonclouds.net/) and [SquidBoard](https://www.squid-board.org/) both run direct-download hosts specifically for anime and game rips
+- [Nipponsei](https://nipponsei.minglong.org/tracker/) and [OS Anime](https://osanime.com/) round out the mp3-focused side
+- **Doujin specific** — [Doujin Cafe](https://discord.gg/doujincafe), [MikuDB](https://mikudb.moe/), [Moriya Shrine](https://moriyashrine.org/)
+- **Game soundtracks** — [HCS VGM Archive](https://vgm.hcs64.com/), [VGM Preservation Foundation](https://www.vgmpf.com/Wiki/index.php), [VGMusic](https://vgmusic.com/)
+- [RuTracker.org](https://rutracker.org/forum/index.php) works as a general fallback across every category above
+</GuideBox>
+
+<GuideBox title="Downloader tools" icon={<Wrench />} tone="neutral">
+Instead of hunting for a specific upload, these pull straight from streaming services on demand:
+- [Antra](https://antra.hoshi.cfd/), [DoubleDouble](https://doubledouble.top/), [Lucida](https://lucida.to/), and [Squid.wtf](https://squid.wtf/) all handle multiple services at once
+- [Monochrome](https://monochrome.tf/) and [T2Tunes](https://t2tunes.site/) are Amazon Music specific
+- [am-dl](https://am-dl.pages.dev/) targets Apple Music, while [Arcod](https://www.arcod.xyz/) is built for Qobuz
+</GuideBox>
+
+<WeebSectionHeading icon={<Tv />} accent="sky">
+
+## Live Action
+
+</WeebSectionHeading>
+
+<GuideBox title="Looking up a title" icon={<Library />} tone="neutral">
+[LAMA](https://lama.watch/) is worth bookmarking specifically for tracking down live action adaptations of manga, since it links the source material directly to its drama or film version.
+</GuideBox>
+
+<ZoneIntro accent="lavender">
+For streaming platforms, watch parties, and a deeper dive into dramas, variety shows, and Asian sports coverage, head over to our dedicated [Asian Entertainment](/movies-shows-sports/asian-entertainment) section.
+</ZoneIntro>

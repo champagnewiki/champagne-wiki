@@ -1,0 +1,202 @@
+---
+title: Learn AI
+description: Courses, prompt engineering guides, benchmarks, and AI directories.
+icon: GraduationCap
+---
+
+import { LearnHero } from "@/components/ai/learn-hero";
+import {
+  AIAtmosphere, AISectionHeader, ToolDeck, ToolCard, PillDeck, AIPill,
+  DiscordPill, PillLegend, NoticePanel, GuideBox,
+} from "@/components/ai";
+import {
+  GraduationCap, BookOpen, Terminal, Trophy, Compass, Library, ShieldAlert,
+} from "lucide-react";
+
+<AIAtmosphere theme="learn" />
+<LearnHero />
+
+<PillLegend />
+
+<AISectionHeader icon={<GraduationCap />} accent="indigo">
+
+## Courses & Learning Paths
+
+</AISectionHeader>
+
+These are structured, mostly free courses that take you from zero to functional rather than a single blog post — several come from the model labs themselves, which means the material stays reasonably current with how the tools actually work today.
+
+<ToolDeck columns={2}>
+  <ToolCard title="Hugging Face Courses" href="https://huggingface.co/learn" icon={<GraduationCap />} badge="Free" badgeStyle="emerald">
+    Free hands-on courses covering NLP, reinforcement learning, and AI agents, using only open models throughout.
+  </ToolCard>
+  <ToolCard title="LLM Course (Maxime Labonne)" href="https://github.com/mlabonne/llm-course" icon={<GraduationCap />} badge="With Colabs" badgeStyle="indigo">
+    End-to-end roadmap for getting into large language models, covering pre-training, fine-tuning, RLHF, and quantization with runnable notebooks.
+  </ToolCard>
+  <ToolCard title="Microsoft 'For Beginners' Series" href="https://microsoft.github.io/generative-ai-for-beginners" icon={<GraduationCap />} badge="4 Courses" badgeStyle="amber">
+    Four free curricula — Generative AI, Machine Learning, full AI, and Data Science — each 10 to 26 lessons with practical projects.
+  </ToolCard>
+  <ToolCard title="Anthropic Courses" href="https://github.com/anthropics/courses" icon={<GraduationCap />} badge="Official" badgeStyle="indigo">
+    Anthropic's own educational material on prompting, tool use, and building with Claude, maintained directly by the model maker.
+  </ToolCard>
+</ToolDeck>
+
+<PillDeck>
+  <AIPill title="DeepLearning.AI Short Courses" href="https://deeplearning.ai/short-courses" type="tool" />
+  <AIPill title="fast.ai Practical Deep Learning" href="https://fast.ai" type="open" />
+  <AIPill title="Hugging Face Agents Course" href="https://huggingface.co/learn/agents-course" type="open" />
+  <AIPill title="Hugging Face Deep RL Course" href="https://huggingface.co/learn/deep-rl-course" type="open" />
+  <AIPill title="LLM Engineering Hub" href="https://github.com/khuyentran1401/Data-science" type="open" />
+  <AIPill title="Andrew Ng's ML Specialization" href="https://coursera.org" type="tool" />
+</PillDeck>
+
+<GuideBox title="Build-it-yourself book series" tone="success">
+  <ul>
+    <li><strong>Build a Large Language Model From Scratch</strong> — Sebastian Raschka's guide to implementing an LLM from the ground up</li>
+    <li><strong>Build a Reasoning Model From Scratch</strong> — same author, focused on reasoning-model architecture and training</li>
+    <li><strong>Build a DeepSeek Model From Scratch</strong> — implementing DeepSeek-style architecture, training, and distillation</li>
+    <li><strong>Build an AI Agent From Scratch</strong> — covers tools, memory, planning, and multi-agent systems</li>
+    <li><strong>aman.ai</strong> — Stanford-style structured notes spanning AI, deep learning, and transformers</li>
+  </ul>
+</GuideBox>
+
+---
+
+<AISectionHeader icon={<BookOpen />} accent="violet">
+
+## Prompt Engineering
+
+</AISectionHeader>
+
+Getting good output from a model is a skill in itself, and these guides move past generic "write clear prompts" advice into documented, tested techniques from the labs and researchers who study this directly.
+
+<ToolDeck columns={3}>
+  <ToolCard title="Prompt Engineering Guide (DAIR.AI)" href="https://promptingguide.ai" icon={<BookOpen />} badge="Comprehensive" badgeStyle="indigo">
+    The most cited reference for prompting strategies and tactics across model types.
+  </ToolCard>
+  <ToolCard title="Learn Prompting" href="https://learnprompting.org" icon={<BookOpen />} badge="Free Course" badgeStyle="emerald">
+    A free, structured open-source course specifically on communicating effectively with AI.
+  </ToolCard>
+  <ToolCard title="OpenAI Cookbook" href="https://cookbook.openai.com" icon={<BookOpen />} badge="Official" badgeStyle="indigo">
+    Official examples and guides for using the OpenAI API, including prompting patterns and structured outputs.
+  </ToolCard>
+</ToolDeck>
+
+<PillDeck>
+  <AIPill title="Anthropic Prompt Engineering Docs" href="https://docs.anthropic.com" type="official" />
+  <AIPill title="ChatGPT Prompt Engineering for Devs" href="https://deeplearning.ai" type="tool" />
+  <AIPill title="Prompt Engineering for Vision Models" href="https://deeplearning.ai" type="tool" />
+  <AIPill title="Big Prompt Library" href="https://github.com/0xeb/TheBigPromptLibrary" type="open" />
+  <AIPill title="Awesome ChatGPT Prompts" href="https://github.com/f/awesome-chatgpt-prompts" type="open" />
+  <AIPill title="BlackFriday GPTs Prompts" href="https://github.com/friuns2/BlackFriday-GPTs-Prompts" type="open" />
+  <AIPill title="Leaked Prompts (GPTs)" href="https://github.com/linexjlin/GPTs" type="open" />
+</PillDeck>
+
+<NoticePanel icon={<ShieldAlert />} title="Jailbreak & red-team prompts" type="danger">
+  Bypassing a chatbot's safety guardrails violates the terms of service of nearly every AI provider. The sources below exist mainly for AI safety research and red-teaming — use at your own risk, and expect account bans or model-side patching on flagged platforms.
+</NoticePanel>
+
+<ToolDeck columns={2}>
+  <ToolCard title="L1B3RT4S" href="https://github.com/elder-plinius/L1B3RT4S" icon={<ShieldAlert />} badge="Actively Updated" badgeStyle="rose">
+    The most prolific and actively maintained jailbreak prompt collection, spanning nearly every major model and updated frequently as providers patch known bypasses.
+  </ToolCard>
+  <ToolCard title="UltraBr3aks" href="https://github.com/SlowLow999/UltraBr3aks" icon={<ShieldAlert />} badge="Actively Updated" badgeStyle="rose">
+    A newer, actively maintained jailbreak repository with a focus on current-generation frontier models rather than legacy bypasses.
+  </ToolCard>
+  <ToolCard title="JB Listing (Rentry)" href="https://rentry.org/jb-listing" icon={<ShieldAlert />} badge="Community Listing" badgeStyle="rose">
+    A frequently updated community-maintained index tracking which jailbreaks currently work against which models, useful for checking what's still live.
+  </ToolCard>
+  <ToolCard title="r/ClaudeAIJailbreak" href="https://old.reddit.com/r/ClaudeAIJailbreak" icon={<ShieldAlert />} badge="Community" badgeStyle="rose">
+    Active community specifically focused on various jailbreak techniques (not just Claude),  discussion, and real-time reports on what still bypasses current guardrails.
+  </ToolCard>
+</ToolDeck>
+
+---
+
+<AISectionHeader icon={<Trophy />} accent="amber">
+
+## Benchmarks & Leaderboards
+
+</AISectionHeader>
+
+If a tool's marketing claims sound too good to verify, this is where you actually check — these are independently run or crowd-voted rankings rather than vendor self-reporting, covering everything from general chat quality down to chess and Minecraft.
+
+<ToolDeck columns={3}>
+  <ToolCard title="LM Arena" href="https://lmarena.ai" icon={<Trophy />} badge="Crowdsourced" badgeStyle="indigo">
+    Open platform for crowdsourced AI benchmarking hosted by UC Berkeley SkyLab, using blind human voting.
+  </ToolCard>
+  <ToolCard title="Artificial Analysis" href="https://artificialanalysis.ai" icon={<Trophy />} badge="Objective" badgeStyle="emerald">
+    Independent benchmarks to help choose AI models and hosting providers based on speed, price, and quality.
+  </ToolCard>
+  <ToolCard title="Epoch AI" href="https://epochai.org" icon={<Trophy />} badge="Aggregator" badgeStyle="amber">
+    Combines multiple AI benchmarks into a broader picture of frontier model capability trends over time.
+  </ToolCard>
+</ToolDeck>
+
+<PillDeck>
+  <AIPill title="LM Council" href="https://lmcouncil.org" type="tool" />
+  <AIPill title="Chatbot Arena Leaderboard" href="https://lmarena.ai/leaderboard" type="tool" />
+  <AIPill title="VLM Leaderboard" href="https://huggingface.co/spaces/opencompass/open_vlm_leaderboard" type="tool" />
+  <AIPill title="LiveBench" href="https://livebench.ai" type="tool" />
+  <AIPill title="Vals AI" href="https://vals.ai" type="tool" />
+</PillDeck>
+
+<GuideBox title="Specialized benchmarks" tone="neutral">
+  <ul>
+    <li><strong>EQ-Bench</strong> — emotional intelligence benchmarks for language models</li>
+    <li><strong>Aider Polyglot / SWE-bench / LiveCodeBench</strong> — coding-specific leaderboards for real-world software engineering tasks</li>
+    <li><strong>MathArena / AIME leaderboards</strong> — mathematics competition benchmarks</li>
+    <li><strong>SpeechMap.AI</strong> — free speech and refusal-rate benchmarks across chatbots</li>
+    <li><strong>VoxelBench</strong> — Minecraft-based generation and reasoning benchmark</li>
+    <li><strong>Chess LLM Leaderboards</strong> — head-to-head chess performance across models</li>
+  </ul>
+</GuideBox>
+
+---
+
+<AISectionHeader icon={<Compass />} accent="sky">
+
+## AI Directories & Indexes
+
+</AISectionHeader>
+
+When you don't know the name of the tool you need yet, these directories help you browse by category rather than searching blind — useful for discovering niche or newer tools that haven't hit mainstream coverage.
+
+<PillDeck>
+  <AIPill title="LLM Explorer" href="https://llm.extractum.io" type="tool" />
+  <AIPill title="There's An AI For That" href="https://theresanaiforthat.com" type="tool" />
+  <AIPill title="Google Labs / AI Test Kitchen" href="https://labs.google" type="official" />
+  <AIPill title="Future Tools" href="https://futuretools.io" type="tool" />
+  <AIPill title="AI Model Database" href="https://models.dev" type="tool" />
+</PillDeck>
+
+---
+
+<AISectionHeader icon={<Library />} accent="emerald">
+
+## ML & Research Resources
+
+</AISectionHeader>
+
+For anyone going deeper than "using" AI into understanding how it actually works, these are the canonical curated lists and interactive tools researchers and engineers actually reference.
+
+<PillDeck>
+  <AIPill title="Awesome Machine Learning" href="https://github.com/josephmisiti/awesome-machine-learning" type="open" />
+  <AIPill title="Awesome Artificial Intelligence" href="https://github.com/owainlewis/awesome-artificial-intelligence" type="open" />
+  <AIPill title="Transformer Explainer" href="https://poloclub.github.io/transformer-explainer" type="open" />
+  <AIPill title="Hugging Face Daily Papers" href="https://huggingface.co/papers" type="tool" />
+  <AIPill title="NielsRogge Transformers Tutorials" href="https://github.com/NielsRogge/Transformers-Tutorials" type="open" />
+</PillDeck>
+
+<GuideBox title="Interactive visualizations" tone="success">
+  <ul>
+    <li><strong>Transformer Explainer</strong> — interactive, in-browser visualization of how transformer-based LLMs actually work</li>
+    <li><strong>Neural Network Playground</strong> — TensorFlow's classic browser-based neural net visualizer, no setup required</li>
+    <li><strong>MicroGPT / nanoGPT-style walkthroughs</strong> — minimal, readable implementations for understanding GPT architecture line by line</li>
+  </ul>
+</GuideBox>
+
+<PillDeck>
+  <DiscordPill title="r/LocalLLaMA" href="https://reddit.com/r/LocalLLaMA" />
+  <AIPill title="r/MachineLearning" href="https://reddit.com/r/MachineLearning" type="community" />
+</PillDeck>

@@ -1,0 +1,313 @@
+---
+title: Useful Mac Applications
+description: A curated collection of tools and websites for Mac users to enhance their user experience and make it more enjoyable.
+icon: Command
+---
+
+import { 
+  MacAtmosphere, 
+  MacHero, 
+  MacDeck, 
+  MacCard,
+  MacSectionHeader
+} from '@/components/mac-magic';
+
+import { 
+  Maximize, Layout, Monitor, MousePointer2, Video, 
+  Archive, HardDrive, ShieldCheck, PenTool, Calendar, 
+  Mail, Zap, Wrench, Clock, BatteryCharging, Sparkles, 
+  Activity, Keyboard, Terminal, ImageIcon,
+  AppWindow, Film, FileArchive, FolderTree, Shield, 
+  BookOpen, CalendarDays, Command, BatteryMedium
+} from 'lucide-react';
+
+import YouTube from '@/components/youtube';
+
+<MacAtmosphere />
+<MacHero />
+
+<MacSectionHeader icon={<AppWindow />} accent="blue">
+
+## Window Management & Menu Bar
+
+</MacSectionHeader>
+
+<MacDeck>
+  <MacCard title="Rectangle" href="https://rectangleapp.com/" badge="Essential" badgeStyle="blue" icon={<Layout className="text-blue-500" />}>
+    A free and open-source app that lets you move and resize windows on macOS using keyboard shortcuts or snap areas, bringing Windows-like snapping functionality to macOS.
+  </MacCard>
+  <MacCard title="Magnet" href="https://magnet.crowdcafe.com/" badge="Premium" badgeStyle="zinc" icon={<Maximize className="text-zinc-700 dark:text-zinc-300" />}>
+    A premium alternative to Rectangle. An excellent and highly polished window snapper for macOS.
+  </MacCard>
+  <MacCard title="Alt-Tab" href="https://alt-tab-macos.netlify.app/" icon={<Keyboard className="text-zinc-700 dark:text-zinc-300" />}>
+    Brings the classic Windows Alt-Tab window switcher to macOS, letting you cycle through all open applications and windows effortlessly.
+  </MacCard>
+  <MacCard title="Hidden Bar" href="https://github.com/dwarvesf/hidden" icon={<Monitor className="text-zinc-700 dark:text-zinc-300" />}>
+    A Mac app that lets you hide or show your desktop icons with one click. Customize appearance, behavior, and hotkeys to declutter your workspace.
+  </MacCard>
+  <MacCard title="Hand Mirror" href="https://handmirror.app/" icon={<Video className="text-zinc-700 dark:text-zinc-300" />}>
+    Check your camera with one click from the menu bar. Preview your appearance, surroundings, and audio before joining any video call.
+  </MacCard>
+  <MacCard title="OneThing" href="https://sindresorhus.com/one-thing" icon={<PenTool className="text-zinc-700 dark:text-zinc-300" />}>
+    A persistent reminder in your top menu bar to keep your next critical task visible. Gently nudges you to stay on track.
+  </MacCard>
+  <MacCard title="MacGPT" href="https://www.macgpt.com/" badge="Featured" badgeStyle="pink" icon={<Sparkles className="text-blue-500" />}>
+    Allows you to access ChatGPT directly from your desktop and menu bar for quick, global answers.
+  </MacCard>
+  <MacCard title="Bartender 5" href="https://www.macbartender.com/Bartender5/" icon={<Layout className="text-zinc-700 dark:text-zinc-300" />}>
+    Take absolute control of your menu bar. Hide, show, reorder, and customize your menu bar items with hotkeys or mouse gestures.
+  </MacCard>
+  <MacCard title="Yabai" href="https://github.com/koekeishiya/yabai" badge="Advanced" badgeStyle="orange" icon={<Layout className="text-zinc-700 dark:text-zinc-300" />}>
+    A highly advanced tiling window manager for macOS based on binary space partitioning. Perfect for power users.
+  </MacCard>
+</MacDeck>
+
+---
+
+<YouTube id="9Lz7jliEvGg" caption="A Crash Course In Mac OS" />
+
+---
+
+<MacSectionHeader icon={<Film />} accent="indigo">
+
+## Video Players & Encoding
+
+</MacSectionHeader>
+
+<MacDeck>
+  <MacCard title="PiP" href="https://github.com/amitv87/PiP" icon={<Video className="text-blue-500" />}>
+    Picture-in-Picture literally anything on your Mac. Create a small floating window that shows the content of another application or stream.
+  </MacCard>
+  <MacCard title="Infuse" href="https://firecore.com/infuse" badge="Top Pick" badgeStyle="orange" icon={<Video className="text-orange-500" />}>
+    Nothing comes close. Watch almost any video format from local storage, NAS, or cloud services. Supports 4K, HDR, and Dolby Vision natively.
+  </MacCard>
+  <MacCard title="IINA" href="https://iina.io/" icon={<Video className="text-zinc-700 dark:text-zinc-300" />}>
+    A modern, sleek media player for macOS that plays almost any format. Use this if you want a lightweight, elegant alternative to Infuse.
+  </MacCard>
+  <MacCard title="HandBrake" href="https://handbrake.fr/" icon={<Video className="text-zinc-700 dark:text-zinc-300" />}>
+    The gold standard open-source tool for converting media files and encoding videos. Includes splicing, frame rate adjustments, and subtitling.
+  </MacCard>
+</MacDeck>
+
+---
+
+<MacSectionHeader icon={<FileArchive />} accent="orange">
+
+## File Compression & Transfer
+
+</MacSectionHeader>
+
+<MacDeck>
+  <MacCard title="Keka" href="https://www.keka.io/en/" badge="Utility" badgeStyle="zinc" icon={<Archive className="text-amber-600" />}>
+    A neat file archiver for macOS. Compress, decompress, split, and password-encrypt files in almost any format (7Z, ZIP, RAR, TAR).
+  </MacCard>
+  <MacCard title="Motrix" href="https://motrix.app/" icon={<HardDrive className="text-zinc-700 dark:text-zinc-300" />}>
+    Download files and torrents with ease. Supports HTTP, FTP, BitTorrent, and Magnet links with a beautiful, clean interface.
+  </MacCard>
+  <MacCard title="Downie" href="https://software.charliemonroe.net/downie/" icon={<HardDrive className="text-zinc-700 dark:text-zinc-300" />}>
+    Easily download and save videos from thousands of different sites directly to your Mac.
+  </MacCard>
+  <MacCard title="Transmission" href="https://transmissionbt.com/" icon={<HardDrive className="text-zinc-700 dark:text-zinc-300" />}>
+    A fast, easy, and free native BitTorrent client designed for macOS with a low memory and resource footprint.
+  </MacCard>
+</MacDeck>
+
+---
+
+<MacSectionHeader icon={<FolderTree />} accent="blue">
+
+## File Management
+
+</MacSectionHeader>
+
+<MacDeck>
+  <MacCard title="DaisyDisk" href="https://daisydiskapp.com/" badge="Visualizer" badgeStyle="pink" icon={<Activity className="text-pink-500" />}>
+    Visualizes your disk usage in a beautiful interactive map, helping you free up disk space by quickly finding and deleting large files.
+  </MacCard>
+  <MacCard title="Path Finder" href="https://www.cocoatech.io/" icon={<HardDrive className="text-blue-500" />}>
+    A robust file browser alternative to Finder. Provides a huge variety of power-user tools to manage files efficiently.
+  </MacCard>
+  <MacCard title="ForkLift" href="https://binarynights.com/" icon={<HardDrive className="text-zinc-700 dark:text-zinc-300" />}>
+    More than just an FTP client, ForkLift is a powerful dual-pane file manager for macOS offering deep organization tools.
+  </MacCard>
+  <MacCard title="Disk Inventory X" href="https://www.derlien.com/" icon={<Activity className="text-zinc-700 dark:text-zinc-300" />}>
+    A disk usage utility that shows the sizes of files and folders in a unique graphical "treemap" format.
+  </MacCard>
+</MacDeck>
+
+---
+
+<MacSectionHeader icon={<Shield />} accent="pink">
+
+## App Management & Security
+
+</MacSectionHeader>
+
+<MacDeck>
+  <MacCard title="AppCleaner" href="https://freemacsoft.net/appcleaner/" badge="Essential" badgeStyle="emerald" icon={<Wrench className="text-zinc-700 dark:text-zinc-300" />}>
+    Thoroughly uninstall unwanted apps. Finds and deletes all hidden files related to an app (preferences, caches, logs) to keep your system clean.
+  </MacCard>
+  <MacCard title="CleanMyMac X" href="https://macpaw.com/cleanmymac" icon={<Sparkles className="text-pink-500" />}>
+    A premium, versatile application that fully uninstalls apps, manages storage, and performs deep system cleanups.
+  </MacCard>
+  <MacCard title="ReiKey" href="https://objective-see.org/products/reikey.html" icon={<ShieldCheck className="text-green-500" />}>
+    A dedicated security tool that monitors your macOS system for keyloggers and other invasive malware.
+  </MacCard>
+  <MacCard title="OnyX" href="https://www.titanium-software.fr/en/onyx.html" badge="System" badgeStyle="zinc" icon={<Wrench className="text-zinc-700 dark:text-zinc-300" />}>
+    A deep-system multifunction utility. Verify system files, run maintenance tasks, and configure hidden parameters in Finder and Safari.
+  </MacCard>
+  <MacCard title="Brew" href="https://brew.sh/" icon={<Terminal className="text-orange-500" />}>
+    The missing package manager for macOS. Simplifies the installation of software and developer tools via the terminal.
+  </MacCard>
+  <MacCard title="MacPass" href="https://macpassapp.org/" icon={<ShieldCheck className="text-zinc-700 dark:text-zinc-300" />}>
+    A free, open-source, fully KeePass-compatible local password manager designed specifically for macOS.
+  </MacCard>
+</MacDeck>
+
+---
+
+<MacSectionHeader icon={<BookOpen />} accent="orange">
+
+## Note Taking & eBooks
+
+</MacSectionHeader>
+
+<MacDeck>
+  <MacCard title="Obsidian" href="https://obsidian.md/" badge="Top Pick" badgeStyle="indigo" icon={<PenTool className="text-purple-500" />}>
+    A flexible, private Markdown writing app that acts as a second brain. Store notes locally, link them, and visualize connections.
+  </MacCard>
+  <MacCard title="Craft" href="https://www.craft.do/" icon={<PenTool className="text-blue-500" />}>
+    A beautiful, native document and notes app. Collaborate in real-time, organize workspaces, and utilize their AI writing assistant.
+  </MacCard>
+  <MacCard title="Ulysses" href="https://ulysses.app/" icon={<PenTool className="text-zinc-700 dark:text-zinc-300" />}>
+    A minimalist, distraction-free writing environment using its own version of Markdown. Perfect for long-form essays and books.
+  </MacCard>
+  <MacCard title="Zotero" href="https://www.zotero.org/" icon={<Archive className="text-zinc-700 dark:text-zinc-300" />}>
+    A free, open-source reference manager that helps academics collect, organize, and cite research sources.
+  </MacCard>
+  <MacCard title="SideNotes" href="https://www.apptorium.com/sidenotes" icon={<PenTool className="text-zinc-700 dark:text-zinc-300" />}>
+    Offers quick note-taking and instant access to files and links hidden on the side of your screen. Excellent for scratchpad workflows.
+  </MacCard>
+  <MacCard title="MindNode" href="https://www.mindnode.com/" icon={<Layout className="text-zinc-700 dark:text-zinc-300" />}>
+    An intuitive mind-mapping tool that creates visually stunning maps to help visualize complex ideas and problem-solving.
+  </MacCard>
+  <MacCard title="Calibre" href="https://calibre-ebook.com/" icon={<Archive className="text-zinc-700 dark:text-zinc-300" />}>
+    A powerful e-book manager. Convert between formats, sync with e-readers, and fetch/convert web news into e-books.
+  </MacCard>
+</MacDeck>
+
+---
+
+<MacSectionHeader icon={<CalendarDays />} accent="pink">
+
+## Calendars, Email & RSS
+
+</MacSectionHeader>
+
+<MacDeck>
+  <MacCard title="Things" href="https://culturedcode.com/things/" badge="Premium" badgeStyle="blue" icon={<Calendar className="text-blue-500" />}>
+    A premium, award-winning personal task manager that integrates beautifully with macOS. Plan days and manage projects seamlessly.
+  </MacCard>
+  <MacCard title="Fantastical" href="https://flexibits.com/fantastical" icon={<Calendar className="text-red-500" />}>
+    Manage your schedule with natural language input, beautiful views, and powerful cross-device Apple syncing features.
+  </MacCard>
+  <MacCard title="Itsycal" href="https://www.mowglii.com/itsycal/" icon={<Calendar className="text-zinc-700 dark:text-zinc-300" />}>
+    A tiny, elegant menu bar calendar app. Integrates as a companion to the native Mac Calendar app.
+  </MacCard>
+  <MacCard title="Spark" href="https://sparkmailapp.com/" icon={<Mail className="text-blue-500" />}>
+    Filter noise, prioritize messages, and collaborate on emails. Features an AI-powered writing assistant and cross-device sync.
+  </MacCard>
+  <MacCard title="Mimestream" href="https://mimestream.com/" badge="Featured" badgeStyle="orange" icon={<Mail className="text-red-500" />}>
+    A native macOS email client built specifically for Gmail. Operates with vastly more speed and efficiency than the web app.
+  </MacCard>
+  <MacCard title="Reeder" href="https://reederapp.com/" icon={<Layout className="text-zinc-700 dark:text-zinc-300" />}>
+    A stunning news reader and read-later client. Bionic Reading support and native integrations with Feedly, Instapaper, and Pocket.
+  </MacCard>
+</MacDeck>
+
+---
+
+<MacSectionHeader icon={<Command />} accent="indigo">
+
+## Productivity & Power Toys
+
+</MacSectionHeader>
+
+<MacDeck>
+  <MacCard title="Alfred" href="https://www.alfredapp.com/" badge="Essential" badgeStyle="indigo" icon={<Zap className="text-purple-500" />}>
+    The ultimate productivity app. Search your Mac, launch apps, run custom workflows, and automate tasks with keyboard macros.
+  </MacCard>
+  <MacCard title="Raycast" href="https://www.raycast.com/" badge="Modern" badgeStyle="pink" icon={<Zap className="text-red-500" />}>
+    A modern, blazing-fast launcher for power users. Control every aspect of your Mac and integrate deeply with developer tools.
+  </MacCard>
+  <MacCard title="Keyboard Maestro" href="https://www.keyboardmaestro.com/main/" icon={<Keyboard className="text-zinc-700 dark:text-zinc-300" />}>
+    Create incredibly powerful macros to automate nearly anything on macOS, from text manipulation to AppleScript triggering.
+  </MacCard>
+  <MacCard title="BetterTouchTool" href="https://folivora.ai/" icon={<MousePointer2 className="text-zinc-700 dark:text-zinc-300" />}>
+    Customize gestures, keyboard shortcuts, and the Touch Bar to create bespoke actions and triggers across your entire system.
+  </MacCard>
+  <MacCard title="Hazel" href="https://www.noodlesoft.com/" badge="Utility" badgeStyle="zinc" icon={<Wrench className="text-zinc-700 dark:text-zinc-300" />}>
+    Automates file organization. Specify rules for watched folders, and Hazel sorts new files by name, date, or type automatically.
+  </MacCard>
+  <MacCard title="Amphetamine" href="https://apps.apple.com/app/amphetamine/id937984704" icon={<Wrench className="text-blue-500" />}>
+    Prevents your Mac from going to sleep. Essential for running long processes or keeping your MacBook awake while closed.
+  </MacCard>
+  <MacCard title="MonitorControl" href="https://github.com/MonitorControl/MonitorControl" icon={<Monitor className="text-zinc-700 dark:text-zinc-300" />}>
+    Control the brightness, volume, and contrast of third-party external displays natively via macOS hardware keys.
+  </MacCard>
+  <MacCard title="SoundSource" href="https://rogueamoeba.com/soundsource/" icon={<Activity className="text-zinc-700 dark:text-zinc-300" />}>
+    Powerful per-app audio control from the menu bar. Adjust volumes, outputs, and EQ effects for individual applications.
+  </MacCard>
+</MacDeck>
+
+---
+
+<MacSectionHeader icon={<BatteryMedium />} accent="blue">
+
+## Battery, System & Hardware
+
+</MacSectionHeader>
+
+<MacDeck>
+  <MacCard title="AlDente" href="https://apphousekitchen.com/" badge="Utility" badgeStyle="emerald" icon={<BatteryCharging className="text-green-500" />}>
+    An all-in-one charge limiter to extend the lifespan of your MacBook battery by preventing it from sitting at 100% capacity.
+  </MacCard>
+  <MacCard title="CoconutBattery" href="https://coconut-flavour.com/coconutbattery/" icon={<BatteryCharging className="text-zinc-700 dark:text-zinc-300" />}>
+    Monitor deep battery health metrics, current capacity, and cycle counts for your Mac and connected iOS devices.
+  </MacCard>
+  <MacCard title="iStat Menus" href="https://bjango.com/mac/istatmenus/" icon={<Activity className="text-blue-500" />}>
+    Detailed system monitoring from the menu bar, including real-time CPU, GPU, memory, sensors, and network traffic.
+  </MacCard>
+  <MacCard title="Little Snitch" href="https://www.obdev.at/products/littlesnitch/index.html" badge="Security" badgeStyle="pink" icon={<ShieldCheck className="text-red-500" />}>
+    A firewall that alerts you whenever a program attempts to establish an outgoing internet connection. Take back privacy control.
+  </MacCard>
+  <MacCard title="Scroll Reverser" href="https://pilotmoon.com/scrollreverser/" icon={<MousePointer2 className="text-zinc-700 dark:text-zinc-300" />}>
+    Allows you to independently reverse the scroll direction for your trackpad and external mouse.
+  </MacCard>
+  <MacCard title="iTerm2" href="https://iterm2.com/" icon={<Terminal className="text-zinc-700 dark:text-zinc-300" />}>
+    A vastly superior terminal replacement. Features split panes, hotkeys, autocomplete, and extensive aesthetic customization.
+  </MacCard>
+</MacDeck>
+
+---
+
+<MacSectionHeader icon={<Sparkles />} accent="indigo">
+
+## AI Tools & Miscellaneous
+
+</MacSectionHeader>
+
+<MacDeck>
+  <MacCard title="DiffusionBee" href="https://diffusionbee.com/" badge="AI" badgeStyle="indigo" icon={<Sparkles className="text-purple-500" />}>
+    Run Stable Diffusion locally on your Mac. Generate images from text prompts offline, for free, with no limits.
+  </MacCard>
+  <MacCard title="Upscayl" href="https://github.com/upscayl/upscayl" icon={<ImageIcon className="text-zinc-700 dark:text-zinc-300" />}>
+    Enlarge and enhance low-resolution images using advanced local AI algorithms without losing quality.
+  </MacCard>
+  <MacCard title="Mac OS App Icons" href="https://macosicons.com/#/" icon={<ImageIcon className="text-blue-500" />}>
+    A massive, open-source community library of 5000+ custom macOS app icons designed in the Monterey/Big Sur style.
+  </MacCard>
+  <MacCard title="Open Source Mac Apps" href="https://github.com/serhii-londar/open-source-mac-os-apps" badge="Repository" badgeStyle="zinc" icon={<Archive className="text-zinc-700 dark:text-zinc-300" />}>
+    An incredible GitHub repository indexing hundreds of completely free, open-source applications built for macOS.
+  </MacCard>
+</MacDeck>

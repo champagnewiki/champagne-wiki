@@ -1,0 +1,95 @@
+---
+title: Foreign Entertainment
+description: Explore the world of international entertainment with an extensive library of foreign shows and films. Stream and download in a wide range of languages and genres.
+icon: Globe
+---
+
+{/* Hydration-safe CSS Injection to hide default titles */}
+<style dangerouslySetInnerHTML={{ __html: `
+  #nd-page > h1:first-of-type { display: none !important; }
+  #nd-page > h1:first-of-type + p { display: none !important; }
+` }} />
+
+import { 
+  FestivalAtmosphere, 
+  FestivalHero, 
+  RegionHeader, 
+  CinemaPillGroup, 
+  CinemaPill 
+} from '@/components/foreign-magic';
+
+import { 
+  Film, Globe2, PlayCircle, Download, Magnet, Ticket, MonitorPlay, Clapperboard
+} from 'lucide-react';
+
+<FestivalAtmosphere />
+<FestivalHero />
+
+<RegionHeader title="Indian Streaming" icon={<Ticket />} />
+
+<CinemaPillGroup>
+  <CinemaPill title="Einthusan" href="https://einthusan.tv/intro/" icon={<PlayCircle className="w-4 h-4" />} />
+  <CinemaPill title="Bangla Plex" href="https://banglaplex.shop/" icon={<PlayCircle className="w-4 h-4" />} />
+  <CinemaPill title="Play Desi" href="https://playdesi.net/playdesi/" icon={<PlayCircle className="w-4 h-4" />} />
+  <CinemaPill title="Desi Serials" href="https://www.desi-serials.cc/" icon={<MonitorPlay className="w-4 h-4" />} />
+  <CinemaPill title="Bolly2Tolly" href="https://www.bolly2tolly.net/" icon={<PlayCircle className="w-4 h-4" />} />
+  <CinemaPill title="Yo Movies" href="https://yomovies.express/" icon={<PlayCircle className="w-4 h-4" />} />
+  <CinemaPill title="OK Jatt" href="https://okjatt.sbs/" icon={<PlayCircle className="w-4 h-4" />} />
+</CinemaPillGroup>
+
+<RegionHeader title="Greek Streaming" icon={<Clapperboard />} />
+
+<CinemaPillGroup>
+  <CinemaPill title="Tainio-Mania" href="https://tainio-mania.online/" icon={<PlayCircle className="w-4 h-4" />} />
+  <CinemaPill title="Voody-Online" href="https://voody-online.com/" icon={<PlayCircle className="w-4 h-4" />} />
+</CinemaPillGroup>
+
+<RegionHeader title="Italian Streaming" icon={<Film />} />
+
+<CinemaPillGroup>
+  <CinemaPill title="CB01 (I)" href="https://cineblog01.vet/alta-definizione-ita/" icon={<PlayCircle className="w-4 h-4" />} />
+  <CinemaPill title="CB01 (II)" href="https://cineblog01.diy/" icon={<PlayCircle className="w-4 h-4" />} />
+  <CinemaPill title="SerieHD" href="https://www.seriehd.sbs/" icon={<MonitorPlay className="w-4 h-4" />} />
+  <CinemaPill title="StreamingCommunity" href="https://streamingcommunity.deal/" icon={<PlayCircle className="w-4 h-4" />} />
+  <CinemaPill title="EuroStreaming" href="https://eurostreaming.charity/" icon={<PlayCircle className="w-4 h-4" />} />
+  <CinemaPill title="CasaCinema" href="https://www.casacinema.bio/" icon={<Film className="w-4 h-4" />} />
+</CinemaPillGroup>
+
+<RegionHeader title="French Entertainment" icon={<Globe2 />} />
+
+<CinemaPillGroup>
+  <CinemaPill title="WiFlix" href="https://www.wiflix.al/" icon={<PlayCircle className="w-4 h-4" />} />
+  <CinemaPill title="WawaCity" href="https://www.wawacity.al/" icon={<PlayCircle className="w-4 h-4" />} />
+  <CinemaPill title="GratFilm" href="https://gratfilm.org/" icon={<Film className="w-4 h-4" />} />
+  <CinemaPill title="SadisFlix (I)" href="https://sadisflix.ing/" icon={<PlayCircle className="w-4 h-4" />} />
+  <CinemaPill title="SadisFlix (II)" href="https://sadisflix.vip/" icon={<PlayCircle className="w-4 h-4" />} />
+  <CinemaPill title="YGG" href="https://ygg.to/" badge="Torrents" icon={<Magnet className="w-4 h-4" />} />
+  <CinemaPill title="Cpasbien" href="https://cpasbien.wtf/" badge="Torrents" icon={<Magnet className="w-4 h-4" />} />
+  <CinemaPill title="LibertyLand" href="https://www.libertyland.al/" badge="Download" icon={<Download className="w-4 h-4" />} />
+  <CinemaPill title="Zone-Telechargement" href="https://www.zone-telechargement.center/" badge="Download" icon={<Download className="w-4 h-4" />} />
+</CinemaPillGroup>
+
+<RegionHeader title="Spanish Streaming" icon={<Ticket />} />
+
+<CinemaPillGroup>
+  <CinemaPill title="EntrePeliculasySeries" href="https://entrepeliculasyseries.nz/" icon={<MonitorPlay className="w-4 h-4" />} />
+  <CinemaPill title="Cuevana" href="https://cuevana.si/" icon={<PlayCircle className="w-4 h-4" />} />
+  <CinemaPill title="PelisPlus" href="https://pelisplus3.org/" icon={<Film className="w-4 h-4" />} />
+  <CinemaPill title="VidCorn" href="https://vidcorn.es/" icon={<PlayCircle className="w-4 h-4" />} />
+  <CinemaPill title="Identi.to" href="https://identi.io/" badge="Download" icon={<Download className="w-4 h-4" />} />
+</CinemaPillGroup>
+
+<RegionHeader title="German Entertainment" icon={<Clapperboard />} />
+
+<CinemaPillGroup>
+  <CinemaPill title="BS.TO" href="https://bs.to/" icon={<MonitorPlay className="w-4 h-4" />} />
+  <CinemaPill title="S.TO" href="https://s.to/" icon={<MonitorPlay className="w-4 h-4" />} />
+  <CinemaPill title="KINOX.TO (I)" href="https://www.kinos.to/" icon={<Film className="w-4 h-4" />} />
+  <CinemaPill title="KINOX.TO (II)" href="https://www15.kinos.to/" icon={<Film className="w-4 h-4" />} />
+  <CinemaPill title="HDFilme" href="https://hdfilme.best/" icon={<PlayCircle className="w-4 h-4" />} />
+  <CinemaPill title="KinoGer" href="https://kinoger.to/" icon={<PlayCircle className="w-4 h-4" />} />
+  <CinemaPill title="Nima4K" href="https://nima4k.org/" badge="Download" icon={<Download className="w-4 h-4" />} />
+  <CinemaPill title="SERIENFANS" href="https://serienfans.org/" badge="Download" icon={<Download className="w-4 h-4" />} />
+  <CinemaPill title="FILMFANS" href="https://filmfans.org/" badge="Download" icon={<Download className="w-4 h-4" />} />
+  <CinemaPill title="NOX.TO" href="https://nox.to/" badge="Download" icon={<Download className="w-4 h-4" />} />
+</CinemaPillGroup>

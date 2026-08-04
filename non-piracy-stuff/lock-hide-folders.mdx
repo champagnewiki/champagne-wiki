@@ -1,0 +1,143 @@
+---
+title: Lock & Hide Folders
+description: Ever wanted to lock and hide your windows files and folders behind a password? The windows hide option is just not secure enough? Worry not!
+icon: Lock
+---
+
+import { Step, Steps } from 'fumadocs-ui/components/steps';
+import { Callout } from 'fumadocs-ui/components/callout';
+import { VaultAtmosphere, VaultHero, VaultSectionHeader } from '@/components/vault-magic';
+import { Lock, FileTerminal, ShieldAlert, Key } from 'lucide-react';
+
+<VaultAtmosphere />
+<VaultHero />
+
+<VaultSectionHeader icon={<FileTerminal />} accent="emerald">
+
+## Implementation Guide
+
+</VaultSectionHeader>
+
+Follow these steps to create an executable batch file that acts as a secure, password-protected gateway to your hidden folder.
+
+<Steps>
+  <Step title="Create the Batch File">
+    Copy the code snippet provided at the bottom of this page. Open **Notepad** (or any text editor), paste the code, and save the file to your desired location. 
+    
+    *Important: When saving, name the file `FolderLocker.bat` (make sure to include the `.bat` extension, not `.txt`).*
+  </Step>
+
+  <Step title="Set Your Custom Password">
+    Right-click your new `.bat` file and select **Edit**. Locate the following line in the code:
+    `if NOT %pass%==Your-Password-Here goto FAIL`
+    
+    Replace `Your-Password-Here` with your own highly secure password. Press `Ctrl + S` to save your changes.
+  </Step>
+
+  <Step title="Initialize the Locker">
+    Double-click the `.bat` file. A command prompt will briefly flash, and a new folder named **Locker** will appear in the same directory.
+  </Step>
+
+  <Step title="Store Your Files">
+    Move any sensitive files, documents, or sub-folders into this newly created **Locker** folder.
+  </Step>
+
+  <Step title="Lock and Hide">
+    Double-click the `FolderLocker.bat` file again. A terminal window will ask:
+    `Are you sure u want to Lock the folder(Y/N)`
+    
+    Type `Y` and press Enter. The **Locker** folder will instantly disappear from your directory.
+  </Step>
+
+  <Step title="Unlock and Access">
+    To access your hidden files again, double-click the `FolderLocker.bat` file.
+    - It will prompt you for the password you set in Step 2.
+    - Input your password and press Enter.
+    - The **Locker** folder will reappear, granting you full access to your files!
+  </Step>
+</Steps>
+
+<Callout title="How Does This Work?" type="info" icon={<ShieldAlert className="w-5 h-5 text-emerald-500" />}>
+  This script utilizes a clever Windows CLSID (Class ID) trick. When you lock the folder, it renames the directory to `Control Panel.{21EC2020-3AEA-1069-A2DD-08002B30309D}` and applies hidden system attributes. Windows immediately interprets this folder as a system Control Panel shortcut, effectively vanishing it from standard view and making it inaccessible without the script to reverse the process.
+</Callout>
+
+---
+
+<VaultSectionHeader icon={<Key />} accent="cyan">
+
+## The Locker Script
+
+</VaultSectionHeader>
+
+Copy the entirety of this code block to create your batch file.
+
+```batch title="FolderLocker.bat" icon="Terminal"
+cls
+
+@ECHO OFF
+
+title Folder Locker
+
+if EXIST "Control Panel.{21EC2020-3AEA-1069-A2DD-08002B30309D}" goto UNLOCK
+
+if NOT EXIST Locker goto MDLOCKER
+
+:CONFIRM
+
+echo Are you sure u want to Lock the folder(Y/N)
+
+set/p "cho=>"
+
+if %cho%==Y goto LOCK
+
+if %cho%==y goto LOCK
+
+if %cho%==n goto END
+
+if %cho%==N goto END
+
+echo Invalid choice.
+
+goto CONFIRM
+
+:LOCK
+
+ren Locker "Control Panel.{21EC2020-3AEA-1069-A2DD-08002B30309D}"
+
+attrib +h +s "Control Panel.{21EC2020-3AEA-1069-A2DD-08002B30309D}"
+
+echo Folder locked
+
+goto End
+
+:UNLOCK
+
+echo Enter password to Unlock folder
+
+set/p "pass=>"
+
+if NOT %pass%==Your-Password-Here goto FAIL
+
+attrib -h -s "Control Panel.{21EC2020-3AEA-1069-A2DD-08002B30309D}"
+
+ren "Control Panel.{21EC2020-3AEA-1069-A2DD-08002B30309D}" Locker
+
+echo Folder Unlocked successfully
+
+goto End
+
+:FAIL
+
+echo Invalid password
+
+goto end
+
+:MDLOCKER
+
+md Locker
+
+echo Locker created successfully
+
+goto End
+
+:End

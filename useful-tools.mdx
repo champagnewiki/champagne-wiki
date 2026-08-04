@@ -1,0 +1,274 @@
+---
+title: Useful Tools & Utilities
+description: A curated arsenal of system-wide adblockers, security scanners, download managers, and privacy tools.
+icon: Wrench
+---
+
+import { 
+  ToolsAtmosphere, 
+  ToolsHero, 
+  ToolDeck, 
+  ToolCard, 
+  SectionHeader,
+  StepList,
+  Step,
+  ConfigCode,
+  NoticePanel,
+  FilterCloud
+} from '@/components/tools-magic';
+
+import { 
+  ShieldCheck, Smartphone, Apple, Monitor, Bug, 
+  Download, PlaySquare, Bookmark, Network, Lock, ShieldAlert,
+  Globe, Trash2, Cpu
+} from 'lucide-react';
+
+<ToolsAtmosphere />
+<ToolsHero />
+
+<SectionHeader icon={<ShieldCheck />}>
+
+## System-Wide Adblocking
+
+</SectionHeader>
+
+Blocking ads, trackers, and malicious domains at the network level is far more efficient than relying solely on browser extensions. It secures your entire device, including background apps.
+
+### Android Filtering
+
+<ToolDeck>
+  <ToolCard title="RethinkDNS" href="https://rethinkdns.com/app" icon={<Smartphone />} badge="Highly Customizable" badgeStyle="indigo">
+An open-source DNS + Firewall app. It allows you to select highly specific blocklists and route them via secure DoT (DNS-over-TLS).
+  </ToolCard>
+  <ToolCard title="Mullvad DNS" href="https://mullvad.net/en/help/dns-over-https-and-dns-over-tls#how-to-use" icon={<Lock />} badge="Plug & Play" badgeStyle="emerald">
+A zero-configuration, highly private DNS resolver that blocks ads and trackers natively. Perfect if you don't want to manage blocklists manually.
+  </ToolCard>
+</ToolDeck>
+
+**Method 1: RethinkDNS Setup**
+First, visit [rethinkdns.com/configure](https://www.rethinkdns.com/configure) and select the following recommended lists:
+<FilterCloud 
+  title="Recommended RethinkDNS Blocklists" 
+  filters={[
+    "NoCoin (Cryptojacking)", 
+    "1HOSTS (EXTRA)", 
+    "OISD (BIG)", 
+    "ADS (The Block List Project)", 
+    "GOODBYEADS HOSTS", 
+    "ADS AND TRACKING (Lightswitch05)"
+  ]} 
+/>
+
+Once selected, toggle the URL format to **DoT** and copy the generated URL. Then, configure your Android device:
+
+<StepList>
+  <Step num="1">Open the Android <strong>Settings</strong> app.</Step>
+  <Step num="2">Navigate to <strong>Network & internet</strong>.</Step>
+  <Step num="3">Tap on <strong>Private DNS</strong>.</Step>
+  <Step num="4">Select <strong>Private DNS provider hostname</strong>.</Step>
+  <Step num="5">Paste your copied RethinkDNS DoT URL and hit Save.</Step>
+</StepList>
+
+**Method 2: Mullvad DNS Setup**
+If you prefer Mullvad, select the hostname that best fits your needs:
+- <ConfigCode>base.dns.mullvad.net</ConfigCode> (Blocks Ads, Trackers, Malware)
+- <ConfigCode>extended.dns.mullvad.net</ConfigCode> (Blocks Ads, Trackers, Malware, Social)
+- <ConfigCode>family.dns.mullvad.net</ConfigCode> (Blocks Ads, Trackers, Malware, Adult, Gambling)
+- <ConfigCode>all.dns.mullvad.net</ConfigCode> (Blocks everything above)
+
+Apply the chosen hostname using the exact same Android Private DNS steps listed above.
+
+*(Note: If you only want browser-level blocking on Android, you can use the free [Adguard for Android](https://adguard.com/en/adguard-android/overview.html). For the system-wide premium version, check out the resources on our [Mobile Page](/mobile).)*
+
+---
+
+### iOS & macOS Filtering
+
+<ToolDeck>
+  <ToolCard title="AdGuard for iOS" href="https://adguard.com/en/adguard-ios/overview.html" icon={<Apple />} badge="Browser Native" badgeStyle="neutral">
+The free version provides phenomenal adblocking, but it is strictly limited to the Safari browser. Requires specific filter configuration to be truly effective.
+  </ToolCard>
+  <ToolCard title="Mullvad Encrypted Profiles" href="https://github.com/mullvad/encrypted-dns-profiles" icon={<Globe />} badge="System Wide" badgeStyle="indigo">
+Native Apple Configuration Profiles that force your entire device to route DNS queries through Mullvad's adblocking servers.
+  </ToolCard>
+</ToolDeck>
+
+**Optimizing AdGuard (Safari Only)**
+To get the most out of the free AdGuard iOS app, tap the **Shield Icon (Protection)** > **Safari Protection** > **Filters**, and enable:
+<FilterCloud 
+  title="Essential AdGuard iOS Filters" 
+  filters={[
+    "Base & Mobile Filter", 
+    "Tracking Protection", 
+    "Mail Tracking Protection", 
+    "Social Media Filter",
+    "Cookie Notices & Popups",
+    "App Banners & Widgets",
+    "Warning Removal & Fanboy's",
+    "Web Annoyances Ultralist",
+    "Language Specific (Your Region)"
+  ]} 
+/>
+
+**Mullvad System-Wide DNS (iOS 18+)**
+<StepList>
+  <Step num="1">Go to the <a href="https://github.com/mullvad/encrypted-dns-profiles" target="_blank">Mullvad Profiles GitHub</a> via Safari.</Step>
+  <Step num="2">Tap a profile category (e.g., <strong>base</strong> or <strong>extended</strong>) in DoH or DoT format.</Step>
+  <Step num="3">Tap <strong>View raw</strong>, then <strong>Allow</strong> to download the profile.</Step>
+  <Step num="4">Open the <strong>Files</strong> app, go to Recents, and tap the downloaded profile.</Step>
+  <Step num="5">Open the <strong>Settings</strong> app. Tap the newly present <strong>Profile Downloaded</strong> at the top.</Step>
+  <Step num="6">Tap <strong>Install</strong>, enter your passcode, and tap Install again. Tap <strong>Done</strong>.</Step>
+</StepList>
+
+**Mullvad System-Wide DNS (macOS 15+)**
+*(For macOS 13 and 14, follow [these instructions](https://mullvad.net/en/help/dns-over-https-and-dns-over-tls#how-to-use).)*
+<StepList>
+  <Step num="1">Download your preferred profile from the <a href="https://github.com/mullvad/encrypted-dns-profiles" target="_blank">GitHub repository</a>.</Step>
+  <Step num="2">Open the <strong>System Settings</strong> app.</Step>
+  <Step num="3">Click on <strong>Profile Downloaded</strong> in the left column under your username.</Step>
+  <Step num="4">Double-click the downloaded profile, click <strong>Install...</strong> and enter your password.</Step>
+  <Step num="5">Manage profiles anytime via <strong>General > Device Management</strong>.</Step>
+</StepList>
+
+---
+
+### Windows Filtering
+
+<ToolDeck>
+  <ToolCard title="Safing Portmaster" href="https://safing.io/" icon={<Monitor />} badge="All-In-One" badgeStyle="indigo">
+A robust, system-wide firewall and adblocker for Windows. It allows you to monitor all network activity in real-time, block trackers across all applications, and seamlessly add custom filter lists to lock down your OS entirely.
+  </ToolCard>
+</ToolDeck>
+
+<SectionHeader icon={<ShieldAlert />}>
+
+## Security & Threat Analysis
+
+</SectionHeader>
+
+<NoticePanel icon={<Bug />} title="Always Verify Before Executing" type="warning">
+Before running any unfamiliar executable downloaded from the web, <strong>always</strong> upload it to <a href="https://www.virustotal.com/gui/" target="_blank">VirusTotal</a>. It scans the file against over 70 antivirus engines simultaneously. For advanced behavioral analysis, utilize online sandboxes like <a href="https://tria.ge/" target="_blank">Triage</a> or <a href="https://cuckoo.cert.ee/" target="_blank">Cuckoo Sandbox</a> to see what the file does in a safe, isolated environment.
+</NoticePanel>
+
+<ToolDeck>
+  <ToolCard title="Malwarebytes" href="https://www.malwarebytes.com/" icon={<ShieldCheck />} badge="Antivirus" badgeStyle="emerald">
+The only third-party scanner we recommend. Assuming you practice safe browsing habits (using uBlock Origin, avoiding shady links), the built-in Windows Defender is excellent. Use Malwarebytes as a secondary, on-demand scanner.
+  </ToolCard>
+  <ToolCard title="AdwCleaner" href="https://www.malwarebytes.com/adwcleaner/" icon={<Trash2 />} badge="Cleanup" badgeStyle="amber">
+A lightweight, standalone tool by Malwarebytes specifically designed to eradicate stubborn adware, browser hijackers, and potentially unwanted programs (PUPs) that slip past standard AVs.
+  </ToolCard>
+</ToolDeck>
+
+<SectionHeader icon={<Download />}>
+
+## Download Managers
+
+</SectionHeader>
+
+<ToolDeck>
+  <ToolCard title="AB Download Manager" href="https://abdownloadmanager.com/" icon={<Download />} badge="Open Source" badgeStyle="emerald">
+A phenomenal, modern, and open-source download manager. <em>Available on Android, Windows, Linux, and macOS.</em>
+  </ToolCard>
+  <ToolCard title="Internet Download Manager (IDM)" href="https://rsload.net/soft/manager/8294-internet-download-manager.html" icon={<Cpu />} badge="Windows Only" badgeStyle="neutral">
+The legendary heavyweight champion of download speeds. <em>Note: The link provided leads to a trusted, clean cracked version via rsload.</em>
+  </ToolCard>
+  <ToolCard title="Free Download Manager (FDM)" href="https://www.freedownloadmanager.org/" icon={<Download />} badge="Cross Platform" badgeStyle="indigo">
+A highly reliable, completely free manager that handles both standard HTTP downloads and torrents. <em>Available on all platforms.</em>
+  </ToolCard>
+  <ToolCard title="Motrix" href="https://motrix.app/" icon={<Apple />} badge="macOS Top Pick" badgeStyle="neutral">
+A beautifully polished, open-source download manager wrapped in an elegant interface. Highly recommended for Mac users.
+  </ToolCard>
+</ToolDeck>
+
+<SectionHeader icon={<PlaySquare />}>
+
+## Media Acquisition
+
+</SectionHeader>
+
+<ToolDeck>
+  <ToolCard title="Cobalt.tools" href="https://cobalt.tools/" icon={<Globe />} badge="Web App" badgeStyle="indigo">
+An incredibly convenient web app that saves video, audio, photos, or GIFs from hundreds of platforms. Just paste the link. Zero ads, trackers, or paywalls.
+  </ToolCard>
+  <ToolCard title="yt-dlp" href="https://github.com/yt-dlp/yt-dlp" icon={<PlaySquare />} badge="CLI" badgeStyle="neutral">
+The undisputed king of video downloading. A powerful command-line tool capable of ripping media from virtually anywhere on the internet at maximum quality.
+  </ToolCard>
+  <ToolCard title="YouWee" href="https://github.com/vanloctech/youwee" icon={<Monitor />} badge="GUI Fork" badgeStyle="emerald">
+Intimidated by the command line? YouWee is a fantastic multi-platform GUI fork that gives you the raw power of yt-dlp wrapped in a user-friendly interface.
+  </ToolCard>
+  <ToolCard title="vdwn.cloud" href="https://vdwn.cloud/" icon={<Globe />} badge="Web Alternative" badgeStyle="neutral">
+A fast, clean, web-based alternative to Cobalt for ripping videos directly from your browser without installing local software.
+  </ToolCard>
+</ToolDeck>
+
+<SectionHeader icon={<Bookmark />}>
+
+## Data & Account Management
+
+</SectionHeader>
+
+<ToolDeck>
+  <ToolCard title="Floccus" href="https://github.com/floccusaddon/floccus" icon={<Bookmark />} badge="Sync" badgeStyle="indigo">
+A unique browser extension that securely syncs your native bookmarks across different browsers (Chrome, Firefox, Safari) using your own Google Drive, Dropbox, or Nextcloud server.
+  </ToolCard>
+  <ToolCard title="JustDeleteMe" href="https://justdeleteme.xyz/en" icon={<Trash2 />} badge="Privacy" badgeStyle="rose">
+A massive directory containing direct links and instructions on how to permanently delete your accounts from hundreds of web services and platforms.
+  </ToolCard>
+</ToolDeck>
+
+<SectionHeader icon={<Network />}>
+
+## Torrenting & Network Security
+
+</SectionHeader>
+
+When torrenting, ensuring your traffic doesn't leak outside your VPN tunnel is critical. **Always bind your torrent client directly to your VPN's network interface.**
+
+<ToolDeck>
+  <ToolCard title="qBittorrent" href="https://www.qbittorrent.org/" icon={<Network />} badge="Windows / Mac" badgeStyle="emerald">
+A feature-rich, open-source client with an integrated search engine. It contains no ads and is universally respected.
+  </ToolCard>
+  <ToolCard title="Transmission" href="https://transmissionbt.com/" icon={<Apple />} badge="macOS / Linux" badgeStyle="neutral">
+A beautifully lightweight, open-source client known for its extreme simplicity and low system resource footprint.
+  </ToolCard>
+</ToolDeck>
+
+### How to Bind Your VPN in qBittorrent
+
+**For Windows:**
+<StepList>
+  <Step num="1">Start your VPN and connect to a server.</Step>
+  <Step num="2">Launch qBittorrent and open <strong>Preferences</strong> (Tools > Options).</Step>
+  <Step num="3">Navigate to the <strong>Advanced</strong> tab.</Step>
+  <Step num="4">Find <strong>Network Interface</strong> and change it from 'Any Interface' to your VPN's adapter (e.g., Mullvad, Proton, WireGuard).</Step>
+  <Step num="5">Restart qBittorrent. If the VPN disconnects, torrents will instantly stop routing.</Step>
+</StepList>
+
+**For macOS:**
+<StepList>
+  <Step num="1">Connect to your VPN.</Step>
+  <Step num="2">Open the <strong>Terminal</strong> app (Applications > Utilities).</Step>
+  <Step num="3">Execute the command: <ConfigCode>ifconfig | grep -A 2 utun</ConfigCode></Step>
+  <Step num="4">Identify the `utun` interface showing an internal IP like `inet 10.x.x.x` (e.g., <strong>utun3</strong>).</Step>
+  <Step num="5">Open qBittorrent <strong>Preferences</strong> > <strong>Advanced</strong> tab.</Step>
+  <Step num="6">Set the Network Interface to match the identified utun interface (e.g., utun3).</Step>
+  <Step num="7">Restart qBittorrent to apply.</Step>
+</StepList>
+
+<SectionHeader icon={<ShieldCheck />}>
+
+## Virtual Private Networks (VPN)
+
+</SectionHeader>
+
+<ToolDeck>
+  <ToolCard title="ProtonVPN" href="https://protonvpn.com/download" icon={<Lock />} badge="Best Free Option" badgeStyle="indigo">
+The free tier is fantastic, offering strict no-logs privacy and great speeds with unlimited data. The only catch: server locations are auto-assigned, and P2P (torrenting) is blocked on free servers.
+  </ToolCard>
+  <ToolCard title="Mullvad VPN" href="https://mullvad.net/en/vpn" icon={<ShieldCheck />} badge="Best Paid Option" badgeStyle="emerald">
+The gold standard for privacy. Anonymous accounts (no email required) and a flat rate of €5/month that hasn't changed in over a decade. Highly optimized for privacy and torrenting.
+  </ToolCard>
+  <ToolCard title="1.1.1.1 (WARP)" href="https://one.one.one.one/" icon={<Globe />} badge="Proxy / DNS" badgeStyle="neutral">
+Built by Cloudflare. <strong>This is not a true anonymity VPN.</strong> It encrypts your DNS queries and tunnels traffic to bypass basic ISP blocks or censorship, but it does not hide your true IP address from the websites you visit.
+  </ToolCard>
+</ToolDeck>

@@ -1,0 +1,132 @@
+---
+title: Meditation
+description: Your gateway to inner peace and tranquility. Explore curated meditations, courses, and mindfulness techniques.
+icon: Flower2
+---
+
+import { 
+  ZenAtmosphere, 
+  ZenHero, 
+  ZenSectionHeader,
+  ZenDeck,
+  ZenCard,
+  ArchiveBanner
+} from '@/components/meditation-magic';
+
+import YouTube from '@/components/youtube';
+import { PlayCircle, Brain, Eye, Focus, Heart, AudioLines, Sparkles, Moon, Smartphone, Archive } from 'lucide-react';
+
+<ZenAtmosphere />
+<ZenHero />
+
+<ZenSectionHeader icon={<PlayCircle />} accent="sky">
+
+## The Point of Origin
+
+</ZenSectionHeader>
+
+If you don't know where to start or feel like you don't have enough time, start here. Bookmark this 10-minute guided session—it is a simple, frictionless way to clear the mental fog.
+
+<YouTube id="vj0JDwQLof4" caption="A 10-Minute Protocol to silence the noise." />  
+
+---
+
+<ZenSectionHeader icon={<Brain />} accent="amber">
+
+## The Disciplines
+
+</ZenSectionHeader>
+
+Before accessing the audio archives, it helps to understand the three primary pillars of meditation. Each modality trains your brain in a slightly different way.
+
+<ZenDeck>
+  <ZenCard 
+    title="Mindfulness" 
+    icon={<Eye />} 
+    accent="sky"
+    description="The practice of observing thoughts, emotions, and physical sensations as they surface in the present moment, without attachment or judgment. Great for managing general anxiety and interrupting overthinking."
+  />
+  <ZenCard 
+    title="Focused Attention" 
+    icon={<Focus />} 
+    accent="emerald"
+    description="Intense concentration on a single anchor point—the breath, a physical object, or a mantra. When the mind inevitably wanders, you gently bring it back. Perfect for improving deep focus and attention spans."
+  />
+  <ZenCard 
+    title="Loving-Kindness" 
+    icon={<Heart />} 
+    accent="rose"
+    description="The deliberate projection of goodwill and compassion toward yourself and others. Scientifically verified to alter the brain's empathy centers. Utilized to dissolve resentment and build self-love."
+  />
+</ZenDeck>
+
+---
+
+<ZenSectionHeader icon={<AudioLines />} accent="indigo">
+
+## Guided Transmissions
+
+</ZenSectionHeader>
+
+Selecting a module below will deploy a curated YouTube playlist. These tracks are fully guided and require zero prior knowledge. Simply sit back, close your eyes, and listen.
+
+<ZenDeck>
+  <ZenCard 
+    title="Seated Sessions" 
+    href="http://www.youtube.com/watch_videos?video_ids=sDi40FQcaIU,v2mY36Ho1Sk,Qk5dlmylOZk,67SeR3LxtdI,u1It7nJMNEA,jdnx6ZDCWd8,Mp8lz9q7dsc"
+    icon={<Sparkles />} 
+    accent="emerald"
+    description="Standard seated protocols led by a vocal guide. Utilizes visualization and deep body scanning to reduce cortisol levels and train the mind to remain calm under stress."
+  />
+  <ZenCard 
+    title="Deep Sleep States" 
+    href="http://www.youtube.com/watch_videos?video_ids=7H0FKzeuVVs,51Kjn6exDro,W36y4s54LkI,KfEqviC7rwg,8tgqQdqvBeM,rkp8R-HlTYk,1vx8iUvfyCY,sIErBrStvxc,y8LIbeKQ60U,N4qCFFBrrgk,VttsLIfV2pM,RuAXYvNh4Rc,DdL9-NhXL6k,heQmEBoF_pg"
+    icon={<Moon />} 
+    accent="indigo"
+    description="Frequencies engineered explicitly to bypass insomnia. Involves paced breathing and progressive muscle relaxation to force the body into high-quality REM sleep."
+  />
+  <ZenCard 
+    title="Mantras & Resonance" 
+    href="http://www.youtube.com/watch_videos?video_ids=cMHmwHJJGZE,SBiwLibZqfw,_CnnyzPY__s,yEGA4EBSZAE,yDJYZXlsASg,S4PkLg_2clI,0PPjyqZXOb0,ABy95341Dto"
+    icon={<AudioLines />} 
+    accent="amber"
+    description="A practice relying on the rhythmic repetition of a specific phrase or sound to induce a trance-like concentration. Features highly curated, ambient vocal tracks."
+  />
+</ZenDeck>
+
+---
+
+<ZenSectionHeader icon={<Smartphone />} accent="emerald">
+
+## Open Protocols
+
+</ZenSectionHeader>
+
+If you want a structured, daily app experience but don't want to pay expensive subscription fees, the open-source community has built some incredible alternatives.
+
+<ZenDeck>
+  <ZenCard 
+    title="Medito Foundation" 
+    href="https://meditofoundation.org/medito-app" 
+    icon={<Smartphone />} 
+    accent="sky"
+    description="A strictly non-profit, open-source application. Contains zero advertisements and no paywalls. Features complete beginner courses, ambient sleep sounds, and unguided timers."
+  />
+  <ZenCard 
+    title="Insight Timer" 
+    href="https://insighttimer.com/" 
+    icon={<Smartphone />} 
+    accent="emerald"
+    description="Offers the largest library of free guided meditations currently indexed (over 100,000 tracks). Includes a highly modular timer for advanced, unguided sessions."
+  />
+</ZenDeck>
+
+---
+
+<ZenSectionHeader icon={<Archive />} accent="teal">
+
+## The Master Archive
+
+</ZenSectionHeader>
+
+<ArchiveBanner />

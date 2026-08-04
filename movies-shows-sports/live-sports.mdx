@@ -1,0 +1,221 @@
+---
+title: Live Sports
+description: Watch live sports events and replays from around the world. Never miss a game again!
+icon: Trophy
+---
+
+import { 
+  SportsAtmosphere, 
+  SportsHero, 
+  ScoreboardTicker,
+  PillGroup,
+  NetworkPill,
+  LeaguePill,
+  AcestreamPill,
+  ArchivePill,
+  SportsGuideBox,
+  SportsSectionHeader
+} from '@/components/sports-magic';
+
+import { Tv, MonitorPlay, Activity, Radio, Download, FileVideo, Trophy, Swords, Car, Network, Globe, Database, Users, Search } from 'lucide-react';
+
+<SportsAtmosphere />
+<SportsHero />
+<ScoreboardTicker />
+
+<SportsGuideBox title="Pre-Flight Configuration">
+  Before accessing any web-based streaming platforms or indexing archives, it is critical to configure your browser to block malicious pop-ups and tracking scripts.
+  
+  **1. Install uBlock Origin:** Never visit a web streamer without an ad-blocker. We strictly recommend installing the [uBlock Origin Extension](https://github.com/gorhill/uBlock) on Firefox or a Chromium-based browser to intercept invasive video advertisements natively.
+  
+  **2. Connection Safety:** If you choose to engage in Peer-to-Peer (P2P) swarms or Acestream links, **you must use a bound VPN** like [Proton VPN](https://protonvpn.com/download). Web Streaming generally does not require a VPN, but P2P exposes your IP address to the entire swarm.
+</SportsGuideBox>
+
+---
+
+<SportsSectionHeader icon={<Activity />} accent="red">
+
+## Main Event: Live Networks
+
+</SportsSectionHeader>
+
+Access the top-tier web streaming hubs offering widespread coverage across all major global leagues. These platforms scrape various broadcast feeds and host them in standard browser players.
+
+<PillGroup>
+  <NetworkPill title="Streamed.pk" href="https://streamed.pk/" mirrorHref="https://strmd.link/" icon={<Radio />} />
+  <NetworkPill title="FreeStreamsLive" href="https://freestreams-live.my/" icon={<Radio />} />
+  <NetworkPill title="Streamfree" href="https://streamfree.top/" mirrorHref="https://strmfree.link/" icon={<Radio />} />
+  <NetworkPill title="DaddyLive" href="https://dlhd.st/" mirrorHref="https://daddylive.pk/" icon={<Activity />} />
+  <NetworkPill title="SportsBite" href="https://sportsbite.org/" icon={<Radio />} />
+  <NetworkPill title="Streamsports99" href="https://streamsports99.ru/" mirrorHref="https://streamsports99.website/" icon={<Activity />} />
+  <NetworkPill title="RoxieStreams" href="https://roxiestreams.su/" mirrorHref="https://roxiestreams.cc/" icon={<Radio />} />
+  <NetworkPill title="TimStreams" href="https://timstreams.st/" icon={<MonitorPlay />} />
+  <NetworkPill title="BinTV" href="https://www.bintv.cc/" icon={<Tv />} />
+  <NetworkPill title="WatchFooty" href="https://watchfooty.st/en" icon={<Radio />} />
+  <NetworkPill title="NTV.cx" href="https://ntv.cx/" icon={<Tv />} />
+  <NetworkPill title="PPV.st" href="https://ppv.st/" icon={<MonitorPlay />} />
+  <NetworkPill title="WatchSports" href="https://watchsports.su/" icon={<Activity />} />
+  <NetworkPill title="Hoofoot Live" href="https://hoofoot.ru/iptv/schedule" icon={<Radio />} />
+  
+  {/* Legacy Core Networks */}
+  <NetworkPill title="FLS" href="https://watch.freelivesports.tv/pages/discover/e/live-tv" icon={<Radio />} />
+  <NetworkPill title="VIPLeague" href="https://vipleague.im/" icon={<Radio />} />
+  <NetworkPill title="SportsHub" href="https://sportshub.stream/" icon={<Activity />} />
+</PillGroup>
+
+<SportsSectionHeader icon={<Tv />} accent="orange">
+
+## Schedules & Broadcasters
+
+</SportsSectionHeader>
+
+The hardest part of watching live sports is knowing *which* channel is broadcasting *what* game. Use these tracking directories to find official channel listings and global schedules before searching for a stream.
+
+<PillGroup>
+  <LeaguePill title="LiveOnSat" href="https://www.liveonsat.com/" icon={<Tv />} badge="Satellite TV" />
+  <LeaguePill title="LiveMatchGuide" href="https://www.livematchguide.com/" icon={<Globe />} badge="Global Broadcasts" />
+  <LeaguePill title="WherestheMatch" href="https://www.wheresthematch.com/" icon={<Tv />} badge="UK TV Guide" />
+  <LeaguePill title="SportBusy" href="https://www.sportbusy.com/" icon={<Activity />} badge="Live Scores + TV" />
+  <LeaguePill title="FlashScore" href="https://www.flashscore.com/" icon={<Activity />} badge="Live Schedules" />
+  <LeaguePill title="TheSportsDB" href="https://www.thesportsdb.com/browse_tv" icon={<Database />} badge="TV Database" />
+  <LeaguePill title="SofaScore" href="https://www.sofascore.com/tv-schedule" icon={<MonitorPlay />} badge="Scores + Channels" />
+</PillGroup>
+
+---
+
+<SportsSectionHeader icon={<Download />} accent="purple">
+
+## The Archives: VODs & Replays
+
+</SportsSectionHeader>
+
+Missed the live broadcast? Access full VODs, race replays, and torrent downloads to watch on-demand.
+
+<SportsSectionHeader icon={<Swords />} accent="red">
+
+### Combat Sports (MMA, Boxing & Wrestling)
+
+</SportsSectionHeader>
+
+<PillGroup>
+  <NetworkPill title="Watch-Wrestling.eu" href="https://watch-wrestling.eu/" icon={<Swords />} />
+  <NetworkPill title="WatchWrestling.ae" href="https://watchwrestling.ae/" icon={<Swords />} />
+  <NetworkPill title="1Max" href="https://1max.top/" mirrorHref="https://realfight.top/" icon={<Swords />} />
+  <NetworkPill title="AllTheBestFights" href="https://www.allthebestfights.com/" icon={<Swords />} />
+  <NetworkPill title="WatchProWrestling" href="https://watchprowrestling.store/" icon={<Swords />} />
+  <NetworkPill title="AllWrestling24" href="https://allwrestling24.com/" icon={<Swords />} />
+  <NetworkPill title="PWrestling" href="https://pwrestling.com/" icon={<Swords />} />
+  <NetworkPill title="123Wrestling" href="https://123wrestling.com/" icon={<Swords />} />
+  <NetworkPill title="XWD (Xtreme)" href="https://xtreme-wrestling-downloads.com/" icon={<Swords />} />
+  <NetworkPill title="Miselet (Sumo)" href="https://vkvideo.ru/@miselet" icon={<Swords />} />
+  <NetworkPill title="Archive Wrestling" href="https://archive.org/details/wrestlingtelevision?sort=date" icon={<FileVideo />} />
+  <NetworkPill title="TNA / Impact Replays" href="https://www.youtube.com/playlist?list=PLSadBNbijyoGV44wd96Fda7-GDYh9UktC" icon={<FileVideo />} />
+</PillGroup>
+
+<SportsSectionHeader icon={<Trophy />} accent="blue">
+
+### Football (Soccer)
+
+</SportsSectionHeader>
+
+<PillGroup>
+  <NetworkPill title="Footballia" href="https://footballia.net/" mirrorHref="https://footballia.eu/" icon={<Trophy />} />
+  <NetworkPill title="FullMatchShows" href="https://fullmatchshows.com/" icon={<Trophy />} />
+  <NetworkPill title="FootballOrigin" href="https://www.footballorgin.com/" icon={<Trophy />} />
+  <NetworkPill title="ReFooty" href="https://refooty.com/" icon={<Trophy />} />
+  <NetworkPill title="zlive" href="https://zlive.st/" icon={<Trophy />} />
+  <NetworkPill title="Time Soccer TV" href="https://timesoccertv.com/" icon={<Trophy />} />
+  <NetworkPill title="SoccerFull" href="https://soccerfull.net/" icon={<Trophy />} />
+  <NetworkPill title="HooFoot" href="https://hoofoot.com/" mirrorHref="https://mysoccerpulse.com/" icon={<FileVideo />} />
+</PillGroup>
+
+<SportsSectionHeader icon={<Car />} accent="orange">
+
+### Motorsports (F1, MotoGP, NASCAR)
+
+</SportsSectionHeader>
+
+<PillGroup>
+  <NetworkPill title="F1 Full Races" href="https://f1fullraces.com/" icon={<Car />} />
+  <NetworkPill title="F1 Live" href="https://f1live.dpdns.org/" icon={<Car />} />
+  <NetworkPill title="FullRaces" href="https://fullraces.com/" icon={<Car />} />
+  <NetworkPill title="Nascar Classics" href="https://classics.nascar.com/" icon={<Car />} />
+  <NetworkPill title="OvertakeFans" href="https://overtakefans.com/" icon={<Car />} />
+  <NetworkPill title="NontonGP" href="https://replay.nontonx.com/" icon={<Car />} />
+</PillGroup>
+
+<SportsSectionHeader icon={<Activity />} accent="green">
+
+### US Sports & Rugby
+
+</SportsSectionHeader>
+
+<PillGroup>
+  <NetworkPill title="Basketball Video" href="https://basketball-video.com/" icon={<Activity />} />
+  <NetworkPill title="BasketballReplays" href="https://basketballreplays.net/" icon={<Activity />} />
+  <NetworkPill title="NFL Video" href="https://nfl-video.com/" mirrorHref="https://nfl-replays.com/" icon={<Activity />} />
+  <NetworkPill title="MLBLive" href="https://mlblive.net/" icon={<Activity />} />
+  <NetworkPill title="Steves Classic Baseball" href="https://www.youtube.com/playlist?list=PLbbmEcFXHSnOHeJdpQr0K808cPVzP0t_B" icon={<FileVideo />} />
+  <NetworkPill title="Rugby24" href="https://rugby24.net/" icon={<Activity />} />
+</PillGroup>
+
+<SportsSectionHeader icon={<FileVideo />} accent="purple">
+
+### General Multi-Sport Archives
+
+</SportsSectionHeader>
+
+<PillGroup>
+  <NetworkPill title="ReplayZone" href="https://replay-exc.pages.dev/" icon={<FileVideo />} />
+  <NetworkPill title="SportsReplay" href="https://watchreplay.net/" icon={<FileVideo />} />
+  <NetworkPill title="LiveXTV" href="https://livextv.hybrows.workers.dev/replays" icon={<FileVideo />} />
+  <NetworkPill title="Classic Sports Fanatic" href="https://www.youtube.com/@classicsportsfanatic7183/playlists" icon={<FileVideo />} />
+</PillGroup>
+
+<SportsSectionHeader icon={<Radio />} accent="zinc">
+
+### Communities & Torrents
+
+</SportsSectionHeader>
+
+<PillGroup>
+  <ArchivePill title="rutracker Sports" href="https://rutracker.org/forum/index.php?c=28" icon={<Database />} badge="HQ Retention" />
+  <ArchivePill title="Sport Video Torrents" href="https://www.sport-video.org.ua/index.html" icon={<FileVideo />} badge="P2P Tracker" />
+  <ArchivePill title="1DDL" href="https://1ddl.org/category/tv-shows/tv-sport" icon={<Download />} badge="Direct Links" />
+  <ArchivePill title="r/footballhighlights" href="https://old.reddit.com/r/footballhighlights/" icon={<Users />} badge="Reddit" />
+  <ArchivePill title="r/MotorsportsReplays" href="https://reddit.com/r/MotorsportsReplays" icon={<Users />} badge="Reddit" />
+</PillGroup>
+
+---
+
+<SportsSectionHeader icon={<Network />} accent="red">
+
+## The Protocol: Acestream (P2P)
+
+</SportsSectionHeader>
+
+If you are frustrated by web streamers constantly buffering during major events, you need to transition to **Acestream**.
+
+<div className="mb-6 font-body text-[14px] leading-relaxed text-[#4A5568] dark:text-[#8B949E] bg-[#FFFFFF]/90 dark:bg-[#141820]/90 backdrop-blur-xl border border-[#E2E4E9] dark:border-[#2A2F3A] p-6 rounded-md shadow-sm relative z-10">
+  Acestream is a Peer-to-Peer (P2P) streaming protocol. Instead of everyone downloading the video from a central server (which crashes under heavy load), viewers share the stream with each other. This allows you to watch **uncompressed 1080p and 4K broadcasts at 50/60 FPS** with literally zero buffering. 
+  <br/><br/>
+  <span className="text-[#E32636] font-semibold">*Because it is P2P (like torrenting), you must use a VPN to hide your IP address.*</span>
+</div>
+
+<SportsSectionHeader icon={<MonitorPlay />} accent="zinc">
+
+### How to use Acestream:
+
+</SportsSectionHeader>
+
+<div className="font-body text-[14px] leading-relaxed text-[#4A5568] dark:text-[#8B949E] relative z-10 mb-4 ml-4">
+1. Download and install the [Acestream Client](https://acestream.org/).
+2. When a major sporting event is happening, find an "Acestream ID" (a long string of letters and numbers). 
+3. Open the Acestream Player, go to **Media > Open Acestream Content ID**, and paste the ID.
+</div>
+
+**Where to find Content IDs:**
+
+<PillGroup>
+  <AcestreamPill title="Acestream Search" href="https://search-ace.stream/" icon={<Search />} />
+</PillGroup>

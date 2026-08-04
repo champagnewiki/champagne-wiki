@@ -1,0 +1,708 @@
+---
+title: Gaming Tools Hub
+description: Platform tools, performance tweaks, mods, and homebrew for PC and console gaming.
+icon: ToolCase
+---
+
+import {
+  GamingAtmosphere, GamingHero, GamingSectionHeading, ZoneIntro, GuideBox,
+  InfoDeck, InfoCard, PillDeck, GamingPill, DiscordPill, PillLegend, CompareTable
+} from '@/components/gaming-magic';
+import {
+  Gamepad2, Store, Wrench, Layers, Cpu, Gauge, Puzzle, Users,
+  Joystick, HardDrive, Trophy, MapPin, Sparkles, ShieldAlert
+} from 'lucide-react';
+
+<GamingAtmosphere />
+<GamingHero />
+
+<PillLegend />
+
+---
+
+<GamingSectionHeading icon={<Store />} accent="violet">
+
+## Platform & Library Tools
+
+</GamingSectionHeading>
+
+<ZoneIntro accent="violet">
+  Steam, Epic, and GOG all lock certain features (DLC access, offline multiplayer, achievements) behind their own servers. This section covers the tools that unlock, organize, and manage those libraries, from DRM bypasses to cross-platform launchers.
+</ZoneIntro>
+
+<GamingSectionHeading icon={<Layers />} accent="violet">
+
+### Steam & Epic Tool Index
+
+</GamingSectionHeading>
+
+<InfoDeck>
+  <InfoCard title="Koalageddon" href="https://github.com/acidicoala/Koalageddon2" icon={<Layers />} tag="DLC unlocker" tagStyle="violet">
+    Unlocks purchasable DLC across Steam, Epic, Origin, EA, and Uplay in one tool, works by intercepting each platform's own ownership check.
+  </InfoCard>
+  <InfoCard title="Goldberg (gbe_fork)" href="https://github.com/otavepto/gbe_fork" icon={<Cpu />} tag="Offline emulator" tagStyle="amber">
+    Replaces Steamworks with a local emulator, enabling offline play and LAN multiplayer for games that would otherwise refuse to launch without Steam servers.
+  </InfoCard>
+  <InfoCard title="SmokeAPI" href="https://github.com/acidicoala/SmokeAPI" icon={<Layers />} tag="DLC unlocker" tagStyle="violet">
+    A lightweight Steamworks API wrapper focused specifically on unlocking DLC ownership flags, pairs well with a matching auto-installer.
+  </InfoCard>
+  <InfoCard title="Steamless" href="https://github.com/atom0s/Steamless" icon={<Wrench />} tag="DRM stripper" tagStyle="amber">
+    Removes the SteamStub DRM wrapper from an executable, a required first step before most other Steam bypass tools can function.
+  </InfoCard>
+  <InfoCard title="SteamDB" href="https://steamdb.info/" icon={<Gauge />} tag="Insights" tagStyle="sky">
+    Tracks price history, depot changes, upcoming releases, and player counts across the entire Steam catalog in near real time.
+  </InfoCard>
+  <InfoCard title="Heroic Games Launcher" href="https://heroicgameslauncher.com/" icon={<Store />} tag="Epic/GOG" tagStyle="violet">
+    An open-source, cross-platform launcher for Epic and GOG libraries, popular on Linux and Steam Deck where the official launchers run poorly.
+  </InfoCard>
+</InfoDeck>
+
+<PillDeck>
+  <GamingPill title="Steamtools" href="https://github.com/st2024/Steamtools/releases" type="tool" />
+  <GamingPill title="GreenLuma" href="https://cs.rin.ru/forum/viewtopic.php?f=29&t=103709" type="tool" warning="Forum sign-up required." />
+  <GamingPill title="DepotDownloader" href="https://github.com/SteamRE/DepotDownloader" type="tool" />
+  <GamingPill title="Nemirtingas Epic Emulator" href="https://cs.rin.ru/forum/viewtopic.php?f=29&t=105551" type="tool" warning="Forum sign-up required." />
+  <GamingPill title="TCNO Acc Switcher" href="https://github.com/TCNOco/TcNo-Acc-Switcher" type="tool" />
+  <GamingPill title="LEGENDARY" href="https://github.com/derrod/legendary" type="tool" />
+  <GamingPill title="Watt Toolkit" href="https://steampp.net/" type="tool" />
+  <GamingPill title="BoilR" href="https://github.com/PhilipK/BoilR" type="tool" />
+  <GamingPill title="ArchiSteamFarm" href="https://github.com/JustArchiNET/ArchiSteamFarm" type="tool" />
+</PillDeck>
+
+<GuideBox title="Steam Deck & SteamOS" tone="neutral">
+  A cluster of tools specifically for Valve's handheld and its Linux-based OS.
+</GuideBox>
+
+<PillDeck>
+  <GamingPill title="Decky Loader" href="https://decky.xyz/" type="official" />
+  <GamingPill title="Bazzite" href="https://bazzite.gg/" type="site" />
+  <GamingPill title="HoloISO" href="https://github.com/HoloISO/releases" type="tool" />
+  <GamingPill title="Steam Deck Tools" href="https://steam-deck-tools.ayufan.dev" type="tool" />
+</PillDeck>
+
+<GamingSectionHeading icon={<Gamepad2 />} accent="violet">
+
+### Game Launchers
+
+</GamingSectionHeading>
+
+<InfoDeck>
+  <InfoCard title="Playnite" href="https://playnite.link/" icon={<Gamepad2 />} tag="Universal" tagStyle="violet">
+    A free, open-source library manager that unifies every launcher (Steam, Epic, GOG, emulators) into one interface, with a large third-party extension ecosystem.
+  </InfoCard>
+  <InfoCard title="GameVault" href="https://gamevau.lt" icon={<HardDrive />} tag="Self-hosted" tagStyle="amber">
+    A self-hosted alternative to Steam for DRM-free games stored on your own server, think Jellyfin, but for game libraries instead of media.
+  </InfoCard>
+  <InfoCard title="Hydra" href="https://github.com/hydralauncher/hydra" icon={<Layers />} tag="Torrent client" tagStyle="rose">
+    A game launcher with a built-in BitTorrent client and repack scraper baked directly into the app, so finding and launching a game is one workflow.
+  </InfoCard>
+  <InfoCard title="LaunchBox" href="https://www.launchbox-app.com/" icon={<Joystick />} tag="Retro focus" tagStyle="sky">
+    A polished frontend built around retro and console emulation libraries, with extensive box-art and metadata scraping support.
+  </InfoCard>
+</InfoDeck>
+
+<GamingSectionHeading icon={<HardDrive />} accent="violet">
+
+### Game Saves
+
+</GamingSectionHeading>
+
+<PillDeck>
+  <GamingPill title="Ludusavi" href="https://github.com/mtkennerly/ludusavi" type="tool" />
+  <GamingPill title="GameSave Manager" href="https://www.gamesave-manager.com/" type="tool" />
+  <GamingPill title="Save Game World" href="https://www.savegameworld.com/" type="site" />
+  <GamingPill title="SavegameDownload" href="https://www.savegamedownload.com/" type="site" />
+  <GamingPill title="Save Editor Online" href="https://www.saveeditonline.com/" type="site" />
+</PillDeck>
+
+---
+
+<GamingSectionHeading icon={<Gauge />} accent="amber">
+
+## Performance & Input
+
+</GamingSectionHeading>
+
+<ZoneIntro accent="amber">
+  Getting the best experience out of a game often has nothing to do with the game itself, driver tweaks, frame-limiting, controller remapping, and display fixes account for most of the difference between a stuttery mess and a smooth session.
+</ZoneIntro>
+
+<GamingSectionHeading icon={<Cpu />} accent="amber">
+
+### Optimization Tools
+
+</GamingSectionHeading>
+
+<InfoDeck>
+  <InfoCard title="Special K" href="https://www.special-k.info/" icon={<Cpu />} tag="Universal injector" tagStyle="amber">
+    A deeply configurable injector that adds frame limiting, HDR, upscaling, and dozens of per-game fixes to titles that never shipped with them.
+  </InfoCard>
+  <InfoCard title="PCGamingWiki" href="https://www.pcgamingwiki.com/" icon={<Wrench />} tag="Reference" tagStyle="sky">
+    The definitive community database of per-game fixes, from widescreen patches to save-file locations, covering tens of thousands of titles.
+  </InfoCard>
+  <InfoCard title="MSI Afterburner" href="https://www.msi.com/Landing/afterburner" icon={<Gauge />} tag="GPU tuning" tagStyle="violet">
+    The most widely used GPU overclocking and monitoring tool, works with nearly any card regardless of manufacturer.
+  </InfoCard>
+  <InfoCard title="ReShade" href="https://reshade.me/" icon={<Sparkles />} tag="Shader injector" tagStyle="amber">
+    Injects post-processing shader effects into almost any DirectX or Vulkan game, widely used for sharpening, color grading, and ambient occlusion mods.
+  </InfoCard>
+  <InfoCard title="Lossless Scaling" href="https://store.steampowered.com/app/993090/Lossless_Scaling/" icon={<Gauge />} tag="Frame gen" tagStyle="amber">
+    Adds frame generation and upscaling to any windowed game, one of the few ways to get FSR-style frame gen on titles that never implemented it.
+  </InfoCard>
+  <InfoCard title="Magpie" href="https://github.com/Blinue/Magpie" icon={<Sparkles />} tag="FSR wrapper" tagStyle="amber">
+    A free window-level FSR upscaler, applies AMD's scaling algorithm to any application without needing driver-level or game-level support.
+  </InfoCard>
+</InfoDeck>
+
+<PillDeck>
+  <GamingPill title="Rivatuner Statistics Server" href="https://www.guru3d.com/files-details/rtss-rivatuner-statistics-server-download.html" type="tool" />
+  <GamingPill title="CapFrameX" href="https://www.capframex.com/" type="tool" />
+  <GamingPill title="dgVoodoo2" href="http://dege.freeweb.hu/dgVoodoo2/" type="tool" />
+  <GamingPill title="Borderless Gaming" href="https://github.com/Codeusa/Borderless-Gaming" type="tool" />
+  <GamingPill title="Widescreen Fixes Pack" href="https://thirteenag.github.io/wfp" type="site" />
+  <GamingPill title="4GB Patch" href="https://ntcore.com/?page_id=371" type="tool" />
+  <GamingPill title="dlss-swapper" href="https://github.com/beeradmoore/dlss-swapper" type="tool" />
+</PillDeck>
+
+<GamingSectionHeading icon={<Joystick />} accent="amber">
+
+### Controller Tools
+
+</GamingSectionHeading>
+
+<PillDeck>
+  <GamingPill title="DS4Windows" href="https://ryochan7.github.io/ds4windows-site/" type="tool" />
+  <GamingPill title="AntiMicroX" href="https://github.com/AntiMicroX/antimicroX" type="tool" />
+  <GamingPill title="DualSenseX" href="https://github.com/Paliverse/DualSenseX" type="tool" />
+  <GamingPill title="x360ce" href="https://www.x360ce.com/" type="tool" />
+  <GamingPill title="JoyToKey" href="https://joytokey.net/en/" type="tool" />
+  <GamingPill title="HidHide" href="https://docs.nefarius.at/projects/HidHide/" type="tool" />
+  <GamingPill title="Gamepad Tester" href="https://gamepad-tester.com/" type="site" />
+</PillDeck>
+
+---
+
+<GamingSectionHeading icon={<Puzzle />} accent="violet">
+
+## Mods & Community
+
+</GamingSectionHeading>
+
+<ZoneIntro accent="violet">
+  Modding hubs range from single-purpose sites (one game, deep catalog) to universal platforms like Nexus and ModDB. Pick the hub built for your specific game first, they usually have better categorization and load-order tooling than the generic ones.
+</ZoneIntro>
+
+<GamingSectionHeading icon={<Layers />} accent="violet">
+
+### Mod Platforms & Managers
+
+</GamingSectionHeading>
+
+<InfoDeck>
+  <InfoCard title="Nexus Mods" href="https://www.nexusmods.com/" icon={<Puzzle />} tag="Largest hub" tagStyle="violet">
+    The largest general-purpose modding platform, covering everything from Bethesda RPGs to indie titles, with a bulk downloader userscript for premium-speed batch downloads.
+  </InfoCard>
+  <InfoCard title="Mod Organizer 2" href="https://github.com/ModOrganizer2/modorganizer" icon={<Wrench />} tag="Load order" tagStyle="amber">
+    A virtualized mod manager that keeps your game's actual install folder untouched, the standard for Bethesda-engine modding (Skyrim, Fallout).
+  </InfoCard>
+  <InfoCard title="WabbaJack" href="https://www.wabbajack.org/" icon={<Layers />} tag="Modlist installer" tagStyle="amber">
+    Automates installing an entire curated modlist, hundreds of mods, correct load order, and patches, in a single run instead of doing it manually.
+  </InfoCard>
+  <InfoCard title="GameBanana" href="https://gamebanana.com/" icon={<Puzzle />} tag="Community hub" tagStyle="violet">
+    A long-running community modding site especially strong for Source engine games, fighting games, and skin/texture packs.
+  </InfoCard>
+  <InfoCard title="ModDB" href="https://moddb.com/" icon={<Puzzle />} tag="Community hub" tagStyle="violet">
+    One of the oldest general modding databases, particularly deep for total-conversion mods and older PC titles.
+  </InfoCard>
+  <InfoCard title="mod.io" href="https://www.mod.io/" icon={<Layers />} tag="Cross-platform SDK" tagStyle="sky">
+    A modding backend that game developers integrate directly, meaning some console and mobile titles support in-game mod browsing through it.
+  </InfoCard>
+</InfoDeck>
+
+<PillDeck>
+  <GamingPill title="ModOrganizer2 (GitHub)" href="https://github.com/ModOrganizer2/modorganizer" type="tool" />
+  <GamingPill title="ModdingLinked" href="https://moddinglinked.com/" type="site" />
+  <GamingPill title="ModWorkshop" href="https://modworkshop.net/" type="site" />
+  <GamingPill title="GameFront" href="https://gamefront.com/" type="site" />
+  <GamingPill title="Video Game Mods" href="https://videogamemods.com/" type="site" />
+  <GamingPill title="Silent's Blog" href="https://cookieplmonster.github.io/mods/index/" type="site" />
+  <GamingPill title="FlingTrainer" href="https://flingtrainer.com/" type="site" />
+</PillDeck>
+
+<GuideBox title="Franchise-Specific Modding Hubs" tone="neutral">
+  Worth checking before a generic platform, these are purpose-built for one game and usually have better tooling.
+</GuideBox>
+
+<PillDeck>
+  <GamingPill title="ChronoCrash (OpenBOR)" href="https://www.chronocrash.com/forum/" type="forum" />
+  <GamingPill title="NexusMods (Bethesda)" href="https://www.nexusmods.com/" type="site" />
+  <GamingPill title="UGX Mods (COD Zombies)" href="https://www.ugx-mods.com/" type="site" />
+  <GamingPill title="RimWorldBase" href="https://www.rimworldbase.com/" type="site" />
+  <GamingPill title="NFSMods" href="https://nfsmods.xyz/" type="site" />
+  <GamingPill title="SimPlaza (MSFS)" href="https://simplaza.org/" type="site" />
+  <GamingPill title="Modding-OpenMW (Morrowind)" href="https://modding-openmw.com/" type="site" />
+  <GamingPill title="BSMG (Beat Saber)" href="https://bsmg.wiki/" type="site" />
+  <GamingPill title="SMods (Cities: Skylines)" href="https://smods.ru/" type="site" />
+</PillDeck>
+
+<PillDeck>
+  <DiscordPill title="ModdingLinked" href="https://discord.com/invite/S99Ary5eba" />
+  <DiscordPill title="WabbaJack" href="https://discord.com/invite/wabbajack" />
+  <DiscordPill title="UGX Mods" href="https://discord.gg/g9S2nSp" />
+  <DiscordPill title="BSManager" href="https://discord.com/invite/uSqbHVpKdV" />
+</PillDeck>
+
+---
+
+<GamingSectionHeading icon={<Users />} accent="amber">
+
+## Multiplayer
+
+</GamingSectionHeading>
+
+<ZoneIntro accent="amber">
+  A surprising number of multiplayer games either shut down their servers years ago or block LAN/offline play entirely. This section covers reviving dead servers, adding multiplayer to singleplayer-only games, and fixing broken LAN connections.
+</ZoneIntro>
+
+<GamingSectionHeading icon={<Trophy />} accent="amber">
+
+### Stat Tracking & Discovery
+
+</GamingSectionHeading>
+
+<InfoDeck>
+  <InfoCard title="Tracker.gg" href="https://tracker.gg/" icon={<Trophy />} tag="Multi-game" tagStyle="violet">
+    Aggregates leaderboards and match stats across dozens of competitive titles, from Valorant to Apex Legends, in one consistent interface.
+  </InfoCard>
+  <InfoCard title="Liquipedia" href="https://liquipedia.net/" icon={<Trophy />} tag="Esports wiki" tagStyle="violet">
+    The most comprehensive esports encyclopedia, covering tournament brackets, team rosters, and match histories across nearly every competitive scene.
+  </InfoCard>
+  <InfoCard title="Find-PlayDate" href="https://www.find-playdate.com/" icon={<Users />} tag="Matchmaking" tagStyle="sky">
+    A lightweight tool for finding people to play specific games with, useful for co-op titles that lack built-in matchmaking.
+  </InfoCard>
+  <InfoCard title="Nucleus Co-op" href="https://github.com/SplitScreen-Me/splitscreenme-nucleus" icon={<Users />} tag="Split-screen" tagStyle="amber">
+    Forces local split-screen multiplayer onto PC games that only support one instance per machine by launching multiple game processes at once.
+  </InfoCard>
+</InfoDeck>
+
+<GamingSectionHeading icon={<Wrench />} accent="amber">
+
+### Multiplayer Mods & Revivals
+
+</GamingSectionHeading>
+
+<PillDeck>
+  <GamingPill title="Plutonium (BO2/MW3)" href="https://plutonium.pw/" type="tool" warning="Requires a legitimate copy of the base game." />
+  <GamingPill title="Venice Unleashed (BF3)" href="https://veniceunleashed.net/" type="tool" />
+  <GamingPill title="Northstar (Titanfall 2)" href="https://northstar.tf/" type="tool" />
+  <GamingPill title="Slippi (Melee)" href="https://slippi.gg/" type="tool" />
+  <GamingPill title="Tilted Online (Skyrim/FO4)" href="https://wiki.tiltedphoques.com/tilted-online/" type="tool" />
+  <GamingPill title="CnCNet" href="https://cncnet.org/" type="tool" />
+  <GamingPill title="Old School RuneScape" href="https://oldschool.runescape.com/" type="official" />
+  <GamingPill title="Toontown Rewritten" href="https://www.toontownrewritten.com/" type="site" />
+</PillDeck>
+
+<PillDeck>
+  <DiscordPill title="Venice Unleashed" href="https://discord.com/invite/dpJwaVZ" />
+  <DiscordPill title="Northstar (Titanfall 2)" href="https://discord.gg/CEszSguY3A" />
+  <DiscordPill title="Slippi" href="https://discord.com/invite/pPfEaW5" />
+  <DiscordPill title="Skyrim Together" href="https://discord.gg/skyrimtogether" />
+</PillDeck>
+
+<GamingSectionHeading icon={<ShieldAlert />} accent="amber">
+
+### LAN & Connection Fixes
+
+</GamingSectionHeading>
+
+<GuideBox title="When Online Multiplayer Won't Connect" tone="neutral">
+  Most of these tools create a virtual LAN so games that only support local networking can still be played with friends over the internet.
+</GuideBox>
+
+<PillDeck>
+  <GamingPill title="Online-Fix" href="https://online-fix.me/" type="tool" />
+  <GamingPill title="Playit.gg" href="https://playit.gg/" type="tool" />
+  <GamingPill title="ZeroTier" href="https://www.zerotier.com/" type="tool" />
+  <GamingPill title="Radmin VPN" href="https://www.radmin-vpn.com/" type="tool" />
+  <GamingPill title="Hamachi" href="https://vpn.net/" type="tool" />
+</PillDeck>
+
+<GamingSectionHeading icon={<MapPin />} accent="amber">
+
+### Private Servers
+
+</GamingSectionHeading>
+
+<PillDeck>
+  <GamingPill title="TrackyServer" href="https://www.trackyserver.com/" type="site" />
+  <GamingPill title="Impostor (Among Us)" href="https://impostor.github.io/Impostor/" type="tool" />
+  <GamingPill title="Northstar (Titanfall 2)" href="https://northstar.tf/" type="tool" />
+  <GamingPill title="Wiimmfi (Wii/DS)" href="https://wiimmfi.de/" type="official" />
+  <GamingPill title="Pretendo (Wii U)" href="https://pretendo.network/" type="official" />
+</PillDeck>
+
+---
+
+<GamingSectionHeading icon={<Cpu />} accent="violet">
+
+## Homebrew & Consoles
+
+</GamingSectionHeading>
+
+<ZoneIntro accent="violet">
+  Console modding is highly firmware-version dependent, a guide written for one system update can permanently soft-brick a device on another. Always confirm your exact firmware version against the guide's stated compatibility before doing anything irreversible.
+</ZoneIntro>
+
+<GuideBox title="Before You Start" tone="danger">
+  Check your console's exact firmware/OFW version first. Many exploits are patched in later updates, and some downgrade paths carry a real brick risk. When in doubt, ask in the relevant Discord before flashing anything.
+</GuideBox>
+
+<GamingSectionHeading icon={<Wrench />} accent="violet">
+
+### General Homebrew Guides
+
+</GamingSectionHeading>
+
+<InfoDeck>
+  <InfoCard title="Hacks.Guide" href="https://hacks.guide/" icon={<Wrench />} tag="Multi-console" tagStyle="violet">
+    A well-maintained set of step-by-step jailbreak guides covering Switch, 3DS, Wii, and Wii U, generally the most current starting point for any console.
+  </InfoCard>
+  <InfoCard title="ConsoleMods.org" href="https://consolemods.org/" icon={<Wrench />} tag="Wiki" tagStyle="violet">
+    A community wiki modeled on the old GBAtemp/Hacks.Guide format, covering a wide range of consoles with active Discord support.
+  </InfoCard>
+  <InfoCard title="GBATemp" href="https://gbatemp.net/" icon={<Users />} tag="Forum" tagStyle="sky">
+    The longest-running general homebrew forum, useful for troubleshooting device-specific issues that guides don't cover.
+  </InfoCard>
+  <InfoCard title="Darthsternie" href="https://darthsternie.net/" icon={<HardDrive />} tag="Firmware archive" tagStyle="amber">
+    An archive of console firmware versions and exploit payloads, useful when you need an older firmware file that's no longer officially distributed.
+  </InfoCard>
+</InfoDeck>
+
+<PillDeck>
+  <GamingPill title="CFW Guide" href="https://cfw.guide/" type="site" />
+  <GamingPill title="Homebrew Guides (rentry)" href="https://rentry.co/Guides" type="site" />
+  <GamingPill title="Gamebrew" href="https://www.gamebrew.org/" type="site" />
+  <GamingPill title="Digiex" href="https://digiex.net/forums/" type="forum" />
+</PillDeck>
+
+<PillDeck>
+  <DiscordPill title="Nintendo Homebrew" href="https://discord.gg/C29hYvh" />
+  <DiscordPill title="ConsoleMods" href="https://discord.gg/x5vEnkR4C8" />
+</PillDeck>
+
+<GamingSectionHeading icon={<Joystick />} accent="violet">
+
+### Nintendo Switch
+
+</GamingSectionHeading>
+
+<InfoDeck>
+  <InfoCard title="Switch Guide" href="https://nh-server.github.io/switch-guide/" icon={<Wrench />} tag="Official guide" tagStyle="violet">
+    The definitive Nintendo Homebrew community guide for jailbreaking a Switch, covers both exploitable and patched hardware revisions.
+  </InfoCard>
+  <InfoCard title="DeepSea" href="https://github.com/Team-Neptune/DeepSea" icon={<Layers />} tag="CFW package" tagStyle="amber">
+    A bundled custom firmware package that installs the essential homebrew apps and payloads in one pass instead of manually sideloading each piece.
+  </InfoCard>
+  <InfoCard title="FlagBrew" href="https://flagbrew.org/" icon={<Puzzle />} tag="Save tools" tagStyle="violet">
+    A suite of Switch homebrew tools centered on save editing and Pokémon-related utilities, actively maintained with Discord support.
+  </InfoCard>
+  <InfoCard title="Switch-LAN-Play" href="https://github.com/spacemeowx2/switch-lan-play" icon={<Users />} tag="LAN emulator" tagStyle="amber">
+    Emulates a local network over the internet for Switch titles that only support local wireless multiplayer, no local Switch console required.
+  </InfoCard>
+</InfoDeck>
+
+<PillDeck>
+  <GamingPill title="Switchway" href="https://switchway.net/" type="site" />
+  <GamingPill title="Switch Hacking Is Easy" href="https://rentry.org/SwitchHackingIsEasy" type="site" />
+  <GamingPill title="NSP Forwarder" href="https://nsp-forwarder.n8.io/" type="tool" />
+  <GamingPill title="emuiibo" href="https://github.com/XorTroll/emuiibo" type="tool" />
+</PillDeck>
+
+<PillDeck>
+  <DiscordPill title="FlagBrew" href="https://discord.com/invite/4Rv8DTzGFa" />
+</PillDeck>
+
+<GamingSectionHeading icon={<Joystick />} accent="violet">
+
+### Wii / Wii U
+
+</GamingSectionHeading>
+
+<InfoDeck>
+  <InfoCard title="Wii U Hacks Guide" href="https://wiiu.hacks.guide/" icon={<Wrench />} tag="Jailbreak" tagStyle="violet">
+    The standard step-by-step Wii U softmod path from stock firmware to full custom firmware access.
+  </InfoCard>
+  <InfoCard title="Wii Hacks Guide" href="https://wii.hacks.guide/" icon={<Wrench />} tag="Jailbreak" tagStyle="violet">
+    The equivalent guide for the original Wii, covering the Homebrew Channel install and common softmod paths.
+  </InfoCard>
+  <InfoCard title="Pretendo" href="https://pretendo.network/" icon={<Users />} tag="Network revival" tagStyle="amber">
+    A full replacement for Nintendo's discontinued Wii U/3DS online services, restoring eShop-like functionality and online play.
+  </InfoCard>
+  <InfoCard title="Wiimmfi" href="https://wiimmfi.de/" icon={<Users />} tag="Server revival" tagStyle="amber">
+    Restores online multiplayer for Wii and DS titles after Nintendo's original Wi-Fi Connection service was shut down.
+  </InfoCard>
+</InfoDeck>
+
+<PillDeck>
+  <GamingPill title="WiiBrew" href="https://wiibrew.org/" type="site" />
+  <GamingPill title="WiiUBrew" href="https://wiiubrew.org/wiki/Main_Page" type="site" />
+  <GamingPill title="Open Shop Channel" href="https://oscwii.org/" type="site" />
+  <GamingPill title="WBFStoISO" href="https://www.wbfstoiso.com/" type="tool" />
+</PillDeck>
+
+<PillDeck>
+  <DiscordPill title="Pretendo" href="https://invite.gg/pretendo" />
+</PillDeck>
+
+<GamingSectionHeading icon={<Joystick />} accent="violet">
+
+### 3DS / DS
+
+</GamingSectionHeading>
+
+<InfoDeck>
+  <InfoCard title="3DS Jailbreak Guide" href="https://3ds.hacks.guide/" icon={<Wrench />} tag="Jailbreak" tagStyle="violet">
+    The most reliable current path to custom firmware on 3DS, DSi, and 2DS hardware, actively kept up to date.
+  </InfoCard>
+  <InfoCard title="DS Homebrew" href="https://ds-homebrew.com/" icon={<Wrench />} tag="Resource hub" tagStyle="violet">
+    A dedicated hub for original DS homebrew development and setup, distinct from the 3DS-focused guides.
+  </InfoCard>
+  <InfoCard title="DSi Jailbreak Guide" href="https://dsi.cfw.guide/" icon={<Wrench />} tag="Jailbreak" tagStyle="violet">
+    A DSi-specific softmod path, useful since some DSi hardware revisions require different exploits than 3DS guides assume.
+  </InfoCard>
+</InfoDeck>
+
+<PillDeck>
+  <GamingPill title="DS Homebrew Wiki" href="https://wiki.ds-homebrew.com/" type="site" />
+</PillDeck>
+
+<PillDeck>
+  <DiscordPill title="DS Homebrew" href="https://discord.com/invite/yD3spjv" />
+</PillDeck>
+
+<GamingSectionHeading icon={<Joystick />} accent="violet">
+
+### Xbox & Classic Consoles
+
+</GamingSectionHeading>
+
+<PillDeck>
+  <GamingPill title="Insignia (OG Xbox servers)" href="https://insignia.live/" type="site" />
+  <GamingPill title="C-Xbox Tool" href="https://gbatemp.net/download/c-xbox-tool.7615/" type="tool" />
+  <GamingPill title="NKit" href="https://wiki.gbatemp.net/wiki/NKit" type="tool" />
+  <GamingPill title="hakchi2 CE (NES/SNES Mini)" href="https://github.com/TeamShinkansen/Hakchi2-CE" type="tool" />
+</PillDeck>
+
+<PillDeck>
+  <DiscordPill title="Insignia" href="https://discord.gg/CWkdVdc" />
+  <DiscordPill title="hakchi2 CE" href="https://discord.gg/UUvqsAR" />
+</PillDeck>
+
+---
+
+<GamingSectionHeading icon={<Sparkles />} accent="amber">
+
+## Discovery & Improvement
+
+</GamingSectionHeading>
+
+<ZoneIntro accent="amber">
+  Beyond the platforms and mods, there's a whole layer of tools for finding what to play next, tracking backlogs, and actually getting better at the games you already own.
+</ZoneIntro>
+
+<GamingSectionHeading icon={<Trophy />} accent="amber">
+
+### Game Databases & Trackers
+
+</GamingSectionHeading>
+
+<InfoDeck>
+  <InfoCard title="IGDB" href="https://www.igdb.com/" icon={<Layers />} tag="Database" tagStyle="violet">
+    A large, API-driven game metadata database used as a backend by many other apps, useful for release dates, platforms, and franchise relationships.
+  </InfoCard>
+  <InfoCard title="Backloggd" href="https://www.backloggd.com/" icon={<Trophy />} tag="Tracker" tagStyle="violet">
+    A Letterboxd-style tracker for logging games played, rating them, and building a public backlog, popular for its clean social feed.
+  </InfoCard>
+  <InfoCard title="OpenCritic" href="https://opencritic.com/" icon={<Trophy />} tag="Review aggregator" tagStyle="sky">
+    Aggregates professional critic reviews into a single score, positioned as a less controversial alternative to Metacritic's methodology.
+  </InfoCard>
+  <InfoCard title="HowLongToBeat" href="https://howlongtobeat.com/" icon={<Gauge />} tag="Playtime" tagStyle="sky">
+    Crowdsourced average completion times for tens of thousands of games, broken down by main story, completionist, and everything-in-between playstyles.
+  </InfoCard>
+  <InfoCard title="Are We Anti-Cheat Yet?" href="https://areweanticheatyet.com/" icon={<ShieldAlert />} tag="Compatibility" tagStyle="rose">
+    Tracks which anti-cheat systems work on Linux/Proton, essential reading before assuming a competitive multiplayer game will run on Steam Deck or Linux.
+  </InfoCard>
+  <InfoCard title="Speedrun.com" href="https://www.speedrun.com/" icon={<Trophy />} tag="Leaderboards" tagStyle="violet">
+    The central hub for speedrunning leaderboards, rules, and community resources across essentially every speedrunnable game.
+  </InfoCard>
+</InfoDeck>
+
+<PillDeck>
+  <GamingPill title="Glitchwave" href="https://glitchwave.com/" type="site" />
+  <GamingPill title="Grouvee" href="https://www.grouvee.com/" type="site" />
+  <GamingPill title="GiantBomb" href="https://www.giantbomb.com/games/" type="site" />
+  <GamingPill title="RAWG" href="https://rawg.io/" type="site" />
+  <GamingPill title="MobyGames" href="https://www.mobygames.com/" type="site" />
+  <GamingPill title="Exophase" href="https://www.exophase.com/" type="site" />
+  <GamingPill title="Delisted Games" href="https://delistedgames.com/" type="site" />
+  <GamingPill title="BoardGameGeek" href="https://boardgamegeek.com/" type="site" />
+</PillDeck>
+
+<GuideBox title="Finding Similar Games" tone="neutral">
+  A cluster of recommendation engines for when you finish something and don't know what's next.
+</GuideBox>
+
+<PillDeck>
+  <GamingPill title="TasteDive" href="https://tastedive.com/games" type="site" />
+  <GamingPill title="50GamesLike" href="https://www.50gameslike.com/" type="site" />
+  <GamingPill title="Games Like Finder" href="https://gameslikefinder.com/" type="site" />
+  <GamingPill title="r/ifyoulikeblank" href="https://www.reddit.com/r/ifyoulikeblank/" type="forum" />
+</PillDeck>
+
+<GamingSectionHeading icon={<Gauge />} accent="amber">
+
+### Skill Improvement ("Git Gud")
+
+</GamingSectionHeading>
+
+<InfoDeck>
+  <InfoCard title="Aim400kg" href="https://aim400kg.com/" icon={<Gauge />} tag="Aim trainer" tagStyle="amber">
+    A free, browser-based aim trainer with routines modeled closely on Valorant and CS mechanics, no install required.
+  </InfoCard>
+  <InfoCard title="Aimlabs" href="https://aimlabs.com/" icon={<Gauge />} tag="Aim trainer" tagStyle="amber">
+    A more full-featured desktop aim trainer with detailed analytics and game-specific sensitivity matching.
+  </InfoCard>
+  <InfoCard title="GamingSmart" href="https://gamingsmart.com/" icon={<Gauge />} tag="Sensitivity converter" tagStyle="sky">
+    Converts mouse sensitivity settings between different games, critical for keeping consistent muscle memory when switching titles.
+  </InfoCard>
+  <InfoCard title="LiveSplit" href="https://livesplit.org/" icon={<Trophy />} tag="Speedrun timer" tagStyle="violet">
+    The standard customizable split timer used across most PC speedrunning communities, supports auto-splitters for many games.
+  </InfoCard>
+</InfoDeck>
+
+<PillDeck>
+  <GamingPill title="Before I Play" href="https://beforeiplay.com/" type="site" />
+  <GamingPill title="3D Aim Trainer" href="https://www.3daimtrainer.com/" type="site" />
+  <GamingPill title="Aiming.Pro" href="https://aiming.pro/" type="site" />
+  <GamingPill title="GameGuides" href="https://www.gamerguides.com/" type="site" />
+  <GamingPill title="StrategyWiki" href="https://strategywiki.org/" type="site" />
+  <GamingPill title="Game8" href="https://game8.co/" type="site" />
+</PillDeck>
+
+<GamingSectionHeading icon={<MapPin />} accent="amber">
+
+### Game Maps
+
+</GamingSectionHeading>
+
+<InfoDeck>
+  <InfoCard title="Map Genie" href="https://mapgenie.io/" icon={<MapPin />} tag="Interactive maps" tagStyle="violet">
+    Interactive collectible and quest maps for a huge range of open-world games, with filterable overlays and progress tracking.
+  </InfoCard>
+  <InfoCard title="noclip" href="https://noclip.website/" icon={<MapPin />} tag="Map explorer" tagStyle="amber">
+    Lets you freely fly through actual game level geometry from dozens of titles directly in the browser, built from reverse-engineered map data.
+  </InfoCard>
+</InfoDeck>
+
+<PillDeck>
+  <GamingPill title="GameMaps" href="https://www.gamemaps.com/" type="site" />
+  <GamingPill title="THGL" href="https://www.th.gl/" type="site" />
+  <GamingPill title="VGMaps" href="https://www.vgmaps.com/" type="site" />
+  <GamingPill title="Fortnite.gg" href="https://fortnite.gg/" type="site" />
+  <GamingPill title="Hitmaps" href="https://www.hitmaps.com/" type="site" />
+</PillDeck>
+
+---
+
+<GamingSectionHeading icon={<Layers />} accent="violet">
+
+## Extras
+
+</GamingSectionHeading>
+
+<ZoneIntro accent="violet">
+  A grab bag of tools that don't fit neatly elsewhere, translation tools for import games, asset resources for artists and modders, tournament utilities, and a few reference reads worth bookmarking.
+</ZoneIntro>
+
+<GamingSectionHeading icon={<Puzzle />} accent="violet">
+
+### Localization & Translation
+
+</GamingSectionHeading>
+
+<InfoDeck>
+  <InfoCard title="Textractor" href="https://github.com/Artikash/Textractor" icon={<Puzzle />} tag="Text extractor" tagStyle="amber">
+    Hooks into a running game or visual novel to extract on-screen text in real time, the standard tool for reading untranslated Japanese titles.
+  </InfoCard>
+  <InfoCard title="MORT" href="https://github.com/killkimno/MORT" icon={<Puzzle />} tag="Live translator" tagStyle="amber">
+    Builds on text-hooking tools like Textractor to provide real-time machine translation overlays for games with no official localization.
+  </InfoCard>
+  <InfoCard title="GARbro" href="https://github.com/morkt/GARbro/" icon={<HardDrive />} tag="Asset browser" tagStyle="amber">
+    Browses and extracts packed resource archives from visual novels and Japanese PC games, useful for accessing art and audio assets directly.
+  </InfoCard>
+</InfoDeck>
+
+<GamingSectionHeading icon={<Sparkles />} accent="violet">
+
+### Art, Models & Soundtracks
+
+</GamingSectionHeading>
+
+<InfoDeck>
+  <InfoCard title="The Models Resource" href="https://www.models-resource.com/" icon={<Layers />} tag="3D models" tagStyle="violet">
+    A huge community-ripped archive of 3D game models, widely used as a reference by modders and 3D artists.
+  </InfoCard>
+  <InfoCard title="The Spriters Resource" href="https://www.spriters-resource.com/" icon={<Layers />} tag="Sprites" tagStyle="violet">
+    The sprite-sheet equivalent of the Models Resource, an enormous catalog of ripped 2D game assets organized by platform and title.
+  </InfoCard>
+</InfoDeck>
+
+<PillDeck>
+  <GamingPill title="ConceptArt (VK)" href="https://vk.com/conceptart" type="site" />
+  <GamingPill title="Library of Codexes" href="https://libraryofcodexes.com/" type="site" />
+  <GamingPill title="Shmuplations" href="https://shmuplations.com/" type="site" />
+</PillDeck>
+
+<GamingSectionHeading icon={<Trophy />} accent="violet">
+
+### Tournament & Party Tools
+
+</GamingSectionHeading>
+
+<PillDeck>
+  <GamingPill title="Challonge" href="https://challonge.com/" type="site" />
+  <GamingPill title="Buzz In" href="https://buzzin.live/" type="site" />
+  <GamingPill title="Archipelago" href="https://archipelago.gg/" type="tool" />
+</PillDeck>
+
+<GamingSectionHeading icon={<Wrench />} accent="violet">
+
+### Recording & Capture
+
+</GamingSectionHeading>
+
+<InfoDeck>
+  <InfoCard title="Medal" href="https://medal.tv/" icon={<Wrench />} tag="Clip tool" tagStyle="amber">
+    A ShadowPlay-style background clip recorder that works on non-Nvidia GPUs, useful on AMD or Intel systems that lack a native equivalent.
+  </InfoCard>
+  <InfoCard title="RePlays" href="https://github.com/lulzsun/RePlays" icon={<Wrench />} tag="Recording manager" tagStyle="amber">
+    An open-source recording manager for organizing and auto-trimming game clips, a self-hosted alternative to cloud clip services.
+  </InfoCard>
+</InfoDeck>
+
+<GamingSectionHeading icon={<Sparkles />} accent="violet">
+
+### Reference Reads
+
+</GamingSectionHeading>
+
+<PillDeck>
+  <GamingPill title="How Denuvo Works" href="https://rentry.co/denuvo" type="site" />
+  <GamingPill title="FatmanTutorial (repacking)" href="https://archive.org/details/fatmantutorial" type="site" />
+  <GamingPill title="Wiki.gg" href="https://wiki.gg/wikis/" type="site" />
+  <GamingPill title="NIWA (Nintendo wikis)" href="https://www.niwanetwork.org/" type="site" />
+</PillDeck>
+
+<PillDeck>
+  <DiscordPill title="NIWA" href="https://discord.gg/59Mq6qB" />
+</PillDeck>

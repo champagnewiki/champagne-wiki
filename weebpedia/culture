@@ -1,0 +1,17 @@
+---
+title: Culture
+description: Japanese folklore, travel, cooking, and otaku culture resources
+customDescription: Dive into Japanese folklore, travel, cooking, and otaku culture!
+outline: [1,2,3]
+---
+
+import { WeebAtmosphere, WeebHeadingIcon, GuideBox, ZoneIntro } from "@/components/weeb-elements";
+import { CultureHero } from "@/components/culture-hero";
+import {
+  BookOpen, MonitorPlay, MapPin, ChefHat, Sparkles, Ghost,
+  Camera, Compass, Gamepad2, Tv2,
+} from "lucide-react";
+
+<WeebAtmosphere />
+<CultureHero />
+ 

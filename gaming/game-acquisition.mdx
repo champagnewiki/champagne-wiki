@@ -1,0 +1,500 @@
+---
+title: Game Acquisition
+description: Download sites, repacks, torrents, abandonware, and open-source games — with the safety knowledge to navigate them.
+icon: GamepadDirectional
+---
+
+import { GameAcquisitionHero } from "@/components/game-acquisition-hero";
+import {
+  GamingAtmosphere,
+  GamingSectionHeading,
+  ZoneIntro,
+  InfoDeck,
+  InfoCard,
+  PillDeck,
+  GamingPill,
+  GuideBox,
+  WarnBox,
+  PillLegend,
+} from "@/components/gaming-magic";
+import {
+  Compass,
+  Search,
+  Download,
+  HardDrive,
+  Globe,
+  BookOpen,
+  Users,
+  ShieldAlert,
+  Archive,
+  Cpu,
+  Code2,
+  Music,
+  Glasses,
+  KeyRound,
+  Unlock,
+  Sparkles,
+  Radar,
+  Puzzle,
+} from "lucide-react";
+
+<GameAcquisitionHero />
+
+<GamingAtmosphere variant="terminal" accent="rose" />
+
+
+
+
+
+
+
+
+<WarnBox title="Required extensions before you browse anything below">
+The community strongly recommends running **uBlock Origin** with a bypass-shortlinks userscript enabled at all times on these sites — most download pages are wrapped in ad-heavy shortlink redirects, and unprotected browsing here is how most malware incidents happen.
+</WarnBox>
+
+<PillDeck>
+  <GamingPill title="uBlock Origin" href="https://ublockorigin.com/" type="tool" />
+  <GamingPill title="Bypass All Shortlinks (fork)" href="https://greasyfork.org/en/scripts/416660-bypass-all-shortlinks-debloated" type="tool" />
+</PillDeck>
+
+<PillLegend />
+
+<GamingSectionHeading icon={<Download />} accent="rose">
+
+## General Download Sites
+
+</GamingSectionHeading>
+
+<InfoDeck>
+  <InfoCard title="CS.RIN.RU" href="https://cs.rin.ru/forum" icon={<Download />} tag="Forum" tagStyle="rose">
+    Widely regarded as the best-moderated piracy forum, requiring sign-up but offering active support for cracking issues that other sites simply can't provide.
+  </InfoCard>
+  <InfoCard title="SteamRIP" href="https://steamrip.com/" icon={<Download />} tag="DDL / Torrent" tagStyle="rose">
+    A pre-installed game host with both download and torrent options, popular for how little setup its releases require.
+  </InfoCard>
+  <InfoCard title="GOG Games" href="https://gog-games.to/" icon={<Download />} tag="DDL" tagStyle="amber">
+    Mirrors every DRM-free GOG release with SHA-256 checksums matching the originals, making it one of the safer bets on this list.
+  </InfoCard>
+  <InfoCard title="Online Fix" href="https://online-fix.me/" icon={<Download />} tag="Multiplayer fixes" tagStyle="violet">
+    Specializes in online-fix patches that let pirated copies of many games play multiplayer together, with its own Discord for support.
+  </InfoCard>
+  <InfoCard title="SteamGG" href="https://steamgg.net/" icon={<Download />} tag="Pre-installs" tagStyle="amber">
+    A pre-installed release host similar to SteamRIP, another good fallback if one host is down or slow.
+  </InfoCard>
+</InfoDeck>
+
+<PillDeck>
+  <GamingPill title="GamesDrive" href="https://gamesdrive.net/" type="site" />
+  <GamingPill title="Torrminatorr" href="https://forum.torrminatorr.com/" type="forum" />
+  <GamingPill title="Ova Games" href="https://www.ovagames.com/" type="site" />
+  <GamingPill title="Game Bounty" href="https://gamebounty.world/" type="site" />
+  <GamingPill title="World of PC Games" href="https://worldof-pcgames.net/" type="site" />
+  <GamingPill title="AtopGames" href="https://atopgames.com/" type="site" />
+  <GamingPill title="Reloaded Steam" href="https://reloadedsteam.com/" type="site" />
+  <GamingPill title="AWTDG" href="https://awtdg.site/" type="site" />
+  <GamingPill title="GamePCFull" href="https://gamepcfull.com/" type="site" />
+</PillDeck>
+
+<GamingSectionHeading icon={<HardDrive />} accent="rose">
+
+## Torrent Trackers
+
+</GamingSectionHeading>
+
+<WarnBox title="Uploader trust matters more than the site">
+On general trackers like 1337x, safety depends entirely on **who uploaded the file**, not the site itself. Only download from names the community has vetted; everything else is a coin flip on malware.
+</WarnBox>
+
+<InfoDeck>
+  <InfoCard title="1337x" href="https://1337x.to/" icon={<HardDrive />} tag="Torrent" tagStyle="rose">
+    The most-used general torrent index for games, but only safe when filtered to known-trusted uploaders such as FitGirl, DODI, KaOsKrew, and johncena141.
+  </InfoCard>
+  <InfoCard title="RuTracker" href="https://rutracker.org/forum/viewforum.php?f=899" icon={<HardDrive />} tag="Torrent" tagStyle="rose">
+    A massive Russian-hosted tracker with an enormous games catalog, best used with a browser translator extension enabled.
+  </InfoCard>
+  <InfoCard title="Empress Releases" href="https://telegra.ph/empress-biography-07-15" icon={<HardDrive />} tag="Cracker" tagStyle="amber">
+    The release hub for games cracked by Empress, one of the most respected crackers currently active for Denuvo-protected titles.
+  </InfoCard>
+</InfoDeck>
+
+<GuideBox title="Trusted uploaders on 1337x" tone="neutral">
+  FitGirl, DODI, KaOsKrew, johncena141 (Linux), Masquerade, r2tor, and Empress are the community-recognized safe names. Anything from CS.RIN.RU-linked accounts is also considered safe. Avoid unfamiliar uploaders entirely, especially ones with few or no prior releases.
+</GuideBox>
+
+<PillDeck>
+  <GamingPill title="OpenSignups (tracker invites)" href="https://opensignups.com/" type="site" />
+  <GamingPill title="Trackers Wiki" href="https://wiki.vertigo.chat/" type="site" />
+  <GamingPill title="qBittorrent" href="https://www.qbittorrent.org/" type="tool" />
+  <GamingPill title="Deluge" href="https://deluge-torrent.org/" type="tool" />
+  <GamingPill title="Flud (Android)" href="https://flud.net/" type="tool" />
+</PillDeck>
+
+<WarnBox title="VPN guidance">
+Never torrent without a reputable paid VPN, and never use a free or "cracked" VPN — those are effectively guaranteed malware. Tor is explicitly **not** a substitute for a VPN and will not protect you while torrenting.
+</WarnBox>
+
+<GamingSectionHeading icon={<Globe />} accent="rose">
+
+## Direct Download (DDL) Sites
+
+</GamingSectionHeading>
+
+<GuideBox title="Why DDL is the safer starting point" tone="neutral">
+Direct downloads run through a normal browser connection to a server, no torrent client and no VPN required. You may occasionally need a DNS change for blocked filehosts, but otherwise this is the lowest-risk acquisition method on this page.
+</GuideBox>
+
+<InfoDeck>
+  <InfoCard title="FitGirl Repacks" href="https://fitgirl-repacks.site/" icon={<Globe />} tag="DDL / Torrent" tagStyle="rose">
+    The most recognized name in game repacking, offering both DDL mirrors and torrents with an active Discord for install support.
+  </InfoCard>
+  <InfoCard title="DODI Repacks" href="https://dodi-repacks.site/" icon={<Globe />} tag="DDL / Torrent" tagStyle="rose">
+    A close second to FitGirl in reputation, typically faster to install with slightly larger file sizes.
+  </InfoCard>
+  <InfoCard title="Elamigos" href="https://elamigos.site/" icon={<Globe />} tag="DDL" tagStyle="amber">
+    Focuses on clean GOG-style rips rather than compressed repacks, good when you want an untouched installer.
+  </InfoCard>
+  <InfoCard title="Gnarly Repacks" href="https://rentry.co/gnarly_repacks" icon={<Globe />} tag="DDL" tagStyle="amber">
+    Has many retro games alongside others.
+  </InfoCard>  
+</InfoDeck>
+
+<PillDeck>
+  <GamingPill title="KaOsKrew" href="https://www.kaoskrew.org/" type="site" />
+  <GamingPill title="M4CKD0GE Repacks" href="https://m4ckd0ge-repacks.site/" type="site" />
+  <GamingPill title="Xatab Repacks" href="https://byxatab.com/" type="site" />
+  <GamingPill title="Tiny-Repacks" href="https://www.tiny-repacks.win" type="site" />
+  <GamingPill title="FreeGOGPCGames" href="https://freegogpcgames.com/" type="site" />
+  <GamingPill title="DigitalZone" href="https://god0654.github.io/DigitalZone/" type="site" />
+</PillDeck>
+
+<GuideBox title="Download managers" tone="neutral">
+  Managing dozens of mirror links gets tedious fast — these tools help.
+</GuideBox>
+
+<PillDeck>
+  <GamingPill title="Free Download Manager" href="https://www.freedownloadmanager.org/" type="tool" />
+  <GamingPill title="JDownloader 2" href="https://jdownloader.org/" type="tool" />
+</PillDeck>
+
+---
+
+<GamingSectionHeading icon={<Archive />} accent="amber">
+
+## Abandonware & Retro
+
+</GamingSectionHeading>
+
+<ZoneIntro accent="amber">
+  Games no longer sold or supported by their original publishers. This is generally the lowest-risk category on this page since most publishers have no active interest in enforcing takedowns, though sourcing quality still varies.
+</ZoneIntro>
+
+<InfoDeck>
+  <InfoCard title="My Abandonware" href="https://www.myabandonware.com/" icon={<Archive />} tag="Abandonware" tagStyle="amber">
+    The most comprehensive and consistently reliable abandonware library, covering DOS, Windows, and early consoles with playable browser previews.
+  </InfoCard>
+  <InfoCard title="AbandonwareGames" href="https://abandonwaregames.net/" icon={<Archive />} tag="Abandonware" tagStyle="amber">
+    A solid alternative library with a cleaner layout, useful when a title isn't listed on My Abandonware.
+  </InfoCard>
+  <InfoCard title="VETUSWARE" href="https://vetusware.com/category/Games/" icon={<Archive />} tag="Abandonware" tagStyle="amber">
+    Focuses on preserving original, unmodified installers rather than repackaged versions.
+  </InfoCard>
+</InfoDeck>
+
+<PillDeck>
+  <GamingPill title="PCGameAbandonware" href="https://www.pcgamesabandonware.com/" type="site" />
+  <GamingPill title="Old-Games.com" href="https://www.old-games.com/" type="site" />
+  <GamingPill title="Flashtro" href="https://flashtro.com/" type="site" />
+  <GamingPill title="Zombs-Lair" href="https://www.zombs-lair.com/" type="site" />
+</PillDeck>
+
+<WarnBox title="Archive.org and abandonware caveat">
+Most content on Archive.org, OldGamesDownload, and MyAbandonware is safe, but sourcing can occasionally blur into unofficial modifications. Scan anything you download and treat unfamiliar file types with suspicion, especially executables disguised as data files.
+</WarnBox>
+
+<GamingSectionHeading icon={<Cpu />} accent="amber">
+
+### Platform-Specific Retro Libraries
+
+</GamingSectionHeading>
+
+<PillDeck>
+  <GamingPill title="World of Spectrum" href="https://worldofspectrum.org/" type="site" />
+  <GamingPill title="GamesNostalgia (C64)" href="https://gamesnostalgia.com/" type="site" />
+  <GamingPill title="Lemon64 (C64)" href="https://www.lemon64.com/" type="site" />
+  <GamingPill title="WHDLoad (Amiga)" href="https://www.whdload.de/" type="site" />
+  <GamingPill title="LemonAmiga" href="https://www.lemonamiga.com/" type="site" />
+  <GamingPill title="Exotica (Amiga)" href="https://www.exotica.org.uk/" type="site" />
+  <GamingPill title="Japanese PC Compendium" href="https://japanesepccompendium.blogspot.com/" type="site" />
+  <GamingPill title="Win7Games" href="https://win7games.com/" type="site" />
+</PillDeck>
+
+<GuideBox title="Magipack & Collection Chamber" tone="neutral">
+  For curated retro PC collections with context and screenshots rather than bare download links, check <a href="https://www.magipack.games">Magipack</a> or <a href="https://collectionchamber.blogspot.com/">Collection Chamber</a> — both are more editorial in style and good for discovery browsing.
+</GuideBox>
+
+---
+
+<GamingSectionHeading icon={<Code2 />} accent="violet">
+
+## Open-Source & Fan Recreations
+
+</GamingSectionHeading>
+
+<ZoneIntro accent="violet">
+  Legally distinct engine recreations and open-source ports of classic games. Zero piracy risk here — these are original code reimplementations, often requiring you to supply your own legally-owned game assets.
+</ZoneIntro>
+
+<InfoDeck>
+  <InfoCard title="OpenMW" href="https://openmw.org/en/" icon={<Code2 />} tag="Remake" tagStyle="violet">
+    A from-scratch open-source engine for Morrowind with modern rendering, requiring only the original game's data files.
+  </InfoCard>
+  <InfoCard title="OpenRCT2" href="https://openrct2.io/" icon={<Code2 />} tag="Remake" tagStyle="violet">
+    A widely praised open-source recreation of RollerCoaster Tycoon 2 with new features layered on top of the original gameplay.
+  </InfoCard>
+  <InfoCard title="OpenRA" href="https://openra.net/" icon={<Code2 />} tag="Remake" tagStyle="violet">
+    Recreates the classic Command & Conquer real-time strategy engine, supporting multiple original titles in one modern client.
+  </InfoCard>
+  <InfoCard title="sm64 Decompilation" href="https://github.com/n64decomp/sm64" icon={<Code2 />} tag="Decomp" tagStyle="sky">
+    A full decompilation of Super Mario 64's original source code, enabling PC ports, mods, and preservation efforts.
+  </InfoCard>
+</InfoDeck>
+
+<PillDeck>
+  <GamingPill title="EDuke32 (Duke Nukem 3D)" href="https://www.eduke32.com/" type="site" />
+  <GamingPill title="IOQuake3" href="https://ioquake3.org/" type="site" />
+  <GamingPill title="YQuake2" href="https://www.yamagi.org/quake2/" type="site" />
+  <GamingPill title="Arx Libertatis" href="https://arx-libertatis.org/" type="site" />
+  <GamingPill title="Ship of Harkinian" href="https://github.com/HarbourMasters/Shipwright" type="site" />
+  <GamingPill title="doukutsu-rs (Cave Story)" href="https://github.com/doukutsu-rs/doukutsu-rs" type="site" />
+  <GamingPill title="OpenTTD" href="https://www.openttd.org/" type="site" />
+  <GamingPill title="Unciv (Civ V)" href="https://github.com/yairm210/Unciv" type="site" />
+  <GamingPill title="SP Tarkov" href="https://www.sp-tarkov.com/" type="site" />
+</PillDeck>
+
+<GuideBox title="Indexes worth bookmarking" tone="neutral">
+  For a much longer running list beyond what fits here, see the <a href="https://trilarion.github.io/opensourcegames/">Open Source Games List</a>, <a href="https://osgameclones.com/">Game Clones index</a>, or <a href="https://github.com/radek-sprta/awesome-game-remakes">Awesome Game Remakes</a> on GitHub.
+</GuideBox>
+
+<GamingSectionHeading icon={<Music />} accent="violet">
+
+### Rhythm Game Clones
+
+</GamingSectionHeading>
+
+<PillDeck>
+  <GamingPill title="osu!" href="https://osu.ppy.sh/home" type="site" />
+  <GamingPill title="Etterna" href="https://etternaonline.com/" type="site" />
+  <GamingPill title="Quaver" href="https://quavergame.com/" type="site" />
+  <GamingPill title="ITGmania (DDR)" href="https://www.itgmania.com/" type="site" />
+  <GamingPill title="beatoraja (BMS/IIDX)" href="https://mocha-repository.info/" type="site" />
+  <GamingPill title="Sonolus (Project Sekai)" href="https://sonolus.com/" type="site" />
+</PillDeck>
+
+---
+
+<GamingSectionHeading icon={<Glasses />} accent="sky">
+
+## Virtual Reality
+
+</GamingSectionHeading>
+
+<ZoneIntro accent="violet">
+  VR piracy runs through its own dedicated ecosystem, mostly centered on Oculus Quest sideloading rather than the DDL/torrent sites used elsewhere on this page.
+</ZoneIntro>
+
+<InfoDeck>
+  <InfoCard title="VRPirates" href="https://vrpirates.wiki/" icon={<Glasses />} tag="VR Wiki" tagStyle="sky">
+    The central hub for VR piracy, maintaining its own wiki with an active Telegram and Discord for support and new releases.
+  </InfoCard>
+  <InfoCard title="ARMGDDN Browser" href="https://cs.rin.ru/forum/viewtopic.php?f=14&t=140593" icon={<Glasses />} tag="VR Games" tagStyle="sky">
+    A CS.RIN.RU-hosted browser and Telegram channel specifically for VR game releases.
+  </InfoCard>
+  <InfoCard title="SideQuest" href="https://sidequestvr.com/" icon={<Glasses />} tag="Sideloading" tagStyle="amber">
+    The standard platform for sideloading apps onto Quest headsets, used for both piracy and legitimate indie VR content.
+  </InfoCard>
+</InfoDeck>
+
+<PillDeck>
+  <GamingPill title="r/QuestPiracy" href="https://www.reddit.com/r/QuestPiracy/" type="forum" />
+  <GamingPill title="VRFavs" href="https://www.vrfavs.com/" type="site" />
+  <GamingPill title="UEVR (Unreal to VR)" href="https://uevr.io/" type="tool" />
+  <GamingPill title="ALVR" href="https://github.com/alvr-org/ALVR" type="tool" />
+  <GamingPill title="Oculess" href="https://github.com/basti564/Oculess" type="tool" />
+</PillDeck>
+
+<GuideBox title="Oculess" tone="neutral">
+  Removes the Oculus/Meta account requirement and telemetry from Quest headsets — commonly paired with sideloaded content to avoid tying pirated apps to a real account.
+</GuideBox>
+
+---
+
+<GamingSectionHeading icon={<KeyRound />} accent="rose">
+
+## Cracking Tools & DLC Unlockers
+
+</GamingSectionHeading>
+
+<WarnBox title="Two very different categories, don't mix them up">
+**DLC unlockers** (Koalageddon, SmokeAPI, CreamInstaller) only work on games you **already legitimately own** — they unlock paid DLC you haven't purchased separately, nothing more. **Steam emulators** (Goldberg, SSE, ALI213) bypass DRM entirely and are what actually lets pirated copies run. Most tools here require sign-up on CS.RIN.RU, and DLC unlocker tools additionally require the actual DLC files, usually linked in the game's CS.RIN.RU thread.
+</WarnBox>
+
+<GamingSectionHeading icon={<Unlock />} accent="rose">
+
+### DLC Unlockers
+
+</GamingSectionHeading>
+
+<InfoDeck>
+  <InfoCard title="Koalageddon" href="https://cs.rin.ru/forum/viewtopic.php?f=29&t=71837" icon={<Unlock />} tag="DLC unlock" tagStyle="rose">
+    Unlocks pirated DLC on legitimately owned Steam games, considered one of the most reliable tools in this category.
+  </InfoCard>
+  <InfoCard title="CreamInstaller" href="https://github.com/pointfeev/CreamInstaller" icon={<Unlock />} tag="DLC unlock" tagStyle="rose">
+    Automatically detects every installed Steam, Ubisoft, and Epic game on your system and configures the correct unlocker for each with a single GUI.
+  </InfoCard>
+  <InfoCard title="SmokeAPI" href="https://cs.rin.ru/forum/viewtopic.php?f=29&t=101107" icon={<Unlock />} tag="DLC unlock" tagStyle="rose">
+    A beginner-friendly, zero-configuration Steam DLC unlocker that also supports unlocking inventory items.
+  </InfoCard>
+  <InfoCard title="EA DLC Unlocker v2" href="https://cs.rin.ru/forum/viewtopic.php?f=29&t=104773" icon={<Unlock />} tag="DLC unlock" tagStyle="amber">
+    Unlocks all DLC on legitimately owned Origin/EA titles.
+  </InfoCard>
+</InfoDeck>
+
+<PillDeck>
+  <GamingPill title="Uplay R1 Unlocker" href="https://cs.rin.ru/forum/viewtopic.php?f=29&t=100729" type="tool" />
+  <GamingPill title="Uplay R2 Unlocker" href="https://cs.rin.ru/forum/viewtopic.php?f=29&t=100729" type="tool" />
+  <GamingPill title="ScreamAPI" href="https://cs.rin.ru/forum/viewtopic.php?f=29&t=71411" type="tool" />
+  <GamingPill title="DreamAPI" href="https://cs.rin.ru/forum/viewtopic.php?f=29&t=71411" type="tool" />
+</PillDeck>
+
+<GamingSectionHeading icon={<Cpu />} accent="rose">
+
+### Steam Emulators & DRM Tools
+
+</GamingSectionHeading>
+
+<InfoDeck>
+  <InfoCard title="Goldberg Steam Emu" href="https://cs.rin.ru/forum/viewtopic.php?f=29&t=70279" icon={<Cpu />} tag="Steam emu" tagStyle="rose" warning="Bypasses Steam DRM entirely — for games you don't legitimately own, this crosses into full piracy rather than DLC unlocking.">
+    An easy-to-use, actively maintained Steam DRM bypass with Linux support and LAN multiplayer capability.
+  </InfoCard>
+  <InfoCard title="SmartSteamEmu (SSE)" href="https://cs.rin.ru/forum/viewtopic.php?f=29&t=70279" icon={<Cpu />} tag="Steam emu" tagStyle="rose" warning="Same DRM-bypass risk profile as Goldberg — use only with an understanding of what it actually does.">
+    A feature-richer alternative to Goldberg with a packaged launcher and plugin support, though less actively maintained.
+  </InfoCard>
+  <InfoCard title="Steamless" href="https://github.com/atom0s/Steamless" icon={<Cpu />} tag="DRM remover" tagStyle="amber">
+    A GUI tool for removing SteamStub DRM wrapping, often a required first step before other emulators will work.
+  </InfoCard>
+  <InfoCard title="GreenLuma" href="https://cs.rin.ru/forum/viewtopic.php?f=29&t=57575" icon={<Cpu />} tag="Steam tool" tagStyle="rose" warning="Can bypass region locks and family sharing restrictions on top of DRM — using it with anti-cheat games risks a ban.">
+    Bypasses basic Steam DRM and can unlock DLC, achievements, and cloud saves for legitimately owned games.
+  </InfoCard>
+</InfoDeck>
+
+<GuideBox title="Depot & achievement tools" tone="neutral">
+  <a href="https://github.com/SteamAutoCracks/DepotDownloader">DepotDownloader</a> is a CLI tool for pulling individual DLC or older Depot versions you own, while <a href="https://github.com/gibbed/SteamAchievementManager">Steam Achievement Manager (SAM)</a> lets you manage achievements manually — both are used heavily alongside the emulators above but come with their own account-risk caveats.
+</GuideBox>
+
+<PillDeck>
+  <GamingPill title="LumaPlay (UPlay emulator)" href="https://cs.rin.ru/forum/viewtopic.php?f=29&t=100729" type="tool" />
+  <GamingPill title="Origin Emulator" href="https://cs.rin.ru/forum/viewtopic.php?f=29&t=71411" type="tool" />
+  <GamingPill title="ALI213" href="https://cs.rin.ru/forum/viewtopic.php?f=29&t=95891" type="tool" />
+</PillDeck>
+
+---
+
+<GamingSectionHeading icon={<Sparkles />} accent="amber">
+
+## Trainers & Cheats
+
+</GamingSectionHeading>
+
+<WarnBox title="Single-player only">
+Trainers and cheat tables are built for offline, single-player use. Using them in any online or multiplayer context risks an anti-cheat ban, and on games with server-side validation they simply won't work at all.
+</WarnBox>
+
+<InfoDeck>
+  <InfoCard title="FLiNG Trainer" href="https://flingtrainer.com/" icon={<Sparkles />} tag="Trainers" tagStyle="amber">
+    The most consistently updated trainer site, usually first to support new releases with clean, ad-light downloads.
+  </InfoCard>
+  <InfoCard title="Cheat Engine" href="https://www.cheatengine.org/" icon={<Sparkles />} tag="Tool" tagStyle="amber">
+    The foundational memory-editing tool that most custom cheat tables are built on, useful for advanced users who want to build their own.
+  </InfoCard>
+  <InfoCard title="WeMod" href="https://www.wemod.com/" icon={<Sparkles />} tag="Trainers" tagStyle="amber">
+    A trainer client with a large community-driven catalog, though some features are gated behind a subscription.
+  </InfoCard>
+</InfoDeck>
+
+<PillDeck>
+  <GamingPill title="GameCopyWorld" href="https://www.gamecopyworld.com/" type="site" />
+  <GamingPill title="MrAntiFun" href="https://mrantifun.net/" type="site" />
+</PillDeck>
+
+---
+
+<GamingSectionHeading icon={<Radar />} accent="violet">
+
+## Release Trackers
+
+</GamingSectionHeading>
+
+<ZoneIntro accent="violet">
+  These sites track nothing you can download directly — they only tell you whether a game has already been cracked, and by whom. Check here before assuming a game isn't crackable.
+</ZoneIntro>
+
+<InfoDeck>
+  <InfoCard title="CrackWatch" href="https://crackwatch.com/" icon={<Radar />} tag="Tracker" tagStyle="violet">
+    The most widely used release tracker, showing crack status, DRM type, and community-reported working status for recent games.
+  </InfoCard>
+  <InfoCard title="xREL" href="https://www.xrel.to/" icon={<Radar />} tag="Tracker" tagStyle="violet">
+    A long-running Scene release database, useful for verifying whether a specific release is Scene-legitimate.
+  </InfoCard>
+  <InfoCard title="srrDB" href="https://www.srrdb.com/" icon={<Radar />} tag="Tracker" tagStyle="violet">
+    Stores Scene Release files (.srr) used to verify a release's authenticity against the original Scene NFO.
+  </InfoCard>
+</InfoDeck>
+
+<PillDeck>
+  <GamingPill title="PreDB.me" href="https://predb.me/" type="site" />
+  <GamingPill title="r/CrackWatch" href="https://www.reddit.com/r/CrackWatch/" type="forum" />
+  <GamingPill title="RepackWatchers" href="https://www.reddit.com/r/RepackWatchers/" type="forum" />
+</PillDeck>
+
+<GuideBox title="Not on a tracker doesn't mean uncracked" tone="neutral">
+  A reminder from the community itself: a game missing from every release index isn't proof it hasn't been cracked. Check CS.RIN.RU directly for anything obscure before giving up.
+</GuideBox>
+
+---
+
+<GamingSectionHeading icon={<Puzzle />} accent="sky">
+
+## Browser Extensions & Safety Toolkit
+
+</GamingSectionHeading>
+
+<ZoneIntro accent="violet">
+  The small set of tools that make everything above safer and less annoying to use. Install these once, use them everywhere on this page.
+</ZoneIntro>
+
+<InfoDeck>
+  <InfoCard title="uBlock Origin" href="https://ublockorigin.com/" icon={<Puzzle />} tag="Essential" tagStyle="rose">
+    Blocks the aggressive ad networks and malicious redirect scripts common on download and shortlink sites — treat this as non-negotiable, not optional.
+  </InfoCard>
+  <InfoCard title="ViolentMonkey" href="https://violentmonkey.github.io/" icon={<Puzzle />} tag="Userscripts" tagStyle="sky">
+    The userscript manager required to run the shortlink-bypass and site-enhancement scripts referenced throughout this page.
+  </InfoCard>
+  <InfoCard title="SteamDB" href="https://steamdb.info/" icon={<Puzzle />} tag="Reference" tagStyle="amber">
+    Not a piracy tool itself, but essential for checking a game's Depot IDs, DLC structure, and required redistributables before using any unlocker or emulator above.
+  </InfoCard>
+</InfoDeck>
+
+<PillDeck>
+  <GamingPill title="Bypass All Shortlinks (fork)" href="https://greasyfork.org/en/scripts/416660-bypass-all-shortlinks-debloated" type="tool" />
+  <GamingPill title="CS.RIN.RU Enhanced" href="https://github.com/SubZeroPL/cs-rin-ru-enhanced-mod" type="tool" />
+</PillDeck>
+
+<WarnBox title="VPN reminder, one more time">
+Never use a free VPN or any "cracked" VPN app for torrenting — these are effectively guaranteed malware vectors. Use a reputable paid VPN, and remember Tor does **not** protect you while torrenting despite what some sites imply.
+</WarnBox>
+
+<PillDeck>
+  <GamingPill title="ProtonVPN" href="https://protonvpn.com/" type="tool" />
+  <GamingPill title="Mullvad" href="https://mullvad.net/" type="tool" />
+</PillDeck>

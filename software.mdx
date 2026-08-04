@@ -1,0 +1,180 @@
+---
+title: Desktop Software Hub
+description: The ultimate repository for open-source alternatives, vetted directories, and community software forums.
+icon: Monitor
+---
+
+import { CyberAtmosphere, CyberHero, SectionHeader, FossDeck, FossCard, PillDeck, PillLegend, ResourcePill, GuideBox, CompareTable } from '@/components/os-magic';
+import { ShieldCheck, Search, Layers, Archive, DownloadCloud, Zap, MonitorSmartphone, Terminal } from 'lucide-react';
+
+<CyberAtmosphere />
+<CyberHero />
+
+<GuideBox title="Zero-Trust Execution Protocol" tone="danger">
+  The decentralized software ecosystem is inherently hostile. SEO typosquatting, repackaged installers with embedded cryptominers, and terminal-based info-stealers are all common. Before running anything sourced from a community link on this page:
+  <ul>
+    <li>Upload it to <a href="https://www.virustotal.com/" target="_blank">VirusTotal</a> first.</li>
+    <li>Isolate unknown installers in <a href="https://learn.microsoft.com/windows/security/application-security/application-isolation/windows-sandbox/" target="_blank">Windows Sandbox</a> or <a href="https://www.qemu.org/" target="_blank">QEMU</a>.</li>
+    <li>For anything higher-risk, detonate it in <a href="https://tria.ge/" target="_blank">Triage</a>'s cloud sandbox and read the network report before trusting it.</li>
+  </ul>
+</GuideBox>
+
+<SectionHeader icon={<ShieldCheck />}>
+
+## System Sanitization & Hardening
+
+</SectionHeader>
+
+Before procuring new software, make sure your OS has the tooling to analyze, sandbox, and eradicate anything malicious or persistently installed.
+
+<FossDeck>
+  <FossCard title="VirusTotal" href="https://www.virustotal.com/" icon={<Search />} badge="Mandatory">
+    Cross-references cryptographic file hashes against dozens of enterprise antivirus engines to detect embedded payloads.
+  </FossCard>
+  <FossCard title="Bulk Crap Uninstaller" href="https://github.com/Klocman/Bulk-Crap-Uninstaller" icon={<Archive />} badge="Open Source">
+    Detects orphaned files, registry keys, and deeply embedded components left behind by poorly coded or malicious installers.
+  </FossCard>
+  <FossCard title="Objective-See Tools" href="https://objective-see.org/" icon={<ShieldCheck />} badge="macOS Defense">
+    Use **KnockKnock** to detect persistent malware, and **LuLu** to block unauthorized outbound connections.
+  </FossCard>
+  <FossCard title="Tria.ge" href="https://tria.ge/" icon={<Layers />} badge="Cloud Sandbox">
+    Upload unverified installers to generate forensic reports on every file edit and network request the software attempts.
+  </FossCard>
+</FossDeck>
+
+<PillLegend />
+
+<SectionHeader icon={<DownloadCloud />}>
+
+## Windows Software Directories
+
+</SectionHeader>
+
+If you want a clean, unpatched install, this is easy. <a href="https://learn.microsoft.com/windows/package-manager/winget/" target="_blank"><strong>WinGet</strong></a> pulls from a Microsoft-signed repository out of the box, and <a href="https://chocolatey.org/" target="_blank"><strong>Chocolatey</strong></a> or <a href="https://ninite.com/" target="_blank"><strong>Ninite</strong></a> handle bulk unattended installs. Nothing below this line is needed for that.
+
+If what you're after is cracked or patched software, the directories and forums below are where the community actually sources it. Forums specifically tend to be safer than blind file-host directories, since uploads are tied to long-standing member reputations, threads let other users confirm a build is clean before you download it, and fake or malicious uploads get called out and removed fast by moderators. Direct-download sites have no such feedback loop, so you're trusting the domain alone.
+
+<PillDeck>
+  <ResourcePill title="CRACKSurl" href="https://cracksurl.com/" type="primary" />
+  <ResourcePill title="Sanet" href="https://www.sanet.st/" type="primary" />
+  <ResourcePill title="Soft98" href="https://www.soft98.ir/" type="primary" />
+  <ResourcePill title="SCNLOG" href="https://scnlog.me/apps/win/" type="primary" />
+  <ResourcePill title="SCNSRC" href="https://www.scnsrc.me/category/applications" type="primary" />
+  <ResourcePill title="DownloadHa" href="https://downloadha.com/" type="primary" />
+  <ResourcePill title="Radixx11RCE3" href="https://radixx11rce3.blogspot.com/" type="primary" />
+  <ResourcePill title="AppNee" href="https://appnee.com/" type="primary" warning="Contains multiple known unsafe activators. High heuristic risk." />
+  <ResourcePill title="Downloadly" href="https://downloadly.ir/" type="primary" warning="Previously flagged for embedding cryptominers within resource-intensive software." />
+  <ResourcePill title="YasDL" href="https://yasdl.com/" type="primary" warning="Documented history of uploading modified software containing malware." />
+</PillDeck>
+
+**Forum communities**, with stronger vetting through reputation and active discussion:
+
+<PillDeck>
+  <ResourcePill title="NSaneForums" href="https://nsaneforums.com/" type="forum" />
+  <ResourcePill title="Mobilism" href="https://forum.mobilism.org/viewforum.php?f=1073" type="forum" />
+  <ResourcePill title="MyDigitalLife" href="https://forums.mydigitallife.net/" type="forum" />
+  <ResourcePill title="DirtyWarez" href="https://forum.dirtywarez.com/" type="forum" />
+  <ResourcePill title="Ru-Board" href="http://forum.ru-board.com/forum.cgi?forum=35" type="forum" />
+</PillDeck>
+
+<SectionHeader icon={<Zap />}>
+
+## Torrents & Repacks
+
+</SectionHeader>
+
+<GuideBox title="Repack Risk Analysis" tone="danger">
+  Repacked software strips DRM and highly compresses files. Fake repack sites are a primary vector for ransomware, so only use verified community repacks and cross-reference hash signatures before extracting.
+</GuideBox>
+
+<PillDeck>
+  <ResourcePill title="RuTracker" href="https://rutracker.org/" type="warning" />
+  <ResourcePill title="TapoCheck" href="https://tapochek.net/index.php" type="warning" />
+  <ResourcePill title="SCNSRC" href="https://www.scnsrc.me/category/applications" type="warning" />
+  <ResourcePill title="Monkrus" href="https://w18.monkrus.ws/" type="warning" />
+  <ResourcePill title="RePack.me" href="https://repack.me/" type="warning" />
+  <ResourcePill title="LRepacks.net" href="https://lrepacks.net/" type="warning" />
+  <ResourcePill title="DiaKov.net" href="https://diakov.net/" type="warning" />
+  <ResourcePill title="Rutor.info" href="https://rutor.info/soft" type="warning" />
+  <ResourcePill title="RSLoad.net" href="https://rsload.net/soft" type="warning" warning="Flagged for uploading previously compromised security software binaries." />
+</PillDeck>
+
+<SectionHeader icon={<MonitorSmartphone />}>
+
+## macOS Software Ecosystem
+
+</SectionHeader>
+
+Want it clean? <a href="https://brew.sh/" target="_blank"><strong>Homebrew</strong></a> is the trusted, community-audited package manager for macOS. Running `brew install <app>` pulls from verified formulae rather than a random binary, and it should be your first stop for almost anything.
+
+For cracked or patched builds, the sites and forums below are the community's go-to sources. Read every caution tag carefully, especially on macOS where quarantine-bypass scripts are a common attack vector.
+
+<GuideBox title="Critical Terminal Deception Warning" tone="danger">
+  Sophisticated info-stealers target macOS via typosquatting domains, such as <code>appstorrent.cc</code> masquerading as a legitimate Russian tracker. <strong>Never</strong> run <code>curl</code> or <code>xattr -cr</code> commands from a software site to "unarchive" an app. These scripts strip Apple's quarantine attribute, bypassing Gatekeeper to silently exfiltrate your keychain and browser cookies.
+</GuideBox>
+
+<PillDeck>
+  <ResourcePill title="MACBed" href="https://www.macbed.com/" type="default" />
+  <ResourcePill title="NXMac" href="https://nxmac.com/blog/" type="default" />
+  <ResourcePill title="InsMac" href="https://insmac.org/" type="default" />
+  <ResourcePill title="HaxMac" href="https://haxmac.cc/" type="default" />
+  <ResourcePill title="X Client" href="https://xclient.info/" type="default" />
+  <ResourcePill title="AppsTorrent (.ru)" href="https://appstorrent.ru/" type="default" warning="Verify you are on the .ru domain. The .cc variant is a known info-stealer phishing hub." />
+  <ResourcePill title="AllMac World" href="https://allmacworlds.com/" type="default" warning="Hit or miss. Some modified Adobe binaries have triggered severe malware heuristics." />
+</PillDeck>
+
+**Forum communities**, active mac-cracking communities with reputation-based trust:
+
+<PillDeck>
+  <ResourcePill title="MACBB" href="https://macbb.org/" type="forum" />
+  <ResourcePill title="MACSerialJunkie" href="https://www.macserialjunkie.com/forum/" type="forum" />
+</PillDeck>
+
+<SectionHeader icon={<Search />}>
+
+## The Open-Source Paradigm
+
+</SectionHeader>
+
+The most robust strategy against supply-chain poisoning is transitioning to Open-Source Software (FOSS). Auditable code eliminates the risks of proprietary binaries and unauthorized telemetry.
+
+<FossDeck>
+  <FossCard title="OpenSourceAlternative.to" href="https://opensourcealternative.to/" icon={<Search />} badge="Discovery Engine">
+    Catalogs 500+ open-source alternatives to proprietary SaaS and desktop apps, with daily-updated GitHub metrics.
+  </FossCard>
+  <FossCard title="OpenSSF Scorecard" href="https://scorecard.dev/" icon={<ShieldCheck />} badge="Security Audit">
+    Assesses GitHub repos against supply-chain heuristics to assign a definitive security score.
+  </FossCard>
+  <FossCard title="Awesome Open Source" href="https://awesomeopensource.com/" icon={<Layers />} badge="Directory">
+    A massive, curated categorization of millions of GitHub projects across hundreds of disciplines.
+  </FossCard>
+  <FossCard title="Forgejo" href="https://forgejo.org/" icon={<Archive />} badge="Code Forge">
+    A self-hosted, lightweight software forge governed by Codeberg e.V.
+  </FossCard>
+</FossDeck>
+
+<SectionHeader icon={<Terminal />}>
+
+## Linux Ecosystem & Containers
+
+</SectionHeader>
+
+Linux mitigates execution risk with cryptographically signed package managers, preventing man-in-the-middle payload substitution. The formats below differ meaningfully in isolation and overhead.
+
+<CompareTable
+  headers={['Format', 'Sandboxing', 'Update speed', 'Disk overhead', 'Best for']}
+  rows={[
+    ['Flatpak', 'Strong (bubblewrap)', 'Moderate', 'Higher', 'Desktop GUI apps'],
+    ['Snap', 'Strong (AppArmor)', 'Slower', 'Highest', 'Ubuntu-first software'],
+    ['AppImage', 'None (self-contained)', 'Manual', 'Low', 'Portable, no-install apps'],
+    ['Native repo (apt/dnf/pacman)', 'None', 'Fastest', 'Lowest', 'System & CLI tools'],
+  ]}
+/>
+
+<PillDeck>
+  <ResourcePill title="Flathub" href="https://flathub.org/" type="success" />
+  <ResourcePill title="AppImageHub" href="https://www.appimagehub.com/" type="success" />
+  <ResourcePill title="Repology" href="https://repology.org/" type="primary" />
+  <ResourcePill title="KDE Store" href="https://store.kde.org/" type="primary" />
+  <ResourcePill title="Snapcraft" href="https://snapcraft.io/" type="default" />
+</PillDeck>

@@ -1,0 +1,492 @@
+---
+title: Books & Literature
+description: Ebooks, audiobooks, comics, magazines, and every tool for finding, reading, and keeping the words that matter to you.
+icon: BookOpen
+---
+
+import { LiteratureHero } from "@/components/literature/literature-hero";
+import {
+  LitAtmosphere, LitSectionHeading, ShelfDeck, BookCard, PillDeck, LitPill,
+  ReadingNook, ShelfNote,
+} from "@/components/literature/literature";
+import {
+  Library, BookText, Feather, Headphones, Newspaper, BookMarked,
+  Sparkles, ScrollText, Ghost, FileSearch, Wrench, Sparkle, GraduationCap,
+} from "lucide-react";
+
+<LitAtmosphere />
+<LiteratureHero />
+
+<ReadingNook icon={<ScrollText />} title="A gentle note" tone="warm">
+  Several sources below sit in a legal gray area depending on where you live. Read for the love of reading, and support authors and publishers directly whenever you're able to.
+</ReadingNook>
+
+<LitSectionHeading icon={<Library />} accent="amber">
+
+## Ebooks
+
+</LitSectionHeading>
+
+These are the shelves themselves, vast open collections where nearly any book you're looking for eventually turns up. Anna's Archive has become the closest thing to a central card catalog for the internet, pulling from Z Library, Library Genesis, and dozens of smaller collections into one search.
+
+<ShelfDeck columns={2}>
+  <BookCard title="Anna's Archive" href="https://annas-archive.gl/" icon={<Library />} tag="Start Here" tagStyle="amber">
+    The largest search index of shadow libraries in existence, pulling from Z Library, Library Genesis, and more into one search bar.
+  </BookCard>
+  <BookCard title="Z Library" href="https://z-lib.gd/" icon={<Library />} tag="Apps + Extension" tagStyle="indigo">
+    A massive, well organized catalog with desktop apps, mobile apps, and a browser extension for quick lookups.
+  </BookCard>
+  <BookCard title="Library Genesis" href="https://libgen.li/" icon={<Library />} tag="No Sign Up" tagStyle="emerald">
+    One of the oldest and most reliable book repositories, with mirrors that rotate as domains come and go.
+  </BookCard>
+  <BookCard title="Bookracy" href="https://bookracy.com/" icon={<Library />} tag="Discord" tagStyle="violet">
+    Books, comics, and manga in one clean interface, with a browser download button and an active community.
+  </BookCard>
+</ShelfDeck>
+
+Beyond the big three, a whole second tier of forums, mirrors, and quiet corners fill in whatever gaps the main libraries leave behind.
+
+<PillDeck>
+  <LitPill title="Mobilism" href="https://forum.mobilism.org" type="forum" info="Books · Audiobooks · Magazines" />
+  <LitPill title="MyAnonaMouse" href="https://www.myanonamouse.net/" type="forum" info="Invite Only" />
+  <LitPill title="Open Slum" href="https://open-slum.org/" type="site" info="Uptime Tracker" />
+  <LitPill title="WeLib" href="https://welib.org/" type="site" info="Anna's Archive Mirror" />
+  <LitPill title="BookSee" href="https://en.booksee.org/" type="site" />
+  <LitPill title="BDeBooks" href="https://bdebooks.com/en/" type="site" />
+  <LitPill title="eBookoz" href="https://ebookoz.net/" type="site" />
+  <LitPill title="Library Land" href="https://library.land/" type="site" info="Online Reading" />
+  <LitPill title="BookFrom.net" href="https://www.bookfrom.net/" type="site" info="Online Reading" />
+  <LitPill title="FreeBannedBooks" href="https://freebannedbooks.org/" type="site" info="US Banned Books" />
+  <LitPill title="Inventaire" href="https://inventaire.io/" type="site" info="Book Lending" />
+  <LitPill title="Flibusta" href="https://flibusta.is/" type="site" info="Russian Library" />
+  <LitPill title="Calibre" href="https://calibre-ebook.com/" type="tool" info="Manager" />
+  <LitPill title="Shelfmark" href="https://github.com/calibrain/shelfmark" type="tool" info="Downloader" />
+  <LitPill title="r/FreeEBOOKS" href="https://reddit.com/r/FreeEBOOKS" type="forum" />
+</PillDeck>
+
+<ShelfNote title="Different ways to reach Z Library" tone="neutral">
+  Z Library has been mirrored, blocked, and rebuilt many times over, so having a few routes in your pocket helps.
+  <ul>
+    <li><a href="https://old.reddit.com/r/zlibrary/wiki/index/access#wiki_how_to_access_zlibrary_through_your_personal_telegram_bot" target="_blank" rel="noopener noreferrer"><strong>Telegram bot</strong></a>, search and download books directly inside Telegram when the main site is blocked</li>
+    <li><a href="https://z-lib.gd/z-access" target="_blank" rel="noopener noreferrer"><strong>Desktop, mobile, and browser extension</strong></a>, official apps exist for most platforms alongside the website itself</li>
+    <li><a href="https://www.reddit.com/r/zlibrary/" target="_blank" rel="noopener noreferrer"><strong>r/zlibrary</strong></a>, the community subreddit tracking live mirrors as domains change</li>
+  </ul>
+</ShelfNote>
+
+<LitSectionHeading icon={<FileSearch />} accent="rose">
+
+### PDF Search
+
+</LitSectionHeading>
+
+Sometimes a book only exists as a scanned PDF floating somewhere on the open web, and these sites specialize in surfacing exactly that.
+
+<PillDeck>
+  <LitPill title="OceanOfPDF" href="https://oceanofpdf.com/" type="official" />
+  <LitPill title="pdfroom" href="https://pdfroom.com/" type="site" />
+  <LitPill title="Ebook PDF" href="https://ebookpdf.com/" type="site" />
+  <LitPill title="KuPDF" href="https://kupdf.net/" type="site" />
+  <LitPill title="ePDF" href="https://epdf.pub/" type="site" />
+  <LitPill title="PDFCoffee" href="https://pdfcoffee.com" type="site" />
+  <LitPill title="iDoc" href="https://idoc.tips/" type="site" />
+  <LitPill title="AWS S3 PDF Search" href="https://www.google.com/search?q=site%3As3.amazonaws.com+filetype%3Apdf" type="tool" info="Google Dork" />
+</PillDeck>
+
+---
+
+<LitSectionHeading icon={<BookText />} accent="rose">
+
+## Public Domain and Classics
+
+</LitSectionHeading>
+
+Everything here is free to read without a hint of a gray area, since copyright has simply run its course. Project Gutenberg alone holds more than seventy thousand titles, and the smaller archives beside it specialize in the strange, the obscure, and the beautifully out of print.
+
+<PillDeck>
+  <LitPill title="Project Gutenberg" href="https://www.gutenberg.org/" type="official" info="70,000+ Titles" />
+  <LitPill title="Unglue.it" href="https://unglue.it/" type="official" />
+  <LitPill title="Standard Ebooks" href="https://standardebooks.org/" type="tool" info="Beautifully Formatted" />
+  <LitPill title="Wikisource" href="https://wikisource.org" type="site" />
+  <LitPill title="Manybooks" href="https://manybooks.net/" type="site" />
+  <LitPill title="Global Grey" href="https://www.globalgreyebooks.com/index.html" type="site" />
+  <LitPill title="JustFreeBooks" href="https://www.justfreebooks.info/" type="site" />
+  <LitPill title="The Literature Network" href="https://www.online-literature.com/" type="site" />
+  <LitPill title="DPLA" href="https://dp.la/" type="site" />
+  <LitPill title="Fadedpage" href="https://www.fadedpage.com/" type="site" />
+  <LitPill title="Planet eBook" href="https://www.planetebook.com/" type="site" />
+  <LitPill title="Loyal Books" href="https://www.loyalbooks.com/" type="site" />
+  <LitPill title="BAEN" href="https://www.baen.com/allbooks/category/index/id/2012" type="site" />
+  <LitPill title="By the Fireplace" href="https://bythefireplace.com/" type="site" info="Classics" />
+  <LitPill title="ExClassics" href="https://www.exclassics.com/" type="site" info="Obscure Books" />
+  <LitPill title="The H.P. Lovecraft Archive" href="https://www.hplovecraft.com/" type="site" info="Complete Works" />
+  <LitPill title="sherlock-holm.es" href="https://sherlock-holm.es/" type="site" info="Full Canon" />
+  <LitPill title="GrimmStories" href="https://www.grimmstories.com/" type="site" info="Fairy Tales" />
+  <LitPill title="Wikibooks" href="https://www.wikibooks.org/" type="site" />
+  <LitPill title="Hoopla" href="https://www.hoopladigital.com/" type="site" info="Needs Library Card" />
+  <LitPill title="Public Domain Review" href="https://publicdomainreview.org/" type="site" />
+  <LitPill title="Distributed Proofreaders" href="https://www.pgdp.net/" type="tool" info="Help Digitize" />
+</PillDeck>
+
+---
+
+<LitSectionHeading icon={<BookText />} accent="indigo">
+
+## Readers and Calibre Tools
+
+</LitSectionHeading>
+
+Once you have the book, the next question is how to actually read it comfortably across every device you own. Calibre remains the backbone of most people's ebook workflow, handling conversion, metadata, and syncing in one place, while dedicated reader apps pick up the slack on phones and tablets.
+
+<ShelfDeck columns={2}>
+  <BookCard title="Readest" href="https://readest.com/" icon={<BookText />} tag="All Platforms" tagStyle="indigo">
+    A polished, actively developed ebook reader with an open community behind it on Discord and GitHub.
+  </BookCard>
+  <BookCard title="KOReader" href="https://koreader.rocks/" icon={<BookText />} tag="All Formats" tagStyle="emerald">
+    Deeply customizable reading software built for E Ink devices and beyond, supporting nearly every format.
+  </BookCard>
+  <BookCard title="Koodo Reader" href="https://www.koodoreader.com/" icon={<BookText />} tag="All Platforms" tagStyle="indigo">
+    A clean, modern reader with note taking and cloud sync, open source and actively maintained.
+  </BookCard>
+  <BookCard title="Calibre" href="https://calibre-ebook.com/" icon={<BookText />} tag="Essential" tagStyle="rose">
+    Free ebook management software for converting formats, editing metadata, and organizing an entire library.
+  </BookCard>
+</ShelfDeck>
+
+<PillDeck>
+  <LitPill title="MobileRead" href="https://www.mobileread.com/" type="forum" info="Reader Index" />
+  <LitPill title="SumatraPDF" href="https://www.sumatrapdfreader.org/free-pdf-reader" type="tool" />
+  <LitPill title="Sioyek" href="https://sioyek.info/" type="tool" info="PDF" />
+  <LitPill title="Foliate" href="https://johnfactotum.github.io/foliate/" type="tool" info="Linux" />
+  <LitPill title="Google Play Books" href="https://play.google.com/books" type="official" />
+  <LitPill title="BookOrbit" href="https://bookorbit.app/" type="tool" info="Self Hosted" />
+  <LitPill title="Grimmory" href="https://grimmory.org/" type="tool" info="Self Hosted" />
+  <LitPill title="FBReader" href="https://fbreader.org/" type="tool" />
+  <LitPill title="Anx Reader" href="https://anx.anxcye.com/" type="tool" />
+  <LitPill title="Librum" href="https://librumreader.com" type="tool" />
+  <LitPill title="Thorium" href="https://thorium.edrlab.org/" type="tool" />
+  <LitPill title="Okular" href="https://okular.kde.org/" type="tool" info="PDF" />
+  <LitPill title="MuPDF" href="https://mupdf.com/" type="tool" info="PDF" />
+  <LitPill title="Evince" href="https://apps.gnome.org/Evince/" type="tool" info="PDF · DjVu" />
+  <LitPill title="Ebook Translator" href="https://translator.bookfere.com" type="tool" info="Calibre Plugin" />
+  <LitPill title="r/opencalibre" href="https://reddit.com/r/opencalibre" type="forum" info="Shared Libraries" />
+</PillDeck>
+
+A handful of Calibre plugins quietly do more work than the software's default install ever suggests.
+
+<ShelfNote title="Calibre plugins worth knowing" tone="neutral">
+  <ul>
+    <li><a href="https://github.com/poochinski9/libgen-calibre-store-plugin" target="_blank" rel="noopener noreferrer"><strong>Libgen for Calibre</strong></a>, search and download directly from inside Calibre without opening a browser</li>
+    <li><a href="https://github.com/Leseratte10/acsm-calibre-plugin" target="_blank" rel="noopener noreferrer"><strong>ACSM Plugin</strong></a>, handles Adobe protected library loan files properly inside Calibre</li>
+    <li><a href="https://github.com/janeczku/calibre-web" target="_blank" rel="noopener noreferrer"><strong>Calibre Web</strong></a>, a browser based interface for reading your whole library remotely</li>
+    <li><a href="https://github.com/crocodilestick/Calibre-Web-Automated" target="_blank" rel="noopener noreferrer"><strong>Calibre Web Automated</strong></a>, adds automatic ingest and conversion on top of Calibre Web</li>
+  </ul>
+</ShelfNote>
+
+<LitSectionHeading icon={<Wrench />} accent="emerald">
+
+### Browser Readers and E Reader Tools
+
+</LitSectionHeading>
+
+For the moments you don't want to install anything at all, a good browser extension can turn any cluttered webpage into something closer to a printed page, and these smaller tools round out the physical reading experience on actual E Ink hardware.
+
+<PillDeck>
+  <LitPill title="Reader View" href="https://webextension.org/listing/chrome-reader-view.html" type="official" />
+  <LitPill title="Anna's Archive Reader" href="https://annas-archive.gl/view" type="site" />
+  <LitPill title="Readwok" href="https://readwok.com/" type="tool" />
+  <LitPill title="Cubari" href="https://cubari.moe/" type="tool" info="Image Proxy Reader" />
+  <LitPill title="Firefox Reader View" href="https://support.mozilla.org/en-US/kb/firefox-reader-view-clutter-free-web-pages" type="official" />
+  <LitPill title="Open Media Library" href="https://openmedialibrary.com/" type="tool" info="Book Manager" />
+  <LitPill title="Kindle Comic Converter" href="https://github.com/ciromattia/kcc" type="tool" info="Multi Format" />
+  <LitPill title="EinkBro" href="https://github.com/plateaukao/einkbro" type="tool" info="E Ink Browser" />
+  <LitPill title="ComparisonTabl.es" href="https://comparisontabl.es/tag/e-reader/" type="site" info="Compare Devices" />
+  <LitPill title="KoboCloud" href="https://github.com/fsantini/KoboCloud" type="tool" />
+  <LitPill title="ReaderBackdrop" href="https://www.readerbackdrop.com/" type="site" info="Wallpapers" />
+  <LitPill title="Manga & Comic Converter" href="https://www.mangaconverter.com/" type="tool" />
+</PillDeck>
+
+---
+
+<LitSectionHeading icon={<Feather />} accent="violet">
+
+## The Kindle Corner
+
+</LitSectionHeading>
+
+A jailbroken Kindle opens up an entire second life for the device, from custom launchers to games, but every tool here assumes you've already followed a jailbreak guide first.
+
+<ReadingNook icon={<ScrollText />} title="Before anything else" tone="caution">
+  Your Kindle needs to be jailbroken before most tools here will work. Follow a trusted guide for your exact firmware version first, and back up your device beforehand.
+</ReadingNook>
+
+<PillDeck>
+  <LitPill title="Kindle Jailbreak Guide" href="https://kindlemodding.org/jailbreaking/index.html" type="official" info="Start Here" />
+  <LitPill title="KindleForge" href="https://github.com/KindleTweaks/KindleForge" type="tool" info="App Installer" />
+  <LitPill title="KOReader" href="https://koreader.rocks/" type="tool" />
+  <LitPill title="KindleFetch" href="https://github.com/justrals/KindleFetch" type="tool" info="Download CLI" />
+  <LitPill title="Kindle Modding Discord" href="https://discord.com/invite/wDbbZTF5QF" type="forum" />
+  <LitPill title="FreeReadFeed" href="https://www.freereadfeed.com/" type="site" info="Free Releases" />
+  <LitPill title="eReaderIQ" href="https://www.ereaderiq.com/freebies" type="site" info="Free Releases" />
+  <LitPill title="LARK" href="https://kindlemodshelf.me/lark" type="tool" info="Audiobook Player" />
+  <LitPill title="KTerm" href="https://github.com/bfabiszewski/kterm" type="tool" info="Terminal Emulator" />
+  <LitPill title="KindleModShelf" href="https://kindlemodshelf.me/images" type="site" info="Screensaver Packs" />
+  <LitPill title="Send to Kobo/Kindle" href="https://send2ereader.net/" type="tool" />
+  <LitPill title="Amazon Kindle EPUB Fix" href="https://kindle-epub-fix.netlify.app/" type="tool" />
+  <LitPill title="Kindle DRM Removal Guide" href="https://itsfoss.com/calibre-remove-drm-kindle/" type="tool" />
+  <LitPill title="KAnki" href="https://github.com/crizmo/KAnki" type="tool" info="Flashcard App" />
+  <LitPill title="Focus Reading" href="https://github.com/gmacahia/focus-reading.lua" type="tool" info="Bionic Reading" />
+  <LitPill title="KWordle" href="https://github.com/crizmo/KWordle/" type="tool" />
+  <LitPill title="Simon Tatham's Puzzles" href="https://github.com/kbarni/kindlepuzzles" type="tool" info="Puzzle Port" />
+</PillDeck>
+
+---
+
+<LitSectionHeading icon={<Headphones />} accent="amber">
+
+## Audiobooks
+
+</LitSectionHeading>
+
+Nothing quite matches a good narrator, and this space splits neatly into streaming platforms, downloadable collections, and self hosted servers for people who want their own private Audible.
+
+<ShelfDeck columns={2}>
+  <BookCard title="Mobilism Audiobooks" href="https://forum.mobilism.org/viewforum.php?f=124" icon={<Headphones />} tag="Forum" tagStyle="rose">
+    A long standing forum community with a dedicated audiobook section and a helpful user rank system.
+  </BookCard>
+  <BookCard title="AudiobookBay" href="https://audiobookbay.lu/" icon={<Headphones />} tag="Torrents" tagStyle="amber">
+    One of the largest audiobook torrent trackers around, organized cleanly by genre and narrator.
+  </BookCard>
+  <BookCard title="MyAnonaMouse" href="https://www.myanonamouse.net/" icon={<Headphones />} tag="Invite Only" tagStyle="violet">
+    A private tracker covering books, audiobooks, comics, and even sheet music, with strong community curation.
+  </BookCard>
+  <BookCard title="Audiobookshelf" href="https://www.audiobookshelf.org/" icon={<Headphones />} tag="Self Hosted" tagStyle="emerald">
+    A gorgeous, self hosted audiobook and podcast server with apps for every platform.
+  </BookCard>
+</ShelfDeck>
+
+For simpler listening without any setup at all, these sites stream or offer direct downloads with nothing to configure.
+
+<PillDeck>
+  <LitPill title="LibriVox" href="https://librivox.org/" type="official" info="Free & Legal" />
+  <LitPill title="NEPU Audiobooks" href="https://nepu.to/ebooks" type="site" info="Streaming" />
+  <LitPill title="AudioBooksBee" href="https://audiobooksbee.com/" type="site" />
+  <LitPill title="Golden Audiobooks" href="https://goldenaudiobook.net/" type="site" />
+  <LitPill title="LearnOutLoud" href="https://www.learnoutloud.com/Free-Audiobooks" type="site" />
+  <LitPill title="Book Radio" href="https://bookradio.vercel.app/" type="site" />
+  <LitPill title="Audiobooks For Soul" href="https://audiobooks4soul.com/" type="site" />
+  <LitPill title="FreeClassicAudiobooks" href="https://www.freeclassicaudiobooks.com/" type="site" />
+  <LitPill title="Storynory" href="https://www.storynory.com/" type="site" info="Children's Stories" />
+  <LitPill title="Audiobooks Poetry" href="https://archive.org/details/audio_bookspoetry" type="site" />
+  <LitPill title="FullLengthAudiobooks" href="https://fulllengthaudiobooks.com/" type="site" info="Streaming" />
+  <LitPill title="HDAudiobooks" href="https://hdaudiobooks.net/" type="site" info="Streaming" />
+  <LitPill title="Audiozaic" href="https://audiozaic.com/" type="site" info="Streaming" />
+  <LitPill title="r/audiobooksonyoutube" href="https://reddit.com/r/audiobooksonyoutube" type="forum" />
+  <LitPill title="Spotify Audiobooks" href="https://open.spotify.com/artist/1FSWXfsYsosTxjcV9WoLax" type="official" />
+</PillDeck>
+
+If you already own the audiobook but Audible's app makes it painful to actually use, these tools free the files for personal backup.
+
+<ShelfNote title="Getting audiobooks off Audible" tone="neutral">
+  <ul>
+    <li><a href="https://getlibation.com/" target="_blank" rel="noopener noreferrer"><strong>Libation</strong></a>, manage your legitimately purchased Audible library and back it up in an open format</li>
+    <li><a href="https://audible-tools.kamsker.at/" target="_blank" rel="noopener noreferrer"><strong>Audible Tools</strong></a>, a browser based DRM remover for files you already own</li>
+    <li><a href="https://github.com/audiamus/AaxAudioConverter" target="_blank" rel="noopener noreferrer"><strong>AaxAudioConverter</strong></a>, another actively maintained AAX conversion option</li>
+    <li><a href="https://github.com/yermak/AudioBookConverter" target="_blank" rel="noopener noreferrer"><strong>AudioBookConverter</strong></a>, convert between AAX, M4B, and MP3 depending on what your player needs</li>
+    <li><a href="https://booksonic.org/" target="_blank" rel="noopener noreferrer"><strong>BookSonic</strong></a>, an alternative self hosted server for anyone not using Audiobookshelf</li>
+  </ul>
+</ShelfNote>
+
+---
+
+<LitSectionHeading icon={<Newspaper />} accent="emerald">
+
+## Magazines and Newspapers
+
+</LitSectionHeading>
+
+Magazines age strangely well, turning into little time capsules of design, advertising, and whatever the world cared about that month, and full newspaper archives let you read history the way people actually experienced it, one front page at a time.
+
+<PillDeck>
+  <LitPill title="Mobilism Magazines" href="https://forum.mobilism.org/viewforum.php?f=123" type="forum" info="Multi Host" />
+  <LitPill title="PDFMagazines" href="https://pdfmagazines.club/news/" type="site" />
+  <LitPill title="DownMagaz" href="https://downmagaz.net/" type="site" />
+  <LitPill title="MagazineLib" href="https://magazinelib.com/" type="site" />
+  <LitPill title="Calameo" href="https://calameo.com/" type="site" info="Online Reading" />
+  <LitPill title="Magzter" href="https://www.magzter.com/top-free-magazines" type="site" />
+  <LitPill title="FlipHTML5" href="https://fliphtml5.com/exploring" type="site" />
+  <LitPill title="Magazine Rack" href="https://archive.org/details/magazine_rack" type="official" info="Archive.org" />
+  <LitPill title="Computer Magazines" href="https://archive.org/details/computermagazines" type="official" info="Archive.org" />
+  <LitPill title="World Mags" href="https://www.worldmags.net/" type="site" />
+  <LitPill title="WholeEarth" href="https://wholeearth.info/" type="site" info="Science Magazines" />
+  <LitPill title="Retromags" href="https://www.retromags.com/" type="site" info="Retro Gaming" />
+  <LitPill title="Out of Print Archive" href="https://www.outofprintarchive.com/" type="site" />
+  <LitPill title="PC Zone" href="https://pixsoriginadventures.co.uk/PCZone/" type="site" />
+  <LitPill title="CGW Museum" href="https://www.cgwmuseum.org/" type="site" />
+  <LitPill title="Atari Magazines" href="https://www.atarimagazines.com/" type="site" />
+  <LitPill title="RadioShack Catalogs" href="https://www.radioshackcatalogs.com/" type="site" />
+  <LitPill title="HomePower" href="https://www.homepower.com/archive-browse" type="site" />
+</PillDeck>
+
+The newspaper archives below stretch from this morning's front page all the way back to microfilm scans over a century old.
+
+<PillDeck>
+  <LitPill title="Veridian" href="https://veridiansoftware.com/collections/" type="official" info="Archive List" />
+  <LitPill title="Google Newspaper Search" href="https://news.google.com/newspapers" type="official" />
+  <LitPill title="Mobilism Newspapers" href="https://forum.mobilism.org/viewforum.php?f=123" type="forum" />
+  <LitPill title="Chronicling America" href="https://chroniclingamerica.loc.gov/newspapers/" type="site" />
+  <LitPill title="SoftArchive" href="https://softarchive.download/newspapers" type="site" />
+  <LitPill title="FultonHistory" href="https://fultonhistory.com/Fulton.html" type="site" />
+  <LitPill title="Newspapers.com" href="https://newspapers.com/" type="site" />
+  <LitPill title="Library of Congress Newspapers" href="https://guides.loc.gov/foreign-newspapers/digital-resources" type="official" />
+  <LitPill title="World-Newspapers" href="https://world-newspapers.com/" type="site" info="Index" />
+  <LitPill title="Front Pages" href="https://www.frontpages.com/" type="site" />
+  <LitPill title="Elephind" href="https://www.elephind.com/" type="site" info="Historical Archive" />
+  <LitPill title="Europeana Newspapers" href="https://www.europeana.eu/en/collections/topic/18-newspapers" type="site" info="European Archive" />
+  <LitPill title="Newspaper Map" href="https://newspapermap.com/" type="tool" info="Find & Translate" />
+</PillDeck>
+
+---
+
+<LitSectionHeading icon={<Sparkles />} accent="indigo">
+
+## Fanfiction and Short Stories
+
+</LitSectionHeading>
+
+Not every great story comes bound and published, and this corner belongs to the writers building entire universes for free, one chapter and one collaborative wiki at a time.
+
+<PillDeck>
+  <LitPill title="Archive of Our Own" href="https://archiveofourown.org/" type="official" info="Fanfiction Archive" />
+  <LitPill title="Short Stories" href="https://short-stories.co/" type="official" />
+  <LitPill title="SCP Foundation" href="https://scp-wiki.wikidot.com/" type="site" info="Story Collab" />
+  <LitPill title="Everything2" href="https://everything2.com/" type="site" info="Poetry & Writing Help" />
+  <LitPill title="Fork Read" href="https://forkread.com/" type="tool" info="Publish Stories" />
+  <LitPill title="Booksie" href="https://www.booksie.com/" type="site" />
+  <LitPill title="Vestal Review" href="https://www.vestalreview.net/" type="site" />
+  <LitPill title="Vocal Media" href="https://vocal.media/fiction/" type="site" />
+  <LitPill title="ClassicShorts" href="https://www.classicshorts.com/" type="site" />
+  <LitPill title="Pulp Magazines Project" href="https://www.pulpmags.org/" type="site" info="Classic Fiction" />
+  <LitPill title="the Wanderers' Library" href="https://wanderers-library.wikidot.com/" type="site" />
+  <LitPill title="RPC Authority" href="http://rpc-wiki.net/" type="site" info="Story Collab" />
+  <LitPill title="OrionsArm" href="https://www.orionsarm.com/" type="site" info="Story Collab" />
+  <LitPill title="Wattpad" href="https://wattpad.com/" type="site" />
+  <LitPill title="SquidgeWorld" href="https://squidgeworld.org/" type="site" />
+  <LitPill title="FanMTL" href="https://www.fanmtl.com/" type="site" />
+  <LitPill title="Fanfiction.net" href="https://www.fanfiction.net/" type="site" />
+</PillDeck>
+
+---
+
+<LitSectionHeading icon={<Ghost />} accent="violet">
+
+## Special Interest Libraries
+
+</LitSectionHeading>
+
+Some of the best finds live in tiny, obsessively curated corners built by a single fan for a single author or subject.
+
+<PillDeck>
+  <LitPill title="The Anarchist Library" href="https://theanarchistlibrary.org/special/index" type="official" />
+  <LitPill title="FreeSFOnline" href="https://www.freesfonline.net/" type="site" info="Sci-Fi & Fantasy" />
+  <LitPill title="EpubPuB" href="https://www.epub.pub/" type="site" info="Romance & Fantasy" />
+  <LitPill title="byGosh" href="https://bygosh.com" type="site" info="Children's Books" />
+  <LitPill title="Baldwin Library" href="https://ufdc.ufl.edu/juv" type="site" info="Children's Books" />
+  <LitPill title="Music and Books" href="https://musicsandbooks.org/" type="site" />
+  <LitPill title="The Eldritch Dark" href="http://www.eldritchdark.com/" type="site" info="Clark Ashton Smith" />
+  <LitPill title="Booklet Library" href="https://bookletlibrary.org/" type="site" />
+  <LitPill title="Project Aon" href="https://www.projectaon.org/en/Main/Home" type="site" info="Lone Wolf Gamebooks" />
+  <LitPill title="Trans Reads" href="https://transreads.org/" type="site" />
+  <LitPill title="Sherwood Forest" href="https://www.sherwoodforestzinelibrary.org/" type="site" info="Underground Zines" />
+  <LitPill title="Anarchist FAQ" href="https://www.anarchistfaq.org/" type="site" />
+  <LitPill title="Marxists Internet Archive" href="https://www.marxists.org/" type="site" />
+  <LitPill title="Liberation School" href="https://liberationschool.org/" type="site" />
+  <LitPill title="Avalon Library" href="https://avalonlibrary.net/" type="site" info="Conspirology" />
+</PillDeck>
+
+<LitSectionHeading icon={<Sparkle />} accent="violet">
+
+### Esoterica, Occult and Mythology
+
+</LitSectionHeading>
+
+For readers drawn to the stranger shelves of the library, mythology, hermetic philosophy, and centuries old occult texts live here, largely untouched by modern reprints.
+
+<PillDeck>
+  <LitPill title="Sacred Texts" href="https://www.sacred-texts.com/" type="official" info="Ancient Texts & Mythology" />
+  <LitPill title="Hermetic Library" href="https://hermetic.com/" type="site" />
+  <LitPill title="Theosophical Society" href="https://www.theosociety.org/" type="site" />
+  <LitPill title="Gnosis Library" href="https://gnosis.study/" type="site" />
+</PillDeck>
+
+---
+
+<LitSectionHeading icon={<GraduationCap />} accent="rose">
+
+## Academic Papers and Documents
+
+</LitSectionHeading>
+
+For research papers, theses, declassified documents, and manuals rather than leisure reading, the tools below cover the academic and reference side of things, the shelf you visit for facts rather than escape.
+
+<PillDeck>
+  <LitPill title="Sci-Hub" href="https://sci-hub.ru/" type="official" info="Research Papers" />
+  <LitPill title="arXiv" href="https://arxiv.org/" type="official" />
+  <LitPill title="Google Scholar" href="https://scholar.google.com/" type="official" />
+  <LitPill title="ResearchGate" href="https://www.researchgate.net/" type="site" />
+  <LitPill title="Zotero" href="https://www.zotero.org/" type="tool" info="Reference Manager" />
+  <LitPill title="Semantic Scholar" href="https://www.semanticscholar.org/" type="site" />
+  <LitPill title="Open Alex" href="https://openalex.org/" type="site" />
+  <LitPill title="PubMed" href="https://pubmed.ncbi.nlm.nih.gov/" type="official" info="Medical Journals" />
+  <LitPill title="Connected Papers" href="https://www.connectedpapers.com/" type="tool" />
+  <LitPill title="TheFreeLibrary" href="https://www.thefreelibrary.com/" type="official" info="Articles" />
+  <LitPill title="DOAJ" href="https://doaj.org/" type="site" info="Open Journals" />
+  <LitPill title="OATD" href="https://oatd.org/" type="site" info="Theses & Dissertations" />
+  <LitPill title="CourtListener" href="https://www.courtlistener.com/" type="site" info="Court Documents" />
+  <LitPill title="LiberatedManuals" href="https://www.liberatedmanuals.com/" type="site" info="Military Manuals" />
+</PillDeck>
+
+---
+
+<LitSectionHeading icon={<BookMarked />} accent="rose">
+
+## Tracking, Reviews and Discovery
+
+</LitSectionHeading>
+
+Finding your next read is half the fun, and the tools below range from simple shelving apps to genuinely clever mood based recommendation engines.
+
+<ShelfDeck columns={2}>
+  <BookCard title="StoryGraph" href="https://www.thestorygraph.com/" icon={<BookMarked />} tag="Top Pick" tagStyle="rose">
+    A thoughtful Goodreads alternative with mood and pacing based recommendations instead of only star ratings.
+  </BookCard>
+  <BookCard title="Hardcover" href="https://hardcover.app/" icon={<BookMarked />} tag="KOReader Plugin" tagStyle="indigo">
+    A newer, community driven tracker with a genuinely active Discord and a growing recommendation engine.
+  </BookCard>
+  <BookCard title="GoodReads" href="https://www.goodreads.com/" icon={<BookMarked />} tag="Most Popular" tagStyle="amber">
+    Still the largest book tracking community, useful for reviews and seeing what your friends are reading.
+  </BookCard>
+  <BookCard title="LibraryThing" href="https://www.librarything.com/" icon={<BookMarked />} tag="Database" tagStyle="emerald">
+    One of the longest running book cataloguing communities, strong on detailed personal library organization.
+  </BookCard>
+</ShelfDeck>
+
+And when you're not sure what you're even looking for yet, these discovery tools are built for wandering rather than searching.
+
+<PillDeck>
+  <LitPill title="BookWyrm" href="https://joinbookwyrm.com/" type="tool" info="Federated" />
+  <LitPill title="Oku" href="https://oku.club/" type="site" />
+  <LitPill title="Literal" href="https://literal.club/" type="site" info="Social Tracking" />
+  <LitPill title="libib" href="https://www.libib.com/" type="tool" info="Desktop Catalog" />
+  <LitPill title="Ratings Filter" href="https://www.book-filter.com/" type="tool" info="Aggregator" />
+  <LitPill title="ISFDB" href="https://isfdb.org/" type="site" info="Speculative Fiction" />
+  <LitPill title="Uchronia" href="https://www.uchronia.net/" type="site" info="Alt History" />
+  <LitPill title="Fantastic Fiction" href="https://www.fantasticfiction.com/" type="tool" info="Series Order" />
+  <LitPill title="Five Books" href="https://fivebooks.com/" type="official" info="Expert Picks" />
+  <LitPill title="WhichBook" href="https://www.whichbook.net/" type="tool" info="Mood Based" />
+  <LitPill title="Literature-Map" href="https://www.literature-map.com/" type="tool" info="Author Discovery" />
+  <LitPill title="r/ifyoulikeblank" href="https://www.reddit.com/r/ifyoulikeblank/" type="forum" />
+  <LitPill title="NPR's Books We Love" href="https://apps.npr.org/best-books/" type="site" />
+  <LitPill title="Tolkien Gateway" href="https://tolkiengateway.net/" type="site" info="Encyclopedia" />
+  <LitPill title="The Greatest Books" href="https://www.thegreatestbooks.org/" type="tool" info="Algorithmic List" />
+  <LitPill title="Banned Book List" href="https://docs.google.com/spreadsheets/u/0/d/10NwV38Rp6EF8X8p7Qa2iXpSFn9m46v717DQtJkLictI" type="site" />
+</PillDeck>

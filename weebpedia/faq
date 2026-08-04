@@ -1,0 +1,14 @@
+---
+title: FAQs
+description: Answers to the questions we see asked most in the community
+customDescription: Answers to some of the most common questions we've seen come up around anime and manga.
+outline: 1
+---
+
+import { WeebAtmosphere, WeebHeadingIcon, FaqSection, FaqItem } from "@/components/weeb-elements";
+import { HelpCircle, BookOpen, Tv, Music } from "lucide-react";
+
+<WeebAtmosphere />
+
+## <WeebHeadingIcon icon={<HelpCircle />} accent="lavender" /> General
+ 

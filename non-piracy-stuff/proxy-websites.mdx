@@ -1,0 +1,294 @@
+---
+title: Proxy 'Any' Website
+description: This guide provides step-by-step instructions for setting up a proxy and using it to access any website you want, regardless of regional restrictions and censorship.
+icon: GlobeLock
+---
+
+{/* Hydration-safe CSS Injection to hide default titles */}
+<style dangerouslySetInnerHTML={{ __html: `
+  #nd-page > h1:first-of-type { display: none !important; }
+  #nd-page > h1:first-of-type + p { display: none !important; }
+` }} />
+
+import { Step, Steps } from 'fumadocs-ui/components/steps';
+import { Callout } from 'fumadocs-ui/components/callout';
+import { 
+  ProxyAtmosphere, 
+  ProxyHero, 
+  LiquidTabs, 
+  LiquidTabList, 
+  LiquidTab, 
+  LiquidTabContent,
+  ProxySectionHeader 
+} from '@/components/proxy-magic';
+import { ShieldAlert, TerminalSquare } from 'lucide-react';
+
+<ProxyAtmosphere />
+<ProxyHero />
+
+<Callout title="Disclaimer" type="warn" icon={<ShieldAlert className="w-5 h-5 text-fuchsia-500" />}>
+  <div>While this method is incredibly effective at bypassing DNS-level and ISP-level blocks, please note that **not all** websites can be proxied using this serverless worker method (e.g., sites with heavy anti-bot protection like strict Cloudflare Turnstiles).</div>
+</Callout>
+
+<ProxySectionHeader icon={<TerminalSquare />} accent="fuchsia">
+
+## Deployment Guide
+
+</ProxySectionHeader>
+
+Follow these instructions to deploy your own personal edge-node proxy using Cloudflare's serverless infrastructure.
+
+<Steps>
+  <Step title="Initialize Cloudflare">
+    Sign up on [Cloudflare](https://www.cloudflare.com/) if you haven't already. Once logged in, navigate to the **Workers & Pages** tab on the left sidebar.
+  </Step>
+
+  <Step title="Configure Your Subdomain">
+    You will be prompted to choose a permanent `.workers.dev` subdomain. 
+    - This will look something like `yourname.workers.dev`.
+    - *Note: This base subdomain will stay the same for all future workers you create.*
+  </Step>
+
+  <Step title="Create the Worker Node">
+    Click on **Create Application**, and then click **Create Worker**. 
+    - Give your new worker a recognizable name (e.g., `proxy-1337x`). 
+    - Click **Deploy**.
+  </Step>
+
+  <Step title="Inject the Code">
+    Click on **Quick Edit** (or Edit Code). 
+    - Delete all the default placeholder code present in the editor.
+    - Copy your preferred code (we highly recommend **Code III**) from the sections below and paste it into the editor.
+  </Step>
+
+  <Step title="Save and Deploy">
+    Modify the target variables at the top/bottom of the code as instructed below, then click **Save and Deploy**. Your custom proxy is now live at `https://[worker-name].[your-subdomain].workers.dev`.
+  </Step>
+</Steps>
+
+---
+
+<ProxySectionHeader icon={<ShieldAlert />} accent="purple">
+
+## Code Configuration
+
+</ProxySectionHeader>
+
+<Callout title="What To Modify In The Code?" type="info">
+  <div className="flex flex-col gap-2">
+    <span>For **Code III** (Recommended): Modify the two constants at the very top of the script:</span>
+    <span>• `TARGET_HOSTNAME`: Change to the website you want to proxy (e.g., `'1337x.to'`).</span>
+    <span>• `WORKER_HOSTNAME`: Change to your Cloudflare worker URL (e.g., `'proxy-1337x.yourname.workers.dev'`).</span>
+    <span className="mt-2 text-fuchsia-400 font-semibold">*Note: For older codes (I and II), locate and modify the `ORIGINS` object at the very bottom instead.*</span>
+  </div>
+</Callout>
+
+<ProxySectionHeader icon={<TerminalSquare />} accent="indigo">
+
+### Advanced Script (Code III)
+
+</ProxySectionHeader>
+
+*Highly Recommended. This modern script strips restrictive security headers (CSP), handles redirects natively, forwards POST payloads, and spoofs Origin headers to bypass modern proxy detection.*
+
+```javascript
+const TARGET_HOSTNAME = '1337x.to'; // Replace with target website
+const WORKER_HOSTNAME = 'proxy-1337x.subdomain.workers.dev'; // Replace with your worker URL
+
+async function handleRequest(request) {
+    const url = new URL(request.url);
+    url.hostname = TARGET_HOSTNAME;
+
+    // 1. Spoof Request Headers to bypass basic bot detection
+    const modifiedRequestHeaders = new Headers(request.headers);
+    modifiedRequestHeaders.set('Host', TARGET_HOSTNAME);
+    modifiedRequestHeaders.set('Origin', `https://${TARGET_HOSTNAME}`);
+    modifiedRequestHeaders.set('Referer', `https://${TARGET_HOSTNAME}/`);
+
+    const init = {
+        method: request.method,
+        headers: modifiedRequestHeaders,
+        redirect: 'manual'
+    };
+
+    // Handle POST/PUT payloads
+    if (request.method !== 'GET' && request.method !== 'HEAD') {
+        init.body = await request.clone().arrayBuffer();
+    }
+
+    let response = await fetch(url.toString(), init);
+
+    // 2. Seamlessly intercept and map redirects back to the worker
+    if (.includes(response.status)) {[301][302][303][307][308]
+        const location = response.headers.get('Location');
+        if (location) {
+            const redirectedUrl = new URL(location);
+            if (redirectedUrl.hostname === TARGET_HOSTNAME) {
+                redirectedUrl.hostname = WORKER_HOSTNAME;
+                return Response.redirect(redirectedUrl.toString(), response.status);
+            }
+        }
+    }
+
+    // 3. Strip restrictive security headers that break proxies
+    const modifiedResponseHeaders = new Headers(response.headers);
+    modifiedResponseHeaders.delete('Content-Security-Policy');
+    modifiedResponseHeaders.delete('X-Frame-Options');
+    modifiedResponseHeaders.set('Access-Control-Allow-Origin', '*');
+
+    const modifiedResponse = new Response(response.body, {
+        status: response.status,
+        statusText: response.statusText,
+        headers: modifiedResponseHeaders
+    });
+
+    // 4. Force rewrite absolute URLs in the HTML
+    const contentType = modifiedResponseHeaders.get('Content-Type') || '';
+    if (contentType.includes('text/html')) {
+        return new HTMLRewriter()
+            .on('*', new AttributeRewriter(TARGET_HOSTNAME, WORKER_HOSTNAME))
+            .transform(modifiedResponse);
+    }
+
+    return modifiedResponse;
+}
+
+class AttributeRewriter {
+    constructor(targetHostname, workerHostname) {
+        this.target = targetHostname;
+        this.worker = workerHostname;
+    }
+    element(element) {
+        const attrs = ['href', 'src', 'action'];
+        for (const attr of attrs) {
+            let value = element.getAttribute(attr);
+            if (value) {
+                // Replace absolute URLs matching the target with the worker URL
+                value = value.replace(new RegExp(`https?://${this.target}`, 'g'), `https://${this.worker}`);
+                element.setAttribute(attr, value);
+            }
+        }
+    }
+}
+
+addEventListener('fetch', event => {
+    event.respondWith(handleRequest(event.request));
+});
+```
+
+<ProxySectionHeader icon={<TerminalSquare />} accent="zinc">
+
+### Legacy Script (Code I)
+
+</ProxySectionHeader>
+
+*The legacy HTMLRewriter script. Often breaks on modern sites due to strict CORS and CSP headers.*
+
+```javascript
+async function handleRequest(request) {
+    const url = new URL(request.url)
+    let response
+    
+    // Check if the hostname is present in the ORIGINS object
+    if (url.hostname in ORIGINS) {
+        const target = ORIGINS[url.hostname]
+        url.hostname = target
+        response = await fetch(url.toString(), {
+            method: request.method,
+            headers: request.headers
+        })
+    } else {
+        response = await fetch(request)
+    }
+    return new HTMLRewriter()
+        .on('a', new LinkHandler(url))
+        .on('form', new FormHandler(url))
+        .on('*', new ElementHandler(url, ORIGINS))
+        .transform(response)
+}
+    
+class LinkHandler {
+    constructor(baseUrl) {
+        this.baseUrl = baseUrl
+    }
+    
+    element(element) {
+        let href = element.getAttribute('href')
+        if (href) {
+            element.setAttribute('href', new URL(href, this.baseUrl).pathname + new URL(href, this
+                .baseUrl).search)
+        }
+    }
+}
+    
+class FormHandler {
+    constructor(baseUrl) {
+        this.baseUrl = baseUrl
+    }
+    
+    element(element) {
+        let action = element.getAttribute('action')
+        if (action) {
+            element.setAttribute('action', new URL(action, this.baseUrl).pathname + new URL(action, this
+                    .baseUrl)
+                .search)
+        }
+    }
+}
+    
+class ElementHandler {
+    constructor(url, ORIGINS) {
+        this.url = url
+        this.ORIGINS = ORIGINS
+    }
+    element(element) {
+        if (element.tagName === 'script' || element.tagName === 'link' || element.tagName === 'img') {
+            let src = element.getAttribute('src') || element.getAttribute('href')
+            if (src) {
+                let srcUrl = new URL(src, this.url)
+                if (srcUrl.hostname in this.ORIGINS) {
+                    let target = this.ORIGINS[srcUrl.hostname]
+                    srcUrl.hostname = target
+                }
+                element.setAttribute(element.tagName === 'script' ? 'src' : 'href', srcUrl.toString())
+            }
+        }
+    }
+}
+    
+addEventListener('fetch', event => {
+    event.respondWith(handleRequest(event.request))
+})
+    
+const ORIGINS = {
+    '1337x.subdomain.workers.dev': '1337x.to'
+}
+```
+
+<ProxySectionHeader icon={<TerminalSquare />} accent="zinc">
+
+### Fallback (Code II)
+
+</ProxySectionHeader>
+
+*An extremely bare-bones fallback. Simply forwards the request. Fails immediately if the target site uses absolute URLs.*
+
+```javascript
+async function handleRequest(request) {
+    const url = new URL(request.url)
+    if (url.hostname in ORIGINS) {
+        const target = ORIGINS[url.hostname]
+        url.hostname = target
+        return fetch(url.toString(), request)
+    }
+    return fetch(request)
+}
+
+addEventListener('fetch', event => {
+    event.respondWith(handleRequest(event.request))
+})
+    
+const ORIGINS = {
+    '1337x.subdomain.workers.dev': '1337x.to'
+}   
+```

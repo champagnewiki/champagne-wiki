@@ -1,0 +1,239 @@
+---
+title: 3D, Video & Sound
+description: Render engines, NLEs, CAD modeling, interpolation tools, and the architectural textures needed to build and compile volumetric worlds and timelines.
+icon: Video
+---
+
+import { ViewportHero, ViewportAtmosphere } from "@/components/graphics/viewport-hero";
+import {
+  GfxSectionHeader, GfxDeck, GfxCard, GfxPillDeck, GfxPill, 
+  PremiumVaultBanner, GfxNotice
+} from "@/components/graphics/graphics";
+import {
+  Box, Cuboid, Printer, Video, Camera, Scissors, Settings2, 
+  UploadCloud, Film, PlaySquare, AudioWaveform
+} from "lucide-react";
+
+<ViewportAtmosphere />
+<ViewportHero />
+
+<GfxSectionHeader icon={<Box />} accent="sky">
+
+## 3D Modeling Apps
+
+</GfxSectionHeader>
+
+Whether you are sculpting characters, blocking out architectural scenes, or generating topology via prompt, these are the flagship environments for 3D generation.
+
+<GfxDeck columns={2}>
+  <GfxCard title="Blender" href="https://www.blender.org/" icon={<Box />} badge="FOSS Standard">
+    The ultimate open-source 3D creation suite supporting the entirety of the 3D pipeline—modeling, rigging, animation, simulation, rendering, and compositing.
+  </GfxCard>
+  <GfxCard title="Shap-e" href="https://github.com/openai/shap-e" icon={<Box />} badge="OpenAI">
+    Generate 3D objects and implicit functions directly from text or image prompts natively on your hardware.
+  </GfxCard>
+</GfxDeck>
+
+<GfxPillDeck>
+  <GfxPill title="MCprep" href="https://theduckcow.com/dev/blender/mcprep/" tag="Blender Addon" />
+  <GfxPill title="Goo Engine" href="https://www.dillongoostudios.com/gooengine/" tag="Anime Branch" />
+  <GfxPill title="Awesome Blender" href="https://awesome-blender.netlify.app/" tag="Index" />
+</GfxPillDeck>
+
+<PremiumVaultBanner text="Need 3Ds Max, C4D plugins, or Evermotion architectural scenes?" hash="3d-scenes" />
+
+---
+
+<GfxSectionHeader icon={<Cuboid />} accent="indigo">
+
+## CAD Engineering
+
+</GfxSectionHeader>
+
+<GfxNotice title="Educational Licenses" tone="info">
+  Professional CAD software normally costs thousands of dollars a year. However, companies like Siemens and Onshape offer robust, free community and educational editions that are more than sufficient for personal mechanical design.
+</GfxNotice>
+
+<GfxPillDeck>
+  <GfxPill title="Solid Edge" href="https://resources.sw.siemens.com/en-US/download-solid-edge-community-edition/" tag="Community Edition" />
+  <GfxPill title="Onshape" href="https://www.onshape.com/en/products/free" tag="Real-time Collab" />
+  <GfxPill title="Tinkercad" href="https://www.tinkercad.com/" tag="Browser based" />
+  <GfxPill title="SendCutSend Education" href="https://sendcutsend.com/education/" tag="Study Guides" />
+  <GfxPill title="SOLIDWORKS Practice" href="https://www.solidworks.com/solution/education/practice-problems" />
+</GfxPillDeck>
+
+---
+
+<GfxSectionHeader icon={<Printer />} accent="emerald">
+
+## 3D Models & Printing
+
+</GfxSectionHeader>
+
+Indexes dedicated strictly to `.obj`, `.fbx`, and `.stl` files. If you are feeding a slicer for a 3D printer, stick to Printables and Thingiverse.
+
+<GfxDeck columns={3}>
+  <GfxCard title="Thingiverse" href="https://www.thingiverse.com/" icon={<Printer />}>
+    The largest repository for sharing and downloading printable 3D models.
+  </GfxCard>
+  <GfxCard title="Printables" href="https://www.printables.com/" icon={<Printer />}>
+    Curated, high-quality models specifically optimized and tested for FDM printing.
+  </GfxCard>
+  <GfxCard title="PolyHaven" href="https://polyhaven.com/" icon={<Printer />} badge="HDRIs">
+    Incredible public-domain library for 3D models, PBR textures, and unclipped HDRIs.
+  </GfxCard>
+</GfxDeck>
+
+<GfxPillDeck>
+  <GfxPill title="Sketchfab" href="https://sketchfab.com/" />
+  <GfxPill title="CadNav" href="https://www.cadnav.com/" />
+  <GfxPill title="Open3dModel" href="https://open3dmodel.com/" />
+  <GfxPill title="Cults3D" href="https://cults3d.com/" />
+  <GfxPill title="Thangs" href="https://thangs.com/" tag="Geometric Search" />
+  <GfxPill title="MakerWorld" href="https://makerworld.com/" />
+  <GfxPill title="3D Warehouse" href="https://3dwarehouse.sketchup.com/" tag="SketchUp" />
+  <GfxPill title="STLFinder" href="https://www.stlfinder.com/" tag="Meta-Search" />
+  <GfxPill title="Generated Photos" href="https://generated.photos/" tag="AI Faces" />
+</GfxPillDeck>
+
+<PremiumVaultBanner text="Looking for DAZ 3D assets, KitBash3D, or premium characters?" hash="3d-characters" />
+
+---
+
+<GfxSectionHeader icon={<Video />} accent="rose">
+
+## Video Editors (NLEs)
+
+</GfxSectionHeader>
+
+<GfxNotice title="Industry Standard" tone="info">
+  DaVinci Resolve has largely cannibalized the free video editing market. It offers Hollywood-grade color grading and node-based compositing (Fusion) for free, though it requires decent GPU VRAM compared to lighter FOSS tools like Kdenlive.
+</GfxNotice>
+
+<GfxDeck columns={2}>
+  <GfxCard title="DaVinci Resolve" href="https://www.blackmagicdesign.com/products/davinciresolve" icon={<Video />} badge="Top Pick">
+    Professional NLE combining editing, color correction, visual effects, and audio post-production.
+  </GfxCard>
+  <GfxCard title="Kdenlive" href="https://kdenlive.org/en/" icon={<Video />} badge="FOSS">
+    Robust, open-source multi-track video editor that excels on Linux and lower-spec hardware.
+  </GfxCard>
+</GfxDeck>
+
+<GfxPillDeck>
+  <GfxPill title="LosslessCut" href="https://github.com/mifi/lossless-cut" tag="Zero-Render Trimming" />
+  <GfxPill title="Shotcut" href="https://shotcut.org/" />
+  <GfxPill title="OpenShot" href="https://www.openshot.org/" />
+  <GfxPill title="wide.video" href="https://wide.video/" tag="Browser NLE" />
+  <GfxPill title="Pikimov" href="https://pikimov.com/" tag="Browser NLE" />
+  <GfxPill title="r/VideoEditing" href="https://www.reddit.com/r/VideoEditing/" />
+  <GfxPill title="Eyecandy" href="https://eyecannndy.com/" tag="Technique Vis-Dev" />
+</GfxPillDeck>
+
+<PremiumVaultBanner text="Unlock Premiere Pro & DaVinci Resolve Master Templates" hash="video-assets" />
+
+---
+
+<GfxSectionHeader icon={<PlaySquare />} accent="amber">
+
+## Animation & Engines
+
+</GfxSectionHeader>
+
+<GfxPillDeck>
+  <GfxPill title="Unreal Engine" href="https://www.unrealengine.com/" tag="Real-Time 3D" />
+  <GfxPill title="Autograph" href="https://www.maxon.net/en/autograph" tag="Motion Graphics" />
+  <GfxPill title="OpenToonz" href="https://opentoonz.github.io/e/" tag="2D Animation" />
+  <GfxPill title="Friction" href="https://friction.graphics/" tag="Vector Animation" />
+  <GfxPill title="Wick Editor" href="https://www.wickeditor.com/editor/" />
+  <GfxPill title="Touch Designer" href="https://derivative.ca/" tag="Node-based" />
+  <GfxPill title="Animaker" href="https://www.animaker.com/" />
+  <GfxPill title="Creator Resources" href="https://www.newgrounds.com/wiki/creator-resources/" tag="Index" />
+</GfxPillDeck>
+
+<PremiumVaultBanner text="Access After Effects projects, Apple Motion, and CinePunch bundles" hash="after-effects" />
+
+---
+
+<GfxSectionHeader icon={<Camera />} accent="zinc">
+
+## Screen Recording & Hosting
+
+</GfxSectionHeader>
+
+<GfxDeck columns={2}>
+  <GfxCard title="OBS Studio" href="https://obsproject.com/" icon={<Camera />} badge="Standard">
+    The benchmark for open-source video recording and live streaming.
+  </GfxCard>
+  <GfxCard title="Shinobi" href="https://shinobi.video/" icon={<Camera />} badge="NVR">
+    Open-source network video recorder designed for CCTV and IP camera monitoring.
+  </GfxCard>
+</GfxDeck>
+
+<GfxPillDeck>
+  <GfxPill title="SteelSeries Moments" href="https://steelseries.com/gg/moments" tag="Clips" />
+  <GfxPill title="Medal.tv" href="https://medal.tv/" tag="Clips" />
+  <GfxPill title="DoodStream" href="https://doodstream.com/" tag="5GB Host" />
+  <GfxPill title="Litterbox" href="https://litterbox.catbox.moe/" tag="1GB Host" />
+  <GfxPill title="Gofile" href="https://gofile.io/" tag="100GB Host" />
+  <GfxPill title="Send.now" href="https://send.now/" />
+  <GfxPill title="VOE" href="https://voe.sx/" />
+</GfxPillDeck>
+
+---
+
+<GfxSectionHeader icon={<Settings2 />} accent="emerald">
+
+## Encoding, Interpolation & Processing
+
+</GfxSectionHeader>
+
+From demuxing Dolby Vision layers to bumping 24fps anime to 60fps via neural interpolation. HandBrake handles general crunching, while tools like Flowframes utilize AI frame generation.
+
+<GfxPillDeck>
+  <GfxPill title="HandBrake" href="https://handbrake.fr/" tag="Video Transcoder" />
+  <GfxPill title="FFmpeg" href="https://ffmpeg.org/" tag="CLI Engine" />
+  <GfxPill title="Shutter Encoder" href="https://www.shutterencoder.com/" tag="GUI" />
+  <GfxPill title="MKVToolNix" href="https://mkvtoolnix.download/" tag="Matroska Editor" />
+  <GfxPill title="Flowframes" href="https://nmkd.itch.io/flowframes" tag="AI Interpolation" />
+  <GfxPill title="SVP" href="https://www.svp-team.com/" tag="Real-Time Interpolation" />
+  <GfxPill title="Gyroflow" href="https://gyroflow.xyz/" tag="Lens Stabilization" />
+  <GfxPill title="ntsc-rs" href="https://ntsc.rs/" tag="VFX Artifacts" />
+  <GfxPill title="Codecs Wiki" href="https://codecs.wiki/" tag="Guide" />
+  <GfxPill title="CorridorKey" href="https://github.com/nikopueringer/CorridorKey" tag="AI Chroma Key" />
+  <GfxPill title="8mb.video" href="https://8mb.video/" tag="Discord Compressor" />
+</GfxPillDeck>
+
+---
+
+<GfxSectionHeader icon={<Film />} accent="sky">
+
+## Stock Video & VFX Sites
+
+</GfxSectionHeader>
+
+<GfxPillDeck>
+  <GfxPill title="Pexels" href="https://www.pexels.com/" tag="Stock" />
+  <GfxPill title="Dareful" href="https://dareful.com/" tag="4K Stock" />
+  <GfxPill title="Monzoom" href="https://www.monzoom.com/" tag="4K Stock" />
+  <GfxPill title="FootageCrate" href="https://footagecrate.com/" tag="VFX" />
+  <GfxPill title="MixKit" href="https://mixkit.co/" />
+  <GfxPill title="DroneStock" href="https://dronestock.com/" tag="Drone B-Roll" />
+  <GfxPill title="MovieTools" href="https://movietools.info/" tag="Loops" />
+</GfxPillDeck>
+
+<PremiumVaultBanner text="Want CRT overlays, film burns, or 16mm grain effects?" hash="overlays" />
+
+---
+
+<GfxSectionHeader icon={<AudioWaveform />} accent="indigo">
+
+## Sound Design
+
+</GfxSectionHeader>
+
+<GfxPillDeck>
+  <GfxPill title="Audio Tools" href="https://audiotools.in/?s=sound+design" />
+  <GfxPill title="BoomBox" href="https://mtmograph.com/products/boombox" tag="Extension" />
+</GfxPillDeck>
+
+<PremiumVaultBanner text="Enter the vault for raw AudioJungle rips, SFX libraries, and VSTs" hash="sound-design" />

@@ -1,0 +1,10 @@
+{
+  "title": "Gaming",
+  "icon": "Gamepad2",
+  "pages": [
+    "game-acquisition",
+    "emulation-roms",
+    "gaming-tools",
+    "linux-gaming"
+  ]
+}

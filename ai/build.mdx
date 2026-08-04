@@ -1,0 +1,248 @@
+---
+title: Build with AI
+description: Agent frameworks, coding agents, MCP, IDEs, and AI app-building tools.
+icon: Blocks
+---
+
+import { BuildHero } from "@/components/ai/build-hero";
+import {
+  AIAtmosphere, AISectionHeader, ToolDeck, ToolCard, PillDeck, AIPill,
+  DiscordPill, PillLegend, NoticePanel, GuideBox, ZoneIntro,
+} from "@/components/ai";
+import {
+  Bot, Network, Terminal, Code2, Blocks, ShieldAlert, Server, Wrench,
+} from "lucide-react";
+
+<AIAtmosphere theme="build" />
+<BuildHero />
+
+<NoticePanel icon={<ShieldAlert />} title="Agent safety" type="danger">
+  Agents frequently run with elevated permissions and can execute shell commands or modify files without confirmation. Avoid granting full root or drive access — a container, VPS, or VM is strongly recommended for anything autonomous.
+</NoticePanel>
+
+<PillLegend />
+
+<AISectionHeader icon={<Bot />} accent="indigo">
+
+## AI Agents & Multi-Agent Frameworks
+
+</AISectionHeader>
+
+Agent frameworks give a language model the ability to plan, call tools, and act autonomously instead of just answering a single prompt. The space splits into single-agent frameworks built for one autonomous actor, and multi-agent orchestration frameworks designed to coordinate several agents working together on the same task.
+
+<ToolDeck columns={2}>
+  <ToolCard title="AutoGPT" href="https://github.com/Significant-Gravitas/AutoGPT" icon={<Bot />} badge="183K Stars" badgeStyle="indigo">
+    The original autonomous agent framework that sparked the agent movement, with modular architecture and forge-based agent building.
+  </ToolCard>
+  <ToolCard title="LangChain / LangGraph" href="https://langchain.com" icon={<Bot />} badge="Foundational" badgeStyle="indigo">
+    The foundational library for agents, chains, and memory — LangGraph adds stateful, controllable agent orchestration on top.
+  </ToolCard>
+  <ToolCard title="Google ADK" href="https://google.github.io/adk-docs" icon={<Bot />} badge="Apache 2.0" badgeStyle="emerald">
+    Code-first Python toolkit for sophisticated multi-agent orchestration with built-in evaluation, model-agnostic but tightly integrated with Google's ecosystem.
+  </ToolCard>
+  <ToolCard title="Pydantic AI" href="https://ai.pydantic.dev" icon={<Bot />} badge="MIT" badgeStyle="emerald">
+    Type-safe agent framework from the creators of Pydantic, with 20 model providers, built-in observability, and MCP/A2A protocol support.
+  </ToolCard>
+</ToolDeck>
+
+<PillDeck>
+  <AIPill title="CrewAI" href="https://crewai.com" type="tool" />
+  <AIPill title="AutoGen / AG2" href="https://microsoft.github.io/autogen" type="official" />
+  <AIPill title="Semantic Kernel" href="https://github.com/microsoft/semantic-kernel" type="official" />
+  <AIPill title="AgentScope" href="https://github.com/modelscope/agentscope" type="open" />
+  <AIPill title="OpenAI Agents SDK" href="https://openai.github.io/openai-agents-python" type="official" />
+  <AIPill title="Microsoft Agent Framework" href="https://github.com/microsoft/agent-framework" type="official" />
+  <AIPill title="BeeAI Framework (IBM)" href="https://github.com/i-am-bee/bee-agent-framework" type="official" />
+  <AIPill title="Qwen-Agent" href="https://github.com/QwenLM/Qwen-Agent" type="open" />
+  <AIPill title="Letta (MemGPT)" href="https://letta.com" type="tool" />
+  <AIPill title="Temporal / OSS orchestration" href="https://temporal.io" type="tool" />
+</PillDeck>
+
+<GuideBox title="Open-source agent orchestration" tone="success">
+  <ul>
+    <li><strong><a href="https://github.com/FoundationAgents/MetaGPT">MetaGPT</a></strong> — multi-agent framework where agents collaborate as programmers, designers, and testers, Apache 2.0</li>
+    <li><strong><a href="https://github.com/awslabs/agent-squad">AWS Labs Agent Squad</a></strong> — flexible multi-agent orchestration with intent classification, pre-built for Bedrock and Lex</li>
+    <li><strong><a href="https://github.com/a2aproject/A2A">A2A Protocol</a></strong> — Google's Agent2Agent open protocol for interoperability between agentic applications, donated to the Linux Foundation</li>
+    <li><strong><a href="https://github.com/langflow-ai/langflow">Langflow</a></strong> — open-source visual canvas for building and deploying agents with 1000+ integrations across frameworks</li>
+    <li><strong><a href="https://github.com/The-Pocket/PocketFlow">PocketFlow</a></strong> — a 100-line minimalist LLM framework for lightweight agent workflows</li>
+  </ul>
+</GuideBox>
+
+<AISectionHeader icon={<Network />} accent="violet">
+
+### Agent Protocols & Context Standards
+
+</AISectionHeader>
+
+As agent ecosystems mature, standardized protocols are emerging so agents built on different frameworks can still talk to each other, share memory, and expose tools safely.
+
+<PillDeck>
+  <AIPill title="Model Context Protocol (MCP)" href="https://modelcontextprotocol.io" type="official" />
+  <AIPill title="Agent File Format (.af)" href="https://github.com/letta-ai/agent-file" type="open" />
+  <AIPill title="Agent Skills spec" href="https://github.com/anthropics/skills" type="open" />
+  <AIPill title="FastMCP" href="https://github.com/jlowin/fastmcp" type="open" />
+</PillDeck>
+
+<GuideBox title="Memory & context infrastructure" tone="success">
+  Long-running agents need persistent memory beyond a single context window. Tools like <strong>Letta</strong>, dedicated memory-engine APIs, and local-first memory lifecycles (e.g. Ring Memory) let agents store, retrieve, and reuse context across sessions without re-processing everything from scratch each run.
+</GuideBox>
+
+---
+
+<AISectionHeader icon={<Terminal />} accent="zinc">
+
+## Autonomous Coding Agents
+
+</AISectionHeader>
+
+These agents operate directly inside your terminal or repository — reading code, writing patches, running tests, and iterating without constant hand-holding. Most fall into either an IDE-integrated assistant or a fully terminal-native harness that manages its own subagents and memory.
+
+<ToolDeck columns={2}>
+  <ToolCard title="OpenHands" href="https://github.com/All-Hands-AI/OpenHands" icon={<Terminal />} badge="Full Agent" badgeStyle="indigo">
+    Full-featured open-source AI software engineer, formerly OpenDevin, built for end-to-end autonomous development tasks.
+  </ToolCard>
+  <ToolCard title="Gemini CLI" href="https://github.com/google-gemini/gemini-cli" icon={<Terminal />} badge="Apache 2.0" badgeStyle="emerald">
+    Open-source agent bringing Gemini's capabilities directly into your terminal, with code generation and shell execution.
+  </ToolCard>
+  <ToolCard title="Mini-SWE-agent" href="https://github.com/SWE-agent/mini-swe-agent" icon={<Terminal />} badge="Lightweight" badgeStyle="amber">
+    Lightweight coding agent purpose-built for repository and issue-fixing workflows and agentic SWE experiments.
+  </ToolCard>
+  <ToolCard title="Continue" href="https://continue.dev" icon={<Terminal />} badge="IDE-Native" badgeStyle="indigo">
+    Open-source AI code assistant that connects any model into custom autocomplete and chat inside your IDE.
+  </ToolCard>
+</ToolDeck>
+
+<PillDeck>
+  <AIPill title="Aider" href="https://aider.chat" type="tool" />
+  <AIPill title="Cline" href="https://github.com/cline/cline" type="open" />
+  <AIPill title="OpenAI Codex CLI" href="https://openai.com/codex" type="official" />
+  <AIPill title="Mistral Vibe" href="https://mistral.ai" type="official" />
+</PillDeck>
+
+<GuideBox title="Coding agent skills & workflow frameworks" tone="success">
+  A newer layer of tooling packages entire development processes — planning, TDD, code review, spec refinement — as reusable "skills" agents can load. These sit on top of Claude Code, Codex, and other agents rather than replacing them, and are worth exploring once you've settled on a base agent.
+</GuideBox>
+
+---
+
+<AISectionHeader icon={<Blocks />} accent="amber">
+
+## No-Code & Visual AI Builders
+
+</AISectionHeader>
+
+Not every AI workflow needs custom code. Visual builders let you wire models, tools, and data sources together on a canvas, which is often the fastest path from idea to working prototype.
+
+<ToolDeck columns={2}>
+  <ToolCard title="Langflow" href="https://langflow.org" icon={<Blocks />} badge="Apache 2.0" badgeStyle="emerald">
+    Open-source AI workspace with a visual canvas, 1000+ integrations, and multi-framework support (Agno, LangChain, Google ADK).
+  </ToolCard>
+  <ToolCard title="Flowise" href="https://flowiseai.com" icon={<Blocks />} badge="Drag & Drop" badgeStyle="indigo">
+    Drag-and-drop builder for LLM apps and RAG agents, popular for fast internal tool prototyping.
+  </ToolCard>
+</ToolDeck>
+
+<PillDeck>
+  <AIPill title="n8n" href="https://n8n.io" type="tool" />
+  <AIPill title="CopilotKit" href="https://copilotkit.ai" type="open" />
+  <AIPill title="Make (Integromat)" href="https://make.com" type="tool" />
+</PillDeck>
+
+---
+
+<AISectionHeader icon={<Code2 />} accent="sky">
+
+## AI-Native IDEs & Dev Tools
+
+</AISectionHeader>
+
+Beyond chat-based coding help, these are full environments and utilities built specifically around AI-assisted development — from complete IDE replacements to focused CLI utilities that plug into whichever agent you're already using.
+
+<ToolDeck columns={3}>
+  <ToolCard title="Cursor" href="https://cursor.com" icon={<Code2 />} badge="AI-Native IDE" badgeStyle="indigo">
+    A full IDE built around AI-assisted multi-file editing, one of the most widely adopted AI-first development environments.
+  </ToolCard>
+  <ToolCard title="Windsurf" href="https://windsurf.com" icon={<Code2 />} badge="Fluid Editor" badgeStyle="fuchsia">
+    AI-native IDE combining code editing with continuous AI assistance across the whole development flow.
+  </ToolCard>
+  <ToolCard title="Devcontainer/Sandbox Runtimes" href="https://github.com" icon={<Code2 />} badge="Safety Layer" badgeStyle="amber">
+    Portable sandbox execution environments that constrain filesystem and network access, reducing blast radius when running autonomous agents.
+  </ToolCard>
+</ToolDeck>
+
+<PillDeck>
+  <AIPill title="Qodo Merge Agent" href="https://qodo.ai" type="tool" />
+  <AIPill title="WhichLLM" href="https://whichllm.com" type="tool" />
+  <AIPill title="LLM VRAM Calculator" href="https://huggingface.co/spaces" type="tool" />
+  <AIPill title="Awesome ChatGPT (GitHub)" href="https://github.com/humanloop/awesome-chatgpt" type="open" />
+</PillDeck>
+
+<GuideBox title="Guardrails, red-teaming & responsible AI dev" tone="success">
+  <ul>
+    <li><strong><a href="https://github.com/NVIDIA/NeMo-Guardrails">NeMo Guardrails</a></strong> (NVIDIA) — programmable safety rules and dialog flows for LLM apps, integrates with LangChain/LangGraph</li>
+    <li><strong><a href="https://github.com/guardrails-ai/guardrails">Guardrails AI</a></strong> — input/output validation for PII, toxicity, and prompt injection with 50+ pre-built validators</li>
+    <li><strong><a href="https://github.com/Azure/PyRIT">Microsoft PyRIT</a></strong> — automated red-teaming framework for generative AI with multi-modal attack support</li>
+    <li><strong><a href="https://github.com/microsoft/presidio">Presidio</a></strong> (Microsoft) — detect, redact, and anonymize PII across text and images</li>
+  </ul>
+</GuideBox>
+
+---
+
+<AISectionHeader icon={<Server />} accent="emerald">
+
+## Self-Hosted AI Platforms & Deployment
+
+</AISectionHeader>
+
+For teams or individuals who want a complete AI stack running on their own infrastructure — chat interface, model serving, and agent orchestration all self-hosted rather than stitched together from cloud APIs.
+
+<ToolDeck columns={2}>
+  <ToolCard title="Open WebUI" href="https://github.com/open-webui/open-webui" icon={<Server />} badge="Most Popular" badgeStyle="indigo">
+    The most widely used self-hosted ChatGPT-style interface, supporting local and remote model backends.
+  </ToolCard>
+  <ToolCard title="LocalAI" href="https://localai.io" icon={<Server />} badge="MIT" badgeStyle="emerald">
+    Self-hosted OpenAI-compatible API engine running LLMs, vision, voice, image, and video models on any hardware.
+  </ToolCard>
+</ToolDeck>
+
+<PillDeck>
+  <AIPill title="text-generation-webui" href="https://github.com/oobabooga/text-generation-webui" type="open" />
+  <AIPill title="Dify" href="https://dify.ai" type="tool" />
+  <AIPill title="AnythingLLM" href="https://anythingllm.com" type="open" />
+</PillDeck>
+
+<GuideBox title="On-prem enterprise AI knowledge platforms" tone="success">
+  Several open-source projects now offer full "ChatGPT replacement" stacks with RAG, access controls, and audit logging built in — suited for teams that need an internal AI knowledge base without sending data to a third-party cloud. Worth cross-referencing with the <a href="/docs/ai/local">Local AI</a> page for model-serving setup.
+</GuideBox>
+
+<PillDeck>
+  <DiscordPill title="r/LocalLLaMA" href="https://reddit.com/r/LocalLLaMA" />
+  <AIPill title="r/AI_Agents" href="https://reddit.com/r/AI_Agents" type="community" />
+</PillDeck>
+
+<AISectionHeader icon={<Wrench />} accent="pink">
+
+### Personal AI Assistants
+
+</AISectionHeader>
+
+Distinct from coding agents, this class of tool lives in your everyday messaging apps — Telegram, WhatsApp, Discord, Slack — and handles real-world tasks like email, scheduling, and browsing on your behalf rather than writing code.
+
+<ToolDeck columns={2}>
+  <ToolCard title="OpenClaw" href="https://openclaw.ai" icon={<Wrench />} badge="Viral / OSS" badgeStyle="indigo">
+    Open agent platform that runs on your machine and works from the chat apps you already use — WhatsApp, Telegram, Discord, Slack, Teams. Broad ecosystem with a large community skill marketplace (Clawhub), though cross-session memory needs manual setup.
+  </ToolCard>
+  <ToolCard title="Hermes Agent" href="https://hermes-agent.nousresearch.com" icon={<Wrench />} badge="Self-Improving" badgeStyle="emerald">
+    MIT-licensed agent from Nous Research with a built-in closed learning loop — it writes reusable skills from completed tasks and builds persistent memory automatically. Supports 200+ models and can migrate an existing OpenClaw setup directly.
+  </ToolCard>
+</ToolDeck>
+
+<PillDeck>
+  <AIPill title="Khoj" href="https://khoj.dev" type="open" />
+  <AIPill title="Leon" href="https://getleon.ai" type="open" />
+  <AIPill title="Home Assistant Voice" href="https://home-assistant.io" type="open" />
+</PillDeck>
+
+<GuideBox title="OpenClaw vs. Hermes Agent" tone="neutral">
+  These two are often run together rather than as competitors: OpenClaw contributes ecosystem breadth and multi-channel orchestration, while Hermes Agent contributes the persistent memory and self-improving skill layer that OpenClaw lacks out of the box. A common setup runs Hermes as a high-level planner on top of OpenClaw's tools.
+</GuideBox>

@@ -1,0 +1,133 @@
+---
+title: Fire TV Stick Free Streaming
+description: Your complete guide to unlocking free streaming on Fire TV Stick and Android TV devices.
+icon: Tv
+---
+
+import { Step, Steps } from 'fumadocs-ui/components/steps';
+import { Tabs, TabsList, TabsTrigger, TabsContent } from 'fumadocs-ui/components/tabs';
+import { Callout } from 'fumadocs-ui/components/callout';
+import { StreamAtmosphere, StreamHero, StreamSectionHeading, GamingPill, PillDeck, InfoCard, InfoDeck } from '@/components/stream-magic';
+import { Tv, Settings, Plug, Zap, DownloadCloud, HardDrive } from 'lucide-react';
+
+<StreamAtmosphere />
+<StreamHero />
+
+<StreamSectionHeading icon={<Settings />} accent="cyan">
+
+## Stremio & Trakt Setup
+
+</StreamSectionHeading>
+
+<Steps>
+  <Step title="Create A Stremio Account">
+    1. Signup [here](https://www.stremio.com/register).
+    2. Install the Stremio app on your PC, Mac, or smartphone.
+       - *Note: This device will be used to install the necessary add-ons. It is much easier to configure on a computer before syncing to your TV.*
+       
+    <Callout title="Account Syncing" type="info">
+      <div>Once finished, you may remove the app from your PC/phone, but don't forget to keep your Stremio login credentials handy. These will be needed to sync your configured add-ons to the Fire Stick.</div>
+    </Callout>
+  </Step>
+
+  <Step title="Connect TRAKT (Optional)">
+    1. Click [here](https://trakt.tv/auth/join) to signup for TRAKT.
+    2. Click [here](https://www.stremio.com/acc-settings) to connect your account with Stremio.
+
+    <Callout title="Is this necessary?" type="warn">
+      <div>Linking your TRAKT account is not mandatory, as Stremio natively remembers your watch history and series progression. It is simply an added bonus. A paid version of Trakt is completely unnecessary for this to work.</div>
+    </Callout>
+  </Step>
+</Steps>
+
+---
+
+<StreamSectionHeading icon={<Plug />} accent="blue">
+
+## Configuring Torrentio
+
+</StreamSectionHeading>
+
+<Callout title="What is Torrentio?" type="info">
+  <div>We will use Torrentio as the core add-on to scrape torrents and communicate securely with your debrid provider.</div>
+</Callout>
+
+1. **Avoid Duplicates:** To avoid installing multiple copies, make sure to uninstall any existing Torrentio plugin from your Stremio account before modifying the configuration.
+2. **Configuration:** Use [this link](https://torrentio.strem.fun/configure) to configure the addon to your preferences. 
+   - *Crucial Tip:* Disable resolution options (like 4K) if your Firestick or TV does not support them. This prevents the app from crashing when attempting to automatically play the first, highest-quality result of an episode.
+
+---
+
+<StreamSectionHeading icon={<DownloadCloud />} accent="emerald">
+
+## Installing on Fire TV
+
+</StreamSectionHeading>
+
+*(This method works seamlessly across Firestick Lite, Fire TV Stick 4K, and Fire TV Cube models.)*
+
+<Steps>
+  <Step title="Install Downloader">
+    Install the "Downloader" app natively from the Fire Stick App Store (look for the orange icon with a download arrow 📥).
+  </Step>
+
+  <Step title="Enable Developer Options">
+    Allow the "Downloader" app to install third-party applications.
+    - Go to **Settings > My Fire TV > Developer Options** and turn ON "Apps from Unknown Sources".
+    - *(If you do not see Developer Options on a newer device, go to Settings > My Fire TV > About, select your Fire TV Stick, and click the select button 7 times to reveal it.)*
+  </Step>
+
+  <Step title="Download Stremio">
+    Open the "Downloader" app, navigate to the URL bar, and enter this specific shortlink:
+    
+    `https://is.gd/dlstremio`
+
+    <Callout title="Troubleshooting Links" type="info">
+      <div className="flex flex-col gap-2">
+        <span>• We use [is.gd](https://www.is.gd/index.php) to shorten download links for TV remote convenience.</span>
+        <span>• If the link expires or an update is released, go [here](https://www.stremio.com/downloads), choose Android TV, and copy the **ARM APK** link. Then, run it through the shortener to create your own.</span>
+        <span>• Alternatively, download the official [Fire TV App](https://www.amazon.com/gp/help/customer/display.html?nodeId=GGKS6F6YNYGHK6YG) on your smartphone to use it as a wireless keyboard, allowing you to easily copy and paste long URLs.</span>
+      </div>
+    </Callout>
+  </Step>
+</Steps>
+
+---
+
+<StreamSectionHeading icon={<Zap />} accent="purple">
+
+## Debrid Subscription
+
+</StreamSectionHeading>
+
+<Callout title="Highly Recommended" type="info">
+  <div>A debrid provider is not strictly mandatory, but it is **strongly advised**. Without one, you will encounter buffering, broken links, and your public IP address will be revealed to the swarm.</div>
+</Callout>
+
+A debrid service is a premium subscription that lets you stream torrents securely, acting similarly to a seedbox. The essential distinction is that when you link a debrid service to Torrentio, the media files are securely cached on their high-speed servers. This allows for immediate, buffer-free streaming of 4K content without waiting for downloads or exposing your IP.
+
+### Recommended Providers
+
+
+<InfoDeck>
+  <InfoCard title="Real-Debrid" href="https://real-debrid.com/" icon={<HardDrive />} tag="Legendary" tagStyle="rose">
+    A legendary, highly popular choice for accessing cached content. Operating securely since 2009 with the vastest selection of pre-cached movies and shows available.
+  </InfoCard>
+  <InfoCard title="Debrid-Link" href="https://debrid-link.com/" icon={<HardDrive />} tag="Top" tagStyle="rose">
+    Offers highly affordable services with the unique ability to seed torrents, manually select CDNs, and utilize additional power-user features.
+  </InfoCard>
+</InfoDeck>
+
+
+<PillDeck>
+  <GamingPill title="Premiumize" href="https://www.premiumize.me/" type="site" />
+  <GamingPill title="AllDebrid" href="https://alldebrid.com/" type="tool" />
+  <GamingPill title="Offcloud" href="https://offcloud.com/" type="tool" />
+  <GamingPill title="Put.io" href="https://put.io/" type="tool" />
+
+</PillDeck>
+
+
+<Callout title="Further Reading" type="info" icon={<Tv className="w-5 h-5 text-indigo-500" />}>
+  <div>Check out [Fire Stick Tricks](https://www.firesticktricks.com/) — Learn how to unlock the real potential of your Amazon FireStick / Fire TV. They list many free movie apps, live TV, sports streaming resources, and more.</div>
+</Callout>

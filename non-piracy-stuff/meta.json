@@ -1,0 +1,11 @@
+{
+  "title": "General Resources",
+  "icon": "Compass",
+  "pages": [
+    "file-hosting-storage",
+    "lock-hide-folders",
+    "proxy-websites",
+    "macos-applications",
+    "windows-applications"
+  ]
+}

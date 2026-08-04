@@ -1,0 +1,295 @@
+---
+title: Useful Windows Applications
+description: A curated collection of tools and websites for Windows users to enhance their user experience and make it more enjoyable.
+icon: LayoutGrid
+---
+
+import { 
+  FluentAtmosphere, 
+  WindowsHero, 
+  FluentGrid, 
+  FluentCard,
+  WindowsSectionHeader
+} from '@/components/windows-magic';
+
+import { 
+  Wrench, FileSearch, MonitorPlay, ShieldAlert, Cpu, 
+  Share2, Image as ImageIcon, Download, Settings2, 
+  FolderTree, Network, PenTool, LayoutDashboard, Volume2, Sparkles,
+  Activity, HardDrive
+} from 'lucide-react';
+
+import YouTube from '@/components/youtube';
+
+<FluentAtmosphere />
+<WindowsHero />
+
+<WindowsSectionHeader icon={<Settings2 />} accent="blue">
+
+## System Utilities & Power Tools
+
+</WindowsSectionHeader>
+
+<FluentGrid>
+  <FluentCard title="Microsoft PowerToys" href="https://docs.microsoft.com/en-gb/windows/powertoys/" icon={<Wrench className="w-5 h-5 text-blue-500" />}>
+    A legendary set of utilities for power users to tune and streamline their Windows experience for greater productivity.
+  </FluentCard>
+  <FluentCard title="Sysinternals" href="https://docs.microsoft.com/en-us/sysinternals/downloads/sysinternals-suite" icon={<Wrench className="w-5 h-5 text-zinc-500" />}>
+    A suite of more than 70 freeware utilities developed to monitor, manage and troubleshoot the Windows operating system deeply.
+  </FluentCard>
+  <FluentCard title="AutoHotkey" href="https://www.autohotkey.com/" icon={<PenTool className="w-5 h-5 text-green-500" />}>
+    A free, open-source scripting language. Easily create small to complex scripts for form fillers, auto-clicking, and macros.
+  </FluentCard>
+  <FluentCard title="Ninite" href="https://ninite.com/" icon={<Download className="w-5 h-5 text-zinc-500" />}>
+    The easiest, fastest way to update or install software. Automatically downloads and installs programs in the background without bloatware.
+  </FluentCard>
+  <FluentCard title="Winget GUI" href="https://github.com/marticliment/WingetUI" icon={<Settings2 className="w-5 h-5 text-blue-500" />}>
+    An intuitive graphical interface for the most common CLI package managers for Windows 10 and 11, such as Winget, Scoop, and Chocolatey.
+  </FluentCard>
+  <FluentCard title="Revo Uninstaller" href="https://www.revouninstaller.com/" icon={<Wrench className="w-5 h-5 text-red-500" />}>
+    Cleans up failed uninstalls and removes all hidden traces of application files and registry keys. (Alternative: [Bulk Crap Uninstaller](https://www.bcuninstaller.com/)).
+  </FluentCard>
+  <FluentCard title="BleachBit" href="https://www.bleachbit.org/" icon={<ShieldAlert className="w-5 h-5 text-zinc-500" />}>
+    A cleaner tool to preserve privacy. It can secure-delete files, folders, program history, cache, and temporary files.
+  </FluentCard>
+  <FluentCard title="Rufus" href="https://rufus.ie/" icon={<HardDrive className="w-5 h-5 text-orange-500" />}>
+    A utility that helps format and create bootable USB flash drives for installing operating systems.
+  </FluentCard>
+  <FluentCard title="PortableApps" href="https://portableapps.com/" icon={<FolderTree className="w-5 h-5 text-blue-500" />}>
+    Get portable versions of various apps to run directly from a USB drive without installation.
+  </FluentCard>
+</FluentGrid>
+
+---
+
+<WindowsSectionHeader icon={<LayoutDashboard />} accent="teal">
+
+## Desktop Customization & Widgets
+
+</WindowsSectionHeader>
+
+<FluentGrid>
+  <FluentCard title="Rainmeter" href="https://www.rainmeter.net/" icon={<LayoutDashboard className="w-5 h-5 text-teal-500" />}>
+    Allows you to display customizable skins on your desktop, ranging from hardware usage meters to fully functional audio visualizers.
+  </FluentCard>
+  <FluentCard title="Lively Wallpaper" href="https://rocksdanister.github.io/lively/" icon={<MonitorPlay className="w-5 h-5 text-purple-500" />}>
+    Animated desktop wallpapers. Bring your desktop to life! A brilliant free and open-source alternative to Wallpaper Engine.
+  </FluentCard>
+  <FluentCard title="Stardock Fences" href="https://www.stardock.com/products/fences/" icon={<LayoutDashboard className="w-5 h-5 text-blue-500" />}>
+    Declutter and beautify your desktop. Automatically organize your apps, files, and folders into shaded areas.
+  </FluentCard>
+  <FluentCard title="EarTrumpet" href="https://eartrumpet.app/" icon={<Volume2 className="w-5 h-5 text-zinc-500" />}>
+    Powerful, intuitive per-application volume control for Windows right from the system tray.
+  </FluentCard>
+  <FluentCard title="AudioBand" href="https://github.com/AudioBand/AudioBand" icon={<Volume2 className="w-5 h-5 text-zinc-500" />}>
+    Displays song information from various sources directly in the Windows taskbar.
+  </FluentCard>
+</FluentGrid>
+
+<div className="my-8">
+  <YouTube id="xHj0juUACFk" />
+</div>
+
+---
+
+<WindowsSectionHeader icon={<FolderTree />} accent="orange">
+
+## File Management & Search
+
+</WindowsSectionHeader>
+
+<FluentGrid>
+  <FluentCard title="Voidtools Everything" href="https://www.voidtools.com/" icon={<FileSearch className="w-5 h-5 text-orange-500" />}>
+    The undisputed king of local search. Lets you locate any file or folder on your entire PC instantly.
+  </FluentCard>
+  <FluentCard title="QuickLook" href="https://github.com/QL-Win/QuickLook" icon={<FileSearch className="w-5 h-5 text-zinc-500" />}>
+    Brings macOS functionality to Windows: peek into file content at lightning speed by just pressing the Space key.
+  </FluentCard>
+  <FluentCard title="7-Zip" href="http://www.7-zip.org/download.html" icon={<FolderTree className="w-5 h-5 text-zinc-500" />}>
+    A free and open-source file archiver with an incredibly high compression ratio. Opens ZIP, TAR, RAR, and more.
+  </FluentCard>
+  <FluentCard title="Filelight" href="https://apps.kde.org/en-gb/filelight/" icon={<Cpu className="w-5 h-5 text-blue-500" />}>
+    An application to beautifully visualize the disk usage on your computer using interactive concentric rings.
+  </FluentCard>
+  <FluentCard title="Bulk Rename Utility" href="https://www.bulkrenameutility.co.uk/" icon={<PenTool className="w-5 h-5 text-zinc-500" />}>
+    Easily rename files and entire folders based upon extremely flexible criteria (regex, timestamps, auto-numbers).
+  </FluentCard>
+  <FluentCard title="FilelistCreator" href="https://www.sttmedia.com/filelistcreator" icon={<FolderTree className="w-5 h-5 text-zinc-500" />}>
+    Quickly generate a text or HTML index of files and folders from a CD, hard drive, or memory stick. (See also: [Arclab Dir2HTML](https://www.arclab.com/en/dir2html/)).
+  </FluentCard>
+</FluentGrid>
+
+---
+
+<WindowsSectionHeader icon={<PenTool />} accent="indigo">
+
+## Productivity & Workflow
+
+</WindowsSectionHeader>
+
+<FluentGrid>
+  <FluentCard title="Flow Launcher" href="https://www.flowlauncher.com/" icon={<FileSearch className="w-5 h-5 text-indigo-500" />}>
+    A highly customizable Quick File Search & App Launcher for Windows, heavily inspired by macOS Spotlight and Alfred.
+  </FluentCard>
+  <FluentCard title="ClipClip" href="https://clipclip.com/" icon={<PenTool className="w-5 h-5 text-blue-500" />}>
+    A free clipboard management software. Browse, search, or convert your past copied text and images into saved, organized folders.
+  </FluentCard>
+  <FluentCard title="PicPick" href="https://picpick.app/en/" icon={<ImageIcon className="w-5 h-5 text-purple-500" />}>
+    A full-featured screen capture tool featuring an intuitive image editor, color picker, pixel-ruler, protractor, and crosshair.
+  </FluentCard>
+  <FluentCard title="Notepad++" href="https://notepad-plus-plus.org/" icon={<PenTool className="w-5 h-5 text-green-500" />}>
+    A free source code editor and Notepad replacement packed full of features and multi-language support.
+  </FluentCard>
+  <FluentCard title="Ambie White Noise" href="https://ambieapp.com/" icon={<Volume2 className="w-5 h-5 text-teal-500" />}>
+    Play white noise and nature sounds to help you focus, sleep, or unwind after a long day.
+  </FluentCard>
+  <FluentCard title="f.lux" href="https://justgetflux.com/" icon={<MonitorPlay className="w-5 h-5 text-orange-400" />}>
+    Adjusts display color temperature according to the time of day to reduce eye strain. Offers far more control than native Windows Night Light.
+  </FluentCard>
+</FluentGrid>
+
+---
+
+<WindowsSectionHeader icon={<Share2 />} accent="green">
+
+## Connectivity & Remote Access
+
+</WindowsSectionHeader>
+
+<FluentGrid>
+  <FluentCard title="KDE Connect" href="https://kdeconnect.kde.org/" icon={<Share2 className="w-5 h-5 text-green-500" />}>
+    Control your PC from mobile. Features virtual trackpad, cross-device file drop, notification syncing, and clipboard sharing.
+  </FluentCard>
+  <FluentCard title="Pushbullet" href="https://www.pushbullet.com/" icon={<Share2 className="w-5 h-5 text-green-500" />}>
+    Share links and files between all your devices and send text messages natively from your PC.
+  </FluentCard>
+  <FluentCard title="Local Send" href="https://github.com/localsend/localsend" icon={<Network className="w-5 h-5 text-blue-500" />}>
+    Securely share files and messages with nearby devices over your local network without needing an internet connection.
+  </FluentCard>
+  <FluentCard title="scrcpy" href="https://github.com/Genymobile/scrcpy" icon={<MonitorPlay className="w-5 h-5 text-purple-500" />}>
+    Mirrors Android devices (video and audio) via USB or TCP/IP. Control the device with your PC keyboard and mouse. No root required.
+  </FluentCard>
+  <FluentCard title="PRemoteM" href="https://github.com/1Remote/PRemoteM" icon={<Network className="w-5 h-5 text-zinc-500" />}>
+    A modern personal remote session manager and launcher supporting a wide number of different protocols.
+  </FluentCard>
+</FluentGrid>
+
+---
+
+<WindowsSectionHeader icon={<Network />} accent="red">
+
+## Network, Security & Privacy
+
+</WindowsSectionHeader>
+
+<FluentGrid>
+  <FluentCard title="Safing Portmaster" href="https://safing.io/portmaster/" icon={<ShieldAlert className="w-5 h-5 text-red-500" />}>
+    A powerful Pi-hole alternative. Block ads & trackers system-wide, monitor all network activity, and enforce DNS-over-TLS.
+  </FluentCard>
+  <FluentCard title="TinyWall" href="https://tinywall.pados.hu/" icon={<ShieldAlert className="w-5 h-5 text-zinc-500" />}>
+    A frontend for Windows Firewall that lets you easily whitelist applications. No more apps phoning home without permission.
+  </FluentCard>
+  <FluentCard title="Proton VPN" href="https://protonvpn.com/download" icon={<Network className="w-5 h-5 text-purple-500" />}>
+    The free tier is fantastic and offers great speeds with zero logging. Servers in Netherlands, US, and Japan.
+  </FluentCard>
+  <FluentCard title="Bitwarden" href="https://bitwarden.com/" icon={<ShieldAlert className="w-5 h-5 text-blue-500" />}>
+    The premier open-source password management solution for individuals and teams.
+  </FluentCard>
+  <FluentCard title="Sandboxie+" href="https://github.com/sandboxie-plus/Sandboxie" icon={<ShieldAlert className="w-5 h-5 text-zinc-500" />}>
+    Creates a sandbox-like isolated operating environment to test untrusted programs without permanently modifying the Windows registry.
+  </FluentCard>
+  <FluentCard title="Authy" href="https://authy.com/" icon={<ShieldAlert className="w-5 h-5 text-red-500" />}>
+    Enable 2FA for your favorite sites. Go beyond the password and protect yourself from account takeovers.
+  </FluentCard>
+</FluentGrid>
+
+---
+
+<WindowsSectionHeader icon={<MonitorPlay />} accent="purple">
+
+## Media Players & Audio
+
+</WindowsSectionHeader>
+
+<FluentGrid>
+  <FluentCard title="PotPlayer" href="https://potplayer.tv/" icon={<MonitorPlay className="w-5 h-5 text-purple-500" />}>
+    One of the best video players for Windows. Extremely lightweight but offers a massive range of customizations and codec support.
+  </FluentCard>
+  <FluentCard title="Kodi" href="https://kodi.tv/" icon={<MonitorPlay className="w-5 h-5 text-blue-500" />}>
+    Turns any computer into a digital set-top box. Highly extensible via community add-ons without being held back by walled gardens.
+  </FluentCard>
+  <FluentCard title="foobar2000" href="https://www.foobar2000.org/" icon={<Volume2 className="w-5 h-5 text-zinc-500" />}>
+    An advanced, highly customizable freeware audio player for power users.
+  </FluentCard>
+  <FluentCard title="Music Bee" href="https://www.getmusicbee.com/" icon={<Volume2 className="w-5 h-5 text-amber-500" />}>
+    A fantastic alternative to foobar2000 for managing and playing large local music collections.
+  </FluentCard>
+  <FluentCard title="libDrive" href="https://github.com/libDrive" icon={<FolderTree className="w-5 h-5 text-blue-500" />}>
+    A Google Drive media library manager (similar to Plex). Browser-based, lightweight, and uses Cloudflare workers to stream rapidly.
+  </FluentCard>
+  <FluentCard title="last.fm" href="https://www.last.fm/" icon={<Volume2 className="w-5 h-5 text-red-500" />}>
+    Scrobble your listening history directly from your desktop media players to build a massive profile of your musical taste.
+  </FluentCard>
+</FluentGrid>
+
+<div className="my-8">
+  <YouTube id="Mg1SQYGzb70" />
+</div>
+
+---
+
+<WindowsSectionHeader icon={<Sparkles />} accent="pink">
+
+## Encoders, Editors & AI Tools
+
+</WindowsSectionHeader>
+
+<FluentGrid>
+  <FluentCard title="DaVinci Resolve" href="https://www.blackmagicdesign.com/products/davinciresolve" icon={<MonitorPlay className="w-5 h-5 text-indigo-500" />}>
+    A completely free alternative to Premiere Pro combining video editing, color correction, VFX, and audio post-production.
+  </FluentCard>
+  <FluentCard title="HandBrake" href="https://handbrake.fr/" icon={<MonitorPlay className="w-5 h-5 text-zinc-500" />}>
+    The definitive free, open-source transcoder. Integrate FFmpeg, x264, and x265 to format video files easily.
+  </FluentCard>
+  <FluentCard title="FileBot" href="https://www.filebot.net/" icon={<FolderTree className="w-5 h-5 text-blue-500" />}>
+    The ultimate tool for automatically renaming and organizing your movies and TV shows against online databases.
+  </FluentCard>
+  <FluentCard title="MakeMKV" href="https://www.makemkv.com/" icon={<MonitorPlay className="w-5 h-5 text-zinc-500" />}>
+    Your one-click solution to convert DVD, Blu-ray, and UHD discs you own directly into DRM-free MKV files.
+  </FluentCard>
+  <FluentCard title="chaiNNer" href="https://github.com/chaiNNer-org/chaiNNer" icon={<Sparkles className="w-5 h-5 text-purple-500" />}>
+    An open-source node-based tool supporting image upscaling, face restoration, inpainting, and background removal.
+  </FluentCard>
+  <FluentCard title="cleanup.pictures" href="https://cleanup.pictures/" icon={<Sparkles className="w-5 h-5 text-pink-500" />}>
+    A rapid AI tool to automatically remove text, objects, and blemishes from images in your browser. (See also: [ribbet.ai](https://ribbet.ai/)).
+  </FluentCard>
+</FluentGrid>
+
+---
+
+<WindowsSectionHeader icon={<Cpu />} accent="zinc">
+
+## Monitoring & Miscellaneous
+
+</WindowsSectionHeader>
+
+<FluentGrid>
+  <FluentCard title="HWiNFO" href="https://www.hwinfo.com/" icon={<Cpu className="w-5 h-5 text-orange-500" />}>
+    Free hardware analysis, in-depth real-time system monitoring, and reporting tool.
+  </FluentCard>
+  <FluentCard title="CPU-Z" href="https://www.cpuid.com/softwares/cpu-z.html" icon={<Cpu className="w-5 h-5 text-purple-500" />}>
+    Gathers detailed information on your processor, mainboard, chipset, memory type, and real-time internal frequencies.
+  </FluentCard>
+  <FluentCard title="Traffic Monitor" href="https://github.com/zhongyang219/TrafficMonitor/blob/master/README_en-us.md" icon={<Activity className="w-5 h-5 text-blue-500" />}>
+    A floating window (or taskbar embed) that displays real-time internet speeds alongside CPU and RAM usage.
+  </FluentCard>
+  <FluentCard title="ActivityWatch" href="https://activitywatch.net/" icon={<Activity className="w-5 h-5 text-green-500" />}>
+    Automatically track how you spend time on your devices to monitor productivity and break bad screen habits.
+  </FluentCard>
+  <FluentCard title="CopyTrans HEIC" href="https://www.copytrans.net/copytransheic/" icon={<ImageIcon className="w-5 h-5 text-zinc-500" />}>
+    Preview and browse Apple HEIC images natively through Windows Explorer without needing to convert to JPEG.
+  </FluentCard>
+  <FluentCard title="Icaros" href="https://shark007.net/tools.html" icon={<ImageIcon className="w-5 h-5 text-zinc-500" />}>
+    Provides high-quality Windows Explorer thumbnails for essentially any video media format (MKV, FLV, MP4).
+  </FluentCard>
+</FluentGrid>

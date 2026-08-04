@@ -1,0 +1,377 @@
+---
+title: Mobile Downloads Hub
+description: Stores, sideloading, patchers, and vetted community sources for Android and iOS.
+icon: Smartphone
+---
+
+import {
+  MobileAtmosphere, MobileHero, MobileSectionHeading,
+  QuickPicksDeck, QuickPick, GuideBox, EcosystemIntro,
+  InfoDeck, InfoCard,
+  PillDeck, MobilePill, MobilePillLegend, TelegramPill,
+  CompareTable, WarnBox
+} from '@/components/mobile-magic';
+import {
+  Smartphone, TabletSmartphone, Store, Wrench, Layers, ShieldCheck,
+  MonitorPlay, KeyRound, HardDrive, Sparkles, Cpu, Trash2, Download,
+  PlayCircle, Film, Send, MessageSquareText
+} from 'lucide-react';
+
+<MobileAtmosphere />
+<MobileHero />
+
+<MobileSectionHeading icon={<Sparkles />}>
+
+## Quick Picks
+
+</MobileSectionHeading>
+
+<QuickPicksDeck>
+  <QuickPick title="Aurora Store" href="https://auroraoss.com/" subtitle="Anonymous Play Store client" icon={<Store />} platform="android" />
+  <QuickPick title="Obtainium" href="https://github.com/ImranR98/Obtainium" subtitle="Auto-updates APKs from any source" icon={<Layers />} platform="android" />
+  <QuickPick title="TrollStore" href="https://github.com/opa334/TrollStore" subtitle="Permanent sideloads, no jailbreak" icon={<Store />} platform="ios" />
+  <QuickPick title="SideStore" href="https://sidestore.io/" subtitle="WiFi sideloading, weekly refresh" icon={<Store />} platform="ios" />
+</QuickPicksDeck>
+
+<GuideBox title="Before You Sideload Anything" tone="danger">
+  APKs and IPAs from third-party sources bypass Google and Apple's app review entirely.
+  <ul>
+    <li>Scan APKs with <a href="https://www.virustotal.com/" target="_blank">VirusTotal</a> before installing.</li>
+    <li>Never grant Accessibility permissions to a modded app unless the source is well-established.</li>
+    <li>On iOS, never enter your Apple ID password into a third-party "signing" website.</li>
+  </ul>
+</GuideBox>
+
+<MobilePillLegend />
+
+---
+
+<MobileSectionHeading icon={<Smartphone />} platform="android">
+
+## Android Ecosystem
+
+</MobileSectionHeading>
+
+<EcosystemIntro platform="android">
+  Android's openness means there's no single "right" way to get apps, you can stay entirely inside vetted FOSS stores, pull untouched APKs directly from developers, or go further with root and ROM tooling. The sections below move roughly from safest to most advanced.
+</EcosystemIntro>
+
+<MobileSectionHeading icon={<Store />} platform="android">
+
+### Official Stores & Untouched APKs
+
+</MobileSectionHeading>
+
+<PillDeck>
+  <MobilePill title="Aurora Store" href="https://auroraoss.com/" type="foss" />
+  <MobilePill title="APKMirror" href="https://www.apkmirror.com/" type="site" />
+  <MobilePill title="APKPure" href="https://apkpure.com/" type="site" />
+  <MobilePill title="APKCombo" href="https://apkcombo.com/" type="site" />
+  <MobilePill title="Uptodown" href="https://en.uptodown.com/android" type="site" />
+  <MobilePill title="Raccoon" href="https://github.com/onyxbits/raccoon4" type="tool" />
+</PillDeck>
+
+<MobileSectionHeading icon={<Layers />} platform="android">
+
+### FOSS App Stores
+
+</MobileSectionHeading>
+
+<PillDeck>
+  <MobilePill title="F-Droid" href="https://f-droid.org/" type="foss" />
+  <MobilePill title="IzzyOnDroid" href="https://apt.izzysoft.de/fdroid/" type="foss" />
+  <MobilePill title="Neo Store" href="https://github.com/NeoApplications/Neo-Store" type="foss" />
+  <MobilePill title="Droid-ify" href="https://github.com/Iamlooker/Droid-ify" type="foss" />
+  <MobilePill title="Awesome F-Droid" href="https://github.com/mightyBroccoli/awesome-f-droid" type="foss" />
+</PillDeck>
+
+<MobileSectionHeading icon={<Wrench />} platform="android">
+
+### Modded APKs & Forums
+
+</MobileSectionHeading>
+
+<GuideBox title="A Note on Modded APK Sites">
+  Some modded sites list apps under fake names that don't match what actually installs. Scan before you run anything.
+</GuideBox>
+
+<PillDeck>
+  <MobilePill title="RexDL" href="https://rexdl.com/" type="site" />
+  <MobilePill title="PlatinMods" href="https://platinmods.com/" type="site" warning="Requires forum sign-up for most links." />
+  <MobilePill title="ModYolo" href="https://modyolo.com/" type="site" />
+  <MobilePill title="APKMody" href="https://apkmody.io/" type="site" />
+  <MobilePill title="Androeed" href="https://www.androeed.ru/" type="site" />
+  <MobilePill title="9Mod" href="https://9mod.com/" type="site" />
+  <MobilePill title="LiteAPKs" href="https://liteapks.com/" type="site" />
+</PillDeck>
+
+<PillDeck>
+  <MobilePill title="4PDA" href="https://4pda.to/forum/" type="forum" warning="Sign-up required, mostly Russian language." />
+  <MobilePill title="Nsane Forums" href="https://nsaneforums.com/" type="forum" />
+  <MobilePill title="Sbenny" href="https://sbenny.com/forums/" type="forum" />
+  <MobilePill title="Mobilism" href="https://forum.mobilism.me/viewforum.php?f=398" type="forum" />
+</PillDeck>
+
+<MobileSectionHeading icon={<Send />} platform="android">
+
+### Telegram Channels
+
+</MobileSectionHeading>
+
+<PillDeck>
+  <TelegramPill title="Modded Central" href="https://t.me/moddedcentralbackup" />
+  <TelegramPill title="RB Mods" href="https://t.me/RBMods" />
+  <TelegramPill title="RockMods" href="https://t.me/rockmods" />
+  <TelegramPill title="A2Z APK" href="https://t.me/a2zapk" />
+  <TelegramPill title="AN1" href="https://t.me/an1com" />
+  <TelegramPill title="ReXDL" href="https://t.me/rexdlcom" />
+</PillDeck>
+
+<MobileSectionHeading icon={<Cpu />} platform="android">
+
+### APK Tools
+
+</MobileSectionHeading>
+
+<InfoDeck>
+  <InfoCard title="AntiSplit-M" href="https://github.com/AndroidPUAA/AntiSplit-M" icon={<Layers />} tag="Merge APKs" tagStyle="emerald">
+    Converts split/bundled formats like APKM or APKS into a single regular APK for easy installation or patching.
+  </InfoCard>
+  <InfoCard title="App Manager" href="https://github.com/MuntashirAkon/AppManager" icon={<Cpu />} tag="Package manager" tagStyle="indigo">
+    An advanced, all-in-one package manager, viewer, and editor with no ads or trackers of its own.
+  </InfoCard>
+  <InfoCard title="CorePatch" href="https://github.com/LSPosed/CorePatch" icon={<Wrench />} tag="Sig bypass" tagStyle="amber">
+    Disables Android's APK signature verification so patched or modded apps install without conflicts.
+  </InfoCard>
+  <InfoCard title="Obtainium" href="https://github.com/ImranR98/Obtainium" icon={<Download />} tag="Auto-updater" tagStyle="emerald">
+    Tracks GitHub, F-Droid, and other sources so sideloaded apps keep updating like they came from a store.
+  </InfoCard>
+</InfoDeck>
+
+<MobileSectionHeading icon={<MonitorPlay />} platform="android">
+
+### Morphe & ReVanced Patchers
+
+</MobileSectionHeading>
+
+The standard approach to ad-free YouTube, Reddit, and social apps now goes through patching the official APK rather than downloading a pre-modded one, keeping it safer and longer-supported.
+
+<PillDeck>
+  <MobilePill title="ReVanced Manager" href="https://revanced.app/" type="tool" />
+  <MobilePill title="Morphe" href="https://github.com/morphe-app/morphe" type="tool" />
+  <MobilePill title="ReVanced Patch Bundles" href="https://github.com/ReVanced/revanced-patches" type="tool" />
+  <MobilePill title="LibreTube" href="https://libretube.dev/" type="foss" />
+  <MobilePill title="NewPipe" href="https://newpipe.net/" type="foss" />
+  <MobilePill title="GrayJay" href="https://grayjay.app/" type="tool" />
+</PillDeck>
+
+<MobileSectionHeading icon={<Trash2 />} platform="android">
+
+### Debloating & System Maintenance
+
+</MobileSectionHeading>
+
+<InfoDeck>
+  <InfoCard title="ADB AppControl" href="https://adbappcontrol.com/en/" icon={<Cpu />} tag="No-root" tagStyle="emerald">
+    A browser-based GUI that runs over ADB to disable or remove bloatware without root, with a searchable database of what's safe to touch.
+  </InfoCard>
+  <InfoCard title="Universal Android Debloater NG" href="https://github.com/Universal-Debloater-Alliance/universal-android-debloater-next-generation" icon={<Trash2 />} tag="Cross-platform" tagStyle="indigo">
+    A community-maintained fork of the original UAD project, run from a desktop app over ADB to strip manufacturer bloat safely.
+  </InfoCard>
+  <InfoCard title="SD Maid SE" href="https://github.com/d4rken-org/sdmaid-se" icon={<Wrench />} tag="Cleaner" tagStyle="amber">
+    Finds and removes orphaned files, corpse folders, and app leftovers that build up over years of installing and uninstalling apps.
+  </InfoCard>
+</InfoDeck>
+
+<MobileSectionHeading icon={<Download />} platform="android">
+
+### Torrenting
+
+</MobileSectionHeading>
+
+<PillDeck>
+  <MobilePill title="LibreTorrent" href="https://github.com/proninyaroslav/libretorrent" type="foss" />
+  <MobilePill title="Flud" href="https://flud.net/" type="tool" />
+  <MobilePill title="BiglyBT" href="https://www.biglybt.com/" type="tool" />
+  <MobilePill title="TorrServe" href="https://github.com/YouROK/TorrServe" type="tool" />
+</PillDeck>
+
+<MobileSectionHeading icon={<PlayCircle />} platform="android">
+
+### Audio Downloaders
+
+</MobileSectionHeading>
+
+<InfoDeck>
+  <InfoCard title="Seal" href="https://github.com/JunkFood02/Seal" icon={<Download />} tag="yt-dlp" tagStyle="emerald">
+    A Material You audio and video downloader built on yt-dlp, pulling from YouTube, SoundCloud, and hundreds of other sites.
+  </InfoCard>
+  <InfoCard title="YTDLnis" href="https://ytdlnis.org/" icon={<Download />} tag="yt-dlp" tagStyle="emerald">
+    Another polished yt-dlp wrapper with format selection, batch downloads, and scheduling built in.
+  </InfoCard>
+  <InfoCard title="SeekerAndroid" href="https://github.com/jackBonadies/SeekerAndroid" icon={<Download />} tag="Soulseek" tagStyle="indigo">
+    A native Android frontend for the Soulseek network, useful for tracking down rare or lossless audio.
+  </InfoCard>
+</InfoDeck>
+
+<MobileSectionHeading icon={<Film />} platform="android">
+
+### Streaming & Playback
+
+</MobileSectionHeading>
+
+<InfoDeck>
+  <InfoCard title="CloudStream" href="https://github.com/recloudstream/cloudstream" icon={<Film />} tag="Extension-based" tagStyle="amber">
+    A movies, TV, and anime player that ships with zero built-in sources by design, everything comes from community extensions.
+    <a href="https://cloudstream.miraheze.org/wiki/Main_Page" target="_blank" className="block mt-1 text-emerald-600 dark:text-emerald-400 font-semibold no-underline hover:underline">Official wiki & setup docs →</a>
+    <a href="https://rentry.org/cs3-repos" target="_blank" className="block text-emerald-600 dark:text-emerald-400 font-semibold no-underline hover:underline">Community extension repos →</a>
+  </InfoCard>
+  <InfoCard title="PlayTorrio" href="https://playtorrio.xyz/" icon={<Film />} tag="Torrent stream" tagStyle="rose">
+    Streams movies, TV, and anime directly from torrent sources without a separate download step.
+  </InfoCard>
+  <InfoCard title="mpvEx" href="https://github.com/marlboro-advance/mpvEx" icon={<PlayCircle />} tag="Video player" tagStyle="indigo">
+    An actively maintained mpv-based Android video player with broad codec and subtitle support.
+  </InfoCard>
+</InfoDeck>
+
+<MobileSectionHeading icon={<Cpu />} platform="android">
+
+### Root, ROMs & Systemless Mods
+
+</MobileSectionHeading>
+
+<CompareTable
+  headers={['Tool', 'Type', 'Best for']}
+  rows={[
+    ['Magisk', 'Root manager', 'The long-standing standard, huge module ecosystem'],
+    ['KernelSU', 'Root manager', 'Kernel-level root, better banking app compatibility'],
+    ['LSPosed', 'Xposed framework', 'Runtime app modification without flashing'],
+    ['GrapheneOS', 'Custom ROM', 'Maximum privacy and security, Pixel only'],
+    ['LineageOS', 'Custom ROM', 'Broadest device support, degoogled option available'],
+  ]}
+/>
+
+<PillDeck>
+  <MobilePill title="Magisk" href="https://github.com/topjohnwu/Magisk" type="tool" />
+  <MobilePill title="KernelSU" href="https://kernelsu.org/" type="tool" />
+  <MobilePill title="LSPosed" href="https://github.com/LSPosed/LSPosed" type="tool" />
+  <MobilePill title="GrapheneOS" href="https://grapheneos.org/" type="foss" />
+  <MobilePill title="LineageOS" href="https://lineageos.org/" type="foss" />
+</PillDeck>
+
+---
+
+<MobileSectionHeading icon={<TabletSmartphone />} platform="ios">
+
+## iOS Ecosystem
+
+</MobileSectionHeading>
+
+<EcosystemIntro platform="ios">
+  Apple's walled garden means most of what's below relies on sideloading rather than a jailbreak, TrollStore and SideStore cover the vast majority of use cases without ever touching system files. Jailbreaking is only worth pursuing if you need deep system-level tweaks that sideloading can't reach.
+</EcosystemIntro>
+
+<MobileSectionHeading icon={<Store />} platform="ios">
+
+### Sideloading, No Jailbreak Required
+
+</MobileSectionHeading>
+
+<InfoDeck>
+  <InfoCard title="TrollStore" href="https://github.com/opa334/TrollStore" icon={<Store />} tag="14.0–17.0" tagStyle="indigo">
+    Sideload unlimited apps with no 7-day expiry, plus icon themes. Needs a one-time semi-jailbreak exploit, no persistent jailbreak.
+  </InfoCard>
+  <InfoCard title="SideStore" href="https://sidestore.io/" icon={<Store />} tag="14.0+" tagStyle="indigo">
+    WiFi-only sideloading with weekly auto-refresh. No computer needed after the initial JIT-enable step.
+  </InfoCard>
+  <InfoCard title="AltStore PAL" href="https://faq.altstore.io/" icon={<Store />} tag="EU only" tagStyle="amber">
+    The Apple-sanctioned EU marketplace version of AltStore, legally distributing tweaked apps without a jailbreak.
+  </InfoCard>
+  <InfoCard title="Feather" href="https://github.com/khcrysalis/Feather" icon={<KeyRound />} tag="15.0+" tagStyle="indigo">
+    A modern app signer that uses your own Apple Developer certificate. Ksign is a maintained fork with the same workflow.
+  </InfoCard>
+</InfoDeck>
+
+<MobileSectionHeading icon={<Wrench />} platform="ios">
+
+### Jailbreaking
+
+</MobileSectionHeading>
+
+<GuideBox title="Check Your iOS Version First" tone="danger">
+  Jailbreak compatibility is extremely version- and chip-specific. Cross-reference your exact build against <a href="https://appledb.dev/" target="_blank">AppleDB</a> and the <a href="https://ios.cfw.guide/" target="_blank">community jailbreak chart</a> before running any exploit.
+</GuideBox>
+
+<CompareTable
+  headers={['Tool', 'Compatible iOS', 'Devices']}
+  rows={[
+    ['Dopamine', '15.0 – 16.6.1', 'A8 – A16, M1 – M2'],
+    ['palera1n', '15.0 – 18.x', 'A8 – A11, T2 Macs'],
+    ['checkra1n', '12.0 – 14.8.1', '5s – iPhone X'],
+    ['unc0ver', '11.0 – 14.8', 'Broad legacy support'],
+  ]}
+/>
+
+<PillDeck>
+  <MobilePill title="Dopamine" href="https://ios.cfw.guide/installing-dopamine/" type="tool" />
+  <MobilePill title="palera1n" href="https://palera.in/" type="tool" />
+  <MobilePill title="checkra1n" href="https://checkra.in/" type="tool" />
+  <MobilePill title="Sileo" href="https://getsileo.app/" type="tool" />
+  <MobilePill title="Zebra" href="https://zebra.getutm.app/" type="tool" />
+</PillDeck>
+
+<MobileSectionHeading icon={<Wrench />} platform="ios">
+
+### Cracked Cydia & Sileo Repositories
+
+</MobileSectionHeading>
+
+<PillDeck>
+  <MobilePill title="ReJail" href="https://rejail.ru/" type="site" />
+  <MobilePill title="CyPwn" href="https://repo.cypwn.xyz/" type="site" />
+  <MobilePill title="HackYouriPhone" href="http://repo.hackyouriphone.org/" type="site" />
+  <MobilePill title="Kiiimo" href="https://cydia.kiiimo.org/" type="site" />
+  <MobilePill title="PandaHelper" href="https://apt.pandahelp.vip/" type="site" />
+</PillDeck>
+
+<MobileSectionHeading icon={<HardDrive />} platform="ios">
+
+### IPA Libraries & Telegram
+
+</MobileSectionHeading>
+
+<PillDeck>
+  <MobilePill title="AppDB" href="https://appdb.to/" type="site" />
+  <MobilePill title="CyPwn IPAs" href="https://ipa.cypwn.xyz/" type="site" />
+  <MobilePill title="IPALibrary" href="https://ipalibrary.net/" type="site" />
+  <MobilePill title="iOSGods" href="https://iosgods.com/" type="forum" />
+</PillDeck>
+
+<PillDeck>
+  <TelegramPill title="iApps IPAs" href="https://t.me/iapps_ipa" />
+  <TelegramPill title="Ed0ardoo IPAs" href="https://t.me/Ed0ardoo" />
+  <TelegramPill title="Sultan Mods" href="https://t.me/SultanModsIPAs" />
+  <TelegramPill title="Blatants Library" href="https://t.me/blatantsipalibrary" />
+</PillDeck>
+
+<MobileSectionHeading icon={<MessageSquareText />} platform="ios">
+
+### Reddit, Streaming & YouTube
+
+</MobileSectionHeading>
+
+<InfoDeck>
+  <InfoCard title="Apollo Reborn" href="https://apolloreborn.app/" icon={<MessageSquareText />} tag="Reddit client" tagStyle="rose">
+    A community-revived continuation of the beloved Apollo Reddit app, restoring functionality after the API pricing shutdown killed the original. Install sources for AltStore, SideStore, and Feather are all listed on the site.
+  </InfoCard>
+  <InfoCard title="Luna" href="https://github.com/cranci1/Luna" icon={<Film />} tag="Modular player" tagStyle="amber">
+    A modular iOS and macOS media player with no built-in sources, everything comes from community-made "Services."
+    <a href="https://library.cufiy.net/library/" target="_blank" className="block mt-1 text-indigo-600 dark:text-indigo-400 font-semibold no-underline hover:underline">Community services library →</a>
+  </InfoCard>
+  <InfoCard title="Yattee" href="https://github.com/yattee/yattee" icon={<MonitorPlay />} tag="Ad-free YT" tagStyle="rose">
+    An open-source YouTube frontend for iOS, tvOS, and macOS built on Invidious and Piped backends, no ads, no Google account.
+  </InfoCard>
+  <InfoCard title="YouTube Plus" href="https://github.com/dayanch96/YTLite" icon={<MonitorPlay />} tag="YT Enhancer" tagStyle="rose">
+    A flexible enhancer for YouTube on iOS, featuring over hundred customizable options. Blocks ads, skips sponsors.
+  </InfoCard>
+</InfoDeck>

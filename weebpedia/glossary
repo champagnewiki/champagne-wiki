@@ -1,0 +1,19 @@
+---
+title: Glossary
+description: Anime, manga, and general weeb terms explained plainly
+customDescription: Every anime, manga, and general otaku term explained plainly!
+outline: [1,2,3]
+---
+
+import { WeebAtmosphere, WeebHeadingIcon, GuideBox, ZoneIntro } from "@/components/weeb-elements";
+import { GlossaryHero } from "@/components/glossary-hero";
+import {
+  Music2, Clapperboard, Calendar, Film, Palette, PenTool,
+  Globe2, Users2, Tags, BookOpen, User, MapPin, MessageSquare,
+  LayoutGrid, Tag, ScanLine, Grid3x3,
+} from "lucide-react";
+
+<WeebAtmosphere />
+<GlossaryHero />
+
+ 

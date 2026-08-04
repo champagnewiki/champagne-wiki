@@ -1,0 +1,345 @@
+---
+title: Asian Entertainment
+description: Immerse yourself in a world of captivating stories from across Asia. Discover dramas and films that showcase the rich cultural tapestry of the continent.
+icon: Tv
+---
+
+import { 
+  CinematicAtmosphere, 
+  CinematicHero, 
+  CustomBadge,
+  PillGroup,
+  StreamPill,
+  TrackPill,
+  ArchivePill,
+  CuratorPill,
+  TorrentPill,
+  ChannelPill,
+  CinematicGuideBox,
+  AsianSectionHeader,
+  AsianDeck,
+  AsianCard
+} from '@/components/asian-magic';
+
+import { 
+  Tv, Heart, MonitorPlay, Film, Compass, Activity, FileVideo, 
+  Download, Languages, Sparkles, Camera, Share2, Send,
+  HardDrive, Search, AlertTriangle
+} from 'lucide-react';
+
+<CinematicAtmosphere />
+<CinematicHero />
+
+<CinematicGuideBox title="Warning: Localized Ads & Mature Content">
+  Many hyper-local Asian streaming and torrent sites (especially regional domains) often embed hardcoded adult or gambling advertisements directly into the site's framework. **Even robust blockers like uBlock Origin may struggle to filter these out completely.** Additionally, due to cultural differences in media regulation, some regional sites (particularly Thai platforms) host a significant amount of softcore cinema alongside mainstream releases. Browse with discretion.
+</CinematicGuideBox>
+
+---
+
+<AsianSectionHeader icon={<Tv />} accent="rose">
+
+## Community Streaming Hubs
+
+</AsianSectionHeader>
+
+A curated selection of the finest community-maintained platforms to experience high-definition dramas and cinema not available in your specific region.
+
+<PillGroup>
+  <StreamPill title="GoPlay" href="https://goplay.su/" icon={<Sparkles />} badge="Top Pick • 1080p+" />
+  <StreamPill title="DramaCool" href="https://dramacoolv.buzz/" icon={<MonitorPlay />} badge="Massive Catalog" />
+  <StreamPill title="KISSKH" href="https://kisskh.co/" icon={<Tv />} badge="Cozy UI" />
+  <StreamPill title="MyAsianTV" href="https://myasiantv9.com.ro/" icon={<MonitorPlay />} badge="Fast Uploads" />
+</PillGroup>
+
+<PillGroup>
+  <StreamPill title="OneTouch TV" href="https://onetouchtv.info/?web=true" icon={<MonitorPlay />} />
+  <StreamPill title="AsiaFlix" href="https://asiaflix.net/home" icon={<MonitorPlay />} />
+  <StreamPill title="Yifan" href="https://www.yifan.tv/" icon={<MonitorPlay />} />
+  <StreamPill title="Dramanice" href="https://dramanice.cyou/" icon={<MonitorPlay />} />
+  <StreamPill title="ViewAsian" href="https://www3.asianvote.net/" icon={<MonitorPlay />} />
+  <StreamPill title="JP-Films" href="https://jp-films.com/" icon={<Film />} badge="Vintage Japanese" />
+  <StreamPill title="KShow123" href="https://kshow123.tv/" icon={<Tv />} badge="Variety Shows" />
+</PillGroup>
+
+<AsianSectionHeader icon={<Film />} accent="gold">
+
+### Regional Focus: Thailand
+
+</AsianSectionHeader>
+
+<PillGroup>
+  <StreamPill title="24HD VIP" href="https://www.24hd.vip/category/thai-movie/" icon={<Film />} badge="Thai Movies" />
+  <StreamPill title="037HD Movies" href="https://www.037hddmovies.com/category/%e0%b8%ab%e0%b8%99%e0%b8%b1%e0%b8%87%e0%b9%84%e0%b8%97%e0%b8%a2/" icon={<MonitorPlay />} badge="Thai Focus" />
+  <StreamPill title="MovieKH HD" href="https://moviekhhd.biz/search?vt=Thailand" icon={<MonitorPlay />} />
+  <StreamPill title="Nung HD 4K" href="https://www.nunghd4k.com/thaimovie/" icon={<MonitorPlay />} />
+</PillGroup>
+
+<AsianSectionHeader icon={<MonitorPlay />} accent="slate">
+
+### Regional Focus: Vietnam & Philippines
+
+</AsianSectionHeader>
+
+<PillGroup>
+  <StreamPill title="KKPhim" href="https://kkphim.com/" icon={<MonitorPlay />} badge="Vietnam" />
+  <StreamPill title="Danet" href="https://danet.vn/" icon={<Tv />} badge="Vietnam" />
+  <StreamPill title="PinoyMoviesHub" href="https://pinoymovieshub.org/" icon={<Film />} badge="Philippines" />
+  <StreamPill title="PinoyMoviePedia" href="https://pinoymoviepedia.ru/" icon={<MonitorPlay />} badge="Philippines" />
+  <StreamPill title="MovieSnipiPay" href="https://moviesnipipay.me/" icon={<MonitorPlay />} badge="Philippines" />
+  <StreamPill title="Vivamax Stream" href="https://vivamaxstream.com/" icon={<MonitorPlay />} badge="Philippines" />
+  <StreamPill title="Cinema.com.ph" href="https://cinema.com.ph/" icon={<Film />} badge="Philippines" />
+</PillGroup>
+
+<AsianSectionHeader icon={<MonitorPlay />} accent="rose">
+
+### Free Legal YouTube Archives (Philippines)
+
+</AsianSectionHeader>
+
+A massive amount of classic and modern Filipino cinema is officially available for free directly through verified YouTube channels. Check their "Playlists" for full-length movies.
+
+<PillGroup>
+  <ChannelPill title="ABS-CBN Star Cinema" href="https://www.youtube.com/@ABSstarcinema" icon={<MonitorPlay />} badge="Blockbusters" />
+  <ChannelPill title="TBA Studios" href="https://www.youtube.com/@TBAStudios" icon={<MonitorPlay />} badge="Indie Films" />
+  <ChannelPill title="Jeepney TV" href="https://www.youtube.com/@JeepneyTV" icon={<MonitorPlay />} badge="Classics" />
+  <ChannelPill title="Sinehub" href="https://www.youtube.com/@Sinehub/" icon={<MonitorPlay />} badge="Variety" />
+  <ChannelPill title="OctoArts Films" href="https://www.youtube.com/@octoartsfilms" icon={<MonitorPlay />} badge="Action & Drama" />
+  <ChannelPill title="Jungo Pinoy" href="https://www.youtube.com/@JungoPinoy" icon={<MonitorPlay />} badge="Modern Mix" />
+</PillGroup>
+
+---
+
+<AsianSectionHeader icon={<Compass />} accent="slate">
+
+## Tracking & Discovery
+
+</AsianSectionHeader>
+
+The Asian drama ecosystem spans thousands of shows across Korea, Japan, China, Taiwan, and Thailand. Utilize these central databases to track your watch history, discover new releases, and find highly specific user-curated lists.
+
+<PillGroup>
+  <TrackPill title="MyDramaList (MDL)" href="https://mydramalist.com/" icon={<Compass />} badge="The Global Standard" />
+  <TrackPill title="AsianWiki" href="https://asianwiki.com/" icon={<Compass />} badge="Extensive Database" />
+  <TrackPill title="Trakt.tv" href="https://trakt.tv/" icon={<Activity />} badge="Cross-Platform Sync" />
+</PillGroup>
+
+---
+
+<AsianSectionHeader icon={<Languages />} accent="sage">
+
+## Subtitles & Localization
+
+</AsianSectionHeader>
+
+If you are downloading raw video files directly from trackers, you will need to acquire community-translated subtitles (`.srt` or `.ass` files). Since Subscene went offline, use these modern alternatives.
+
+<PillGroup>
+  <TrackPill title="SubDL" href="https://subdl.com/" icon={<Languages />} badge="Global Database" />
+  <TrackPill title="English Subtitles" href="https://english-subtitles.org/" icon={<Languages />} />
+  <TrackPill title="OpenSubtitles" href="https://www.opensubtitles.org/" icon={<Languages />} badge="Legacy Archive" />
+</PillGroup>
+
+---
+
+<AsianSectionHeader icon={<Download />} accent="rose">
+
+## Archival & Downloads
+
+</AsianSectionHeader>
+
+For those who wish to preserve these stories locally in pristine quality, or build a personal Plex/Jellyfin media server.
+
+<PillGroup>
+  <ArchivePill title="DramaDay" href="https://dramaday.net/" icon={<Download />} badge="1080p DL" />
+  <ArchivePill title="Mkv Drama" href="https://mkvdrama.net/" icon={<Download />} badge="1080p DL" />
+  <ArchivePill title="111477" href="https://a.111477.xyz/" icon={<Download />} badge="Massive" />
+  <ArchivePill title="DramaSuki" href="https://dramasuki.xyz/#" icon={<Download />} badge="1080p DL" />
+  <ArchivePill title="Sinflix Korean" href="https://rentry.co/sin-flix" icon={<Heart />} badge="Daily Korean Updates" />
+  <ArchivePill title="Sinflix Japanese" href="https://rentry.co/sinflix-cap" icon={<Heart />} badge="Daily Japanese Updates" />
+  <ArchivePill title="Sinflix Chinese" href="https://rentry.co/Spooky-Panda" icon={<Heart />} badge="Daily Chinese Updates" />
+  <ArchivePill title="BakiGuy" href="https://bagikuy.com/" icon={<Download />} badge="HQ Archives" />
+  <ArchivePill title="MiniDrama" href="https://minidrama.net/" icon={<Download />} badge="HQ Archives" />
+  <ArchivePill title="KMDL" href="https://kmdl.eu.org/" icon={<Download />} badge="Archive" />
+  <ArchivePill title="DORAMA X264" href="https://doramax264.com/" icon={<FileVideo />} badge="Mini Encodes" />
+</PillGroup>
+
+<AsianSectionHeader icon={<Tv />} accent="slate">
+
+### Regional Encodes (Pahe)
+
+</AsianSectionHeader>
+
+Pahe provides highly compressed, excellent quality x265 MKV files categorized strictly by region.
+
+<PillGroup>
+  <ArchivePill title="Korean Drama" href="https://pahe.ink/k-drama/" icon={<Tv />} />
+  <ArchivePill title="Japanese Drama" href="https://pahe.ink/j-drama/" icon={<Tv />} />
+  <ArchivePill title="Chinese Drama" href="https://pahe.ink/chinese-drama/" icon={<Tv />} />
+  <ArchivePill title="Thai Drama" href="https://pahe.ink/thai-drama/" icon={<Tv />} />
+</PillGroup>
+
+<AsianSectionHeader icon={<HardDrive />} accent="gold">
+
+### Raw Blu-Ray & DVD Archives (DDL)
+
+</AsianSectionHeader>
+
+<CinematicGuideBox title="Navigating RAW Releases & Premium Hosts">
+  Sites like JPFiles and AsiaMediaBlog provide pristine BD/DVD rips directly from the source, but they are strictly **RAW** (meaning they do not come with English subtitles). You will need to source `.srt` files separately. Additionally, these sites often rely on slow, third-party file hosts. We highly recommend using a download manager like **IDM** or **AB Download Manager** (see our [Useful Tools](/useful-tools) page) to bypass slow speeds and queue multiple files. *Note: Do not forget to check the direct download networks on our [General Entertainment](/movies-shows-sports/general-entertainment) page, as they frequently mirror popular Asian releases!*
+</CinematicGuideBox>
+
+<PillGroup>
+  <ArchivePill title="JPFiles (Movies)" href="https://jpfiles.net/download/japanese/japanese-movie" icon={<HardDrive />} badge="RAW .ts" />
+  <ArchivePill title="JPFiles (TV)" href="https://jpfiles.net/download/japanese/japanese-tv-music" icon={<HardDrive />} badge="RAW .ts" />
+  <ArchivePill title="AsiaMediaBlog (Movies)" href="https://asiamediablog.com/media/movies/" icon={<HardDrive />} badge="RAW BD" />
+  <ArchivePill title="AsiaMediaBlog (TV)" href="https://asiamediablog.com/media/tv-show/" icon={<HardDrive />} badge="RAW BD" />
+</PillGroup>
+
+---
+
+<AsianSectionHeader icon={<Share2 />} accent="slate">
+
+## The Torrent Network (P2P)
+
+</AsianSectionHeader>
+
+<CinematicGuideBox title="The Pan-Asian Tracker Ecosystem">
+  A crucial tip for navigating Asian P2P trackers: the ecosystem is highly cross-pollinated. Just because a tracker originates in Korea or China does not mean it won't host the latest Japanese drama releases or Thai BLs. If you can't find a specific release in one country's trackers, **search the others**. Also, please remember to properly bind your torrent client (like qBittorrent) to your VPN to avoid IP leaks, as outlined in our [Tools](/useful-tools) guide. *Additionally, many global trackers listed on our [General Entertainment](/movies-shows-sports/general-entertainment) page have dedicated Asian sub-categories.*
+</CinematicGuideBox>
+
+<AsianSectionHeader icon={<Share2 />} accent="rose">
+
+### Japanese Trackers
+
+</AsianSectionHeader>
+
+<PillGroup>
+  <TorrentPill title="TokyoToshokan" href="https://tokyo-tosho.net/?cat=8" icon={<Share2 />} badge="Drama Cat" />
+  <TorrentPill title="AniRena" href="https://www.anirena.com/" icon={<Search />} badge="Advanced Search: Live Action" />
+  <TorrentPill title="ACGNX" href="https://www.acgnx.se/sort-13-1.html" icon={<Share2 />} />
+  <TorrentPill title="Nyaa.si" href="https://ny.iss.one/?f=0&c=4_0&q=" icon={<Share2 />} badge="Live Action Proxy" />
+  <TorrentPill title="Nyaa Digital" href="https://nyaa.digital/?f=0&c=4_0&q=" icon={<Share2 />} badge="Alt Proxy" />
+</PillGroup>
+
+<AsianSectionHeader icon={<Share2 />} accent="sage">
+
+### Korean Trackers
+
+</AsianSectionHeader>
+
+*(Note: Korean torrent domains change frequently to avoid ISP blocks. Check proxy mirrors if links fail.)*
+
+<PillGroup>
+  <TorrentPill title="TorrentSee" href="https://torrentsee346.com/" icon={<Share2 />} />
+  <TorrentPill title="TorrentSome" href="https://torrentsome255.com/" icon={<Share2 />} />
+  <TorrentPill title="TorrentMobile" href="https://torrentmobile262.top/" icon={<Share2 />} />
+  <TorrentPill title="TorrentZota" href="https://torrentzota194.com/" icon={<Share2 />} />
+  <TorrentPill title="TorrentTop" href="https://torrenttop214.com/" icon={<Share2 />} />
+  <TorrentPill title="TorrentTT" href="https://torrenttt241.top/" icon={<Share2 />} />
+  <TorrentPill title="TFreeca" href="https://www.tfreeca22.top/home.php" icon={<Share2 />} />
+</PillGroup>
+
+<AsianSectionHeader icon={<Share2 />} accent="gold">
+
+### Greater China Trackers
+
+</AsianSectionHeader>
+
+<PillGroup>
+  <TorrentPill title="1Lou" href="https://1lou.me/" icon={<Share2 />} />
+  <TorrentPill title="BT.Orzx" href="https://bt.orzx.im/" icon={<Share2 />} />
+  <TorrentPill title="DMHY" href="https://share.dmhy.org/topics/list/sort_id/6" icon={<Share2 />} badge="Live Action Filter" />
+  <TorrentPill title="Xiazai001" href="https://xiazai001.org/forum.php?gid=42" icon={<Share2 />} />
+  <TorrentPill title="Pkavi" href="https://www.pkavi.com/" icon={<Share2 />} />
+  <TorrentPill title="Dygang" href="https://www.dygang.net/dsj/" icon={<Share2 />} />
+</PillGroup>
+
+---
+
+<AsianSectionHeader icon={<Send />} accent="slate">
+
+## Telegram Distribution Networks
+
+</AsianSectionHeader>
+
+<CinematicGuideBox title="The Chinese Telegram Phenomenon">
+  Due to strict firewalls, Chinese netizens heavily utilize Telegram to rapidly distribute massive archives, un-subbed dramas, and rare media files. These channels are absolute goldmines for high-quality Asian entertainment, though you will need to navigate them using Chinese search terms (Hanzi).
+</CinematicGuideBox>
+
+<PillGroup>
+  <ChannelPill title="Jisou" href="https://t.me/jisou" icon={<Send />} />
+  <ChannelPill title="Kuaiaa" href="https://t.me/kuaiaa" icon={<Send />} />
+  <ChannelPill title="Soso" href="https://t.me/soso" icon={<Send />} />
+  <ChannelPill title="CJSY" href="https://t.me/CJSY" icon={<Send />} />
+</PillGroup>
+
+---
+
+<AsianSectionHeader icon={<Camera />} accent="rose">
+
+## Curator's Vault
+
+</AsianSectionHeader>
+
+Hidden gems and meticulously organized private libraries maintained by dedicated archivists.
+
+<PillGroup>
+  <CuratorPill title="Izachikun Library" href="https://justpaste.it/izachikun" icon={<Camera />} badge="Telegram Vault" />
+  <CuratorPill title="Rare Doramas" href="https://www.raredoramas.com/" icon={<Film />} badge="Restored Japanese" />
+  <CuratorPill title="rarefilmm" href="https://rarefilmm.com/browse/" icon={<Film />} badge="Art House" />
+  <CuratorPill title="TOKUFAN" href="https://toku.fun/" icon={<Tv />} badge="Kamen Rider & Sentai" />
+</PillGroup>
+
+---
+
+<AsianSectionHeader icon={<Sparkles />} accent="gold">
+
+## Official Premium Networks
+
+</AsianSectionHeader>
+
+Apart from exploring community archives, it is recommended to explore the official streaming platforms. These apps provide flawless 1080p/4K streaming and official multi-language subtitles. 
+
+*Many of these platforms offer extensive "Free to Watch" tiers with advertisements.*
+
+<AsianDeck>
+  <AsianCard title="iQIYI" href="https://www.iq.com/" icon={<Sparkles className="text-[#DDB864]" />}>
+    The powerhouse of Chinese entertainment. Massive budget historical dramas, modern romance, and exclusive variety shows.
+    <div className="flex flex-wrap gap-2 mt-3">
+      <CustomBadge text="Free Tier Available" color="success" />
+      <CustomBadge text="VIP 4K" color="warning" />
+    </div>
+  </AsianCard>
+  
+  <AsianCard title="Rakuten Viki" href="https://www.viki.com/" icon={<Heart className="text-[#D48C8C]" />}>
+    The global standard for K-Dramas and J-Dramas. Features an incredible community-driven subtitle system covering hundreds of languages.
+    <div className="flex flex-wrap gap-2 mt-3">
+      <CustomBadge text="Free Tier Available" color="success" />
+      <CustomBadge text="Pass Required for New Airings" color="primary" />
+    </div>
+  </AsianCard>
+  
+  <AsianCard title="WeTV (Tencent)" href="https://wetv.vip/" icon={<MonitorPlay className="text-[#7B8B9E]" />}>
+    Home to legendary Wuxia and Xianxia fantasy epics, alongside modern Thai and Indonesian dramas.
+    <div className="flex flex-wrap gap-2 mt-3">
+      <CustomBadge text="Free Tier Available" color="success" />
+      <CustomBadge text="Fast Track VIP" color="danger" />
+    </div>
+  </AsianCard>
+
+  <AsianCard title="Netflix Asia" href="https://www.netflix.com/" icon={<Film className="text-[#D48C8C]" />}>
+    Heavily investing in exclusive, high-budget K-Dramas, Anime, and Japanese thrillers. 
+    <div className="flex flex-wrap gap-2 mt-3">
+      <CustomBadge text="Strictly Paid" color="danger" />
+      <CustomBadge text="Global Reach" color="primary" />
+    </div>
+  </AsianCard>
+
+  <AsianCard title="Kocowa" href="https://www.kocowa.com/" icon={<Tv className="text-[#809B82]" />}>
+    Direct streaming network for the top three Korean broadcasting stations (KBS, MBC, SBS).
+    <div className="flex flex-wrap gap-2 mt-3">
+      <CustomBadge text="Premium" color="danger" />
+      <CustomBadge text="Americas/Europe (VPN)" color="warning" />
+    </div>
+  </AsianCard>
+</AsianDeck>

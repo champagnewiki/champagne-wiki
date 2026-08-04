@@ -1,0 +1,170 @@
+---
+title: File Hosting & Storage
+description: Your complete guide to file hosting, P2P transfer, and cloud storage solutions. Find the perfect place to store, share, and manage your files.
+icon: HardDrive
+---
+
+import { 
+  StorageAtmosphere, 
+  StorageHero,
+  StorageSectionHeader, 
+  InfoDeck, 
+  InfoCard, 
+  GuideBox, 
+  WarnBox 
+} from '@/components/storage-magic';
+import { 
+  HardDrive, Cloud, Server, Share2, ShieldAlert, 
+  Send, Globe, Cpu, FolderLock, Sparkles, FolderSync, Database 
+} from 'lucide-react';
+
+<StorageAtmosphere />
+<StorageHero />
+
+<WarnBox title="Privacy & Security Warning">
+  Remember it is **never** a good idea to upload personal or confidential files to any public file host, even if they claim zero-knowledge encryption. Always consider encrypting your data locally (using 7-Zip AES-256 or Cryptomator) before uploading.
+</WarnBox>
+
+---
+
+<StorageSectionHeader icon={<Share2 />} accent="cyan">
+
+## File Transfer & P2P Sharing
+
+</StorageSectionHeader>
+
+Instant peer-to-peer sending and local device synchronization for moving files quickly across platforms without permanent cloud storage.
+
+<InfoDeck>
+  <InfoCard title="LocalSend" href="https://localsend.org/" icon={<Send />} tag="Featured ⭐" tagStyle="rose">
+    Free, open-source local file sharing across Windows, macOS, Linux, Android, and iOS. Check out the <a href="https://web.localsend.org/" target="_blank">Web Version</a>, <a href="https://discord.com/invite/GSRWmQNP87" target="_blank">Discord</a>, and <a href="https://github.com/localsend/localsend" target="_blank">GitHub</a>.
+  </InfoCard>
+  <InfoCard title="Blip" href="https://blip.net/" tag="Featured ⭐" tagStyle="rose" icon={<Share2 />}>
+    Hybrid P2P transfer network supporting Windows, macOS, Android, and iOS. <br/>**Tip:** Turn "Searchable by Name" off in settings for enhanced privacy.
+  </InfoCard>
+  <InfoCard title="PairDrop" href="https://pairdrop.net/" tag="Web ⭐" tagStyle="amber" icon={<Globe />}>
+    An open-source, browser-based peer-to-peer file sharing tool inspired by AirDrop. Alternative mirror: <a href="https://node-snapdrop.onrender.com/" target="_blank">Snapdrop</a>.
+  </InfoCard>
+  <InfoCard title="JustBeamIt" href="https://justbeamit.com/" tag="Web ⭐" tagStyle="amber" icon={<Share2 />}>
+    Instant browser-based direct file transfer where files are streamed straight between peers without intermediate cloud storage.
+  </InfoCard>
+  <InfoCard title="Wormhole" href="https://wormhole.app/" tag="Encrypted" tagStyle="violet" icon={<Share2 />}>
+    End-to-end encrypted file sharing with automatic 24-hour expiration. Join their <a href="https://discord.com/invite/de6FscsK5Z" target="_blank">Discord</a> or view <a href="https://github.com/webtorrent/wormhole-crypto" target="_blank">GitHub</a>.
+  </InfoCard>
+  <InfoCard title="OnionShare" href="https://onionshare.org/" tag="Tor Network" tagStyle="sky" icon={<Globe />}>
+    Open-source tool to securely and anonymously share files hosted locally over the Tor network. Available on all desktop & mobile platforms.
+  </InfoCard>
+  <InfoCard title="Photon" href="https://photondev.netlify.app/" tag="Local P2P" tagStyle="neutral" icon={<Send />}>
+    Local file transfer utility for Windows, macOS, Linux, and Android. Source code available on <a href="https://github.com/abhi16180/photon" target="_blank">GitHub</a>.
+  </InfoCard>
+  <InfoCard title="KDE Connect" href="https://kdeconnect.kde.org/" tag="Ecosystem" tagStyle="neutral" icon={<FolderSync />}>
+    Links your phone and computer seamlessly across platforms for shared clipboard, file transfers, and notifications.
+  </InfoCard>
+  <InfoCard title="LANDrop" href="https://landrop.app/" tag="Cross-Platform" tagStyle="neutral" icon={<Globe />}>
+    Drop files to any device on your LAN securely and without internet. Check out their <a href="https://discord.com/invite/5adm6sPugT" target="_blank">Discord</a>.
+  </InfoCard>
+  <InfoCard title="Magic Wormhole" href="https://github.com/magic-wormhole/magic-wormhole" tag="CLI / GUI" tagStyle="neutral" icon={<Cpu />}>
+    Get things from one computer to another safely via code words across Windows, macOS, Linux, and Android.
+  </InfoCard>
+</InfoDeck>
+
+<GuideBox title="Additional Transfer Utilities" tone="success" icon={<Sparkles />}>
+  <ul>
+    <li>**<a href="https://github.com/schollz/croc" target="_blank">croc</a>**: Easily and securely send things from one computer to another with end-to-end encryption.</li>
+    <li>**<a href="https://qrcp.sh/" target="_blank">qrcp</a> / <a href="https://aqross.app/" target="_blank">aQRoss</a>**: Share files over local Wi-Fi instantly by scanning generated QR codes with your phone camera.</li>
+    <li>**<a href="https://www.microsoft.com/windows/sync-across-your-devices" target="_blank">Phone Link</a>**: Official Microsoft utility for syncing notifications, photos, and messages between Windows and mobile devices.</li>
+  </ul>
+</GuideBox>
+
+---
+
+<StorageSectionHeader icon={<Server />} accent="cyan">
+
+## File Hosts & Retention Storage
+
+</StorageSectionHeader>
+
+Public file hosts categorized by storage limits and retention periods. Remember that files are frequently purged after inactivity.
+
+<InfoDeck>
+  <InfoCard title="Gofile" href="https://gofile.io/" tag="Featured ⭐" tagStyle="rose" icon={<Server />}>
+    100GB monthly limit with unlimited file size. Files are retained for 10 days after the last download. Automated manager script available on <a href="https://greasyfork.org/en/scripts/515250" target="_blank">GreasyFork</a>.
+  </InfoCard>
+  <InfoCard title="Pixeldrain" href="https://pixeldrain.com/" tag="Featured ⭐" tagStyle="rose" icon={<Server />}>
+    10GB max file size, 60 days retention after last download. Features <a href="https://docs.pixeldrain.com/questions_and_answers/#alternative-domain-names" target="_blank">alternative mirrors</a> and a <a href="https://pixeldrain.com/speedtest" target="_blank">speedtest tool</a>.
+  </InfoCard>
+  <InfoCard title="VikingFile" href="https://vikingfile.com/" tag="Featured ⭐" tagStyle="rose" icon={<Server />}>
+    Unlimited storage tier with 15 days retention after the last download. Join the <a href="https://discord.gg/EPEFC6KkpF" target="_blank">Discord</a> community.
+  </InfoCard>
+  <InfoCard title="0807" href="https://0807.st/" tag="Featured ⭐" tagStyle="rose" icon={<Server />}>
+    10GB storage limit, 90 days retention after the last download. Open-source code available on <a href="https://codeberg.org/Sauul/0807" target="_blank">Codeberg</a>.
+  </InfoCard>
+  <InfoCard title="ZeroFS" href="https://zerofs.link/" tag="Featured ⭐" tagStyle="rose" icon={<Server />}>
+    Unlimited file hosting with 15 days retention after last download. CLI tool available on <a href="https://github.com/kirmola/zerofs-cli" target="_blank">GitHub</a>.
+  </InfoCard>
+  <InfoCard title="Catbox" href="https://catbox.moe/" tag="Featured ⭐" tagStyle="amber" icon={<Server />}>
+    200MB limit. Permanent retention with an account (2 years for inactive anonymous files). Includes official <a href="https://fatbox.moe/" target="_blank">Fatbox Proxy</a>.
+  </InfoCard>
+  <InfoCard title="Pillowcase" href="https://pillows.su/" tag="Audio Host" tagStyle="violet" icon={<Server />}>
+    Dedicated audio file host supporting up to 500MB with permanent retention for uploaded audio files.
+  </InfoCard>
+  <InfoCard title="MediaFire" href="https://www.mediafire.com/" tag="4GB Limit" tagStyle="neutral" icon={<HardDrive />}>
+    Classic long-term file host offering up to 4GB file sizes with permanent storage retention tiers.
+  </InfoCard>
+</InfoDeck>
+
+<GuideBox title="Alternative File Hosts & Temporary Mirrors" tone="neutral" icon={<FolderLock />}>
+  <ul>
+    <li>**<a href="https://fileq.net/" target="_blank">FileQ</a>**: 50GB storage limit (20GB max file size). 3 days retention after last download. *(Use uBlock Origin)*</li>
+    <li>**<a href="https://filemirage.com/" target="_blank">FileMirage</a>**: 50GB storage limit. 30 days retention after last view. *(Use uBlock Origin)*</li>
+    <li>**<a href="https://new.fileditch.com/" target="_blank">FileDitch</a>**: 150GB storage limit with 90 days retention.</li>
+    <li>**<a href="https://patrins.com/" target="_blank">Patrins</a>**: 1TB storage limit with 7 days retention.</li>
+    <li>**<a href="https://1fichier.com/" target="_blank">1fichier</a>**: 300GB limit with 15 days retention (30 days with registered account).</li>
+    <li>**<a href="https://filebin.net/" target="_blank">Filebin</a>**: Unlimited storage with 6 days retention.</li>
+    <li>**<a href="https://swisstransfer.com/" target="_blank">SwissTransfer</a>**: 50GB limit, 30 days retention up to 250 downloads.</li>
+  </ul>
+</GuideBox>
+
+---
+
+<StorageSectionHeader icon={<Cloud />} accent="cyan">
+
+## Cloud Storage Solutions
+
+</StorageSectionHeader>
+
+Permanent cloud storage tiers and zero-knowledge encrypted providers for long-term archiving.
+
+<InfoDeck>
+  <InfoCard title="MEGA" href="https://mega.io/" tag="20 GB Free ⭐" tagStyle="rose" icon={<Cloud />}>
+    Generous 20GB free permanent tier with client-side zero-knowledge encryption and global reliability.
+  </InfoCard>
+  <InfoCard title="Google Drive" href="https://drive.google.com/" tag="15 GB Free ⭐" tagStyle="amber" icon={<Cloud />}>
+    Industry standard cloud storage offering up to 15GB free storage (with mobile bonuses) and robust collaboration tools.
+  </InfoCard>
+  <InfoCard title="Filen.io" href="https://filen.io/" tag="10 GB Free" tagStyle="violet" icon={<HardDrive />}>
+    Zero-knowledge, end-to-end encrypted cloud storage based in Germany with 10GB free on sign-up.
+  </InfoCard>
+  <InfoCard title="IceDrive" href="https://icedrive.net/" tag="10 GB Free" tagStyle="violet" icon={<HardDrive />}>
+    Sleek, modern cloud storage provider offering 10GB free with virtual drive mounting client apps.
+  </InfoCard>
+  <InfoCard title="pCloud" href="https://www.pcloud.com/" tag="10 GB Free" tagStyle="sky" icon={<HardDrive />}>
+    Secure cloud storage platform offering 10GB free storage and flexible lifetime pricing options.
+  </InfoCard>
+  <InfoCard title="InfiniCLOUD" href="https://infini-cloud.net/en/" tag="20 GB Free" tagStyle="sky" icon={<Cloud />}>
+    Reliable Japanese cloud storage provider offering 20GB free storage on sign-up with frequent promotional capacity bonuses.
+  </InfoCard>
+  <InfoCard title="Proton Drive" href="https://proton.me/drive" tag="5 GB Free" tagStyle="violet" icon={<HardDrive />}>
+    End-to-end encrypted cloud storage built by the creators of ProtonMail, prioritizing strict Swiss privacy laws.
+  </InfoCard>
+  <InfoCard title="Cloudflare R2 & Backblaze B2" href="https://www.cloudflare.com/developer-platform/products/r2/" tag="Object Storage" tagStyle="neutral" icon={<Database />}>
+    S3-compatible developer cloud storage solutions offering generous free tiers for backups and self-hosting.
+  </InfoCard>
+</InfoDeck>
+
+<GuideBox title="Cloud Comparison Resources" tone="success" icon={<Sparkles />}>
+  <ul>
+    <li>**<a href="https://eylenburg.github.io/cloud_comparison.htm" target="_blank">Eylenburg Cloud Comparisons</a>**: Comprehensive technical breakdown of zero-knowledge privacy features, speeds, and pricing across providers.</li>
+    <li>**<a href="https://comparisontabl.es/cloud-storage/" target="_blank">ComparisonTabl.es</a>**: Clean interactive comparison tables for cloud storage gigabyte costs and plans.</li>
+  </ul>
+</GuideBox>

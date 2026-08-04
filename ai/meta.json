@@ -1,0 +1,10 @@
+{
+  "title": "AI",
+  "icon": "BrainCircuit",
+  "pages": [
+    "create",
+    "build",
+    "learn",
+    "local"
+  ]
+}

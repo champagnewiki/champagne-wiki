@@ -1,0 +1,404 @@
+---
+title: Linux Gaming
+description: Proton, Wine, launchers, and everything needed to game natively on Linux.
+icon: Terminal
+---
+
+import { LinuxGamingHero } from "@/components/linux-gaming-hero";
+
+import {
+  GamingAtmosphere,
+  GamingSectionHeading,
+  ZoneIntro,
+  InfoDeck,
+  InfoCard,
+  PillDeck,
+  GamingPill,
+  GuideBox,
+  WarnBox,
+} from "@/components/gaming-magic";
+
+import {
+  Compass,
+  Gauge,
+  Layers3,
+  LayoutGrid,
+  Rocket,
+  Wine,
+  Zap,
+  SlidersHorizontal,
+  Sparkle,
+  AppWindow,
+  LifeBuoy,
+  Gamepad2,
+} from "lucide-react";
+
+<LinuxGamingHero />
+
+<GamingAtmosphere />
+
+---
+
+<GamingSectionHeading icon={<Compass />} accent="amber">
+
+## Before You Switch
+
+</GamingSectionHeading>
+
+<ZoneIntro accent="amber">
+  Migrating to Linux gaming isn't about finding one magic distro — it's about checking your actual game library against real compatibility data first, then picking hardware-appropriate tools.
+</ZoneIntro>
+
+<GuideBox title="Check compatibility before you commit" tone="neutral">
+  For each game in your library, check <a href="https://www.protondb.com/">ProtonDB</a> for Steam titles or the <a href="https://appdb.winehq.org/">WineHQ AppDB</a> for everything else. A "Platinum" or "Gold" rating on ProtonDB means it should just work; "Bronze" or lower means expect real troubleshooting. Steam games run through Steam directly, non-Steam Windows games go through Lutris or Bottles.
+</GuideBox>
+
+<InfoDeck>
+  <InfoCard title="ProtonDB" href="https://www.protondb.com/" icon={<Gauge />} tag="Compatibility" tagStyle="emerald">
+    Community-reported compatibility ratings for every Steam game running under Proton, the fastest way to know what to expect before switching.
+  </InfoCard>
+  <InfoCard title="WineHQ AppDB" href="https://appdb.winehq.org/" icon={<Gauge />} tag="Compatibility" tagStyle="emerald">
+    The equivalent database for non-Steam Windows software and games, rated the same way from Platinum down to Garbage.
+  </InfoCard>
+  <InfoCard title="SteamDB" href="https://steamdb.info/" icon={<Gauge />} tag="Reference" tagStyle="sky">
+    Useful for checking whether a Steam game has native Linux support before assuming you'll need a compatibility layer at all.
+  </InfoCard>
+</InfoDeck>
+
+<WarnBox title="No Linux support for a game you need?">
+Your fallback options in order of practicality: look for a similar game with better support, use cloud/SaaS versions of professional software, run a Windows VM for light, non-gaming workloads, dual-boot, or attempt GPU passthrough — the last being powerful but genuinely advanced to set up correctly.
+</WarnBox>
+
+---
+
+<GamingSectionHeading icon={<Layers3 />} accent="orange">
+
+## Choosing a Distro
+
+</GamingSectionHeading>
+
+<ZoneIntro accent="amber">
+  Every mainstream distro can game equally well underneath — what actually differs is preinstalled software, update frequency, and critically, the desktop environment. KDE Plasma and GNOME have the strongest gaming support of the bunch.
+</ZoneIntro>
+
+<GuideBox title="If you're unsure, start here" tone="success">
+  <strong>Pop!_OS</strong> is the safest beginner pick — Ubuntu-based, GNOME desktop, dedicated Nvidia/AMD ISOs, and search results for "Pop!_OS" problems are abundant since it's so Ubuntu-similar. <strong>Nobara</strong> is the gaming-specific alternative, built by the developer of Proton-GE with performance tweaks pre-applied, though newer and less battle-tested.
+</GuideBox>
+
+<InfoDeck>
+  <InfoCard title="Pop!_OS" href="https://pop.system76.com/" icon={<Layers3 />} tag="Beginner" tagStyle="emerald">
+    Ubuntu-based with GNOME, dedicated Nvidia and AMD/Intel ISOs, and gaming-friendly tweaks out of the box.
+  </InfoCard>
+  <InfoCard title="Nobara" href="https://nobaraproject.org/" icon={<Layers3 />} tag="Gaming-focused" tagStyle="emerald">
+    Fedora-based and purpose-built for gaming by Glorious Eggroll (creator of Proton-GE), available in Official/KDE, GNOME, and KDE variants.
+  </InfoCard>
+  <InfoCard title="EndeavourOS" href="https://endeavouros.com/" icon={<Layers3 />} tag="Arch-based" tagStyle="amber">
+    A minimal, terminal-driven graphical installer for Arch itself, with the full Arch repositories and a genuinely helpful community.
+  </InfoCard>
+  <InfoCard title="Garuda" href="https://garudalinux.org/" icon={<Layers3 />} tag="Arch-based" tagStyle="amber">
+    An Arch-based, gaming-oriented distro shipping with performance presets like the Zen kernel pre-installed, heavily themed by default.
+  </InfoCard>
+</InfoDeck>
+
+<PillDeck>
+  <GamingPill title="Fedora" href="https://fedoraproject.org/" type="site" />
+  <GamingPill title="Ubuntu LTS" href="https://ubuntu.com/download" type="site" />
+  <GamingPill title="Arch Linux" href="https://archlinux.org/" type="site" />
+  <GamingPill title="openSUSE Tumbleweed" href="https://get.opensuse.org/tumbleweed/" type="site" />
+  <GamingPill title="ChimeraOS (couch gaming)" href="https://chimeraos.org/" type="site" />
+</PillDeck>
+
+<WarnBox title="Distros to avoid for gaming">
+The wiki explicitly warns against **HoloISO** (abandoned, unstable), **Deepin** (ships with spyware), **Puppy Linux** and **Tiny Core** (insufficient driver support), **Linux From Scratch** (educational only, no package manager), and **Kali** (built for penetration testing, not daily use — expect broken audio and worse).
+</WarnBox>
+
+<GamingSectionHeading icon={<LayoutGrid />} accent="orange">
+
+### Desktop Environments
+
+</GamingSectionHeading>
+
+<GuideBox title="Why this matters more than the distro itself" tone="neutral">
+  Your desktop environment (DE) determines whether you can disable compositing for lower input lag, how customizable your system feels, and RAM overhead. <strong>KDE Plasma</strong> and <strong>GNOME</strong> have the best gaming support; Plasma is generally more lightweight and more customizable, GNOME is cleaner but harder to deeply customize.
+</GuideBox>
+
+<PillDeck>
+  <GamingPill title="KDE Plasma" href="https://kde.org/plasma-desktop/" type="tool" />
+  <GamingPill title="GNOME" href="https://www.gnome.org/" type="tool" />
+  <GamingPill title="Xfce" href="https://xfce.org/" type="tool" />
+  <GamingPill title="Cinnamon" href="https://projects.linuxmint.com/cinnamon/" type="tool" />
+</PillDeck>
+
+<WarnBox title="Avoid Pantheon (elementary OS) for gaming">
+Pantheon has no option to disable its compositor on X11 at all, which makes it a poor choice if performance matters to you at all.
+</WarnBox>
+
+---
+
+<GamingSectionHeading icon={<Rocket />} accent="orange">
+
+## Launchers
+
+</GamingSectionHeading>
+
+<ZoneIntro accent="amber">
+  These four tools aren't redundant with each other — each one covers a different storefront or use case, and most Linux gamers end up running two or three side by side.
+</ZoneIntro>
+
+<InfoDeck>
+  <InfoCard title="Steam" href="https://store.steampowered.com/about/" icon={<Rocket />} tag="Steam" tagStyle="emerald">
+    Use natively for anything you own on Steam — Proton is built in, and routing Steam games through Lutris or Bottles instead only adds unnecessary complexity.
+  </InfoCard>
+  <InfoCard title="Lutris" href="https://lutris.net/" icon={<Rocket />} tag="General" tagStyle="orange">
+    The general-purpose launcher for everything else, using community-maintained install scripts that pre-configure Wine settings for thousands of games automatically.
+  </InfoCard>
+  <InfoCard title="Heroic Games Launcher" href="https://heroicgameslauncher.com/" icon={<Rocket />} tag="Epic / GOG" tagStyle="orange">
+    Purpose-built for Epic Games Store and GOG libraries, with native Proton integration and a much cleaner experience than trying to force those stores through Lutris.
+  </InfoCard>
+  <InfoCard title="Bottles" href="https://usebottles.com/" icon={<Rocket />} tag="Fallback" tagStyle="amber">
+    The go-to option when no Lutris install script exists for a game — creates isolated Wine "bottles" per application so settings and dependencies never conflict between games.
+  </InfoCard>
+</InfoDeck>
+
+<GuideBox title="Decision shortcut" tone="neutral">
+  Steam game → use Steam. Epic or GOG game → Heroic. Anything else with a Lutris script available → Lutris. No script exists → Bottles. This covers the overwhelming majority of cases without any manual Wine configuration at all.
+</GuideBox>
+
+<PillDeck>
+  <GamingPill title="Lutris Install Scripts" href="https://lutris.net/games" type="site" />
+  <GamingPill title="Heroic GitHub" href="https://github.com/Heroic-Games-Launcher/HeroicGamesLauncher" type="tool" />
+  <GamingPill title="Bottles Flathub" href="https://flathub.org/apps/com.usebottles.bottles" type="tool" />
+</PillDeck>
+
+<WarnBox title="Install via Flatpak where possible">
+Lutris, Heroic, and Bottles are all best installed through Flatpak rather than a distro's native package manager — Flatpak versions tend to update faster and sandbox more cleanly, avoiding dependency conflicts with system libraries.
+</WarnBox>
+
+---
+
+<GamingSectionHeading icon={<Wine />} accent="orange">
+
+## Wine, Proton & Compatibility Tools
+
+</GamingSectionHeading>
+
+<ZoneIntro accent="amber">
+  Wine and Proton are the translation layers that let Windows games run at all; Winetricks and Protontricks are the companion tools that install the extra runtime dependencies specific games need on top.
+</ZoneIntro>
+
+<InfoDeck>
+  <InfoCard title="Wine" href="https://www.winehq.org/" icon={<Wine />} tag="Core" tagStyle="orange">
+    The foundational compatibility layer translating Windows API calls into Linux-native calls, everything else on this page builds on top of it.
+  </InfoCard>
+  <InfoCard title="Proton-GE" href="https://github.com/GloriousEggroll/proton-ge-custom" icon={<Wine />} tag="Proton fork" tagStyle="orange">
+    A community-maintained Proton fork with additional patches and codecs baked in, generally recommended over stock Proton for troublesome games.
+  </InfoCard>
+  <InfoCard title="ProtonUp-Qt" href="https://github.com/DavidoTek/ProtonUp-Qt" icon={<Wine />} tag="Manager" tagStyle="amber">
+    A GUI for installing and managing Proton-GE and Wine-GE versions across Steam, Lutris, and Heroic without touching the terminal.
+  </InfoCard>
+</InfoDeck>
+
+<GuideBox title="Winetricks & Protontricks" tone="neutral">
+  <strong>Winetricks</strong> installs missing runtime components (DirectX, .NET, Visual C++ redistributables, specific fonts) into a Wine prefix that a game expects but doesn't ship with — commonly needed for older or poorly-ported titles. <strong>Protontricks</strong> is the same tool adapted specifically for Steam's Proton prefixes, since Proton stores its prefixes differently than standalone Wine.
+</GuideBox>
+
+<PillDeck>
+  <GamingPill title="Winetricks" href="https://github.com/Winetricks/winetricks" type="tool" />
+  <GamingPill title="Protontricks" href="https://github.com/Matoking/protontricks" type="tool" />
+  <GamingPill title="DXVK" href="https://github.com/doitsujin/dxvk" type="tool" />
+  <GamingPill title="VKD3D-Proton" href="https://github.com/HansKristian-Work/vkd3d-proton" type="tool" />
+</PillDeck>
+
+<WarnBox title="DXVK and VKD3D are usually already handled for you">
+Proton and most Lutris scripts bundle DXVK (DirectX 9/10/11 → Vulkan) and VKD3D-Proton (DirectX 12 → Vulkan) automatically. You only need to manage these manually in standalone Wine setups outside of Proton or Lutris.
+</WarnBox>
+
+---
+
+<GamingSectionHeading icon={<Gauge />} accent="emerald">
+
+## Performance Tuning
+
+</GamingSectionHeading>
+
+<ZoneIntro accent="amber">
+  The wiki tiers these tweaks deliberately — start with Major changes since they carry the biggest impact, then layer in Minor and Optional tweaks only if you're still chasing extra frames.
+</ZoneIntro>
+
+<GamingSectionHeading icon={<Zap />} accent="emerald">
+
+### Major Tweaks
+
+</GamingSectionHeading>
+
+<InfoDeck>
+  <InfoCard title="Disable the compositor" icon={<Zap />} tag="Major" tagStyle="emerald">
+    Compositing effects (transparency, animations, shadows) add input latency and overhead. KDE Plasma lets you toggle this with Shift+Alt+F12; GNOME requires an extension since it can't be disabled natively.
+  </InfoCard>
+  <InfoCard title="Install correct GPU drivers" icon={<Zap />} tag="Major" tagStyle="emerald">
+    Nvidia users should use the proprietary driver over Nouveau for gaming performance; AMD and Intel users get excellent performance from the open-source Mesa drivers included by default in most distros.
+  </InfoCard>
+  <InfoCard title="Set the CPU governor to performance" icon={<Zap />} tag="Major" tagStyle="emerald">
+    Most distros default to a power-saving governor that throttles clock speeds; switching to the "performance" governor keeps your CPU at higher clocks during gameplay at the cost of higher power draw.
+  </InfoCard>
+  <InfoCard title="Use GameMode" href="https://github.com/FeralInteractive/gamemode" icon={<Zap />} tag="Major" tagStyle="emerald">
+    Feral Interactive's daemon automatically applies a bundle of performance optimizations (CPU governor, I/O priority, GPU clocks) the moment a game launches, then reverts them on exit.
+  </InfoCard>
+</InfoDeck>
+
+<PillDeck>
+  <GamingPill title="GameMode" href="https://github.com/FeralInteractive/gamemode" type="tool" />
+  <GamingPill title="CoreCtrl (AMD GPU tuning)" href="https://gitlab.com/corectrl/corectrl" type="tool" />
+</PillDeck>
+
+<GuideBox title="Checking your CPU governor" tone="neutral">
+  Run `cat /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor` in a terminal to check your current governor. GameMode handles switching this automatically per-game, so manual governor changes are mainly useful if you're not using GameMode at all.
+</GuideBox>
+
+<GamingSectionHeading icon={<SlidersHorizontal />} accent="amber">
+
+### Minor Tweaks
+
+</GamingSectionHeading>
+
+<InfoDeck>
+  <InfoCard title="Enable Fsync or Esync" icon={<SlidersHorizontal />} tag="Minor" tagStyle="amber">
+    These reduce Wine/Proton's synchronization overhead between threads. Fsync requires a modern kernel with the feature built in; Esync is the older, more broadly compatible fallback.
+  </InfoCard>
+  <InfoCard title="Switch to an optimized kernel" icon={<SlidersHorizontal />} tag="Minor" tagStyle="amber">
+    Kernels like linux-tkg, Zen, and Xanmod ship with gaming-oriented scheduler and latency tweaks not present in stock distro kernels, and are usually one package-manager install away on Arch-based distros.
+  </InfoCard>
+  <InfoCard title="Use zram or zswap" icon={<SlidersHorizontal />} tag="Minor" tagStyle="amber">
+    Compressed swap in RAM reduces stuttering from memory pressure on systems with limited RAM, especially useful on lower-end hardware running modern titles.
+  </InfoCard>
+</InfoDeck>
+
+<PillDeck>
+  <GamingPill title="linux-tkg" href="https://github.com/Frogging-Family/linux-tkg" type="tool" />
+  <GamingPill title="Xanmod Kernel" href="https://xanmod.org/" type="tool" />
+  <GamingPill title="Zen Kernel" href="https://liquorix.net/" type="tool" />
+</PillDeck>
+
+<GamingSectionHeading icon={<Sparkle />} accent="sky">
+
+### Optional Tweaks
+
+</GamingSectionHeading>
+
+<InfoDeck>
+  <InfoCard title="AMD FidelityFX Super Resolution (FSR)" icon={<Sparkle />} tag="Optional" tagStyle="sky">
+    Upscaling that trades a small amount of image quality for a significant framerate boost, available through Gamescope or natively in supporting games.
+  </InfoCard>
+  <InfoCard title="LatencyFleX" href="https://github.com/ishitatsuyuki/LatencyFleX" icon={<Sparkle />} tag="Optional" tagStyle="sky">
+    An open-source alternative to Nvidia Reflex for reducing input latency, works across both Nvidia and AMD hardware.
+  </InfoCard>
+  <InfoCard title="MangoHud" href="https://github.com/flightlessmango/MangoHud" icon={<Sparkle />} tag="Optional" tagStyle="sky">
+    An in-game performance overlay showing FPS, frame time, temperatures, and GPU/CPU usage, useful for diagnosing exactly where a bottleneck is coming from.
+  </InfoCard>
+</InfoDeck>
+
+<PillDeck>
+  <GamingPill title="MangoHud" href="https://github.com/flightlessmango/MangoHud" type="tool" />
+  <GamingPill title="vkBasalt (post-processing)" href="https://github.com/DadSchoorse/vkBasalt" type="tool" />
+</PillDeck>
+
+<WarnBox title="Environment variables aren't universal fixes">
+Environment variables like `PROTON_NO_ESYNC=1` or `__GL_SHADER_DISK_CACHE=1` fix specific, narrow problems, they are not blanket performance boosts. Only add them if you're solving a documented issue for a specific game, not as a general-purpose tweak.
+</WarnBox>
+
+---
+
+<GamingSectionHeading icon={<AppWindow />} accent="orange">
+
+## Gamescope
+
+</GamingSectionHeading>
+
+<ZoneIntro accent="amber">
+  Valve's micro-compositor, built for the Steam Deck but usable on any Linux system, wraps a game in its own isolated display session for better scaling, framerate limiting, and upscaling control.
+</ZoneIntro>
+
+<InfoDeck>
+  <InfoCard title="Gamescope" href="https://github.com/ValveSoftware/gamescope" icon={<AppWindow />} tag="Compositor" tagStyle="orange">
+    Runs a game in a nested Wayland session, giving you independent control over resolution, framerate cap, and FSR/NIS upscaling regardless of your main desktop's display settings.
+  </InfoCard>
+</InfoDeck>
+
+<GuideBox title="Common Gamescope keyboard shortcuts" tone="neutral">
+  <strong>Super+F</strong> toggles fullscreen, <strong>Super+N</strong> cycles through upscaling filters (Linear, Nearest, FSR, NIS), <strong>Super+U</strong> toggles FSR sharpness up/down, and <strong>Super+S</strong> takes a screenshot. Exact bindings can vary slightly by launch flags.
+</GuideBox>
+
+<PillDeck>
+  <GamingPill title="Gamescope launch options guide" href="https://github.com/ValveSoftware/gamescope#readme" type="site" />
+</PillDeck>
+
+---
+
+<GamingSectionHeading icon={<LifeBuoy />} accent="sky">
+
+## Troubleshooting Resources
+
+</GamingSectionHeading>
+
+<ZoneIntro accent="amber">
+  When a specific game misbehaves, these community-maintained references solve far more issues than generic forum searches — check them before spending hours guessing at Wine flags.
+</ZoneIntro>
+
+<InfoDeck>
+  <InfoCard title="ProtonDB" href="https://www.protondb.com/" icon={<LifeBuoy />} tag="Compatibility" tagStyle="sky">
+    Crowdsourced per-game reports on Proton compatibility, including the exact launch options and tweaks other players used to get a title running well.
+  </InfoCard>
+  <InfoCard title="PCGamingWiki" href="https://www.pcgamingwiki.com/" icon={<LifeBuoy />} tag="Fixes" tagStyle="sky">
+    Deep per-game technical pages covering widescreen fixes, config file locations, and known issues, useful well beyond just Linux.
+  </InfoCard>
+  <InfoCard title="Arch Wiki: Gaming" href="https://wiki.archlinux.org/title/Gaming" icon={<LifeBuoy />} tag="Reference" tagStyle="sky">
+    The most technically thorough general gaming-on-Linux reference available, distro-agnostic despite the Arch branding.
+  </InfoCard>
+  <InfoCard title="r/linux_gaming" href="https://www.reddit.com/r/linux_gaming/" icon={<LifeBuoy />} tag="Community" tagStyle="amber">
+    Active community for troubleshooting recent or obscure issues that haven't made it into wikis yet, and for general driver/distro discussion.
+  </InfoCard>
+</InfoDeck>
+
+<PillDeck>
+  <GamingPill title="ProtonDB" href="https://www.protondb.com/" type="site" />
+  <GamingPill title="PCGamingWiki" href="https://www.pcgamingwiki.com/" type="site" />
+  <GamingPill title="Arch Wiki: Gaming" href="https://wiki.archlinux.org/title/Gaming" type="site" />
+</PillDeck>
+
+<GuideBox title="Debugging checklist" tone="neutral">
+  Check ProtonDB first for the specific game and Proton version, then confirm GPU drivers are current, then try Proton-GE if stock Proton fails, and only reach for manual Winetricks/Protontricks dependencies as a last resort.
+</GuideBox>
+
+---
+
+<GamingSectionHeading icon={<Gamepad2 />} accent="emerald">
+
+## Steam Deck Tooling
+
+</GamingSectionHeading>
+
+<ZoneIntro accent="amber">
+  Most tools already covered work identically on Steam Deck since it runs SteamOS, a standard Linux distro, but a few utilities specifically target Deck's Desktop Mode workflow.
+</ZoneIntro>
+
+<InfoDeck>
+  <InfoCard title="Decky Loader" href="https://decky.xyz/" icon={<Gamepad2 />} tag="Plugin loader" tagStyle="emerald">
+    A plugin loader injecting extra functionality directly into Steam Deck's Game Mode UI, powering most of the community plugin ecosystem below.
+  </InfoCard>
+  <InfoCard title="EmuDeck" href="https://www.emudeck.com/" icon={<Gamepad2 />} tag="Emulation" tagStyle="emerald">
+    One-click emulator setup and configuration tool, handling install and BIOS/ROM folder structuring for dozens of emulators at once.
+  </InfoCard>
+  <InfoCard title="CryoUtilities" href="https://github.com/CryoByte33/steam-deck-optimizer" icon={<Gamepad2 />} tag="Optimizer" tagStyle="amber">
+    Adjusts swap and zram settings specifically tuned for Deck's hardware to reduce stuttering in memory-heavy titles.
+  </InfoCard>
+</InfoDeck>
+
+<PillDeck>
+  <GamingPill title="Decky Loader" href="https://decky.xyz/" type="tool" />
+  <GamingPill title="EmuDeck" href="https://www.emudeck.com/" type="tool" />
+  <GamingPill title="Deck Verified Database" href="https://store.steampowered.com/curator/33907817" type="site" />
+</PillDeck>
+
+<WarnBox title="Desktop Mode voids some warranty assumptions">
+Installing Decky Loader plugins and switching to Desktop Mode is fully supported by Valve, but installing untrusted third-party plugins carries the same risk as installing any unverified software, review sources before installing.
+</WarnBox>

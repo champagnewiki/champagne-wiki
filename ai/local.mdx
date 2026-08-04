@@ -1,0 +1,164 @@
+---
+title: Run AI Locally
+description: Self-hosted LLM frontends, inference engines, and open-weight model families for on-device AI.
+icon: HardDrive
+---
+
+import { LocalHero } from "@/components/ai/local-hero";
+import {
+  AIAtmosphere, AISectionHeader, ToolDeck, ToolCard, PillDeck, AIPill,
+  PillLegend, NoticePanel, GuideBox,
+} from "@/components/ai";
+import {
+  HardDrive, Cpu, Boxes, Gauge, Terminal, ShieldCheck,
+} from "lucide-react";
+
+<AIAtmosphere theme="local" />
+<LocalHero />
+
+<PillLegend />
+
+<NoticePanel icon={<ShieldCheck />} title="Why run AI locally?" type="info">
+  Cloud-based AI providers frequently use your prompts for data collection or model training. Running LLMs locally keeps everything — your prompts, documents, and outputs — entirely on your own machine, with no account, no logging, and no internet connection required once set up.
+</NoticePanel>
+
+<AISectionHeader icon={<Terminal />} accent="emerald">
+
+## Local Frontends
+
+</AISectionHeader>
+
+These are the apps you actually chat through — some are point-and-click desktop apps, others are browser-based UIs pointed at a local backend, and a few are terminal-only for people who want zero overhead.
+
+<ToolDeck columns={2}>
+  <ToolCard title="LM Studio" href="https://lmstudio.ai" icon={<Terminal />} badge="Desktop App" badgeStyle="emerald">
+    The most beginner-friendly way to download and run local LLMs, with a built-in model browser and OpenAI-compatible local server.
+  </ToolCard>
+  <ToolCard title="Ollama" href="https://ollama.com" icon={<Terminal />} badge="CLI + API" badgeStyle="indigo">
+    The de facto standard for running open-weight models locally — one command to pull and run a model, plus a REST API that most local-AI tools build on top of.
+  </ToolCard>
+  <ToolCard title="Open WebUI" href="https://github.com/open-webui/open-webui" icon={<Terminal />} badge="Self-Hosted" badgeStyle="amber">
+    Feature-rich, ChatGPT-style web interface designed to run entirely offline, with RAG, multi-model support, and a plugin system.
+  </ToolCard>
+  <ToolCard title="GPT4All" href="https://gpt4all.io" icon={<Terminal />} badge="No GPU Needed" badgeStyle="emerald">
+    Runs quantized local LLMs on ordinary consumer hardware, with a simple desktop chat interface and no internet dependency.
+  </ToolCard>
+</ToolDeck>
+
+<PillDeck>
+  <AIPill title="Jan" href="https://jan.ai" type="open" />
+  <AIPill title="AnythingLLM" href="https://anythingllm.com" type="open" />
+  <AIPill title="Msty" href="https://msty.app" type="tool" />
+  <AIPill title="Kobold.cpp" href="https://github.com/LostRuins/koboldcpp" type="open" />
+  <AIPill title="text-generation-webui" href="https://github.com/oobabooga/text-generation-webui" type="open" />
+  <AIPill title="ch.at" href="https://ch.at" type="open" />
+</PillDeck>
+
+---
+
+<AISectionHeader icon={<Cpu />} accent="indigo">
+
+## Inference Engines
+
+</AISectionHeader>
+
+These are the backends that actually load and run the model weights — most frontends above are just a UI layered on top of one of these.
+
+<PillDeck>
+  <AIPill title="llama.cpp" href="https://github.com/ggml-org/llama.cpp" type="open" />
+  <AIPill title="vLLM" href="https://github.com/vllm-project/vllm" type="open" />
+  <AIPill title="LocalAI" href="https://localai.io" type="open" />
+  <AIPill title="Llamafile" href="https://github.com/Mozilla-Ocho/llamafile" type="open" />
+  <AIPill title="LLM API Key Proxy" href="https://github.com/BerriAI/litellm" type="open" />
+</PillDeck>
+
+<GuideBox title="Can I actually run this on my hardware?" tone="neutral">
+  <ul>
+    <li><strong><a href="https://modelfit.io">ModelFit</a></strong> — checks your device against a live model database, ranking which LLMs and coding agents actually run well on your specific GPU or Mac, with dedicated cloud vs. local tool comparisons</li>
+    <li><strong><a href="http://www.canirunthisllm.net">Can I Run This LLM?</a></strong> — enter your GPU VRAM and system RAM to see which open-weight models actually fit, plus estimated tokens-per-second</li>
+    <li><strong><a href="https://apxml.com/tools/vram-calculator">VRAM Calculator</a></strong> (ApX Machine Learning) — detailed inference and fine-tuning VRAM estimator covering quantization, KV cache, batch size, and multi-GPU offloading</li>
+    <li>As a rule of thumb, a 7B model in 4-bit quantization needs roughly 4 to 6GB of VRAM or unified memory, while a 70B model needs 40GB or more unless heavily quantized</li>
+  </ul>
+</GuideBox>
+
+---
+
+<AISectionHeader icon={<Boxes />} accent="amber">
+
+## Model Families for Local Use
+
+</AISectionHeader>
+
+Every family below is open-weight and runs through Ollama, llama.cpp, or LM Studio — pick based on your available RAM and what you're using it for, not just parameter count.
+
+<ToolDeck columns={2}>
+  <ToolCard title="Meta Llama" href="https://ollama.com/library/llama3.3" icon={<Boxes />} badge="Most Popular" badgeStyle="indigo">
+    The most widely adopted open-weight family with the largest community ecosystem, spanning 1B to 405B parameters with strong general reasoning.
+  </ToolCard>
+  <ToolCard title="Alibaba Qwen" href="https://ollama.com/library/qwen2.5" icon={<Boxes />} badge="Widest Range" badgeStyle="emerald">
+    27 models spanning 0.5B to 235B parameters — the widest size range of any family, with strong multilingual and coding performance.
+  </ToolCard>
+  <ToolCard title="DeepSeek" href="https://ollama.com/library/deepseek-r1" icon={<Boxes />} badge="Best Reasoning" badgeStyle="rose">
+    DeepSeek R1 introduced chain-of-thought reasoning that rivals proprietary frontier models, while V3 is a massive but efficient MoE model.
+  </ToolCard>
+  <ToolCard title="Mistral" href="https://ollama.com/library/mistral" icon={<Boxes />} badge="Efficient" badgeStyle="amber">
+    Known for the best performance-per-parameter ratio in the open-weight space, using sliding window attention for efficiency at smaller sizes.
+  </ToolCard>
+  <ToolCard title="Google Gemma" href="https://ollama.com/library/gemma2" icon={<Boxes />} badge="Small & Safe" badgeStyle="emerald">
+    Lightweight family from Google DeepMind spanning 1B to 31B, tuned for strong safety and quality even at small sizes.
+  </ToolCard>
+  <ToolCard title="Microsoft Phi" href="https://ollama.com/library/phi4" icon={<Boxes />} badge="Tiny But Sharp" badgeStyle="indigo">
+    Proves careful training data beats raw parameter count — Phi-4 Mini packs strong reasoning into 3.8B parameters and loads in just 3.2GB.
+  </ToolCard>
+</ToolDeck>
+
+<PillDeck>
+  <AIPill title="Liquid AI LFM2" href="https://huggingface.co/LiquidAI" type="open" />
+  <AIPill title="Hugging Face SmolLM" href="https://huggingface.co/HuggingFaceTB/SmolLM2-360M" type="open" />
+</PillDeck>
+
+<GuideBox title="Smallest viable models" tone="success">
+  <ul>
+    <li><strong>SmolLM2 360M</strong> — the smallest model in most local databases, loads in about 0.5GB and runs on just 1GB of RAM, including old Macs, iPhones, and embedded boards</li>
+    <li><strong>LFM2 24B-A2B</strong> — a sparse mixture-of-experts model that only activates 2B of its 24B parameters per token, fitting in about 14GB and running well on any 16GB Mac</li>
+    <li><strong>Phi-4 Mini 3.8B</strong> — loads in 3.2GB and needs just 7GB minimum RAM, making it viable on most modern laptops</li>
+  </ul>
+</GuideBox>
+
+---
+
+<AISectionHeader icon={<Gauge />} accent="rose">
+
+## Local Coding Agents
+
+</AISectionHeader>
+
+If you want an agentic coding assistant without sending code to the cloud, several tools below pair specifically with local models through Ollama rather than requiring a subscription API key.
+
+<PillDeck>
+  <AIPill title="OpenCode" href="https://github.com/opencode-ai/opencode" type="open" />
+  <AIPill title="Aider" href="https://aider.chat" type="open" />
+  <AIPill title="Continue.dev" href="https://continue.dev" type="open" />
+  <AIPill title="Goose" href="https://github.com/block/goose" type="open" />
+  <AIPill title="Cline" href="https://github.com/cline/cline" type="open" />
+  <AIPill title="Roo Code" href="https://github.com/RooCodeInc/Roo-Code" type="open" />
+</PillDeck>
+
+<NoticePanel icon={<ShieldCheck />} title="A note on running agents locally" type="warning">
+  Coding agents can execute terminal commands and modify files without additional confirmation if misconfigured. Run them in a container, VPS, or VM rather than on a machine with anything important on it, and avoid giving any agent full drive-root access.
+</NoticePanel>
+
+---
+
+<AISectionHeader icon={<Terminal />} accent="zinc">
+
+## Community & Discussion
+
+</AISectionHeader>
+
+For troubleshooting a specific setup or getting a second opinion on hardware before buying, these communities move faster than most written guides.
+
+<PillDeck>
+  <AIPill title="r/LocalLLaMA" href="https://reddit.com/r/LocalLLaMA" type="community" />
+  <AIPill title="r/LocalLLM" href="https://old.reddit.com/r/LocalLLM/" type="community" />
+</PillDeck>

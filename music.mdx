@@ -1,0 +1,362 @@
+---
+title: Music
+description: Discovery, streaming, and high-fidelity downloads for the sound obsessed.
+icon: Headphones
+---
+
+import { MusicHero } from "@/components/music/music-hero";
+import {
+  MusicAtmosphere,
+  MusicSectionHeading,
+  Pill,
+  PillDeck,
+  DiscordPill,
+  TelegramPill,
+  PillLegend,
+  ToolDeck,
+  ToolCard,
+  GuideBox,
+  WarnBox,
+  CompareTable,
+} from "@/components/music/music-elements";
+import {
+  Headphones,
+  Compass,
+  Radio,
+  Download,
+  Disc,
+  Library,
+  Music2,
+  ListMusic,
+  Waves,
+  Sparkles,
+  ShieldCheck,
+  Zap,
+  Globe,
+  Sliders,
+  Tv,
+  Map,
+  Search,
+  Monitor,
+  Smartphone,
+  BookOpen
+} from "lucide-react";
+
+<MusicAtmosphere />
+<MusicHero />
+
+<PillLegend />
+
+<MusicSectionHeading kicker="Discovery" icon={<Compass />} accent="brass">
+
+## Finding Your Next Favourite Record
+
+</MusicSectionHeading>
+
+"I don't have anything to listen to." Not on our watch. These are the charts, maps, and tracking engines worth losing an afternoon to. 
+
+<ToolDeck columns={2}>
+  <ToolCard title="RateYourMusic (RYM)" href="https://rateyourmusic.com/" badge="Database" badgeStyle="wine" icon={<Disc />} starred>
+    The ultimate community-driven music database. Incredible for finding highly specific, user-rated custom charts across every genre imaginable. The absolute best place on the internet to discover deep cuts and critically acclaimed masterpieces.
+  </ToolCard>
+  <ToolCard title="Every Noise At Once" href="https://everynoise.com" badge="Genre Map" badgeStyle="brass" icon={<Globe />} starred>
+    A sprawling, algorithmic scatter-plot of over 6,000 musical genres based on Spotify tracking data. Click any obscure genre to hear a sample, find its core artists, and fall down a rabbit hole.
+  </ToolCard>
+  <ToolCard title="Last.fm" href="https://www.last.fm/home" badge="Tracker" badgeStyle="emerald" icon={<ListMusic />}>
+    Tracks (or "scrobbles") your listening habits across all your devices and streaming platforms to build a massive, visual profile of your musical taste and recommend new artists based on your unique data.
+  </ToolCard>
+  <ToolCard title="Chosic" href="https://www.chosic.com/" badge="Discovery" badgeStyle="rose" icon={<Music2 />}>
+    Discover new music based on your favorite bands. Generates spot-on similar artist lists and helps you break out of algorithmic echo chambers by analyzing the sonic profile of the tracks you love.
+  </ToolCard>
+  <ToolCard title="Kworb" href="https://kworb.net/" badge="Charts" badgeStyle="neutral" icon={<Zap />}>
+    Deep streaming statistics—track top songs, artists, and album movement by country across Spotify, Apple Music, and YouTube to see what the world is actually listening to in real-time.
+  </ToolCard>
+  <ToolCard title="Music-Map" href="https://www.music-map.com" badge="Visual Map" badgeStyle="brass" icon={<Map />}>
+    A floating visual artist relationship map. Type in one musical act you love and watch the screen populate with a floating constellation of similar artists. The closer two names are, the more likely you are to enjoy them.
+  </ToolCard>
+  <ToolCard title="Every Noise World Browser" href="https://everynoise.com/worldbrowser.cgi" badge="Global" badgeStyle="wine" icon={<Search />}>
+    See exactly what Spotify editors around the world are programming in their local Browse sections. Filter music by country, region, and city to hear the local underground sound.
+  </ToolCard>
+  <ToolCard title="Spotify Charts" href="https://charts.spotify.com/home" badge="Official" badgeStyle="emerald" icon={<ListMusic />}>
+    The official real-time streaming charts, breaking down the most streamed songs, viral hits, and top artists globally and by specific region.
+  </ToolCard>
+  <ToolCard title="Skiley" href="https://skiley.net" badge="Web App" badgeStyle="rose" icon={<Sparkles />}>
+    A powerful webapp that integrates directly with your Spotify account to manage playlists, discover brand new tracks, and analyze your library with advanced sorting algorithms.
+  </ToolCard>
+  <ToolCard title="Dubolt" href="https://dubolt.com/" badge="Generator" badgeStyle="brass" icon={<Music2 />}>
+    Discover new music strictly through the lens of your old favorites. Plug in the artists you love and let it generate a tailored discovery playlist for you.
+  </ToolCard>
+  <ToolCard title="Gnoosic" href="https://www.gnoosic.com/" badge="AI Engine" badgeStyle="neutral" icon={<Zap />}>
+    A wonderfully simple, quiz-based recommendation engine. Rate a few bands you like (I like, I don't like, I don't know), and it feeds you a highly curated shortlist of new ones.
+  </ToolCard>
+  <ToolCard title="Forgotify" href="http://forgotify.com/player.cfm" badge="Obscure" badgeStyle="wine" icon={<Disc />}>
+    Plays only tracks that have never once been played on Spotify. Give a totally forgotten, zero-playcount song its first spin in the world.
+  </ToolCard>
+  <ToolCard title="Playlist Miner" href="http://playlistminer.playlistmachinery.com/index.html" badge="Aggregator" badgeStyle="emerald" icon={<Library />}>
+    Aggregates the top tracks from the most popular public playlists on Spotify based on your exact search criteria (e.g., search "workout" to find the tracks that appear most frequently in fitness playlists).
+  </ToolCard>
+  <ToolCard title="4chan Music Wiki" href="https://4chanmusic.fandom.com/wiki/4chanmusic_Wiki" badge="Community" badgeStyle="rose" icon={<BookOpen />}>
+    A community-driven wiki dedicated to deep-cut music discussion, legendary essentials charts, and discovery, heavily inspired by the infamous /mu/ board.
+  </ToolCard>
+</ToolDeck>
+
+<GuideBox title="Scrobbling & Listening Analytics" tone="brass">
+  If you want deeper insights into what you listen to, pair Last.fm with tools like **<a href="https://openscrobbler.com/">OpenScrobbler</a>** to manually log vinyl/CD listens, or **<a href="https://github.com/kawaiiDango/pano-scrobbler">Pano Scrobbler</a>** for seamless mobile tracking. **<a href="https://listenbrainz.org/">ListenBrainz</a>** and **<a href="https://github.com/krateng/maloja">Maloja</a>** are fantastic open-source and self-hosted alternatives to Last.fm.
+</GuideBox>
+
+---
+
+<MusicSectionHeading kicker="Streaming" icon={<Waves />} accent="rose">
+
+## Web Streaming & Ecosystem Clients
+
+</MusicSectionHeading>
+
+Browser-based lossless streaming has quietly become exceptional, and the modding community has completely overhauled the desktop and mobile player experience.
+
+<ToolDeck columns={2}>
+  <ToolCard title="Monochrome" href="https://monochrome.tf/" badge="Free Lossless" badgeStyle="emerald" icon={<Waves />} starred>
+    Free browser streaming with FLAC-quality audio. Mirrors available if the main site goes down: <a href="https://monochrome.samidy.com/">Mirror 1</a>, <a href="https://lossless.wtf">Mirror 2</a>.
+  </ToolCard>
+  <ToolCard title="Octave" href="https://octavestreaming.com/" badge="Free Lossless" badgeStyle="emerald" icon={<Waves />}>
+    Another excellent free lossless browser streamer supported by an active Discord community.
+  </ToolCard>
+  <ToolCard title="YouTube Music" href="https://music.youtube.com/" badge="Web Player" badgeStyle="amber" icon={<Tv />}>
+    The standard web player. Pair it with **<a href="https://ytify.pp.ua/">Ytify</a>** or **<a href="https://github.com/pear-devs/pear-desktop">Pear Desktop</a>** for cleaner, ad-free listening.
+  </ToolCard>
+  <ToolCard title="ArtistGrid" href="https://artistgrid.cx/" badge="Unreleased" badgeStyle="rose" icon={<Sparkles />}>
+    A treasure trove for streaming unreleased tracks, demos, and leaked music archives.
+  </ToolCard>
+</ToolDeck>
+
+<PillDeck>
+  <Pill title="SoundCloud" href="https://soundcloud.com/" type="official" />
+  <Pill title="Bandcamp Free Music" href="https://bandcamp.com/discover/free-music" type="official" />
+  <Pill title="Audiomack" href="https://audiomack.com/" type="official" />
+  <Pill title="Audius" href="https://audius.co/" type="open" />
+  <Pill title="Nuclear Player" href="https://nuclearplayer.com/" type="open" />
+  <Pill title="FunkWhale" href="https://funkwhale.audio/" type="open" />
+  <Pill title="Hype Machine" href="https://hypem.com/popular" type="tool" />
+</PillDeck>
+
+<MusicSectionHeading icon={<Smartphone />} accent="wine">
+
+### App Patchers & Mobile Clients
+
+</MusicSectionHeading>
+
+<GuideBox title="Android Audio Toolkit" tone="neutral">
+  <ul>
+    <li><strong><a href="https://github.com/JunkFood02/Seal">Seal</a> / <a href="https://ytdlnis.org/">YTDLnis</a>:</strong> High-performance multi-site audio and video downloaders built on yt-dlp.</li>
+    <li><strong><a href="https://github.com/SpotX-Official/SpotX">SpotX</a>:</strong> The definitive ad-free patcher for Spotify on Windows and Linux.</li>
+    <li><strong><a href="https://morphe.software/">Morphe</a> / <a href="https://revanced.app/">ReVanced</a>:</strong> Essential patchers for completely ad-free, background-play YouTube Music.</li>
+    <li><strong><a href="https://krosbits.in/musicolet/">Musicolet</a> / <a href="https://github.com/namidaco/namida">Namida</a>:</strong> Exceptional, feature-rich local audio players for your offline library.</li>
+  </ul>
+</GuideBox>
+
+<GuideBox title="iOS Audio Toolkit" tone="neutral">
+  <ul>
+    <li><strong><a href="https://spotc.yodaluca.dev/">SpotC++</a> / EeveeSpotify:</strong> Sideloadable, ad-free Spotify experiences for iOS.</li>
+    <li><strong><a href="https://github.com/dayanch96/YTMusicUltimate">YTMusicUltimate</a>:</strong> A modded, ad-free YouTube Music client.</li>
+    <li><strong><a href="https://eclipsemusic.app/">Eclipse</a>:</strong> A beautiful, module-based streaming and downloading app.</li>
+  </ul>
+</GuideBox>
+
+---
+
+<MusicSectionHeading kicker="Live & Ambient" icon={<Radio />} accent="brass">
+
+## Live Performances, Radio & Ambient
+
+</MusicSectionHeading>
+
+<ToolDeck columns={3}>
+  <ToolCard title="Radio Garden" href="https://radio.garden/" badge="Interactive" badgeStyle="emerald" icon={<Globe />} starred>
+    A literal spinning 3D globe of live radio stations. Rotate the earth and tune into local broadcasts from any country.
+  </ToolCard>
+  <ToolCard title="SomaFM" href="https://somafm.com/" badge="Ad-Free Radio" badgeStyle="brass" icon={<Radio />} starred>
+    Legendary, listener-supported internet radio featuring dozens of specialized, commercial-free channels.
+  </ToolCard>
+  <ToolCard title="NTS Radio" href="https://www.nts.live/" badge="DJ Shows" badgeStyle="wine" icon={<Radio />}>
+    An incredible, DJ-curated global radio platform spanning virtually every genre and underground sound.
+  </ToolCard>
+  <ToolCard title="myNoise" href="https://mynoise.net/" badge="Sound Generator" badgeStyle="brass" icon={<Waves />}>
+    Customizable ambient soundscapes and noise generators to boost focus or ease anxiety.
+  </ToolCard>
+  <ToolCard title="bt.etree" href="https://bt.etree.org/" badge="Concert Torrents" badgeStyle="neutral" icon={<Disc />}>
+    The long-running home of lossless live concert tape trading.
+  </ToolCard>
+  <ToolCard title="hate5six" href="https://hate5six.com/" badge="Live Shows" badgeStyle="rose" icon={<Tv />}>
+    An immense, high-definition video archive of live hardcore, punk, and indie shows.
+  </ToolCard>
+</ToolDeck>
+
+<PillDeck>
+  <Pill title="Bootleg.fm" href="https://bootleg.fm/" type="community" />
+  <Pill title="Relisten" href="https://relisten.net/" type="open" />
+  <Pill title="setlist.fm" href="https://www.setlist.fm/" type="tool" />
+  <Pill title="BBC Radio 1 Essential Mix" href="https://www.bbc.co.uk/programmes/b006wkfp" type="official" />
+  <Pill title="RadioParadise" href="https://radioparadise.com/" type="official" />
+  <Pill title="Drive & Listen" href="https://drivenlisten.com/" type="tool" />
+  <Pill title="Rainy Mood" href="https://www.rainymood.com/" type="tool" />
+  <Pill title="Music For Programming" href="https://musicforprogramming.net/" type="official" />
+</PillDeck>
+
+---
+
+<MusicSectionHeading kicker="Download" icon={<Download />} accent="rose">
+
+## Audio Ripping & Downloads
+
+</MusicSectionHeading>
+
+<WarnBox>
+  Many general converter sites claim to download from Spotify or Apple Music, but actually just scrape compressed 128kbps audio from YouTube. The tools listed below are confirmed to rip directly from their stated high-quality sources.
+</WarnBox>
+
+<ToolDeck columns={2}>
+  <ToolCard title="Lucida" href="https://lucida.to/" badge="Up to 24-bit/192kHz" badgeStyle="emerald" icon={<Download />} starred>
+    Multi-site ripper supporting Spotify, SoundCloud, Qobuz, Deezer, and Tidal. Pulls directly from Qobuz in uncompressed Hi-Res. Mirror at <a href="https://lucida.su/">lucida.su</a>.
+  </ToolCard>
+  <ToolCard title="DoubleDouble" href="https://doubledouble.top/" badge="Lossless ALAC" badgeStyle="emerald" icon={<Download />} starred>
+    Incredible multi-tool. Rips Apple Music (ALAC), Spotify, Qobuz, Deezer, Tidal, Amazon Music, and Napster in maximum available bitrate.
+  </ToolCard>
+  <ToolCard title="squid.wtf" href="https://squid.wtf/" badge="Direct Rips" badgeStyle="brass" icon={<Download />}>
+    Direct downloads from Deezer, Amazon Music, KHInsider, SoundCloud, and JioSaavn in FLAC.
+  </ToolCard>
+  <ToolCard title="Nicotine+" href="https://nicotine-plus.org/" badge="Soulseek P2P" badgeStyle="wine" icon={<Globe />} starred>
+    The premiere desktop client for the Soulseek peer-to-peer network. Unrivaled for finding obscure, rare, and out-of-print albums.
+  </ToolCard>
+  <ToolCard title="Exact Audio Copy" href="https://www.exactaudiocopy.de/" badge="CD Rip" badgeStyle="brass" icon={<Disc />} starred>
+    The gold standard for lossless CD ripping on Windows, ensuring bit-perfect copies verified against the AccurateRip database.
+  </ToolCard>
+  <ToolCard title="Khinsider" href="https://downloads.khinsider.com/" badge="Soundtracks" badgeStyle="rose" icon={<Music2 />}>
+    The ultimate archive for downloading video game original soundtracks (OSTs) in MP3 and FLAC.
+  </ToolCard>
+</ToolDeck>
+
+<PillDeck>
+  <Pill title="Antra Web" href="https://antra.hoshi.cfd/" type="tool" />
+  <Pill title="ARCOD" href="https://arcod.xyz/" type="tool" />
+  <Pill title="Whipper (Linux)" href="https://github.com/whipper-team/whipper" type="open" />
+  <Pill title="Sitting on Clouds" href="https://www.sittingonclouds.net/" type="tool" />
+</PillDeck>
+
+<MusicSectionHeading icon={<Monitor />} accent="brass">
+
+### Desktop & CLI Rippers
+
+</MusicSectionHeading>
+
+<GuideBox title="The Desktop Toolkit" tone="brass">
+  <ul>
+    <li><strong><a href="https://github.com/DJDoubleD/QobuzDownloaderX-MOD">QobuzDownloaderX-MOD</a>:</strong> Actively maintained Windows tool for ripping pristine FLACs from Qobuz.</li>
+    <li><strong><a href="https://github.com/OrfiTeam/OrpheusDL">OrpheusDL</a>:</strong> A highly modular command-line downloader supporting Deezer, Qobuz, and other service modules.</li>
+    <li><strong><a href="https://github.com/bambanah/deemix">Deemix Revival</a>:</strong> The classic Deezer FLAC ripper, kept alive by the community.</li>
+    <li><strong><a href="https://github.com/exislow/tidal-dl-ng">Tidal-DL-NG</a>:</strong> A dedicated, next-generation Tidal ripper for Windows, Mac, and Linux.</li>
+    <li><strong><a href="https://github.com/nathom/streamrip">streamrip</a>:</strong> A powerful CLI tool for pulling FLACs from Deezer, Tidal, and Qobuz.</li>
+    <li><strong><a href="https://github.com/justin025/onthespot">OnTheSpot</a>:</strong> Open-source GUI downloader for Apple Music, Spotify, Deezer, Qobuz, and Tidal.</li>
+  </ul>
+</GuideBox>
+
+<PillDeck>
+  <TelegramPill title="DeezerMusicBot (Telegram)" href="https://t.me/DeezerMusicBot" />
+  <TelegramPill title="BeatSpotBot (Telegram)" href="https://t.me/BeatSpotBot" />
+  <TelegramPill title="scdlbot (Telegram)" href="https://t.me/scdlbot" />
+</PillDeck>
+
+---
+
+<MusicSectionHeading kicker="Access" icon={<Zap />} accent="brass">
+
+## Firehawk52 — Hi-Res Tokens & Accounts
+
+</MusicSectionHeading>
+
+To utilize tools like OrpheusDL, QobuzDownloaderX, or Streamrip for premium FLAC downloads, you traditionally need an active, paid subscription to those services. **Firehawk52** bridges that gap by providing community-sourced authentication tokens.
+
+<GuideBox title="The Firehawk52 Hub" tone="wine">
+  The project has officially migrated its primary hub to <a href="https://firehawk52.com"><strong>firehawk52.com</strong></a>. The old Rentry page is being phased out, so update your bookmarks.
+  
+  * **What they provide:** A running supply of free ARLs (Deezer), tokens (Qobuz), and account access for Tidal to plug into your ripping software.
+  * **Qobuz 403 Error Fix:** Qobuz recently changed its authentication system. If your ripper throws an "invalid username/password" error, Firehawk52 has a dedicated guide on their site to fix the `app_id` and secret handling.
+
+  <div className="mt-3">
+    <Pill title="Firehawk52 Official Site" href="https://firehawk52.com" tag="Primary Hub" type="official" starred />
+    <TelegramPill title="Telegram Community" href="https://t.me/firehawk52official" />
+    <DiscordPill title="Discord Server" href="https://discord.gg/uqfQbzHj6K" />
+  </div>
+</GuideBox>
+
+---
+
+<MusicSectionHeading kicker="Torrents" icon={<ShieldCheck />} accent="wine">
+
+## Audio Torrenting
+
+</MusicSectionHeading>
+
+For the highest tier of catalog curation and quality control, private music trackers remain unmatched. 
+
+<WarnBox>
+  Always use a reputable VPN and explicitly bind it to your torrent client's network interface before downloading from public or private swarms.
+</WarnBox>
+
+<ToolDeck columns={3}>
+  <ToolCard title="Redacted" href="https://redacted.sh/" badge="Private Tracker" badgeStyle="wine" icon={<ShieldCheck />}>
+    The largest, most prestigious private music tracker in existence. Invite-gated, but accessible via a rigorous interview process.
+  </ToolCard>
+  <ToolCard title="Orpheus" href="https://orpheus.network/" badge="Private Tracker" badgeStyle="brass" icon={<ShieldCheck />}>
+    The sister tracker to Redacted. Features a similarly incredible catalog of MP3s and FLACs, also accessible via interview.
+  </ToolCard>
+  <ToolCard title="Lidarr" href="https://lidarr.audio/" badge="Automation" badgeStyle="emerald" icon={<Sliders />}>
+    Automates your music library management and torrent acquisition. Simply add an artist, and Lidarr hunts down their discography.
+  </ToolCard>
+</ToolDeck>
+
+---
+
+<MusicSectionHeading kicker="Organization" icon={<Library />} accent="emerald">
+
+## Media Servers & Tagging
+
+</MusicSectionHeading>
+
+If you are downloading gigabytes of local music, you need software to properly tag the metadata (artist, album, year, artwork) and a server to stream it to your devices.
+
+<ToolDeck columns={2}>
+  <ToolCard title="Navidrome" href="https://navidrome.org" badge="Self-Hosted" badgeStyle="emerald" icon={<Library />}>
+    A lightweight, blazing-fast self-hosted media server. Point it at your music folder and stream your private collection to any device via Subsonic clients.
+  </ToolCard>
+  <ToolCard title="Foobar2000" href="https://www.foobar2000.org/" badge="Audio Player" badgeStyle="brass" icon={<Headphones />}>
+    The undisputed king of lightweight, highly customizable desktop music players for Windows, Android, and iOS.
+  </ToolCard>
+</ToolDeck>
+
+<GuideBox title="Tagging & Album Art Tools" tone="neutral">
+  <ul>
+    <li><strong><a href="https://www.mp3tag.de/en/">MP3Tag</a> / <a href="https://picard.musicbrainz.org/">MusicBrainz Picard</a>:</strong> Essential software for fixing messy metadata and embedding high-quality album art into your files.</li>
+    <li><strong><a href="https://covers.musichoarders.xyz">Covers.Musichoarders</a>:</strong> A specialized search engine for pulling original Hi-Res album art from multiple music services.</li>
+    <li><strong><a href="https://spicetify.app/">Spicetify</a>:</strong> Command-line tool to customize and theme the official Spotify desktop app. Pair with <a href="https://spicylyrics.org/">Spicy Lyrics</a> for synced lyrics.</li>
+  </ul>
+</GuideBox>
+
+---
+
+<MusicSectionHeading kicker="Reference" icon={<ListMusic />} accent="neutral">
+
+## Format Quality at a Glance
+
+</MusicSectionHeading>
+
+<CompareTable
+  headers={["Service", "Free Tier Quality", "Paid / Ripped Quality", "Best Ripping Tool"]}
+  rows={[
+    ["Spotify", "128–160 kbps OGG", "320 kbps OGG", "Lucida / DoubleDouble / SpotiFLAC"],
+    ["Tidal", "N/A", "Up to Hi-Res FLAC (24-bit/192kHz)", "Tidal-DL-NG / streamrip"],
+    ["Deezer", "128 kbps MP3", "FLAC (16-bit/44.1kHz)", "Lucida / Deemix / ReFreezer"],
+    ["Qobuz", "128 kbps Free Sample", "Up to Hi-Res FLAC (24-bit/192kHz)", "QobuzDownloaderX-MOD / streamrip"],
+    ["Apple Music", "N/A", "Lossless ALAC, up to 24-bit/192kHz", "DoubleDouble / AppleMusicDecrypt"],
+    ["YouTube Music", "128 kbps AAC/Opus", "256 kbps AAC", "gytmdl / Seal / YTDLnis"],
+  ]}
+/>

@@ -1,0 +1,407 @@
+---
+title: Emulation & ROMs
+description: Console emulators, ROM libraries, and setup guides for every platform.
+icon: Cpu
+---
+
+import { EmulationRomsHero } from "@/components/emulation-roms-hero";
+import {
+  GamingAtmosphere,
+  GamingSectionHeading,
+  ZoneIntro,
+  InfoDeck,
+  InfoCard,
+  PillDeck,
+  GamingPill,
+  GuideBox,
+  WarnBox,
+  PillLegend,
+} from "@/components/gaming-magic";
+import {
+  BookOpen,
+  Cpu,
+  HardDrive,
+  Layers,
+  Grid3x3,
+  Gamepad2,
+  Joystick,
+  Disc,
+  Smartphone,
+  Boxes,
+  Library,
+  Layout,
+  MonitorPlay,
+  Wrench,
+  Save,
+  ListChecks,
+} from "lucide-react";
+
+<EmulationRomsHero />
+
+<GamingAtmosphere />
+
+---
+
+<GamingSectionHeading icon={<BookOpen />} accent="violet">
+
+## Before You Start
+
+</GamingSectionHeading>
+
+<PillLegend />
+
+<ZoneIntro accent="violet">
+  Emulation itself is legal in most jurisdictions — it's the ROM files that carry legal risk unless you own the original media. The safest path is dumping your own cartridges/discs, but the community resources below reflect how most people actually approach this.
+</ZoneIntro>
+
+<WarnBox title="BIOS and firmware files are not optional extras">
+Several emulators listed below (marked with a gear icon in the source material) require BIOS or firmware dumps to function correctly or at all — without them you'll get broken graphics, missing audio, or games that refuse to boot. These files are copyrighted, so sourcing them carries the same legal considerations as ROMs themselves.
+</WarnBox>
+
+<InfoDeck>
+  <InfoCard title="Emulation General Wiki" href="https://emulation.gametechwiki.com/index.php/Main_Page" icon={<BookOpen />} tag="Wiki" tagStyle="violet">
+    The single best reference for emulator recommendations, BIOS sourcing guidance, and per-console setup notes — bookmark this before anything else.
+  </InfoCard>
+  <InfoCard title="Recommended Emulator Specs" href="https://emulation.gametechwiki.com/index.php/Computer_specs" icon={<Cpu />} tag="Reference" tagStyle="sky">
+    A breakdown of what hardware each console generation actually needs to emulate smoothly, useful before assuming your PC can't handle it.
+  </InfoCard>
+  <InfoCard title="Emulator BIOS Files" href="https://emulation.gametechwiki.com/index.php/Emulator_files" icon={<HardDrive />} tag="BIOS" tagStyle="amber">
+    The Wiki's own index of where to find required BIOS files for emulators that need them.
+  </InfoCard>
+</InfoDeck>
+
+<PillDeck>
+  <GamingPill title="RetroAchievements" href="https://retroachievements.org/" type="site" />
+  <GamingPill title="Skraper (cover/metadata scraper)" href="https://www.skraper.net/" type="tool" />
+</PillDeck>
+
+---
+
+<GamingSectionHeading icon={<Layers />} accent="emerald">
+
+## Multi-System Emulators
+
+</GamingSectionHeading>
+
+<ZoneIntro accent="violet">
+  One emulator, many consoles. These are the best starting point if you don't want to juggle a separate program for every platform.
+</ZoneIntro>
+
+<InfoDeck>
+  <InfoCard title="RetroArch" href="https://www.retroarch.com/" icon={<Layers />} tag="Frontend" tagStyle="emerald">
+    The most widely used multi-system frontend, running dozens of emulator "cores" under one unified interface with shaders, netplay, and save states built in.
+  </InfoCard>
+  <InfoCard title="Multi-System Emulators List" href="https://emulation.gametechwiki.com/index.php/Multi-system_emulators" icon={<Layers />} tag="Index" tagStyle="violet">
+    The Wiki's full comparison of every multi-system option beyond RetroArch, useful if you want alternatives.
+  </InfoCard>
+</InfoDeck>
+
+<WarnBox title="Avoid these RetroArch cores">
+The community consistently flags certain built-in cores as inferior to their standalone counterparts: avoid the **PPSSPP**, **Dolphin**, and **Citra** cores for PSP, GameCube/Wii, and 3DS respectively, and avoid the **Neo Geo**, **PlayStation 1**, and **Game Boy Advance** cores too. Use the standalone emulators listed below for those systems instead.
+</WarnBox>
+
+<GamingSectionHeading icon={<Grid3x3 />} accent="emerald">
+
+### Frontends & Library Managers
+
+</GamingSectionHeading>
+
+<PillDeck>
+  <GamingPill title="EmuDeck" href="https://www.emudeck.com/" type="tool" />
+  <GamingPill title="Skraper" href="https://www.skraper.net/" type="tool" />
+  <GamingPill title="PlanetEmu" href="https://www.planetemu.net/" type="site" />
+  <GamingPill title="The Emulator Zone" href="https://www.emulator-zone.com/" type="site" />
+</PillDeck>
+
+<GuideBox title="EmuDeck" tone="neutral">
+  If you're setting up emulation on a Steam Deck or a Linux gaming distro, EmuDeck automates nearly the entire process — installing RetroArch, standalone emulators, and organizing your ROM library into a single unified launcher.
+</GuideBox>
+
+---
+
+<GamingSectionHeading icon={<Gamepad2 />} accent="emerald">
+
+## Console-Specific Emulators
+
+</GamingSectionHeading>
+
+<ZoneIntro accent="violet">
+  Standalone emulators consistently outperform their RetroArch-core equivalents for these systems. Gear icons in the source material mark emulators that need BIOS or key files.
+</ZoneIntro>
+
+<GamingSectionHeading icon={<Joystick />} accent="emerald">
+
+### Retro & 16-Bit Era
+
+</GamingSectionHeading>
+
+<InfoDeck>
+  <InfoCard title="Snes9x" href="https://www.snes9x.com/" icon={<Joystick />} tag="SNES" tagStyle="emerald">
+    The long-standing standard for Super Nintendo emulation, accurate and lightweight enough to run on almost anything.
+  </InfoCard>
+  <InfoCard title="Project64" href="https://www.pj64-emu.com/" icon={<Joystick />} tag="N64" tagStyle="emerald">
+    The most widely used Nintendo 64 emulator, with broad plugin support for graphics and input.
+  </InfoCard>
+  <InfoCard title="Dolphin" href="https://dolphin-emu.org/" icon={<Joystick />} tag="GC / Wii" tagStyle="emerald">
+    The gold standard for GameCube and Wii emulation, actively developed with excellent performance and upscaling support.
+  </InfoCard>
+  <InfoCard title="mGBA" href="https://mgba.io/" icon={<Joystick />} tag="GBA" tagStyle="emerald">
+    A highly accurate Game Boy Advance emulator, generally preferred over VBA-based alternatives.
+  </InfoCard>
+</InfoDeck>
+
+<PillDeck>
+  <GamingPill title="melonDS (NDS)" href="https://melonds.kuribo64.net/" type="tool" />
+  <GamingPill title="DeSmuME (NDS)" href="https://desmume.org/" type="tool" />
+  <GamingPill title="Kega Fusion (Genesis)" href="https://www.carpeludum.com/kega-fusion/" type="tool" />
+  <GamingPill title="Nestopia (NES)" href="https://github.com/0ldsk00l/nestopia" type="tool" />
+  <GamingPill title="Flycast (Dreamcast)" href="https://flycast.venom112.dev/" type="tool" />
+</PillDeck>
+
+<GuideBox title="Dolphin performance guide" tone="neutral">
+  Getting Dolphin running smoothly, especially for demanding titles like Breath of the Wild via the Wii U layer, benefits heavily from a dedicated tuning pass — see the <a href="https://github.com/shiiion/dolphin/wiki/Performance-Guide">Dolphin Performance Guide</a> for graphics backend and settings recommendations.
+</GuideBox>
+
+<GamingSectionHeading icon={<Disc />} accent="emerald">
+
+### PlayStation & Xbox Generation
+
+</GamingSectionHeading>
+
+<InfoDeck>
+  <InfoCard title="DuckStation" href="https://www.duckstation.org/" icon={<Disc />} tag="PS1" tagStyle="emerald">
+    A modern, actively maintained PS1 emulator with far better compatibility and upscaling than older alternatives.
+  </InfoCard>
+  <InfoCard title="PCSX2" href="https://pcsx2.net/" icon={<Disc />} tag="PS2" tagStyle="emerald">
+    The definitive PS2 emulator, now with a much friendlier setup process than in years past.
+  </InfoCard>
+  <InfoCard title="RPCS3" href="https://rpcs3.net/" icon={<Disc />} tag="PS3" tagStyle="emerald">
+    A genuinely impressive PS3 emulator given the console's complexity, with strong and growing game compatibility.
+  </InfoCard>
+  <InfoCard title="PPSSPP" href="https://www.ppsspp.org/" icon={<Disc />} tag="PSP" tagStyle="emerald">
+    Runs PSP games at far higher resolutions than the original hardware, widely considered one of the best-executed emulators available.
+  </InfoCard>
+  <InfoCard title="Xemu" href="https://xemu.app/" icon={<Disc />} tag="Xbox" tagStyle="amber">
+    The leading emulator for the original Xbox, requiring a BIOS dump to run.
+  </InfoCard>
+  <InfoCard title="Xenia" href="https://xenia.jp/" icon={<Disc />} tag="Xbox 360" tagStyle="amber">
+    The primary Xbox 360 emulator, with compatibility that varies significantly by title.
+  </InfoCard>
+</InfoDeck>
+
+<PillDeck>
+  <GamingPill title="RPCS3 Setup Guide" href="https://docs.google.com/document/d/1gdjNab-CtVS97jH2diPPP5tCrpBeof9-qPIRRB9-BrU/edit" type="site" />
+  <GamingPill title="Modernized PCSX2 Settings" href="https://mega.nz/folder/WdNAlY5Z#K6PmrQFyDm2k7BEV8KoAmg" type="tool" />
+  <GamingPill title="PCSX-Redux" href="https://pcsx-redux.consoledev.net" type="tool" />
+</PillDeck>
+
+<GamingSectionHeading icon={<Smartphone />} accent="emerald">
+
+### Modern Handhelds & Switch
+
+</GamingSectionHeading>
+
+<WarnBox title="These require your own keys and firmware">
+Switch, Vita, and 3DS emulation all require dumping encryption keys and firmware from a console you own — there's no legitimate way around this step, and guides that skip it are usually pointing to piracy of the keys themselves.
+</WarnBox>
+
+<InfoDeck>
+  <InfoCard title="Ryujinx" href="https://ryujinx.app/" icon={<Smartphone />} tag="Switch" tagStyle="amber">
+    One of the two leading Switch emulators, known for strong compatibility and active development.
+  </InfoCard>
+  <InfoCard title="Cemu" href="https://cemu.info/" icon={<Smartphone />} tag="Wii U" tagStyle="emerald">
+    The definitive Wii U emulator, particularly popular for running Breath of the Wild at enhanced settings.
+  </InfoCard>
+  <InfoCard title="Citra" href="https://citra-emu.org/" icon={<Smartphone />} tag="3DS" tagStyle="amber">
+    The most established 3DS emulator, though development has slowed following legal pressure on its original team.
+  </InfoCard>
+  <InfoCard title="Vita3K" href="https://vita3k.org/" icon={<Smartphone />} tag="Vita" tagStyle="amber">
+    The primary PS Vita emulator, still under active development with steadily improving compatibility.
+  </InfoCard>
+</InfoDeck>
+
+<PillDeck>
+  <GamingPill title="Switch Emulator Setup Guide" href="https://github.com/Abd-007/Switch-Emulators-Guide" type="site" />
+  <GamingPill title="Ryujinx Guide" href="https://docs.google.com/document/d/1prxOJaE4WhPeYNHW17W5UaWZxDgB8e5wNHxt2O4FKvs/" type="site" />
+  <GamingPill title="Cemu Guide" href="https://cemu.cfw.guide/" type="site" />
+  <GamingPill title="SwitchEmuModDownloader" href="https://github.com/amakvana/SwitchEmuModDownloader" type="tool" />
+</PillDeck>
+
+<GamingSectionHeading icon={<Boxes />} accent="emerald">
+
+### Arcade & Other Systems
+
+</GamingSectionHeading>
+
+<PillDeck>
+  <GamingPill title="MAME" href="https://www.mamedev.org/" type="tool" />
+  <GamingPill title="RAZE (Build engine shooters)" href="https://github.com/ZDoom/Raze" type="tool" />
+  <GamingPill title="ECWolf (Wolfenstein 3D)" href="https://maniacsvault.net/ecwolf/" type="tool" />
+  <GamingPill title="NBlood (Duke Nukem)" href="https://github.com/nukeykt/NBlood" type="tool" />
+</PillDeck>
+
+---
+
+<GamingSectionHeading icon={<Library />} accent="amber">
+
+## ROM Sites
+
+</GamingSectionHeading>
+
+<WarnBox title="The .exe rule">
+If a downloaded ROM file has a `.exe` extension instead of the expected format for that console (`.nes`, `.iso`, `.z64`, etc.), it is almost certainly malware. Legitimate ROM dumps never need to be "installed" — they're loaded directly into an emulator.
+</WarnBox>
+
+<InfoDeck>
+  <InfoCard title="Myrient" href="https://myrient.erista.me/" icon={<Library />} tag="ROMs" tagStyle="amber">
+    Widely considered one of the cleanest and most reliable ROM archives currently active, with a straightforward directory structure and no popup-laden download flow.
+  </InfoCard>
+  <InfoCard title="No-Intro" href="https://datomatic.no-intro.org/index.php" icon={<Library />} tag="Verification" tagStyle="violet">
+    Not a download source itself, but the preservation project whose checksums verify that a ROM dump is clean and unmodified — cross-reference downloads against this when in doubt.
+  </InfoCard>
+  <InfoCard title="Vimm's Lair" href="https://vimm.net/" icon={<Library />} tag="ROMs" tagStyle="amber">
+    A long-running, well-regarded archive with a restore-button script available if the download button goes missing.
+  </InfoCard>
+  <InfoCard title="CDRomance" href="https://cdromance.org/" icon={<Library />} tag="ROMs" tagStyle="amber">
+    A solid general ROM archive with an active Discord for support when files or links break.
+  </InfoCard>
+</InfoDeck>
+
+<PillDeck>
+  <GamingPill title="ROM Center" href="https://r-roms.github.io/" type="site" />
+  <GamingPill title="CrocDB" href="https://crocdb.net/" type="site" />
+  <GamingPill title="ROMhacking (fan translations)" href="https://www.romhacking.net/" type="site" />
+  <GamingPill title="WiiUDownloader" href="https://github.com/Xpl0itU/WiiUDownloader" type="tool" />
+</PillDeck>
+
+<GamingSectionHeading icon={<Layout />} accent="amber">
+
+### Platform-Specific ROM Sources
+
+</GamingSectionHeading>
+
+<PillDeck>
+  <GamingPill title="NSWDB (Switch tracker)" href="https://www.nswdb.com" type="site" />
+  <GamingPill title="NoPayStation (PlayStation)" href="https://nopaystation.com/" type="site" />
+  <GamingPill title="3DS ROMs" href="https://3dsroms.org" type="site" />
+  <GamingPill title="hShop (3DS)" href="https://hshop.erista.me/" type="site" />
+  <GamingPill title="AtariMania" href="https://www.atarimania.com/" type="site" />
+  <GamingPill title="1CC (Arcade MAME)" href="https://1cc.kr.eu.org/1cc/index.html" type="site" />
+</PillDeck>
+
+<GuideBox title="ROM hack communities" tone="neutral">
+  For fan-made modifications rather than original dumps, <a href="https://www.smwcentral.net/">SMWCentral</a> hosts an enormous library of Super Mario World hacks, while <a href="https://pokemerald.com/">Pokemerald</a> is the reference project for Pokémon ROM hacking built on a full decompilation.
+</GuideBox>
+
+<PillDeck>
+  <GamingPill title="Rom Magnet Links" href="https://emulation.gametechwiki.com/index.php/ROM_%26_ISO_Sites#BitTorrent" type="site" />
+  <GamingPill title="ROM CSE" href="https://cse.google.com/cse?cx=f47f68e49301a07ac" type="site" />
+</PillDeck>
+
+---
+
+<GamingSectionHeading icon={<MonitorPlay />} accent="sky">
+
+## Browser Emulators
+
+</GamingSectionHeading>
+
+<ZoneIntro accent="violet">
+  No install, no setup — just click and play. Great for quickly testing a game before committing to a full emulator setup, though performance and accuracy trail dedicated emulators.
+</ZoneIntro>
+
+<InfoDeck>
+  <InfoCard title="Browser Emulator Index" href="https://emulation.gametechwiki.com/index.php/Emulators_on_browsers" icon={<MonitorPlay />} tag="Index" tagStyle="violet">
+    The Wiki's full list of browser-based emulators across every console, the best jumping-off point if what you want isn't below.
+  </InfoCard>
+  <InfoCard title="PS1FUN" href="https://www.ps1fun.com/" icon={<MonitorPlay />} tag="PS1" tagStyle="sky">
+    A no-frills browser PS1 emulator, useful for quick nostalgia sessions without any setup.
+  </InfoCard>
+</InfoDeck>
+
+<PillDeck>
+  <GamingPill title="LetsPlayGB (Game Boy)" href="https://www.letsplaygb.com/" type="site" />
+  <GamingPill title="SNESFun" href="https://www.snesfun.com/" type="site" />
+  <GamingPill title="8bbit (NES)" href="https://www.8bbit.com/" type="site" />
+  <GamingPill title="SSega" href="https://www.ssega.com/" type="site" />
+  <GamingPill title="DOSZone" href="https://dos.zone/" type="site" />
+  <GamingPill title="NeoGeoFun" href="https://www.neogeofun.com/" type="site" />
+</PillDeck>
+
+<GuideBox title="Multiplayer browser emulation" tone="neutral">
+  <a href="https://telemelt.com/">Telemelt</a> and <a href="https://psxparty.kosmi.io/">PSX Party</a> both let you play classic multiplayer games with friends directly in the browser, no ROM sharing or netcode setup required on your end.
+</GuideBox>
+
+---
+
+<GamingSectionHeading icon={<Wrench />} accent="rose">
+
+## Homebrew & Console Modding
+
+</GamingSectionHeading>
+
+<ZoneIntro accent="violet">
+  Getting your own console to run custom firmware, homebrew apps, or emulators natively — distinct from PC emulation, but closely related in spirit.
+</ZoneIntro>
+
+<InfoDeck>
+  <InfoCard title="cfw.guide" href="https://cfw.guide/" icon={<Wrench />} tag="Guides" tagStyle="rose">
+    A conglomerate of community-written custom firmware guides covering nearly every console and handheld, the best single starting point for modding your own hardware.
+  </InfoCard>
+  <InfoCard title="ConsoleMods" href="https://consolemods.org/" icon={<Wrench />} tag="Wiki" tagStyle="rose">
+    A community-driven modding wiki, strong on older consoles though it lags behind on the newest hardware.
+  </InfoCard>
+  <InfoCard title="NH Switch Guide" href="https://nh-server.github.io/switch-guide/" icon={<Wrench />} tag="Switch" tagStyle="amber">
+    The definitive Nintendo Switch homebrew and CFW guide, covering RCM entry methods and safe modding practices.
+  </InfoCard>
+  <InfoCard title="WiiBrew" href="https://wiibrew.org/" icon={<Wrench />} tag="Wii" tagStyle="amber">
+    The long-standing wiki dedicated to Wii homebrew development and installation guides.
+  </InfoCard>
+</InfoDeck>
+
+<WarnBox title="RCM Jigs and soldering">
+Entering RCM mode on a Switch to install custom firmware traditionally required soldering a jig by hand. It's strongly recommended to buy a proper RCM Jig instead of attempting solderless workarounds, which carry a real risk of damaging your console.
+</WarnBox>
+
+<GamingSectionHeading icon={<Save />} accent="rose">
+
+### Save Management & Mods
+
+</GamingSectionHeading>
+
+<PillDeck>
+  <GamingPill title="Green Leaf (Switch saves Discord)" href="https://discord.gg/m6z3ra8ssh" type="forum" />
+  <GamingPill title="TOTK Optimization" href="https://old.reddit.com/user/Maxlastbreath/submitted/" type="site" />
+  <GamingPill title="UniversalDynamicInput (Dolphin)" href="https://github.com/Venomalia/UniversalDynamicInput" type="tool" />
+  <GamingPill title="Motion Support Bypass (Cemu)" href="https://old.reddit.com/r/cemu/comments/gobcne/if_you_hate_motion_shrines_dont_have_a_supported/" type="tool" />
+</PillDeck>
+
+---
+
+<GamingSectionHeading icon={<ListChecks />} accent="violet">
+
+## ROM Managers & Verification
+
+</GamingSectionHeading>
+
+<ZoneIntro accent="violet">
+  Once you've built up a ROM library, these tools help organize it and confirm nothing in it has been tampered with.
+</ZoneIntro>
+
+<InfoDeck>
+  <InfoCard title="ROM Managers List" href="https://emulation.gametechwiki.com/index.php/ROM_managers" icon={<ListChecks />} tag="Index" tagStyle="violet">
+    A comparison of dedicated ROM library managers beyond what's built into frontends like RetroArch or EmuDeck.
+  </InfoCard>
+  <InfoCard title="Dat-O-Matic" href="https://datomatic.no-intro.org/index.php" icon={<ListChecks />} tag="Verification" tagStyle="violet">
+    The database of No-Intro checksums used to verify your ROM collection matches known-clean dumps, essential if you're paranoid about tampered files.
+  </InfoCard>
+</InfoDeck>
+
+<PillDeck>
+  <GamingPill title="Dats.site" href="https://dats.site/" type="site" />
+  <GamingPill title="RomStation" href="https://www.romstation.fr/" type="tool" />
+</PillDeck>
+
+<GuideBox title="One last reminder" tone="neutral">
+  Every safety practice from the Game Acquisition page applies here too — uBlock Origin, a real VPN if torrenting ROM packs, and scanning anything before you run it. Emulators themselves are safe software; it's the ROM sourcing around them that needs care.
+</GuideBox>

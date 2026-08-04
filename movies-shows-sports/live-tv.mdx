@@ -1,0 +1,154 @@
+---
+title: Live TV
+description: Live TV channel aggregators, IPTV indexes, and regional streaming mirrors.
+icon: Satellite
+---
+
+import LiveTVHero from "@/components/livetv/livetv-hero";
+import {
+  LiveTVAtmosphere,
+  LiveTVSectionHeading,
+  SiteDeck,
+  SiteCard,
+  PillDeck,
+  Pill,
+  PillLegend,
+  GuideBox,
+  WarnBox,
+  CompareTable,
+} from "@/components/livetv/livetv-elements";
+import { Radio, Globe, Tv, MapPin, Satellite, Rss, Cast, MonitorPlay, MonitorSmartphone, Antenna } from "lucide-react";
+
+<LiveTVAtmosphere />
+
+<LiveTVHero />
+
+<LiveTVSectionHeading kicker="Indexes" icon={<Globe />} accent="amber">
+
+## Aggregators & Channel Indexes
+
+</LiveTVSectionHeading>
+
+These sites don't host streams themselves — they catalog and organize what's out there across many sources, which makes them the best starting point when a specific site goes down.
+
+<SiteDeck columns={3}>
+  <SiteCard title="NTV.cx" href="https://ntv.cx/channels" badge="index" icon={<Rss />} starred>
+Clean channel directory, organized and easy to browse by category.
+  </SiteCard>
+  <SiteCard title="Hoofoot IPTV" href="https://hoofoot.ru/iptv/" badge="index" icon={<Antenna />}>
+Large IPTV channel listing, sports-leaning.
+  </SiteCard>
+  <SiteCard title="TV Explorer" href="https://tvexplorer.live/" badge="index" icon={<Globe />}>
+Searchable live TV directory across regions and genres.
+  </SiteCard>
+  <SiteCard title="Easy Web TV M3u8" href="https://zhangboheng.github.io/Easy-Web-TV-M3u8/routes/tv.html" badge="index" icon={<Cast />}>
+Lightweight open-source M3U8 channel player, GitHub-hosted.
+  </SiteCard>
+  <SiteCard title="i.mjh.nz (GitHub)" href="https://github.com/matthuisman/i.mjh.nz" badge="index" icon={<Satellite />}>
+Source repo behind the i.mjh.nz playlist project. See the hosted mirror below.
+  </SiteCard>
+  <SiteCard title="i.mjh.nz (mirror)" href="https://i.mjh.nz/" badge="mirror" icon={<Satellite />} starred>
+Hosted playlists generated from the GitHub project — reliable M3U feeds.
+  </SiteCard>
+</SiteDeck>
+
+***
+
+<LiveTVSectionHeading kicker="Streaming" icon={<Tv />} accent="teal">
+
+## Main Streaming Sites
+
+</LiveTVSectionHeading>
+
+<GuideBox title="On Mirrors" tone="teal">
+Several of these sites run parallel mirrors under different domains. If the main link is down or blocked, the mirror usually carries an identical channel list.
+</GuideBox>
+
+<SiteDeck columns={2}>
+  <SiteCard title="DaddyLive (dlhd.st)" href="https://dlhd.st//24-7-channels.php" badge="main" icon={<Tv />} starred>
+24/7 channel list, one of the most reliable general live TV sources.
+  </SiteCard>
+  <SiteCard title="Daddylive.pk" href="https://daddylive.pk/" badge="mirror" icon={<Tv />}>
+Mirror of DaddyLive under a different domain.
+  </SiteCard>
+  <SiteCard title="Vavoo.to" href="https://vavoo.to/live" badge="main" icon={<Radio />} starred>
+Broad live channel catalog spanning sports, news, and entertainment.
+  </SiteCard>
+  <SiteCard title="Huhu.to" href="https://huhu.to/live" badge="mirror" icon={<Radio />}>
+Mirror of Vavoo under a different domain.
+  </SiteCard>
+  <SiteCard title="Tvfreedom" href="https://tvfreedom.surge.sh/" badge="main" icon={<Tv />}>
+Simple, ad-light live TV streaming page.
+  </SiteCard>
+  <SiteCard title="Tvalt" href="https://tvalt.surge.sh/" badge="mirror" icon={<Tv />}>
+Mirror of Tvfreedom under a different Surge.sh subdomain.
+  </SiteCard>
+  <SiteCard title="Famelack" href="https://famelack.com/" badge="main" icon={<Cast />}>
+General live TV streaming hub.
+  </SiteCard>
+  <SiteCard title="IPTV Web App" href="https://iptv-web.app/" badge="main" icon={<Satellite />}>
+Browser-based IPTV player, no install required.
+  </SiteCard>
+  <SiteCard title="LiveHDTV" href="https://www.livehdtv.net/" badge="main" icon={<Tv />}>
+HD-focused live channel streaming.
+  </SiteCard>
+  <SiteCard title="1Tube Live TV" href="https://www.1tube.org/live-tv" badge="main" icon={<Cast />}>
+Live TV section of the broader 1Tube streaming site.
+  </SiteCard>
+  <SiteCard title="FreeInterTV" href="http://www.freeintertv.com/" badge="main" icon={<Globe />}>
+Long-running free international TV streaming directory.
+  </SiteCard>
+  <SiteCard title="Heartive TV" href="https://heartivetv.pages.dev/live/" badge="main" icon={<Rss />}>
+Community-hosted live channel page.
+  </SiteCard>
+</SiteDeck>
+
+***
+
+<LiveTVSectionHeading kicker="Regional" icon={<MapPin />} accent="rose">
+
+## Region-Specific Channels
+
+</LiveTVSectionHeading>
+
+<CompareTable
+  headers={["Site", "Region", "Notes"]}
+  rows={[
+    [<a key="pl" href="https://listatv.pl/online.php">ListaTV.pl</a>, "Poland", "Polish channel directory, online streaming"],
+    [<a key="es" href="https://player.tdtchannels.com/television">TDT Channels</a>, "Spain", "Spanish terrestrial TV (TDT) player"],
+    [<a key="fr" href="https://www.stream4free.tv/tv-live-france">Stream4Free</a>, "France", "French live TV section"],
+  ]}
+/>
+
+<LiveTVSectionHeading kicker="Software" icon={<MonitorPlay />} accent="sky">
+
+## Dedicated IPTV Players
+
+</LiveTVSectionHeading>
+
+If you want to use the raw M3U8 playlists found in the indexes above (like `i.mjh.nz` or the `Free-TV Repo`), you need dedicated client software to play them. These apps process the raw links into a beautiful, navigable TV interface and pull in Electronic Program Guides (EPG).
+
+<SiteDeck columns={2}>
+  <SiteCard title="TiviMate" href="https://tivimate.com/" badge="software" icon={<Tv />} starred>
+Considered the absolute gold standard for Android TV and Firestick setups. Features a flawless, native TV guide (EPG) interface, recording capabilities, and multi-screen viewing.
+  </SiteCard>
+  <SiteCard title="SFVIP Player" href="https://www.lativ.me/sfvip-player" badge="software" icon={<MonitorPlay />} starred>
+An incredibly powerful, lightweight IPTV player explicitly built for Windows. Supports MAC portals, Xtream Codes, and standard M3U lists flawlessly.
+  </SiteCard>
+  <SiteCard title="IPTV Smarters Pro" href="https://www.iptvsmarters.com/" badge="software" icon={<MonitorSmartphone />}>
+A highly versatile, cross-platform player (iOS/Android/Web) supporting both raw M3U URLs and Xtream Codes API logins for organized VOD and Live TV tabs.
+  </SiteCard>
+  <SiteCard title="Sparkle TV" href="https://play.google.com/store/apps/details?id=se.hedekonsult.sparkle" badge="software" icon={<Tv />}>
+A very strong alternative to TiviMate for Android TV users, offering excellent Timeshift (catch-up) support and a robust DVR interface.
+  </SiteCard>
+  <SiteCard title="Televizo" href="https://televizo.net/" badge="software" icon={<MonitorSmartphone />}>
+A lightweight, highly customizable player for Android mobile devices featuring robust EPG syncing and a clean, ad-free interface.
+  </SiteCard>
+  <SiteCard title="IINA / VLC Media Player" href="https://iina.io/" badge="software" icon={<MonitorPlay />}>
+The ultimate free, open-source fallbacks for Mac (IINA) and PC (VLC). Simply go to <i>File - Open Network Stream</i> and paste your M3U8 link to start watching instantly.
+  </SiteCard>
+</SiteDeck>
+
+<WarnBox>
+Region-specific players sometimes geoblock based on IP. A VPN set to the relevant country will usually resolve access issues if a stream refuses to load.
+</WarnBox>

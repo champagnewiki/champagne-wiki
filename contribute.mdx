@@ -1,0 +1,83 @@
+---
+title: Contribute To Wiki
+description: We believe in the power of shared discovery. Join the community, share your knowledge, and help keep this wiki alive and expanding.
+icon: Users
+---
+
+import { 
+  ContributeAtmosphere, 
+  ContributeHero, 
+  ContributeSectionHeader,
+  ContributeDeck,
+  ContributeCard,
+  GuildBanner
+} from '@/components/contribute-magic';
+
+import { Telescope, Compass, PenTool, Library, Sparkles } from 'lucide-react';
+
+<ContributeAtmosphere />
+<ContributeHero />
+
+<ContributeSectionHeader icon={<Telescope />} accent="sky">
+
+## Finding & Fixing
+
+</ContributeSectionHeader>
+
+You don't need to write a ten-page essay to make a massive impact. Hundreds of people rely on this wiki daily, and fixing a single broken link or sharing a new tool helps keep everything working for everyone else.
+
+<ContributeDeck>
+  <ContributeCard 
+    title="The Scout"
+    subtitle="Fixing the Map"
+    icon={<Telescope />} 
+    accent="sky"
+    description="The internet breaks all the time. If you click a link and it's dead, seized, or suddenly hiding behind a paywall, let us know so we can fix it."
+    note="Use free version of Proton VPN or your existing VPN connected to some big European country server to verify the link isn't just suffering from regional ISP blocking."
+  />
+  <ContributeCard 
+    title="The Curator"
+    subtitle="Discovering New Stuff"
+    icon={<Compass />} 
+    accent="emerald"
+    description="Stumbled across a great new open-source app, a hidden Telegram group, or a browser extension you can't live without? Drop the link in our Discord so we can add it to the collection."
+  />
+</ContributeDeck>
+
+---
+
+<ContributeSectionHeader icon={<Library />} accent="violet">
+
+## Building New Pages
+
+</ContributeSectionHeader>
+
+For those who want to get a bit more involved. We're always looking to cover new topics and rely on people who actually use these tools daily to help build out new sections.
+
+<ContributeDeck>
+  <ContributeCard 
+    title="The Scribe"
+    subtitle="Writing New Sections"
+    icon={<PenTool />} 
+    accent="rose"
+    description="If a topic or a category is completely missing from the wiki, you can help us start it. Just share your links and basic notes with us, and we'll format it into a proper page."
+  />
+  <ContributeCard 
+    title="The Scholar"
+    subtitle="Expanding Existing Pages"
+    icon={<Library />} 
+    accent="violet"
+    description="Notice a section that feels a bit bare? You can step in to add context, point out better alternatives, or write up quick warnings so people know exactly what they're downloading."
+    note="All technical guides, workflows, and tutorials are welcome here."
+  />
+</ContributeDeck>
+
+---
+
+<ContributeSectionHeader icon={<Sparkles />} accent="amber">
+
+## Where to Post
+
+</ContributeSectionHeader>
+
+<GuildBanner />

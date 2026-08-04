@@ -1,0 +1,41 @@
+---
+title: System Activation
+description: Your guide to genuine installation media and system activation.
+icon: Key
+---
+
+import { Step, Steps } from 'fumadocs-ui/components/steps';
+import { ActivationAtmosphere, ActivationHero, ActivationSectionHeader } from '@/components/activation-magic';
+import { DownloadCloud, TerminalSquare, KeyRound } from 'lucide-react';
+
+<ActivationAtmosphere />
+<ActivationHero />
+
+<ActivationSectionHeader icon={<TerminalSquare />} accent="orange">
+
+## Deployment & Activation Guide
+
+</ActivationSectionHeader>
+
+Follow this standardized protocol to acquire genuine images and activate your system environments using open-source, community-verified scripts.
+
+<Steps>
+  <Step title={<span className="flex items-center text-xl"><DownloadCloud className="w-6 h-6 mr-2 text-amber-500" /> Step 1: Download Media</span>}>
+    Acquire untouched, genuine installation images directly from verified repositories:
+    
+    *   **Windows OS:** Download [here](https://massgrave.dev/genuine-installation-media.html), [here](https://os.click/en) or [here](https://files.rg-adguard.net/version/f0bd8307-d897-ef77-dbd6-216fefbe94c5).
+    *   **MS Office Products:** Download [here](https://massgrave.dev/genuine-installation-media.html) or [here](https://files.rg-adguard.net/version/5f2ad9c6-e111-76e8-06d1-56d44c136bae).
+  </Step>
+
+  <Step title={<span className="flex items-center text-xl"><TerminalSquare className="w-6 h-6 mr-2 text-rose-500" /> Step 2: System Imaging (Windows Only)</span>}>
+    If you are performing a clean installation of Windows, you will need to flash the downloaded ISO file to a USB drive.
+    
+    *   Use [Rufus](https://rufus.ie/en/) to create your bootable installation media.
+  </Step>
+
+  <Step title={<span className="flex items-center text-xl"><KeyRound className="w-6 h-6 mr-2 text-orange-500" /> Step 3: Activation</span>}>
+    Utilize the open-source Microsoft Activation Scripts (MAS) to permanently activate your software.
+    
+    *   Follow the documentation [here](https://github.com/massgravel/Microsoft-Activation-Scripts) to activate Windows and/or MS Office products securely.
+  </Step>
+</Steps>

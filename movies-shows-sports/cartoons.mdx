@@ -1,0 +1,141 @@
+---
+title: Cartoons & Kids
+description: Saturday-morning reruns, streaming mirrors, and a full YouTube channel guide for cartoons and kids media.
+icon: Smile
+---
+
+import { Tv, Radio, ShieldAlert, MonitorPlay } from "lucide-react";
+import {
+  ToonAtmosphere,
+  ToonSectionHeading,
+  SiteDeck,
+  SiteCard,
+  ChannelSection,
+  ChannelGrid,
+  ChannelCard,
+  ToonPillDeck,
+  ToonPill,
+  NoticePanel,
+  ToonGuideBox,
+} from "@/components/cartoons/cartoon";
+import { CartoonHero } from "@/components/cartoons/cartoon-hero";
+
+<ToonAtmosphere />
+
+<CartoonHero />
+
+<ToonSectionHeading icon={<Tv />} accent="amber">
+
+## Streaming Sites
+
+</ToonSectionHeading>
+
+WCO is the flagship — everything else here is either a direct mirror of it or an independent fallback for when it's down.
+
+<NoticePanel icon={<ShieldAlert />} title="Before you click" type="warning">
+These sites run heavy, often aggressive ad networks. Use an ad-blocker and never approve browser notification pop-ups — that's the actual malware vector, not the video player itself.
+</NoticePanel>
+
+<SiteDeck columns={3}>
+  <SiteCard title="WCO.tv" href="https://www.wco.tv/" icon={<Tv />} badge="main">
+Flagship site — the largest library of dubbed/subbed cartoons and anime, updated daily.
+  </SiteCard>
+  <SiteCard title="WCOStream" href="https://www.wcostream.tv/" icon={<Radio />} badge="mirror">
+Direct WCO mirror, same catalog and player, useful when the main domain is throttled.
+  </SiteCard>
+  <SiteCard title="WCOForever" href="https://www.wcoforever.net/" icon={<Radio />} badge="mirror">
+Another WCO mirror domain — near-identical layout, good backup if the .tv domain is blocked by your ISP.
+  </SiteCard>
+  <SiteCard title="WCOFlix" href="https://www.wcoflix.tv/" icon={<Radio />} badge="mirror">
+Third WCO mirror, occasionally has a lighter ad load than the others.
+  </SiteCard>
+  <SiteCard title="PirateXPlay" href="https://piratexplay.cc/home" icon={<Tv />} badge="source">
+Independent cartoon/anime streaming index, not affiliated with WCO.
+  </SiteCard>
+  <SiteCard title="FunnierMoments" href="https://www.funniermoments.net/" icon={<Tv />} badge="source">
+Cartoon streaming site leaning toward comedy-focused animated shows.
+  </SiteCard>
+  <SiteCard title="MegaCartoons" href="https://www.megacartoons.net/" icon={<Tv />} badge="source">
+General-purpose cartoon streaming with a decent classic-show library.
+  </SiteCard>
+  <SiteCard title="B98.tv" href="https://www.b98.tv/home/" icon={<Tv />} badge="source">
+Boomerang-era catalog — Wacky Races, Pink Panther, and other golden-age classics.
+  </SiteCard>
+  <SiteCard title="ToonTales" href="https://www.toontales.net/" icon={<Tv />} badge="source">
+Straightforward cartoon streamer, lighter interface than most WCO alternatives.
+  </SiteCard>
+  <SiteCard title="SuperCartoons" href="https://www.supercartoons.net/" icon={<Tv />} badge="source">
+Long-running free cartoon site with a strong retro/classic-toon focus.
+  </SiteCard>
+  <SiteCard title="KimCartoon" href="https://kimcartoon.com.co/" icon={<Tv />} badge="source">
+Popular alternative with a large modern + classic cartoon catalog.
+  </SiteCard>
+  <SiteCard title="TopCartoons" href="https://www.topcartoons.tv/serie/" icon={<Tv />} badge="source">
+Series-first layout, good for binge-marathoning a specific show start to finish.
+  </SiteCard>
+  <SiteCard title="Toonami Aftermath" href="https://www.toonamiaftermath.com/" icon={<Tv />} badge="source">
+Fan-run continuation of the Toonami block — action/adult-skew anime and toons, live-stream style.
+  </SiteCard>
+</SiteDeck>
+
+***
+
+<ToonSectionHeading icon={<MonitorPlay />} accent="rose">
+
+## The Channel Guide
+
+</ToonSectionHeading>
+
+<ToonGuideBox title="Retro & Classic Toons" tone="success">
+- [**Bugs Bunny / Looney Tunes**](https://www.youtube.com/@warnerbrosclassics) — classic Looney Tunes shorts and clips
+- [**Garfield & Friends**](https://www.youtube.com/@GarfieldAndFriends) — full episodes of the 80s/90s classic
+- [**Popeye And Friends**](https://www.youtube.com/@PopeyeAndFriendsOfficial) — classic Popeye shorts, officially remastered
+- [**The Pink Panther**](https://www.youtube.com/@PinkPanther) — clips and compilations of the wordless slapstick classic
+- [**Wallace & Gromit**](https://www.youtube.com/@WallaceAndGromitOfficial) — full films, clips, and occasional live streams
+- [**Inspector Gadget**](https://www.youtube.com/@InspectorGadget) — full episodes and compilations
+</ToonGuideBox>
+
+<ToonGuideBox title="Cartoon Network & Nickelodeon Staples">
+- [**The Powerpuff Girls**](https://www.youtube.com/@ThePowerpuffGirls) — clips and compilations
+- [**The Loud House**](https://www.youtube.com/@LoudHouse) — official clips, compilations, and full episodes
+- [**The Fairly OddParents**](https://www.youtube.com/@TheFairlyOddParentsOfficial) — clips, shorts, and full episodes
+- [**SpongeBob SquarePants**](https://www.youtube.com/@SpongeBobOfficial) — mostly clips, plus full-episode marathons
+- [**Nicktoons**](https://www.youtube.com/@Nicktoons) — clips, compilations, and full episodes
+- [**WB Kids**](https://www.youtube.com/@WBKids) — mix of clips and full episodes from the WB library
+</ToonGuideBox>
+
+<ToonGuideBox title="Adult Animation (18+)" tone="danger">
+- [**Rick and Morty**](https://www.youtube.com/@rickandmorty) — clips, behind-the-scenes, occasional full episodes
+- [**Family Guy**](https://www.youtube.com/@FamilyGuyFOX) — clips and full-episode playlists
+- [**Adult Swim**](https://www.youtube.com/@adultswim) — surreal, dark-humor, experimental animation hub
+- [**Aqua Teen Hunger Force**](https://www.youtube.com/@AquaTeen-HungerForce) — surreal adult comedy, absurd dark humor
+- [**Mondo Media**](https://www.youtube.com/@MondoMedia) — original animated shorts for mature audiences
+- [**Vivziepop / SpindleHorse**](https://www.youtube.com/@SpindleHorse) — full episodes, explicitly not kid-safe
+</ToonGuideBox>
+
+<ToonGuideBox title="Kids & Preschool Learning" tone="success">
+- [**Bluey**](https://www.youtube.com/@BlueyOfficialChannel) — clips and compilations of the Australian preschool hit
+- [**Peppa Pig**](https://www.youtube.com/@PeppaPigOfficial) — clips and full episodes
+- [**Numberblocks**](https://www.youtube.com/@Numberblocks) — full episodes teaching early math
+- [**Alphablocks**](https://www.youtube.com/@officialalphablocks) — full episodes teaching phonics
+- [**Sesame Street**](https://www.youtube.com/@sesamestreet) — full episodes, classic clips, and songs
+- [**Blippi**](https://www.youtube.com/@Blippi) — full episodes of the educational kids show
+</ToonGuideBox>
+
+<ToonGuideBox title="Action & Adventure Franchises">
+- [**Avatar: The Last Airbender**](https://www.youtube.com/@avatarthelastairbender) — official clips, compilations, and full episodes
+- [**Ben 10**](https://www.youtube.com/@Ben10) — official clips, compilations, and full episodes in English
+- [**Teenage Mutant Ninja Turtles**](https://www.youtube.com/@tmnt) — mostly clips, some full episodes
+- [**Transformers Official**](https://www.youtube.com/@TransformersOfficial) — clips and full episodes across the franchise
+- [**Miraculous Ladybug**](https://www.youtube.com/@Miraculous) — clips, compilations, and full episodes
+- [**My Little Pony**](https://www.youtube.com/@MyLittlePonyOfficial) — full episodes, clips, and music videos
+</ToonGuideBox>
+
+<ToonGuideBox title="French-Language Corner">
+- [**Code Lyoko Officiel**](https://www.youtube.com/@codelyokoofficiel7410) — full episodes and compilations, French only
+- [**Titeuf Saison 1 Officiel**](https://www.youtube.com/@TiteufFR) — full episodes and compilations, French only
+- [**Kaeloo Officiel**](https://www.youtube.com/@KaelooOfficiel) — full episodes and compilations, French only
+- [**Totally Spies! Français**](https://www.youtube.com/@TotallySpiesFrançais) — full episodes and compilations, French only
+- [**Foot 2 Rue**](https://www.youtube.com/@foot2rueextreme/videos) — all full episodes, French only
+- [**Minuscule**](https://www.youtube.com/@Minuscule) — full episodes of the CGI/live-action insect series
+</ToonGuideBox>

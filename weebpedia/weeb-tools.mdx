@@ -1,0 +1,384 @@
+---
+title: Weeb Toolkit
+description: Enjoy anime, manga and novels on all your devices, no matter the OS
+customDescription: Enjoy anime, manga and novels on all your devices, no matter the OS!
+icon: LayoutGrid
+outline: [1,2]
+---
+
+import {
+  WeebAtmosphere, PillLegend, PillDeck, WeebPill, DiscordPill,
+  GuideBox, ZoneIntro, WarnBox, WeebSectionHeading,
+  InfoDeck, InfoCard, CompareTable,
+  FaqItem, FaqSection,
+} from "@/components/weeb-elements";
+import { SoftwareHero } from "@/components/software-hero";
+import {
+  Smartphone, Bot, Apple, Monitor, Server, Wrench, Puzzle,
+  PlayCircle, BookOpen, ScrollText, Compass, Sparkles, Layers,
+  HardDriveDownload, Download, Users, Search, LineChart,
+  Archive, Newspaper, Gamepad2, Image as ImageIcon, Cast,
+} from "lucide-react";
+
+<WeebAtmosphere />
+<SoftwareHero />
+
+<WeebSectionHeading icon={<Smartphone />} accent="lavender">
+
+## Apps
+
+</WeebSectionHeading>
+
+<ZoneIntro accent="lavender">
+Dedicated apps for anime, manga, and novels across every platform, plus the trackers that keep progress synced between them.
+</ZoneIntro>
+
+<WeebSectionHeading icon={<Bot />} accent="sakura">
+
+### Android
+
+</WeebSectionHeading>
+
+<GuideBox title="Anime" icon={<PlayCircle />} tone="neutral">
+<PillDeck>
+  <WeebPill title="Animetail" href="https://github.com/Animetailapp/Animetail" type="tool" tagLabel="DDL/Torrent" />
+  <WeebPill title="Hayase" href="https://hayase.watch/" type="tool" tagLabel="Torrent/Usenet · TV cast" />
+  <WeebPill title="Anikku" href="https://anikku-app.github.io/" type="tool" tagLabel="DDL/Torrent" />
+  <WeebPill title="Dantotsu" href="https://github.com/itsmechinmoy/dantotsu-updater" type="tool" />
+  <DiscordPill title="Dantotsu" href="https://discord.gg/4HPZ5nAWwM" />
+  <WeebPill title="Cloudstream" href="https://github.com/recloudstream/cloudstream" type="tool" />
+  <WeebPill title="Animiru" href="https://github.com/quickdesh/Animiru" type="tool" tagLabel="DDL only" />
+  <WeebPill title="Nuvio" href="https://nuvio.tv/" type="tool" tagLabel="Stremio-based" />
+  <WeebPill title="Mangayomi" href="https://github.com/kodjodevf/mangayomi" type="tool" tagLabel="Anime + Manga + Novels" />
+  <WeebPill title="AnymeX" href="https://anymex.vercel.app/" type="tool" />
+  <WeebPill title="NyanTV" href="https://nyantv.vercel.app/" type="tool" />
+</PillDeck>
+Most of these run on the Mihon extension system and ship empty by default, so you'll need to sideload a source repo before they show any content.
+</GuideBox>
+
+<GuideBox title="Manga: Mihon and its forks" icon={<BookOpen />} tone="neutral">
+- [Mihon](https://mihon.app/) is the actively maintained mainline, with [Komikku](https://komikku-app.github.io/) as its most popular sibling
+- [Yokai](https://mihon.app/forks/Yokai/), [TachiyomiSY](https://mihon.app/forks/TachiyomiSY/), and [TachiyomiAZ](https://mihon.app/forks/TachiyomiAZ/) each layer their own quality-of-life tweaks on top
+</GuideBox>
+
+<GuideBox title="Manga: Kotatsu and its family" icon={<Layers />} tone="neutral">
+- [Usagi](https://yumemi.moe/) and [Futon](https://futon.wtf/) both continue where the original Kotatsu left off
+- [Kotatsu Redo](https://github.com/Kotatsu-Redo/Kotatsu-Redo) and [Kototoro](https://github.com/Kototoro-app/Kototoro) are two more active forks in the same family
+</GuideBox>
+
+<GuideBox title="Manga: all-in-one and local readers" icon={<HardDriveDownload />} tone="neutral">
+- [AnymeX](https://anymex.vercel.app/), [Dantotsu](https://github.com/itsmechinmoy/dantotsu-updater), and [Mangayomi](https://github.com/kodjodevf/mangayomi) all handle manga alongside anime in one app
+- For files already on your device, [Perfect Viewer](https://play.google.com/store/apps/details?id=com.rookiestudio.perfectviewer), [Kuro Reader+](https://kurotoshiro.dev/), and [CDisplayEx](https://play.google.com/store/apps/details?id=com.progdigy.cdisplay.free) work as offline local viewers
+</GuideBox>
+
+<GuideBox title="Mihon-adjacent utilities" icon={<Wrench />} tone="neutral">
+- [Tachibk Viewer](https://tachibk.netlify.app/) lets you inspect your Mihon backup files
+- [Aniyomi Local Manager](https://gitlab.com/Secozzi/aniyomi-local-manager) and the [Mihon Local Source JSON Generator](https://mihonlocal.netlify.app/) both help configure local sources
+- [Kihon](https://github.com/tbvns/Kihon) rounds out the toolkit for power users
+</GuideBox>
+
+<GuideBox title="Novel" icon={<ScrollText />} tone="neutral">
+<PillDeck>
+  <WeebPill title="IReader" href="https://ireaderorg.netlify.app/" type="tool" />
+  <WeebPill title="LN Reader" href="https://www.lnreader.app/" type="tool" />
+  <WeebPill title="Mangayomi" href="https://github.com/kodjodevf/mangayomi" type="tool" />
+  <WeebPill title="QuickNovel" href="https://github.com/LagradOst/QuickNovel" type="tool" />
+  <WeebPill title="Ranobe" href="https://github.com/ranobe-org/ranobe" type="tool" />
+  <WeebPill title="Shosetsu" href="https://shosetsu.app/" type="tool" />
+  <WeebPill title="Tsundoku" href="https://tsundoku-otaku.github.io/" type="tool" />
+</PillDeck>
+For local files instead of online sources, [Moon+ Reader](https://play.google.com/store/apps/details?id=com.flyersoft.moonreader), [ReadEra](https://play.google.com/store/apps/details?id=org.readera), [Librera Reader](https://github.com/foobnix/LibreraReader), [Book's Story](https://github.com/Acclorite/book-story), and [Readest](https://readest.com/) all work well.
+</GuideBox>
+
+<GuideBox title="Trackers" icon={<Compass />} tone="neutral">
+**AniList:** [AL-Chan](https://github.com/zend10/AL-chan), [Aluminium](https://play.google.com/store/apps/details?id=moe.emi.aluminium), [AniHyou](https://github.com/axiel7/AniHyou-android), [Kurumi](https://play.google.com/store/apps/details?id=com.subrotokumar.kurumi), [Otraku](https://github.com/lotusprey/otraku)
+
+**MyAnimeList:** [DailyAL](https://github.com/JICA98/DailyAL), [MoeList](https://moelist.net/), [Risuto](https://github.com/lexwilliam/Risuto)
+
+**Others:** [Kitsune](https://github.com/Drumber/Kitsune) and [Nekome](https://github.com/Chesire/Nekome) for Kitsu, [OpenComicVine](https://github.com/proninyaroslav/OpenComicVine) for comics, [VNDB Lite](https://daniel-c-j.github.io/vndb-lite-web/) for visual novels
+</GuideBox>
+
+<WeebSectionHeading icon={<Apple />} accent="sky">
+
+### iOS
+
+</WeebSectionHeading>
+
+<WarnBox title="Sideloading apps on Apple devices">
+Check out [CFW](https://ios.cfw.guide/), [JCoinx](https://jcionx.github.io/ios-sideloading/), and [The Apple Wiki](https://theapplewiki.com/wiki/Main_Page) for guides on jailbreaking and sideloading.
+</WarnBox>
+
+<GuideBox title="Anime" icon={<PlayCircle />} tone="neutral">
+<PillDeck>
+  <WeebPill title="Sora" href="https://github.com/cranci1/Sora" type="tool" />
+  <WeebPill title="Luna" href="https://github.com/cranci1/Luna" type="tool" />
+  <WeebPill title="Mangayomi" href="https://github.com/kodjodevf/mangayomi" type="tool" />
+  <WeebPill title="AnymeX" href="https://anymex.vercel.app/" type="tool" />
+  <WeebPill title="Nuvio" href="https://nuvio.tv/" type="tool" />
+  <WeebPill title="Hayase" href="https://hayase.watch/" type="tool" tagLabel="Paid" />
+</PillDeck>
+</GuideBox>
+
+<GuideBox title="Manga" icon={<BookOpen />} tone="neutral">
+**Online:** [Aidoku](https://aidoku.app/), [Paperback](https://paperback.moe/), [Suwatte](https://www.suwatte.app/), [AnymeX](https://anymex.vercel.app/), [Mangayomi](https://github.com/kodjodevf/mangayomi), [Tachimanga](https://tachimanga.app/) (subscription)
+
+**Local:** [YACReader](https://apps.apple.com/app/id635717885), [Panels](https://apps.apple.com/app/id1236567663), [iComics](https://apps.apple.com/app/id493845493), [SideBooks](https://apps.apple.com/app/id409777225)
+</GuideBox>
+
+<GuideBox title="Novel" icon={<ScrollText />} tone="neutral">
+[Mangayomi](https://github.com/kodjodevf/mangayomi), [Readest](https://readest.com/), and [Yomu](https://www.yomu-reader.com/) (paid) cover novel reading on iOS.
+</GuideBox>
+
+<GuideBox title="Trackers" icon={<Compass />} tone="neutral">
+**AniList:** [AniClient](https://apps.apple.com/app/id6474905817), [MyAniList](https://apps.apple.com/app/id741257899), [Otraku](https://github.com/lotusprey/otraku), [Risuto](https://apps.apple.com/app/id6455685990), [Ryuusei](https://apps.apple.com/app/id1347721581)
+
+**MyAnimeList:** [Kitsune](https://apps.apple.com/app/id6466716447), [ManGo](https://apps.apple.com/app/id1604385869), [official app](https://apps.apple.com/app/id1469330778)
+</GuideBox>
+
+<WeebSectionHeading icon={<Monitor />} accent="matcha">
+
+### PC
+
+</WeebSectionHeading>
+
+<GuideBox title="Anime" icon={<PlayCircle />} tone="neutral">
+<PillDeck>
+  <WeebPill title="Hayase" href="https://hayase.watch/" type="tool" />
+  <WeebPill title="Stremio" href="https://www.stremio.com/" type="tool" tagLabel="Subscription" />
+  <WeebPill title="Mangayomi" href="https://github.com/kodjodevf/mangayomi" type="tool" />
+  <WeebPill title="Seanime" href="https://seanime.app/" type="tool" />
+  <WeebPill title="Unyo" href="https://github.com/K3vinb5/unyo-app" type="tool" />
+  <WeebPill title="AnymeX" href="https://anymex.vercel.app/" type="tool" />
+</PillDeck>
+Lighter, CLI-leaning options include [Toru](https://github.com/sweetbbak/toru), [Zenshin](https://hitarth-gg.github.io/zenshin-website/), [Curd](https://github.com/Wraient/curd), and [ani-cli](https://github.com/pystardust/ani-cli).
+</GuideBox>
+
+<GuideBox title="Streaming torrents without a dedicated client" icon={<Cast />} tone="neutral">
+[qBittorrent](https://www.qbittorrent.org/) can stream a torrent while it downloads, enable "Download in sequential order" in its settings, then open the file once a few chunks are in. [TorrServer](https://github.com/YouROK/TorrServer) and [WebTorrent](https://github.com/webtorrent/webtorrent-cli) work the same way if you want alternatives.
+</GuideBox>
+
+<GuideBox title="Manga" icon={<BookOpen />} tone="neutral">
+**Online:** [Mangayomi](https://github.com/kodjodevf/mangayomi), [AnymeX](https://anymex.vercel.app/), [Seanime](https://seanime.app/), [Manga-tui](https://github.com/josueBarretogit/manga-tui) (terminal)
+
+**Local:** [OpenComic](https://opencomic.app/), [YACReader](https://www.yacreader.com/), [CDisplayEx](https://www.cdisplayex.com/), [Yomikiru](https://github.com/mienaiyami/yomikiru), [NeeView](https://neelabo.github.io/NeeView/en-us/), [MComix](https://sourceforge.net/projects/mcomix/files/), [SumatraPDF](https://www.sumatrapdfreader.org/free-pdf-reader), [ComicRack CE](https://github.com/maforget/ComicRackCE)
+</GuideBox>
+
+<GuideBox title="Novel" icon={<ScrollText />} tone="neutral">
+[Calibre](https://calibre-ebook.com/), [Freda](https://www.turnipsoft.com/freda/), [Koodo Reader](https://www.koodoreader.com/), [Okular](https://okular.kde.org/), [Readest](https://readest.com/), [SumatraPDF](https://www.sumatrapdfreader.org/free-pdf-reader), [Thorium Reader](https://www.edrlab.org/software/thorium-reader/), and [Yomikiru](https://github.com/mienaiyami/yomikiru) all cover local novel reading on desktop.
+</GuideBox>
+
+<GuideBox title="Trackers" icon={<Compass />} tone="neutral">
+[AniCour](https://github.com/ReStartQ/anicour), [Chibi](https://chibi-cli.pages.dev/), [Hachidori](https://malupdaterosx.moe/hachidori/), [Keroro](https://github.com/hotsno/keroro), [MAL-Sync](https://malsync.moe/), [Tadoku](https://github.com/Eroge-Abyss/tadoku), [Taiga](https://taiga.moe/), [Trackma](https://z411.github.io/trackma/), and [Tundra](https://tundra.moe/) each sync to different combinations of AniList, MAL, Kitsu, Shikimori, or VNDB.
+</GuideBox>
+
+<WeebSectionHeading icon={<BookOpen />} accent="amber">
+
+### E-reader
+
+</WeebSectionHeading>
+
+<GuideBox title="Reading & general tools" icon={<ScrollText />} tone="neutral">
+[KOReader](https://koreader.rocks/) is the standard reader for e-ink devices, with [rakuyomi](https://github.com/tachibana-shin/rakuyomi) as an Aidoku-extension-powered alternative on Linux-based readers. [Calibre](https://calibre-ebook.com/) remains the go-to for library management and format conversion.
+</GuideBox>
+
+<GuideBox title="Conversion & transfer" icon={<Download />} tone="neutral">
+[Kindle Comic Converter](https://github.com/ciromattia/kcc) preps CBZ files for Kindle displays, while [send2ereader](https://github.com/daniel-j/send2ereader) and [Send to Kindle](https://www.amazon.com/sendtokindle) handle getting files onto the device itself.
+</GuideBox>
+
+<GuideBox title="Related reading" icon={<Compass />} tone="neutral">
+Check the [Kindle Modding Wiki](https://kindlemodding.org/) for jailbreak-adjacent tweaks, our [manga tools](#-manga-tools) further down this page for prepping files, and our [OPDS to E-reader guide](/guides/manga/opds) for syncing a self-hosted library directly to your device.
+</GuideBox>
+
+<WeebSectionHeading icon={<Wrench />} accent="rose">
+
+## Tools & Utilities
+
+</WeebSectionHeading>
+
+<ZoneIntro accent="rose">
+Downloaders, converters, image search engines, tracker stat sites, and a corner dedicated to archived otaku history. If it makes your setup smoother without being a full app, it lives here.
+</ZoneIntro>
+
+<WeebSectionHeading icon={<Download />} accent="sakura">
+
+### Downloaders
+
+</WeebSectionHeading>
+
+<GuideBox title="Anime & manga" icon={<HardDriveDownload />} tone="neutral">
+[Anime Downloader NX](https://github.com/anidl/multi-downloader-nx) handles anime downloads from the command line. For manga, [Free Manga Downloader 2](https://github.com/dazedcat19/FMD2), [JAM](https://redsquirrel87.com/jam), and [gallery-dl](https://codeberg.org/mikf/gallery-dl/) cover most sources, while [HDoujin Downloader](https://doujindownloader.com/) specializes in doujin platforms.
+</GuideBox>
+
+<GuideBox title="Specific-case tools" icon={<Puzzle />} tone="neutral">
+[BookWalker Downloader](https://gist.github.com/GolyBidoof/6c9cbff7644c7078520fe45e3bcf039f), [Clip Studio Reader Downloader](https://greasyfork.org/en/scripts/481576-clip-studio-reader-downloader), [Getjump](https://github.com/eggplants/getjump), and [Mangaplus Downloader NG](https://github.com/l0westbob/mloader) each target one specific platform's quirks.
+</GuideBox>
+
+<GuideBox title="Novels & DRM" icon={<ScrollText />} tone="neutral">
+[WebtoEpub](https://github.com/dteviot/WebToEpub), [Epublifier](https://github.com/maoserr/epublifier), and [Lightnovel Crawler](https://github.com/lncrawl/lightnovel-crawler) convert web novels into readable ebook formats. For DRM removal, [KeyDive](https://github.com/hyugogirubato/KeyDive/), [N_m3u8DL-RE](https://github.com/nilaoda/N_m3u8DL-RE), [pywidevine](https://github.com/devine-dl/pywidevine), and [Unshackle](https://github.com/unshackle-dl/unshackle) are the current standard toolset.
+</GuideBox>
+
+<GuideBox title="Comics" icon={<BookOpen />} tone="neutral">
+[Kapowarr](https://casvt.github.io/Kapowarr/) and [Mylar3](https://github.com/mylar3/mylar3) both automate comic downloading and library management, similar to how Sonarr works for TV.
+</GuideBox>
+
+<WeebSectionHeading icon={<PlayCircle />} accent="sky">
+
+### Anime Tools
+
+</WeebSectionHeading>
+
+<GuideBox title="Upscaling & metadata" icon={<Sparkles />} tone="neutral">
+[AnimeJaNai](https://github.com/the-database/mpv-AnimeJaNai) upscales anime in real time through mpv, while [nativeres](https://github.com/Jaded-Encoding-Thaumaturgy/nativeres) helps identify a video's true native resolution. [Anicon for AniList](https://github.com/EnArvy/AniconforAnilist) generates custom icons from your AniList data, and [Manami](https://github.com/manami-project/manami) plus [Shoko Anime](https://shokoanime.com/) both handle local library organization.
+</GuideBox>
+
+<WeebSectionHeading icon={<BookOpen />} accent="matcha">
+
+### Manga Tools
+
+</WeebSectionHeading>
+
+<GuideBox title="Conversion & metadata" icon={<Layers />} tone="neutral">
+[ACBR](https://github.com/binarynonsense/comic-book-reader), [CBconvert](https://github.com/gen2brain/cbconvert), [CbxConverter](https://tomeko.net/software/CbxConverter/), and [ComicbookArchiveToolbox](https://degoedel.github.io/ComicbookArchiveToolbox/) all handle format conversion and compression. For tagging, [ComicTagger](https://github.com/comictagger/comictagger) and [Manga Manager](https://github.com/MangaManagerORG/Manga-Manager) organize metadata across your library.
+</GuideBox>
+
+<GuideBox title="Covers & rendering" icon={<ImageIcon />} tone="neutral">
+[DarkThumbs](https://github.com/fire-eggs/DarkThumbs) and [Icaros](https://www.videohelp.com/software/Icaros) fix thumbnail generation issues. [MangaJaNai](https://github.com/the-database/MangaJaNai) and its [Converter GUI](https://github.com/the-database/MangaJaNaiConverterGui) handle upscaling specifically for manga pages, while [XpdfReader](https://www.xpdfreader.com/index.html) and [Poppler](https://poppler.freedesktop.org/) cover PDF rendering needs.
+</GuideBox>
+
+<WeebSectionHeading icon={<Cast />} accent="lavender">
+
+### Stremio Add-ons
+
+</WeebSectionHeading>
+
+<GuideBox title="Getting started" icon={<Compass />} tone="neutral">
+[Our FireStick Guide](/piracy-guides/firestick) is a good starting point for setting Stremio up properly, paired with the [Stremio Addons](https://stremio-addons.net/) catalog for browsing what's available.
+</GuideBox>
+
+<GuideBox title="Tracking & catalog add-ons" icon={<LineChart />} tone="neutral">
+[SyncriBullet](https://56bca7d190fc-syncribullet.baby-beamup.club/), [Animeo](https://7a625ac658ec-animeo.baby-beamup.club/configure), [MAL-Stremio Addon](https://mal-stremio.vercel.app/), and [Simkl Addons](https://simkl.com/apps/stremio/) sync your Stremio activity back to whichever tracker you use. [Anime Catalogs](https://1fe84bc728af-stremio-anime-catalogs.baby-beamup.club/configure), [AIOStreams](https://docs.aiostreams.viren070.me/), [Debrid Media Manager](https://debridmediamanager.com/), [Jackett Addon](https://github.com/aymene69/stremio-jackett), and [Addon Manager](https://stremio-addon-manager.vercel.app/) round out sourcing and organization.
+</GuideBox>
+
+<WeebSectionHeading icon={<Search />} accent="amber">
+
+### Utility Sites
+
+</WeebSectionHeading>
+
+<GuideBox title="Anime & manga misc" icon={<Puzzle />} tone="neutral">
+[Anime Bingo](https://anime-bingo.aikats.us/), [due.moe](https://due.moe/), [Konsumr](https://www.konsumr.com/), [Related Anime](https://relatedanime.com/), and [WikiTimeline](https://wiki-timeline.com/) each pull creative or practical use out of your tracker data. [Manga Adaptations](https://anilist-adaptations.timschneeberger.me/) links source manga to their anime versions, [MyDubList](https://mydublist.com/) tracks English dub availability, and [Randime](https://randime.moe/) plus [Spin.moe](https://spin.moe/) both help you pick something random to watch next.
+</GuideBox>
+
+<GuideBox title="Reverse image search" icon={<ImageIcon />} tone="neutral">
+[SauceNAO](https://saucenao.com/), [Trace](https://trace.moe/) (built specifically for anime screenshots), [ascii2d](https://ascii2d.net/), and [iqdb](https://iqdb.org/) all identify source material from an image. [Slowpoke Pics](https://slow.pics/) is handy separately for comparing image quality side by side.
+</GuideBox>
+
+<GuideBox title="Tracker stats & tools" icon={<LineChart />} tone="neutral">
+For visualizing your watch history: [Sekai](https://sekai.rl404.com/), [Anistats](https://mayudev.github.io/anistats/), [anime.plus](https://anime.plus/), [KitsuStats](https://drumber.github.io/KitsuStats/#/), and [MAL Badges](https://www.mal-badges.com/). For managing your list directly: [AniCheck](https://anicheck.moe/), [AniListDiff](https://animelistdiff.zerolabs.fyi/), [AniTools](https://anitools.koopz.rocks/), [aniTrakt](https://anitrakt.huere.net/), and [MAL Exporter](https://malscraper.azurewebsites.net/).
+</GuideBox>
+
+<WeebSectionHeading icon={<Archive />} accent="rose">
+
+### Retro Archives & Blogs
+
+</WeebSectionHeading>
+
+<GuideBox title="General archives" icon={<Newspaper />} tone="neutral">
+[CosmoDNA](https://www.ourstarblazers.com/vault/), [Digital World Archive](https://digitalworldarchive.wordpress.com/) (Digimon-focused), [MAD ANGLER PRESS](https://retroanimechris.blogspot.com/), [Media Monster](https://archive.org/details/@media-monster_alt), [MercuryFalcon](https://www.youtube.com/@MercuryFalcon/), [Otaku Archive](https://archive.org/details/otaku-archive) (by the Anime World Order team), [Otaku Print Archive](https://archive.org/details/@nicole_turkowski/uploads), [The Magazine Rack](https://archive.org/details/magazine_rack), [Tuxedo Unmasked](https://www.tuxedounmasked.com/), [Wiz Kaleb](https://archive.org/details/@wiz_kaleb), and [Zimmerit](https://www.zimmerit.moe/) preserve otaku print media, scans, and history across genres.
+</GuideBox>
+
+<GuideBox title="Anime-specific" icon={<PlayCircle />} tone="neutral">
+[80s OVA](https://80s-ova.com/), [Anime Magazine Archive](https://animagarchive.com/), [Anime Preservation Society](https://www.youtube.com/@AnimePreservationSociety), [Animétudes](https://animetudes.com/), [Anime World by Tim Eldred](https://timeldred.com/category/anime-world/), and [Let's Anime](https://letsanime.blogspot.com/) all dig into production history and rare archival footage. For official art specifically, check our [Art page](/art#official-art).
+</GuideBox>
+
+<GuideBox title="Manga & games" icon={<BookOpen />} tone="neutral">
+**Manga:** [Comic Bibliographic and Cover Archives](http://www.eshita.jp/comics/index.html) and [MANGA bookshelf](https://manga-bookshelf.com/) catalog Japanese print history.
+
+**Games:** [Old Game Mags](https://oldgamemags.tumblr.com/), [Forgotten Worlds](https://www.forgottenworlds.net/), [Gaming Alexandria](https://www.gamingalexandria.com/wp/), and the [VGHF Archive](https://archive.gamehistory.org/) preserve gaming print and cultural history.
+</GuideBox>
+
+<GuideBox title="Twitter accounts worth following" icon={<Users />} tone="neutral">
+[Anime V.H.S Bot](https://x.com/AnimeV_H_S), [Daiba Tadashi](https://x.com/daibatadashi), [Retro Gamer Art](https://x.com/RetroGamerArt), [Game Vecanti](https://x.com/gamevecanti), [Memories of Homepage](https://x.com/memoriesofhp), [Retro anime Lovers](https://x.com/anime8cm), and [VideoGameArt&Tidbits](https://x.com/VGArtAndTidbits) all post scanned ephemera and archival finds regularly.
+</GuideBox>
+
+<WeebSectionHeading icon={<Server />} accent="matcha">
+
+## Self-Hosting
+
+</WeebSectionHeading>
+
+<ZoneIntro accent="matcha">
+Run your own library instead of relying on someone else's server, with a client for nearly every platform and a few sync tools to keep everything talking to each other.
+</ZoneIntro>
+
+<WeebSectionHeading icon={<Server />} accent="matcha">
+
+### Server Software
+
+</WeebSectionHeading>
+
+<GuideBox title="By media type" icon={<HardDriveDownload />} tone="neutral">
+**Anime:** [Jellyfin](https://jellyfin.org/), [Plex](https://www.plex.tv/your-media/), [Seanime](https://seanime.app/)
+
+**Manga:** [Komga](https://komga.org/), [Kavita](https://www.kavitareader.com/), [LANraragi](https://sugoi.gitbook.io/lanraragi/dev), [Suwayomi](https://github.com/Suwayomi/Suwayomi-Server)
+
+**Novels:** [Kavita](https://www.kavitareader.com/), [Komga](https://komga.org/), [Calibre-Web](https://github.com/janeczku/calibre-web), [Librium](https://librumreader.com/)
+
+**Audiobooks:** [audiobookshelf](https://www.audiobookshelf.org/), [Booksonic](https://booksonic.org/), [Storyteller](https://smoores.gitlab.io/storyteller/)
+
+**General file access:** [Copyparty](https://github.com/9001/copyparty/)
+</GuideBox>
+
+<WeebSectionHeading icon={<Smartphone />} accent="sky">
+
+### Clients
+
+</WeebSectionHeading>
+
+<GuideBox title="By server & platform" icon={<Layers />} tone="neutral">
+[Plezy](https://plezy.app/) works as a general cross-platform client for most of the above. For Audiobookshelf specifically: [Plappa](https://plappa.me/) and [Prologue](https://prologue.audio/) (both iOS). For Jellyfin: [Jellyfin MPV Shim](https://github.com/jellyfin/jellyfin-mpv-shim) and [Streamyfin](https://github.com/streamyfin/streamyfin). For Komga: [Komelia](https://github.com/Snd-R/Komelia) and [Komik](https://pruizlezcano.github.io/komic/). For LANraragi: [Ichaival](https://github.com/Utazukin/Ichaival), [LANreader](https://github.com/Doraemoe/LANreader), and [LRReader](https://github.com/Guerra24/LRReader). For Seanime: [Seanime Tenji](https://github.com/5rahim/seanime-tenji).
+</GuideBox>
+
+<WeebSectionHeading icon={<Wrench />} accent="amber">
+
+### Sync & Bridge Tools
+
+</WeebSectionHeading>
+
+<GuideBox title="Connecting servers to trackers" icon={<Compass />} tone="neutral">
+[MAL-Sync](https://github.com/MALSync/MALSync) bridges nearly everything. For Jellyfin specifically: [Jellyfin-RPC](https://github.com/JustRadical/jellyfin-rpc), the [MAL Metadata Plugin](https://github.com/ryandash/jellyfin-plugin-myanimelist), and the [Shikimori plugin](https://github.com/te9c/jellyfin-plugin-shikimori). For Kavita and Komga: [komf](https://github.com/Snd-R/komf) and the [Komga Bulk Download Helper](https://github.com/darthmooguy/komga-bulk-download-helper). For Plex: [Plex to AniList Sync](https://github.com/RickDB/PlexAniSync) and [AniBridge](https://anibridge.eliasbenb.dev/). [Tailscale](https://tailscale.com/) is worth having regardless, for accessing your server securely from anywhere.
+</GuideBox>
+
+<GuideBox title="A note on Mihon and forks" icon={<Puzzle />} tone="neutral">
+Android apps built on the Mihon extension system (Aniyomi, Dantotsu, and their forks) can double as clients for Jellyfin, Komga, Kavita, and LANraragi once the right extension is loaded.
+</GuideBox>
+
+<WeebSectionHeading icon={<Puzzle />} accent="sakura">
+
+## Browser Extensions
+
+</WeebSectionHeading>
+
+<ZoneIntro accent="sakura">
+Small quality-of-life additions for your browser, covering anime streaming, manga reading, tracker syncing, and general image or privacy utilities.
+</ZoneIntro>
+
+<GuideBox title="Anime" icon={<PlayCircle />} tone="neutral">
+[animepahe Enhancer](https://github.com/abdullahkhfb/animepahe-enhancer), [Animepahe Plus](https://github.com/hwk929/Animepahe-plus), [Anime Skip Player](https://anime-skip.com/), [Aniskip](https://github.com/aniskip/aniskip-extension), [Crunchyroll With Better Seasons](https://github.com/Dragicafit/Crunchyroll-With-Better-Seasons), [Streaming Enhanced](https://github.com/Dreamlinerm/Netflix-Prime-Auto-Skip), and [Substital](https://substital.com/) all improve streaming site UX or add skip-intro functionality.
+</GuideBox>
+
+<GuideBox title="Manga" icon={<BookOpen />} tone="neutral">
+[All Manga Reader](https://www.allmangasreader.com/) turns scattered manga sites into a unified reader interface. [Image Max URL](https://github.com/qsniyg/maxurl), [Manganato Enhancer](https://github.com/sn0w12/ManganatoEnhancer), and [Similar Manga](https://github.com/similar-manga/similar) each fix a specific site annoyance or add discovery features.
+</GuideBox>
+
+<GuideBox title="Trackers" icon={<Compass />} tone="neutral">
+[MALSync](https://malsync.moe/) auto-tracks progress across most streaming and reading sites. [MAL Redesigned](https://hritikvaishnav.github.io/Project-Redesign/public/mal.html) refreshes MyAnimeList's dated UI, and [Web Scrobbler](https://github.com/web-scrobbler/web-scrobbler) extends scrobbling to Last.fm and similar services.
+</GuideBox>
+
+<GuideBox title="Image" icon={<ImageIcon />} tone="neutral">
+[Betterviewer](https://github.com/Ademking/Betterviewer) improves in-browser image viewing, while [Search by Image](https://github.com/dessant/search-by-image) adds reverse image search to your right-click menu across multiple engines at once.
+</GuideBox>
+
+<GuideBox title="General" icon={<Sparkles />} tone="neutral">
+[Buster](https://github.com/dessant/buster) helps solve captchas faster, [Indie Wiki Buddy](https://getindie.wiki/) redirects fandom wiki links to ad-free alternatives, [Live Stream Downloader](https://webextension.org/listing/hls-downloader.html) grabs HLS streams directly, [NopeCHA](https://nopecha.com/) automates captcha solving, [Selection](https://github.com/emvaized/selecton-extension) adds a quick-action menu on text selection, [Translate Web Pages](https://github.com/FilipePS/Traduzir-paginas-web) handles inline translation, and [Violentmonkey](https://violentmonkey.github.io/) runs the userscripts referenced throughout this page.
+</GuideBox>
