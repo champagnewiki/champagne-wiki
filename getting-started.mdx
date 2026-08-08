@@ -1,0 +1,226 @@
+---
+title: Getting Started
+description: A complete beginner guide to safely navigating the digital landscape.
+icon: Map
+---
+
+import { 
+  GSAtmosphere, GSHero, GSSectionHeader, GSDeck, ToolCard, 
+  ShieldCheck, Wrench, Film, Gamepad2, Sparkles, Music, Smartphone, 
+  Globe, MonitorPlay, Monitor, BookOpen, HeartPulse, Compass, PlaySquare, Dumbbell, Heart, Brain, ShieldAlert, BrainCircuit, Palette, Cpu, Download, FolderTree, HardDrive, Tv, HeartHandshake, Network
+} from '@/components/GettingStarted';
+
+<GSAtmosphere />
+<GSHero />
+
+<GSSectionHeader icon={<ShieldCheck />}>
+## 1. The Foundation of Safe Browsing
+</GSSectionHeader>
+
+Your web browser is your first line of defense. The digital frontier is filled with tracking scripts, intrusive advertisements, and malicious pop-ups. Taking five minutes to properly configure a private browser equips you to navigate safely.
+
+<GSDeck columns={2}>
+  <ToolCard 
+    title="Browsers & Extensions" 
+    href="/browsers-extensions" 
+    icon={<ShieldCheck />} 
+    badge="Start Here"
+    desc="Learn which browsers respect your privacy out-of-the-box, and discover essential extensions like uBlock Origin to permanently remove ads and tracking scripts." 
+  />
+</GSDeck>
+
+<GSSectionHeader icon={<Wrench />}>
+## 2. System Security & Useful Tools
+</GSSectionHeader>
+
+Once your browser is secure, you need to harden your actual operating system. This section moves beyond simple browser extensions to system-wide utilities and network configurations. 
+
+Here, you will learn how to block ads and trackers system-wide across macOS, Windows, iOS, and Android. It also covers essential security scanners like Malwarebytes and AdwCleaner, powerful download managers (like IDM and FDM), media ripping tools, and the critical steps for binding your torrent client (like qBittorrent) securely to a VPN.
+
+<GSDeck columns={2}>
+  <ToolCard 
+    title="Useful Tools & Utilities" 
+    href="/useful-tools" 
+    icon={<Wrench />} 
+    badge="Crucial"
+    desc="A curated arsenal of system-wide adblockers, security scanners, download managers, and privacy tools for your daily driver." 
+  />
+</GSDeck>
+
+<GSSectionHeader icon={<Film />}>
+## 3. Movies, Shows & Sports
+</GSSectionHeader>
+
+Everything you need to cut the cord permanently. This ecosystem covers everything from on-demand blockbusters to live international sporting events.
+
+<GSDeck columns={2}>
+  <ToolCard title="General Entertainment" href="/movies-shows-sports/general-entertainment" icon={<Film />} desc="A massive guide to streaming and downloading movies and TV shows, covering Direct Downloads (DDL) and private Torrents." />
+  <ToolCard title="Asian Entertainment" href="/movies-shows-sports/asian-entertainment" icon={<Globe />} desc="Immerse yourself in Asian dramas, cinema, and television spanning Korea, Japan, China, Taiwan, and Thailand." />
+  <ToolCard title="Live Sports" href="/movies-shows-sports/live-sports" icon={<MonitorPlay />} desc="Watch live global sports, track broadcasts, and download high-quality replays and highlights." />
+  <ToolCard title="Cartoons" href="/movies-shows-sports/cartoons" icon={<Sparkles />} desc="Saturday-morning reruns, animated movies, and streaming mirrors for classic and modern cartoons." />
+  <ToolCard title="Live TV" href="/movies-shows-sports/live-tv" icon={<Tv />} desc="Live television channel aggregators, global IPTV indexes, and regional streaming mirrors." />
+</GSDeck>
+
+<GSSectionHeader icon={<Gamepad2 />}>
+## 4. Gaming & Emulation
+</GSSectionHeader>
+
+Whether you are looking to acquire the newest PC releases safely or preserve retro console history on modern hardware, this is your complete gaming toolkit.
+
+<GSDeck columns={2}>
+  <ToolCard title="Game Acquisition" href="/gaming/game-acquisition" icon={<Download />} desc="Safe download sites, trusted repacks, torrent trackers, abandonware, and open-source game recreations." />
+  <ToolCard title="Emulation & ROMs" href="/gaming/emulation-roms" icon={<Gamepad2 />} desc="Console emulators, clean ROM libraries, and detailed setup guides for preserving gaming history." />
+  <ToolCard title="Gaming Tools" href="/gaming/gaming-tools" icon={<Wrench />} desc="Platform tools, DLC unlockers, performance tweaks, input mappers, and homebrew utilities." />
+  <ToolCard title="Linux Gaming" href="/gaming/linux-gaming" icon={<Monitor />} desc="Proton, Wine, specialized launchers, and everything you need to game natively on Linux." />
+</GSDeck>
+
+<GSSectionHeader icon={<Sparkles />}>
+## 5. Weebpedia (Anime & Manga)
+</GSSectionHeader>
+
+The ultimate directory for otaku culture. Find the best places to stream episodes, read manga, and organize your growing collection across all your devices.
+
+<GSDeck columns={2}>
+  <ToolCard title="Otaku Sites Directory" href="/weebpedia/weeb-websites" icon={<Globe />} desc="The definitive list of websites for high-quality anime streaming, manga reading, and light novels." />
+  <ToolCard title="Weeb Toolkit" href="/weebpedia/weeb-tools" icon={<Smartphone />} desc="Enjoy anime, manga, and novels comfortably on all your devices with dedicated tracking apps and software." />
+</GSDeck>
+
+<GSSectionHeader icon={<Music />}>
+## 6. Music & Audiophile
+</GSSectionHeader>
+
+Move away from algorithm-driven radio and take control of your musical library.
+
+<GSDeck columns={2}>
+  <ToolCard title="Music" href="/music" icon={<Music />} desc="Deep-cut discovery tools, lossless web streaming, and high-fidelity FLAC downloads for the sound obsessed." />
+</GSDeck>
+
+<GSSectionHeader icon={<Smartphone />}>
+## 7. Mobile Downloads Hub
+</GSSectionHeader>
+
+Break free from the standard app stores. This section provides vetted sources for modifying and upgrading your mobile devices.
+
+<GSDeck columns={2}>
+  <ToolCard title="Mobile Downloads Hub" href="/mobile" icon={<Smartphone />} desc="Alternative stores, sideloading utilities, patchers, and vetted community software for both Android and iOS." />
+</GSDeck>
+
+<GSSectionHeader icon={<FolderTree />}>
+## 8. General Resources & OS Goodies
+</GSSectionHeader>
+
+The backend utilities that make your digital life easier, from cloud storage to operating system enhancements.
+
+<GSDeck columns={3}>
+  <ToolCard title="File Hosting & Storage" href="/non-piracy-stuff/file-hosting-storage" icon={<HardDrive />} desc="Your complete guide to P2P file transfer and permanent cloud storage solutions." />
+  <ToolCard title="Lock & Hide Folders" href="/non-piracy-stuff/lock-hide-folders" icon={<ShieldCheck />} desc="Secure your sensitive local Windows files and folders behind a password." />
+  <ToolCard title="Proxy 'Any' Website" href="/non-piracy-stuff/proxy-websites" icon={<Network />} desc="Set up a personal Cloudflare proxy to bypass regional restrictions and censorship." />
+  <ToolCard title="Mac Applications" href="/non-piracy-stuff/macos-applications" icon={<Monitor />} desc="A curated collection of tools to enhance the macOS user experience." />
+  <ToolCard title="Windows Applications" href="/non-piracy-stuff/windows-applications" icon={<Monitor />} desc="System utilities, power toys, and desktop customization tools for Windows." />
+</GSDeck>
+
+<GSSectionHeader icon={<Tv />}>
+## 9. TV Streaming Setup
+</GSSectionHeader>
+
+If you want to move your streaming setup from your computer monitor to your living room television, start here.
+
+<GSDeck columns={2}>
+  <ToolCard title="Fire TV Stick Free Streaming" href="/piracy-guides/firestick" icon={<Tv />} desc="A complete, step-by-step guide to unlocking free, bufferless streaming on Fire TV Stick and Android TV devices using Stremio." />
+</GSDeck>
+
+<GSSectionHeader icon={<Monitor />}>
+## 10. Desktop Software Hub
+</GSSectionHeader>
+
+Procure the software you need to work and create without being locked into expensive monthly subscriptions.
+
+<GSDeck columns={2}>
+  <ToolCard title="Desktop Software Hub" href="/software" icon={<Monitor />} desc="The ultimate repository for open-source alternatives, vetted directories, and community software forums." />
+</GSDeck>
+
+<GSSectionHeader icon={<BookOpen />}>
+## 11. Reading, Education & Knowledge
+</GSSectionHeader>
+
+The internet is the greatest library ever constructed. Access ebooks, audiobooks, and structured learning material entirely for free.
+
+<GSDeck columns={2}>
+  <ToolCard title="Books & Literature" href="/literature" icon={<BookOpen />} desc="Ebooks, audiobooks, comics, magazines, and the tools to manage your digital library." />
+  <ToolCard title="Education & Learning" href="/education" icon={<BrainCircuit />} desc="Free university courses, science references, history archives, and tools for learning new skills." />
+</GSDeck>
+
+<GSSectionHeader icon={<BrainCircuit />}>
+## 12. Artificial Intelligence
+</GSSectionHeader>
+
+Navigate the rapidly evolving AI landscape. Find the best models for writing, coding, and generating media, or learn how to run them entirely offline.
+
+<GSDeck columns={2}>
+  <ToolCard title="Create with AI" href="/ai/create" icon={<Sparkles />} desc="The best chatbots, writing tools, and image, video, audio, and coding generators available today." />
+  <ToolCard title="Build with AI" href="/ai/build" icon={<Wrench />} desc="Agent frameworks, coding agents, IDEs, and AI app-building tools for developers." />
+  <ToolCard title="Learn AI" href="/ai/learn" icon={<BookOpen />} desc="Courses, prompt engineering guides, benchmarks, and expansive AI directories." />
+  <ToolCard title="Run AI Locally" href="/ai/local" icon={<Cpu />} desc="Self-hosted frontends, inference engines, and open-weight models for totally private, on-device AI." />
+</GSDeck>
+
+<GSSectionHeader icon={<Palette />}>
+## 13. Image & Design Tools
+</GSSectionHeader>
+
+Everything for the digital artist, video editor, and graphic designer. 
+
+<GSDeck columns={3}>
+  <ToolCard title="Image & Design Tools" href="/design/image-assets" icon={<Palette />} desc="Editors, vectors, stock photography, asset libraries, and tools for composing visual media." />
+  <ToolCard title="3D, Video & Sound" href="/design/video-3d" icon={<Film />} desc="Render engines, NLE video editors, CAD modeling, and post-production software." />
+  <ToolCard title="The Premium Vault" href="/design/premium-vault" icon={<Download />} desc="The definitive archive of premium assets, templates, commercial plugins, and resource repositories." />
+</GSDeck>
+
+
+<GSSectionHeader icon={<HeartPulse />}>
+## 14. Self Improvement
+</GSSectionHeader>
+
+Resources dedicated to upgrading your mind and body. Find community-vetted guides for overcoming addiction, starting a meditation practice, and optimizing your physical fitness.
+
+<GSDeck columns={3}>
+  <ToolCard 
+    title="Overcoming Addiction" 
+    href="/self-improvement/addiction" 
+    icon={<ShieldAlert />} 
+    desc="Practical guides, community support, and clinical tools for breaking free from digital, behavioral, and substance addictions." 
+  />
+  <ToolCard 
+    title="Meditation & Focus" 
+    href="/self-improvement/meditation" 
+    icon={<Brain />} 
+    desc="Learn how to meditate without the mystical fluff. Free apps, timers, and straightforward methods to reclaim your attention span." 
+  />
+  <ToolCard 
+    title="Fitness & Nutrition" 
+    href="/self-improvement/fitness" 
+    icon={<Dumbbell />} 
+    desc="Workout routines, open-source tracking applications, and practical dietary science to optimize your physical health." 
+  />
+</GSDeck>
+
+
+<GSSectionHeader icon={<HeartHandshake />}>
+## 15. Contribute to the Archive
+</GSSectionHeader>
+
+This wiki thrives because of the community behind it. If you have found value here, consider giving back.
+
+<GSDeck columns={2}>
+  <ToolCard 
+    title="Contribute To Wiki" 
+    href="/contribute" 
+    icon={<Heart className="icon-ember" />} 
+    desc="Join the community, report dead links, share new tools, and help keep this archive alive and expanding." 
+  />
+</GSDeck>
+
+<div className="text-center py-8 mt-4">
+  <p className="font-gs-display text-zinc-400 dark:text-zinc-600 text-[10px] font-bold tracking-widest uppercase">
+    Information wants to be free.
+  </p>
+</div>
