@@ -28,7 +28,7 @@ import {
 
 <SectionHeader icon={<ShieldCheck />}>
 
-## System-Wide Adblocking
+## System-Wide Adblocking 
 
 </SectionHeader>
 
@@ -85,8 +85,11 @@ Apply the chosen hostname using the exact same Android Private DNS steps listed 
 ### iOS & macOS Filtering
 
 <ToolDeck>
+  <ToolCard title="wBlock" href="https://github.com/0xCUB3/wBlock" icon={<Apple />} badge="Open Source" badgeStyle="neutral">
+A phenomenal, completely free and open-source adblocker built strictly for the Safari browser across macOS and iOS. It operates on Apple's native declarative API for zero-overhead performance and fully supports custom filter lists, Greasemonkey userscripts, and iCloud sync.
+</ToolCard>  
   <ToolCard title="AdGuard for iOS" href="https://adguard.com/en/adguard-ios/overview.html" icon={<Apple />} badge="Browser Native" badgeStyle="neutral">
-The free version provides phenomenal adblocking, but it is strictly limited to the Safari browser. Requires specific filter configuration to be truly effective.
+The free version provides great adblocking, but it is strictly limited to the Safari browser. Requires specific filter configuration to be truly effective.
   </ToolCard>
   <ToolCard title="Mullvad Encrypted Profiles" href="https://github.com/mullvad/encrypted-dns-profiles" icon={<Globe />} badge="System Wide" badgeStyle="indigo">
 Native Apple Configuration Profiles that force your entire device to route DNS queries through Mullvad's adblocking servers.
