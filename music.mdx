@@ -45,7 +45,6 @@ import {
 <MusicAtmosphere />
 <MusicHero />
 
-<PillLegend />
 
 <MusicSectionHeading kicker="Discovery" icon={<Compass />} accent="brass">
 
@@ -311,6 +310,52 @@ For the highest tier of catalog curation and quality control, private music trac
   </ToolCard>
   <ToolCard title="Lidarr" href="https://lidarr.audio/" badge="Automation" badgeStyle="emerald" icon={<Sliders />}>
     Automates your music library management and torrent acquisition. Simply add an artist, and Lidarr hunts down their discography.
+  </ToolCard>
+</ToolDeck>
+
+---
+
+<MusicSectionHeading kicker="Curation" icon={<ListMusic />} accent="sky">
+
+## Playlist Transfer & Management
+
+</MusicSectionHeading>
+
+Whether you are migrating away from Spotify, backing up a massive library, or trying to fix a broken shuffle algorithm, these tools give you total control over your curated playlists.
+
+<ToolDeck columns={2}>
+  <ToolCard title="TuneMyMusic" href="https://www.tunemymusic.com/" badge="Transfer" badgeStyle="emerald" icon={<Zap />} starred>
+    The standard for transferring massive playlists between almost any music service (Spotify, Apple Music, Tidal, YouTube). Fast, reliable, and handles heavy libraries with ease.
+  </ToolCard>
+  <ToolCard title="Soundiiz" href="https://soundiiz.com/" badge="Sync Manager" badgeStyle="emerald" icon={<Globe />} starred>
+    An advanced playlist manager. Goes beyond simple transfers by allowing you to synchronize playlists across different platforms, merge lists, and automatically clean up broken tracks.
+  </ToolCard>
+  <ToolCard title="Spotify Dedup" href="https://spotify-dedup.com/" badge="Cleanup" badgeStyle="wine" icon={<Sparkles />}>
+    Spotify's interface frequently allows duplicate tracks to bloat your playlists. This open-source tool safely scans your library and removes duplicates with a single click.
+  </ToolCard>
+  <ToolCard title="Trikatuka" href="https://trikatuka.aknakn.eu/#/" badge="True Shuffle" badgeStyle="brass" icon={<Sliders />} starred>
+    Fixes Spotify's infamously broken shuffle algorithm. This tool completely randomizes your track order and clones it into a new, genuinely shuffled playlist.
+  </ToolCard>
+  <ToolCard title="Exportify" href="https://exportify.app/" badge="Backup to CSV" badgeStyle="neutral" icon={<Download />}>
+    Instantly back up any of your Spotify playlists by exporting them directly into a clean CSV file. Essential for preserving your library data outside of the ecosystem.
+  </ToolCard>
+  <ToolCard title="Spotlistr" href="https://www.spotlistr.com/" badge="Text Converter" badgeStyle="rose" icon={<Search />}>
+    An incredibly resourceful tool that converts plain text lists, Reddit threads, YouTube links, or Last.fm scrobbles directly into Spotify playlists in seconds.
+  </ToolCard>
+  <ToolCard title="Playlisty" href="https://apps.apple.com/us/app/playlisty-for-apple-music/id1459275972" badge="iOS App" badgeStyle="rose" icon={<Smartphone />}>
+    The absolute gold-standard iOS app for Apple Music users. Seamlessly imports playlists from Spotify, YouTube, and Setlist.fm directly into your Apple library.
+  </ToolCard>
+  <ToolCard title="Discover Quickly" href="https://discoverquickly.com/" badge="Fast Builder" badgeStyle="emerald" icon={<Headphones />}>
+    Built by Spotify employees, this visual interface lets you simply hover your mouse over tracks and album art to instantly hear a preview, making playlist building exponentially faster.
+  </ToolCard>
+  <ToolCard title="Smarter Playlists" href="http://smarterplaylists.playlistmachinery.com/" badge="Automation" badgeStyle="brass" icon={<Map />}>
+    A powerful node-based graphical interface for building complex Spotify playlists. Set automated rules to filter tracks by BPM, acousticness, or combine multiple lists dynamically.
+  </ToolCard>
+  <ToolCard title="Spotify Backup" href="https://github.com/caseychu/spotify-backup" badge="CLI Script" badgeStyle="neutral" icon={<Monitor />}>
+    A lightweight, open-source Python script for developers and data-hoarders to quietly export your entire Spotify library and playlist data via the command line.
+  </ToolCard>
+  <ToolCard title="Playlistor" href="https://playlistor.io/" badge="Apple Music" badgeStyle="neutral" icon={<Zap />}>
+    A streamlined, no-frills web tool specifically designed for fast, accurate conversions directly between Apple Music and Spotify.
   </ToolCard>
 </ToolDeck>
 
