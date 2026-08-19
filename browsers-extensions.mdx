@@ -80,13 +80,13 @@ A browser is only as powerful as the tools it wields. We have categorized the mo
 The undisputed king of content blockers. It is fast, potent, and lean. Required for a clean web experience. 
   </ToolCard>
   <ToolCard 
-    title="ClearURLs" 
-    href="https://docs.clearurls.xyz/1.23.0/#download" 
+    title="Clean URLs Filter" 
+    href="https://raw.githubusercontent.com/DandelionSprout/adfilt/refs/heads/master/LegitimateURLShortener.txt" 
     icon={<EyeOff />} 
-    badge="Privacy" 
+    badge="Filter List" 
     badgeStyle="neutral"
   >
-Automatically strips bloated, invisible tracking elements from URLs. *Note: Has not been updated recently and may cause breakage on some modern e-commerce sites.*
+Automatically removes unnecessary `?/&` tracking values from URLs, keeping them transparent and easy to share. **Setup:** Copy the link above. In **uBlock Origin**: Dashboard → Filter lists → Import → Paste & Apply. In **AdGuard**: Settings → Filter lists → Add Custom filter. Auto-updates once enabled.
   </ToolCard>
   <ToolCard title="Privacy Badger" href="https://privacybadger.org/" icon={<GlobeLock />} badge="Heuristic" badgeStyle="amber">
 Developed by the EFF. It automatically learns to block invisible trackers as you browse, dynamically filling in the gaps left by standard blocklists.
