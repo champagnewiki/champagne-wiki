@@ -86,7 +86,7 @@ Your fallback options in order of practicality: look for a similar game with bet
 </GuideBox>
 
 <InfoDeck>
-  <InfoCard title="Pop!_OS" href="https://pop.system76.com/" icon={<Layers3 />} tag="Beginner" tagStyle="emerald">
+  <InfoCard title="Pop!_OS" href="https://system76.com/pop" icon={<Layers3 />} tag="Beginner" tagStyle="emerald">
     Ubuntu-based with GNOME, dedicated Nvidia and AMD/Intel ISOs, and gaming-friendly tweaks out of the box.
   </InfoCard>
   <InfoCard title="Nobara" href="https://nobaraproject.org/" icon={<Layers3 />} tag="Gaming-focused" tagStyle="emerald">
@@ -126,7 +126,7 @@ The wiki explicitly warns against **HoloISO** (abandoned, unstable), **Deepin** 
   <GamingPill title="KDE Plasma" href="https://kde.org/plasma-desktop/" type="tool" />
   <GamingPill title="GNOME" href="https://www.gnome.org/" type="tool" />
   <GamingPill title="Xfce" href="https://xfce.org/" type="tool" />
-  <GamingPill title="Cinnamon" href="https://projects.linuxmint.com/cinnamon/" type="tool" />
+  <GamingPill title="Cinnamon" href="https://linuxmint.com/download.php" type="tool" />
 </PillDeck>
 
 <WarnBox title="Avoid Pantheon (elementary OS) for gaming">
@@ -167,7 +167,7 @@ Pantheon has no option to disable its compositor on X11 at all, which makes it a
 <PillDeck>
   <GamingPill title="Lutris Install Scripts" href="https://lutris.net/games" type="site" />
   <GamingPill title="Heroic GitHub" href="https://github.com/Heroic-Games-Launcher/HeroicGamesLauncher" type="tool" />
-  <GamingPill title="Bottles Flathub" href="https://flathub.org/apps/com.usebottles.bottles" type="tool" />
+  <GamingPill title="Bottles Flathub" href="https://flathub.org/en/apps/com.usebottles.bottles" type="tool" />
 </PillDeck>
 
 <WarnBox title="Install via Flatpak where possible">
@@ -298,7 +298,6 @@ Proton and most Lutris scripts bundle DXVK (DirectX 9/10/11 → Vulkan) and VKD3
 </InfoDeck>
 
 <PillDeck>
-  <GamingPill title="MangoHud" href="https://github.com/flightlessmango/MangoHud" type="tool" />
   <GamingPill title="vkBasalt (post-processing)" href="https://github.com/DadSchoorse/vkBasalt" type="tool" />
 </PillDeck>
 
@@ -354,16 +353,10 @@ Environment variables like `PROTON_NO_ESYNC=1` or `__GL_SHADER_DISK_CACHE=1` fix
   <InfoCard title="Arch Wiki: Gaming" href="https://wiki.archlinux.org/title/Gaming" icon={<LifeBuoy />} tag="Reference" tagStyle="sky">
     The most technically thorough general gaming-on-Linux reference available, distro-agnostic despite the Arch branding.
   </InfoCard>
-  <InfoCard title="r/linux_gaming" href="https://www.reddit.com/r/linux_gaming/" icon={<LifeBuoy />} tag="Community" tagStyle="amber">
+  <InfoCard title="r/linux_gaming" href="https://old.reddit.com/r/linux_gaming/" icon={<LifeBuoy />} tag="Community" tagStyle="amber">
     Active community for troubleshooting recent or obscure issues that haven't made it into wikis yet, and for general driver/distro discussion.
   </InfoCard>
 </InfoDeck>
-
-<PillDeck>
-  <GamingPill title="ProtonDB" href="https://www.protondb.com/" type="site" />
-  <GamingPill title="PCGamingWiki" href="https://www.pcgamingwiki.com/" type="site" />
-  <GamingPill title="Arch Wiki: Gaming" href="https://wiki.archlinux.org/title/Gaming" type="site" />
-</PillDeck>
 
 <GuideBox title="Debugging checklist" tone="neutral">
   Check ProtonDB first for the specific game and Proton version, then confirm GPU drivers are current, then try Proton-GE if stock Proton fails, and only reach for manual Winetricks/Protontricks dependencies as a last resort.
@@ -388,16 +381,10 @@ Environment variables like `PROTON_NO_ESYNC=1` or `__GL_SHADER_DISK_CACHE=1` fix
   <InfoCard title="EmuDeck" href="https://www.emudeck.com/" icon={<Gamepad2 />} tag="Emulation" tagStyle="emerald">
     One-click emulator setup and configuration tool, handling install and BIOS/ROM folder structuring for dozens of emulators at once.
   </InfoCard>
-  <InfoCard title="CryoUtilities" href="https://github.com/CryoByte33/steam-deck-optimizer" icon={<Gamepad2 />} tag="Optimizer" tagStyle="amber">
+  <InfoCard title="CryoUtilities" href="https://github.com/cryobyte33/steam-deck-utilities" icon={<Gamepad2 />} tag="Optimizer" tagStyle="amber">
     Adjusts swap and zram settings specifically tuned for Deck's hardware to reduce stuttering in memory-heavy titles.
   </InfoCard>
 </InfoDeck>
-
-<PillDeck>
-  <GamingPill title="Decky Loader" href="https://decky.xyz/" type="tool" />
-  <GamingPill title="EmuDeck" href="https://www.emudeck.com/" type="tool" />
-  <GamingPill title="Deck Verified Database" href="https://store.steampowered.com/curator/33907817" type="site" />
-</PillDeck>
 
 <WarnBox title="Desktop Mode voids some warranty assumptions">
 Installing Decky Loader plugins and switching to Desktop Mode is fully supported by Valve, but installing untrusted third-party plugins carries the same risk as installing any unverified software, review sources before installing.
