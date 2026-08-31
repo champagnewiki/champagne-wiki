@@ -92,19 +92,19 @@ These are the backends that actually load and run the model weights — most fro
 Every family below is open-weight and runs through Ollama, llama.cpp, or LM Studio — pick based on your available RAM and what you're using it for, not just parameter count.
 
 <ToolDeck columns={2}>
-  <ToolCard title="Meta Llama" href="https://ollama.com/library/llama3.3" icon={<Boxes />} badge="Most Popular" badgeStyle="indigo">
+  <ToolCard title="Meta Llama" href="https://huggingface.co/meta-llama" icon={<Boxes />} badge="Most Popular" badgeStyle="indigo">
     The most widely adopted open-weight family with the largest community ecosystem, spanning 1B to 405B parameters with strong general reasoning.
   </ToolCard>
-  <ToolCard title="Alibaba Qwen" href="https://ollama.com/library/qwen2.5" icon={<Boxes />} badge="Widest Range" badgeStyle="emerald">
+  <ToolCard title="Alibaba Qwen" href="https://huggingface.co/Qwen" icon={<Boxes />} badge="Widest Range" badgeStyle="emerald">
     27 models spanning 0.5B to 235B parameters — the widest size range of any family, with strong multilingual and coding performance.
   </ToolCard>
-  <ToolCard title="DeepSeek" href="https://ollama.com/library/deepseek-r1" icon={<Boxes />} badge="Best Reasoning" badgeStyle="rose">
+  <ToolCard title="DeepSeek" href="https://huggingface.co/deepseek-ai/collections" icon={<Boxes />} badge="Best Reasoning" badgeStyle="rose">
     DeepSeek R1 introduced chain-of-thought reasoning that rivals proprietary frontier models, while V3 is a massive but efficient MoE model.
   </ToolCard>
-  <ToolCard title="Mistral" href="https://ollama.com/library/mistral" icon={<Boxes />} badge="Efficient" badgeStyle="amber">
+  <ToolCard title="Mistral" href="https://huggingface.co/mistralai" icon={<Boxes />} badge="Efficient" badgeStyle="amber">
     Known for the best performance-per-parameter ratio in the open-weight space, using sliding window attention for efficiency at smaller sizes.
   </ToolCard>
-  <ToolCard title="Google Gemma" href="https://ollama.com/library/gemma2" icon={<Boxes />} badge="Small & Safe" badgeStyle="emerald">
+  <ToolCard title="Google Gemma" href="https://deepmind.google/models/gemma/gemma-4/#e2b-and-e4b" icon={<Boxes />} badge="Small & Safe" badgeStyle="emerald">
     Lightweight family from Google DeepMind spanning 1B to 31B, tuned for strong safety and quality even at small sizes.
   </ToolCard>
   <ToolCard title="Microsoft Phi" href="https://ollama.com/library/phi4" icon={<Boxes />} badge="Tiny But Sharp" badgeStyle="indigo">
@@ -113,8 +113,8 @@ Every family below is open-weight and runs through Ollama, llama.cpp, or LM Stud
 </ToolDeck>
 
 <PillDeck>
-  <AIPill title="Liquid AI LFM2" href="https://huggingface.co/LiquidAI" type="open" />
-  <AIPill title="Hugging Face SmolLM" href="https://huggingface.co/HuggingFaceTB/SmolLM2-360M" type="open" />
+  <AIPill title="Liquid AI LFM" href="https://huggingface.co/LiquidAI" type="open" />
+  <AIPill title="Hugging Face SmolLM" href="https://huggingface.co/collections/HuggingFaceTB/smollm" type="open" />
 </PillDeck>
 
 <GuideBox title="Smallest viable models" tone="success">
