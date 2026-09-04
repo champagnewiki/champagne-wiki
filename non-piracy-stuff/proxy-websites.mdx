@@ -22,9 +22,12 @@ import {
   ProxySectionHeader 
 } from '@/components/proxy-magic';
 import { ShieldAlert, TerminalSquare } from 'lucide-react';
+import FeedbackCollapsible from "@/components/FeedbackCollapsible";
 
 <ProxyAtmosphere />
 <ProxyHero />
+
+<FeedbackCollapsible />
 
 <Callout title="Disclaimer" type="warn" icon={<ShieldAlert className="w-5 h-5 text-fuchsia-500" />}>
   <div>While this method is incredibly effective at bypassing DNS-level and ISP-level blocks, please note that **not all** websites can be proxied using this serverless worker method (e.g., sites with heavy anti-bot protection like strict Cloudflare Turnstiles).</div>

@@ -19,7 +19,7 @@
 Our goal is simple: to provide a clean, uncluttered space where the community can explore high-quality resources without distractions. This directory cuts through the noise of the modern web to catalog only what actually works. 
 
 ### The Index
-The wiki is organized into focused collections to help you find exactly what you need:
+The [wiki](https://champagne.pages.dev/) is organized into focused collections to help you find exactly what you need:
 
 *   **🧰 Digital Tooling & AI:** Software, AI utilities, browsers, extensions, mobile apps, and essential daily tools.
 *   **🎬 Media & Entertainment:** Cinema, television, live sports, music, gaming, and Japanese media.

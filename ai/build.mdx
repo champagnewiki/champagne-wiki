@@ -12,9 +12,11 @@ import {
 import {
   Bot, Network, Terminal, Code2, Blocks, ShieldAlert, Server, Wrench,
 } from "lucide-react";
+import FeedbackCollapsible from "@/components/FeedbackCollapsible";
 
 <AIAtmosphere theme="build" />
 <BuildHero />
+<FeedbackCollapsible />
 
 <NoticePanel icon={<ShieldAlert />} title="Agent safety" type="danger">
   Agents frequently run with elevated permissions and can execute shell commands or modify files without confirmation. Avoid granting full root or drive access — a container, VPS, or VM is strongly recommended for anything autonomous.
