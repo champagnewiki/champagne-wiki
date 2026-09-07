@@ -34,21 +34,27 @@ import FeedbackCollapsible from "@/components/FeedbackCollapsible";
 
 </SectionHeader>
 
-Blocking ads, trackers, and malicious domains at the network level is far more efficient than relying solely on browser extensions. It secures your entire device, including background apps.
+Browser adblockers are still the most effective way to remove ads from websites, but they only protect the browser itself. DNS filtering adds a system-wide layer that can block known advertising, tracking, and malicious domains at the DNS level across apps, games, and background services. 
+
+*DNS performance varies significantly by location and network; these recommendations prioritize filtering, privacy, reliability, and ease of use rather than claiming one resolver is universally the fastest. For a quick comparison, you can test providers from your own connection using tools like [DNS Speed Test](https://dnsspeedtest.online/) before switching permanently.*
 
 ### Android Filtering
 
 <ToolDeck>
-  <ToolCard title="RethinkDNS" href="https://rethinkdns.com/app" icon={<Smartphone />} badge="Highly Customizable" badgeStyle="indigo">
-An open-source DNS + Firewall app. It allows you to select highly specific blocklists and route them via secure DoT (DNS-over-TLS).
+  <ToolCard title="RethinkDNS" href="https://rethinkdns.com/app" icon={<Smartphone />} badge="Power user" badgeStyle="indigo">
+    An open-source DNS + Firewall method for users who want granular control over blocklists, app networking, and DNS-over-TLS routing.
   </ToolCard>
-  <ToolCard title="Mullvad DNS" href="https://mullvad.net/en/help/dns-over-https-and-dns-over-tls#how-to-use" icon={<Lock />} badge="Plug & Play" badgeStyle="emerald">
-A zero-configuration, highly private DNS resolver that blocks ads and trackers natively. Perfect if you don't want to manage blocklists manually.
+  <ToolCard title="AdGuard DNS" href="https://adguard-dns.io/en/public-dns.html" icon={<ShieldCheck />} badge="Solid Alternative" badgeStyle="emerald">
+    A free, encrypted DNS service that blocks ads and trackers system-wide without requiring an app.
+  </ToolCard>
+  <ToolCard title="Control D" href="https://controld.com/free-dns#quick-setups" icon={<Network />} badge="Flexible" badgeStyle="rose">
+    Highly reliable free public DNS with ready-made Ads & Tracking, Malware, and Family filtering presets.
   </ToolCard>
 </ToolDeck>
 
 **Method 1: RethinkDNS Setup**
-First, visit [rethinkdns.com/configure](https://www.rethinkdns.com/configure) and select the following recommended lists:
+RethinkDNS is our preferred default for Android users who want to combine DNS filtering with firewall controls. Visit [rethinkdns.com/configure](https://www.rethinkdns.com/configure) and select the following recommended lists:
+
 <FilterCloud 
   title="Recommended RethinkDNS Blocklists" 
   filters={[
@@ -65,38 +71,47 @@ Once selected, toggle the URL format to **DoT** and copy the generated URL. Then
 
 <StepList>
   <Step num="1">Open the Android <strong>Settings</strong> app.</Step>
-  <Step num="2">Navigate to <strong>Network & internet</strong>.</Step>
+  <Step num="2">Navigate to <strong>Network & internet</strong> (or Connections).</Step>
   <Step num="3">Tap on <strong>Private DNS</strong>.</Step>
   <Step num="4">Select <strong>Private DNS provider hostname</strong>.</Step>
   <Step num="5">Paste your copied RethinkDNS DoT URL and hit Save.</Step>
 </StepList>
 
-**Method 2: Mullvad DNS Setup**
-If you prefer Mullvad, select the hostname that best fits your needs:
-- <ConfigCode>base.dns.mullvad.net</ConfigCode> (Blocks Ads, Trackers, Malware)
-- <ConfigCode>extended.dns.mullvad.net</ConfigCode> (Blocks Ads, Trackers, Malware, Social)
-- <ConfigCode>family.dns.mullvad.net</ConfigCode> (Blocks Ads, Trackers, Malware, Adult, Gambling)
-- <ConfigCode>all.dns.mullvad.net</ConfigCode> (Blocks everything above)
+**Method 2: Plug & Play DNS (AdGuard or Control D)**
+If you prefer a simpler setup without configuring custom blocklists, you can use a public filtering endpoint to block known advertising and tracking domains:
 
-Apply the chosen hostname using the exact same Android Private DNS steps listed above.
+<ConfigCode>dns.adguard-dns.com</ConfigCode> *(or <ConfigCode>p2.freedns.controld.com</ConfigCode>)*
 
-*(Note: If you only want browser-level blocking on Android, you can use the free [Adguard for Android](https://adguard.com/en/adguard-android/overview.html). For the system-wide premium version, check out the resources on our [Mobile Page](/mobile).)*
+Paste your chosen hostname into your Android Private DNS settings using the exact same steps listed in Method 1.
 
 ---
 
 ### iOS & macOS Filtering
 
 <ToolDeck>
-  <ToolCard title="wBlock" href="https://github.com/0xCUB3/wBlock" icon={<Apple />} badge="Open Source" badgeStyle="neutral">
-A phenomenal, completely free and open-source adblocker built strictly for the Safari browser across macOS and iOS. It operates on Apple's native declarative API for zero-overhead performance and fully supports custom filter lists, Greasemonkey userscripts, and iCloud sync.
-</ToolCard>  
+  <ToolCard title="wBlock" href="https://github.com/0xCUB3/wBlock" icon={<Apple />} badge="Open Source" badgeStyle="indigo">
+    A phenomenal, free, open-source adblocker built strictly for Safari. Operates on Apple's native declarative API for zero-overhead performance.
+  </ToolCard>  
+  <ToolCard title="AdGuard Apple Profiles" href="https://adguard-dns.io/en/public-dns.html" icon={<Globe />} badge="System Wide" badgeStyle="emerald">
+    Official downloadable Apple Configuration Profiles which configure system-wide DNS filtering through AdGuard's blocking servers.
+  </ToolCard>
   <ToolCard title="AdGuard for iOS" href="https://adguard.com/en/adguard-ios/overview.html" icon={<Apple />} badge="Browser Native" badgeStyle="neutral">
-The free version provides great adblocking, but it is strictly limited to the Safari browser. Requires specific filter configuration to be truly effective.
+    The free version provides great adblocking, but is strictly limited to Safari. Requires specific filter configuration to be truly effective.
   </ToolCard>
-  <ToolCard title="Mullvad Encrypted Profiles" href="https://github.com/mullvad/encrypted-dns-profiles" icon={<Globe />} badge="System Wide" badgeStyle="indigo">
-Native Apple Configuration Profiles that force your entire device to route DNS queries through Mullvad's adblocking servers.
-  </ToolCard>
+  <ToolCard title="Control D Profiles" href="https://controld.com/free-dns#quick-setups" icon={<Network />} badge="Flexible" badgeStyle="rose">
+    Generate a tailored Apple Configuration Profile to route your system's DNS queries through Control D's high-performance ad-blocking servers.
+  </ToolCard>  
 </ToolDeck>
+
+**Method 1: AdGuard DNS (Native Apple Profile)**
+AdGuard provides official, direct-download configuration profiles that route your device's DNS queries through their ad-blocking servers at the OS level.
+
+<StepList>
+  <Step num="1">Open the <a href="https://adguard-dns.io/en/public-dns.html" target="_blank">AdGuard DNS public servers page</a> in Safari.</Step>
+  <Step num="2">Navigate to <strong>Option 2: Configure manually</strong>, choose the <strong>Default</strong> server, and download the configuration profile for iOS or macOS.</Step>
+  <Step num="3"><strong>On iOS:</strong> Open the <strong>Settings</strong> app. Tap the <strong>Profile Downloaded</strong> banner at the top, then tap Install.</Step>
+  <Step num="4"><strong>On macOS:</strong> Open <strong>System Settings</strong>. Click on <strong>Profile Downloaded</strong> in the left sidebar, double-click the profile, and click Install.</Step>
+</StepList>
 
 **Optimizing AdGuard (Safari Only)**
 To get the most out of the free AdGuard iOS app, tap the **Shield Icon (Protection)** > **Safari Protection** > **Filters**, and enable:
@@ -115,35 +130,43 @@ To get the most out of the free AdGuard iOS app, tap the **Shield Icon (Protecti
   ]} 
 />
 
-**Mullvad System-Wide DNS (iOS 18+)**
-<StepList>
-  <Step num="1">Go to the <a href="https://github.com/mullvad/encrypted-dns-profiles" target="_blank">Mullvad Profiles GitHub</a> via Safari.</Step>
-  <Step num="2">Tap a profile category (e.g., <strong>base</strong> or <strong>extended</strong>) in DoH or DoT format.</Step>
-  <Step num="3">Tap <strong>View raw</strong>, then <strong>Allow</strong> to download the profile.</Step>
-  <Step num="4">Open the <strong>Files</strong> app, go to Recents, and tap the downloaded profile.</Step>
-  <Step num="5">Open the <strong>Settings</strong> app. Tap the newly present <strong>Profile Downloaded</strong> at the top.</Step>
-  <Step num="6">Tap <strong>Install</strong>, enter your passcode, and tap Install again. Tap <strong>Done</strong>.</Step>
-</StepList>
-
-**Mullvad System-Wide DNS (macOS 15+)**
-*(For macOS 13 and 14, follow [these instructions](https://mullvad.net/en/help/dns-over-https-and-dns-over-tls#how-to-use).)*
-<StepList>
-  <Step num="1">Download your preferred profile from the <a href="https://github.com/mullvad/encrypted-dns-profiles" target="_blank">GitHub repository</a>.</Step>
-  <Step num="2">Open the <strong>System Settings</strong> app.</Step>
-  <Step num="3">Click on <strong>Profile Downloaded</strong> in the left column under your username.</Step>
-  <Step num="4">Double-click the downloaded profile, click <strong>Install...</strong> and enter your password.</Step>
-  <Step num="5">Manage profiles anytime via <strong>General > Device Management</strong>.</Step>
-</StepList>
+**Method 2: Control D (Setup Portal)**
+Unlike AdGuard's direct download, applying Control D's free public DNS to an Apple device via a configuration profile requires generating it through their setup flow. Visit the <a href="https://controld.com/free-dns#quick-setups" target="_blank">Control D Free DNS page</a>, select your desired preset (e.g., Ads & Tracking), select iOS or macOS, and follow the on-screen instructions to generate and install your custom profile.
 
 ---
 
 ### Windows Filtering
 
 <ToolDeck>
-  <ToolCard title="Safing Portmaster" href="https://safing.io/" icon={<Monitor />} badge="All-In-One" badgeStyle="indigo">
-A robust, system-wide firewall and adblocker for Windows. It allows you to monitor all network activity in real-time, block trackers across all applications, and seamlessly add custom filter lists to lock down your OS entirely.
+  <ToolCard title="Safing Portmaster" href="https://safing.io/" icon={<Monitor />} badge="Maximum Control" badgeStyle="indigo">
+    A robust, system-wide firewall and adblocker for Windows. Monitor all network activity in real-time, block trackers across applications, and lock down your OS entirely.
   </ToolCard>
 </ToolDeck>
+
+*(If you prefer not to install a firewall application, you can configure Windows to use AdGuard DNS by entering the IPv4/IPv6 addresses listed in their <a href="https://adguard-dns.io/en/public-dns.html" target="_blank">official setup guide</a>).*
+
+---
+
+### Other DNS Options
+
+These alternatives offer different balances of customization, privacy, filtering, and security.
+
+<ToolDeck>
+  <ToolCard title="NextDNS" href="https://nextdns.io/" icon={<Globe />} badge="Maximum Customization" badgeStyle="indigo">
+    Highly configurable profiles, analytics, and custom rules. The free tier currently provides 300,000 queries per month; after that, DNS continues resolving but filtering stops until the quota resets.
+  </ToolCard>
+  <ToolCard title="LibreDNS" href="https://libredns.gr/" icon={<ShieldCheck />} badge="Privacy Focused" badgeStyle="emerald">
+    Independent encrypted DNS with a dedicated no-ads endpoint and an emphasis on privacy and censorship resistance.
+  </ToolCard>
+  <ToolCard title="OpenBLD" href="https://openbld.net/docs/category/get-started/" icon={<Network />} badge="Independent Alternative" badgeStyle="neutral">
+    Independent public DNS with adaptive and strict filtering for ads, tracking, malware, phishing, and unwanted domains.
+  </ToolCard>
+  <ToolCard title="Quad9" href="https://quad9.net/" icon={<ShieldAlert />} badge="Security Focused" badgeStyle="rose">
+    A Swiss-based nonprofit DNS resolver providing DNSSEC and threat intelligence blocking against malware and phishing. <strong>It does not block advertisements or web trackers.</strong>
+  </ToolCard>
+</ToolDeck>
+
+*Setup: Follow the provider's official device-specific instructions linked above; DNS hostnames and profile requirements vary by service.*
 
 <SectionHeader icon={<ShieldAlert />}>
 
@@ -151,8 +174,10 @@ A robust, system-wide firewall and adblocker for Windows. It allows you to monit
 
 </SectionHeader>
 
+### File Verification & Scanning
+
 <NoticePanel icon={<Bug />} title="Always Verify Before Executing" type="warning">
-Before running any unfamiliar executable downloaded from the web, <strong>always</strong> upload it to <a href="https://www.virustotal.com/gui/" target="_blank">VirusTotal</a>. It scans the file against over 70 antivirus engines simultaneously. For advanced behavioral analysis, utilize online sandboxes like <a href="https://tria.ge/" target="_blank">Triage</a> or <a href="https://cuckoo.cert.ee/" target="_blank">Cuckoo Sandbox</a> to see what the file does in a safe, isolated environment.
+Before running any unfamiliar executable downloaded from the web, <strong>always</strong> upload it to <a href="https://www.virustotal.com/gui/" target="_blank">VirusTotal</a>. It scans the file against over 70 antivirus engines simultaneously. For advanced behavioral analysis, utilize online sandboxes like <a href="https://tria.ge/" target="_blank">Triage</a> or <a href="https://cuckoo.cert.ee/" target="_blank">Cuckoo Sandbox</a>.
 </NoticePanel>
 
 <ToolDeck>
@@ -271,7 +296,7 @@ A beautifully lightweight, open-source client known for its extreme simplicity a
 The free tier is fantastic, offering strict no-logs privacy and great speeds with unlimited data. The only catch: server locations are auto-assigned, and P2P (torrenting) is blocked on free servers.
   </ToolCard>
   <ToolCard title="Mullvad VPN" href="https://mullvad.net/en/vpn" icon={<ShieldCheck />} badge="Best Paid Option" badgeStyle="emerald">
-The gold standard for privacy. Anonymous accounts (no email required) and a flat rate of €5/month that hasn't changed in over a decade. Highly optimized for privacy and torrenting.
+The gold standard for privacy. Anonymous accounts (no email required) and a flat rate of €5/month that hasn't changed in over a decade. Highly optimized for privacy and torrenting. *(Includes an integrated DNS content blocker).*
   </ToolCard>
   <ToolCard title="1.1.1.1 (WARP)" href="https://one.one.one.one/" icon={<Globe />} badge="Proxy / DNS" badgeStyle="neutral">
 Built by Cloudflare. <strong>This is not a true anonymity VPN.</strong> It encrypts your DNS queries and tunnels traffic to bypass basic ISP blocks or censorship, but it does not hide your true IP address from the websites you visit.
