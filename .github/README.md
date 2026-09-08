@@ -49,5 +49,6 @@ If the resource still fails to load after changing your geographic region, pleas
 <br>
 
 <div align="center">
+  <sub>Established in 2022 · Open sourced in August 2026</sub><br>
   <sub>Architected and maintained by <strong>champagne.sunshine</strong></sub>
 </div>
