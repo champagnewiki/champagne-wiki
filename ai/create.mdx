@@ -346,10 +346,10 @@ Instrumental and vocal music generation now scores competitively enough on blind
 
 </AISectionHeader>
 
-If accuracy is the priority, Whisper-derived models still top independent word-error-rate benchmarks; if you need a finished meeting summary rather than a raw transcript, the workflow tools below are the better fit.
+Transcription covers two very different jobs: speech-to-text engines that produce the transcript itself, and finished meeting tools that turn that transcript into notes, summaries, and action items. The tools below span both ends of that workflow.
 
 <ToolDeck columns={3}>
-  <ToolCard title="OpenAI Whisper" href="https://github.com/openai/whisper" icon={<Captions />} badge="Best Accuracy" badgeStyle="indigo">
+  <ToolCard title="Whisper" href="https://github.com/openai/whisper" icon={<Captions />} badge="Best Accuracy" badgeStyle="indigo">
     Highest accuracy score for speech-to-text, with strong noise handling and flexible deployment. Open-source.
   </ToolCard>
   <ToolCard title="Deepgram" href="https://deepgram.com" icon={<Captions />} badge="Real-Time" badgeStyle="indigo">
@@ -361,6 +361,7 @@ If accuracy is the priority, Whisper-derived models still top independent word-e
 </ToolDeck>
 
 <PillDeck>
+  <AIPill title="Anarlog" href="https://anarlog.so" type="open" />
   <AIPill title="Otter.ai" href="https://otter.ai" type="tool" />
   <AIPill title="Descript" href="https://descript.com" type="tool" />
   <AIPill title="Trint" href="https://trint.com" type="tool" />

@@ -18,7 +18,7 @@ import {
   Mail, Zap, Wrench, Clock, BatteryCharging, Sparkles, 
   Activity, Keyboard, Terminal, ImageIcon,
   AppWindow, Film, FileArchive, FolderTree, Shield, 
-  BookOpen, CalendarDays, Command, BatteryMedium
+  BookOpen, CalendarDays, Command, SlidersHorizontal, BatteryMedium
 } from 'lucide-react';
 import FeedbackCollapsible from "@/components/FeedbackCollapsible";
 
@@ -34,8 +34,11 @@ import YouTube from '@/components/youtube';
 </MacSectionHeader>
 
 <MacDeck>
+  <MacCard title="Vorssaint" href="https://github.com/vorssaint/vorssaint-utils" badge="Essential" badgeStyle="blue" icon={<SlidersHorizontal className="text-blue-500" />}>
+    One menu bar icon doing the job of a dozen paid Mac apps. Free, open source, and local-first.
+  </MacCard>
   <MacCard title="Rectangle" href="https://rectangleapp.com/" badge="Essential" badgeStyle="blue" icon={<Layout className="text-blue-500" />}>
-    A free and open-source app that lets you move and resize windows on macOS using keyboard shortcuts or snap areas, bringing Windows-like snapping functionality to macOS.
+    Free, open-source macOS window manager with keyboard shortcuts and snap areas for Windows-style window snapping.
   </MacCard>
   <MacCard title="Magnet" href="https://magnet.crowdcafe.com/" badge="Premium" badgeStyle="zinc" icon={<Maximize className="text-zinc-700 dark:text-zinc-300" />}>
     A premium alternative to Rectangle. An excellent and highly polished window snapper for macOS.
