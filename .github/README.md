@@ -1,7 +1,3 @@
-<a href="https://champagne.pages.dev">
-  <img src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExM3ZtNXQ4ZTZ0OHYyeXJtNngxeDhwYXF6N3Jya3p1NzNwNzF6bTNwZyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/8Iv5lqKwKsZ2g/giphy.webp" alt="Gatsby Toast" width="100%" style="border-radius: 8px; margin-bottom: 20px; object-fit: cover; max-height: 400px;" />
-</a>
-
 <div align="center">
 
 # 🥂 Champagne Wiki
@@ -10,6 +6,7 @@
 
 [![Live Environment](https://img.shields.io/badge/Status-Live_on_Cloudflare-F38020?style=for-the-badge&logo=cloudflare&logoColor=white)](https://champagne.pages.dev)
 [![Discord Members](https://img.shields.io/discord/972766813458923521?color=5865F2&label=Community&logo=discord&logoColor=white&style=for-the-badge)](https://discord.gg/cH3ZkVc3Gd)
+[![Stars](https://img.shields.io/github/stars/champagnewiki/champagne-wiki?style=for-the-badge&label=Stars&labelColor=555555&color=18191C&logo=data:image/svg%2Bxml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI+PHBhdGggZmlsbD0iI0ZGRDcwMCIgZD0iTTEyIDJsMi43OCA2LjE0IDYuNjguNzMtNC45NCA0LjU3IDEuMzIgNi41NkwxMiAxNi43NSA2LjE2IDIwbDEuMzItNi41Ni00Ljk0LTQuNTcgNi42OC0uNzNMMTIgMnoiLz48L3N2Zz4=)](https://github.com/champagnewiki/champagne-wiki)
 [![Contributions Welcome](https://img.shields.io/badge/Contributions-Welcome-18191C?style=for-the-badge)](#getting-involved)
 
 </div>
