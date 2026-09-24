@@ -7,7 +7,7 @@ icon: Sparkles
 import { CreateHero } from "@/components/ai/create-hero";
 import {
   AIAtmosphere, AISectionHeader, ToolDeck, ToolCard, PillDeck, AIPill,
-  DiscordPill, PillLegend, NoticePanel, GuideBox, ZoneIntro,
+  RedditPill, PillLegend, NoticePanel, GuideBox, ZoneIntro,
 } from "@/components/ai";
 import {
   MessageSquare, Search, Users, Image as ImageIcon, Video, Mic,
@@ -64,9 +64,8 @@ Every major lab now ships a flagship reasoning model alongside a faster "lite" v
   <AIPill title="Microsoft Copilot" href="https://copilot.microsoft.com" type="official" />
   <AIPill title="MiniMax" href="https://minimax.chat" type="official" />
   <AIPill title="Meta AI (Muse Spark)" href="https://meta.ai" type="official" />
-  <AIPill title="Mistral Medium" href="https://mistral.ai" type="official" />
   <AIPill title="Olmo (Ai2 Playground)" href="https://playground.allenai.org" type="open" />
-  <AIPill title="Solar Pro" href="https://solar.upstage.ai" type="open" />
+  <AIPill title="Solar Pro" href="https://solar-chat.upstage.ai/" type="open" />
 </PillDeck>
 
 <AISectionHeader icon={<Users />} accent="amber">
@@ -138,7 +137,7 @@ Character-driven chatbots trade general knowledge for persona consistency and me
 </PillDeck>
 
 <GuideBox title="Self-hosted roleplay models" tone="success">
-  Run roleplay-tuned open-weight models locally through frontends like <a href="https://github.com/SillyTavern/SillyTavern">SillyTavern</a> for full control over persona, memory, and content filtering — see the <a href="/docs/ai/local">Local AI</a> page for setup guides.
+  Run roleplay-tuned open-weight models locally through frontends like <a href="https://github.com/SillyTavern/SillyTavern">SillyTavern</a> for full control over persona, memory, and content filtering — see the <a href="/ai/local">Local AI</a> page for setup guides.
 </GuideBox>
 
 ---
@@ -459,5 +458,5 @@ For pure prose quality, editorial voice, and handling a full novel's worth of co
 
 <PillDeck>
   <AIPill title="Perplexity" href="https://perplexity.ai" type="tool" />
-  <DiscordPill title="r/ArtificialIntelligence" href="https://reddit.com/r/artificial" />
+  <RedditPill title="r/ArtificialIntelligence" href="https://old.reddit.com/r/artificial" />
 </PillDeck>
