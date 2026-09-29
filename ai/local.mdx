@@ -76,7 +76,7 @@ These are the backends that actually load and run the model weights — most fro
 <GuideBox title="Can I actually run this on my hardware?" tone="neutral">
   <ul>
     <li><strong><a href="https://modelfit.io">ModelFit</a></strong> — checks your device against a live model database, ranking which LLMs and coding agents actually run well on your specific GPU or Mac, with dedicated cloud vs. local tool comparisons</li>
-    <li><strong><a href="http://www.canirunthisllm.net">Can I Run This LLM?</a></strong> — enter your GPU VRAM and system RAM to see which open-weight models actually fit, plus estimated tokens-per-second</li>
+    <li><strong><a href="https://modelvram.com/llm-vram-calculator/">ModelVRAM</a></strong> — pick any Hugging Face model, quantization and context length to estimate VRAM (weights plus KV cache), with a separate tokens-per-second estimator</li>
     <li><strong><a href="https://apxml.com/tools/vram-calculator">VRAM Calculator</a></strong> (ApX Machine Learning) — detailed inference and fine-tuning VRAM estimator covering quantization, KV cache, batch size, and multi-GPU offloading</li>
     <li>As a rule of thumb, a 7B model in 4-bit quantization needs roughly 4 to 6GB of VRAM or unified memory, while a 70B model needs 40GB or more unless heavily quantized</li>
   </ul>
